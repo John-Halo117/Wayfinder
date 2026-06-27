@@ -1,0 +1,135 @@
+# Ownership Matrix
+
+Every concept has exactly one canonical owner.
+
+## Canonical Concepts
+
+| Concept | Canonical Owner |
+| --- | --- |
+| Observation | Observation Contracts |
+| Observation Source | Observation Contracts |
+| Evidence | Evidence Contracts |
+| Evidence Bundle | Evidence Contracts |
+| Provenance | Provenance Contracts |
+| Provenance Edge | Provenance Contracts |
+| RID | Identity Contracts |
+| Canonical Identity | Identity Contracts |
+| Alias | Identity Contracts |
+| Namespace | Identity Contracts |
+| Identity Lifecycle | Identity Contracts |
+| Identity Lookup | Identity Contracts |
+| Identity Merge | Identity Contracts |
+| Asset | Asset Contracts |
+| Asset Metadata | Asset Contracts |
+| Asset Lifecycle | Asset Contracts |
+| Event | Event Contracts |
+| Event Envelope | Event Contracts |
+| Event Metadata | Event Contracts |
+| Event Route | Event Contracts |
+| Correlation ID | Event Contracts |
+| Causation ID | Event Contracts |
+| Replay Cursor | Event Contracts |
+| Policy | Policy Contracts |
+| Policy Rule | Policy Contracts |
+| Policy Decision | Policy Contracts |
+| Permission | Permission Contracts |
+| Permission Scope | Permission Contracts |
+| Capability | Capability Contracts |
+| Capability Route Language | Capability Contracts |
+| Bearing | Bearing Contracts |
+| Route Target | Bearing Contracts |
+| View | View Contracts |
+| Projection Language | View Contracts |
+| Capsule | Capsule Contracts |
+| Continuity Boundary | Capsule Contracts |
+| Promotion | Promotion Contracts |
+| Promotion Criteria | Promotion Contracts |
+| Rollback Reference | Promotion Contracts |
+| Health | Health Contracts |
+| Readiness Status | Health Contracts |
+| Dependency Status | Health Contracts |
+| Schema Identifier | Schema Contracts |
+| Schema Version | Schema Contracts |
+| Validation Result | Schema Contracts |
+| Structured Failure Model | Schema Contracts |
+| Persistence | Storage |
+| Storage Interface | Storage |
+| Storage Backend | Storage |
+| Object Storage | Storage |
+| Object Metadata | Storage |
+| Versioning Hook | Storage |
+| Engineering Workflow | Foundry |
+| Code-Change Proposal | Foundry |
+| Patch Application | Foundry |
+| Verification Gate | Foundry |
+| Red-Team Engineering Check | Foundry |
+| Engineering Artifact | Foundry |
+| Forge Legacy Compatibility | Foundry |
+
+## Boundary Rules
+
+Contracts own language only. They do not own implementation, runtime behavior,
+service adapters, engine algorithms, domain workflows, or external integration
+logic.
+
+Identity Contracts own identity language. Identity Service owns future identity
+implementation.
+
+Event Contracts own event language. Event Bus owns future event transport and
+routing implementation.
+
+Storage owns persistence abstraction and future storage implementation. Storage
+contracts remain language only.
+
+ARK owns reality-preservation behavior that consumes Observation, Evidence,
+Provenance, Promotion, Health, Event, Identity, Asset, Policy, Permission,
+Capability, View, Capsule, and Schema language.
+
+Jarvis owns navigation behavior that consumes Bearing and Capability language.
+
+Foundry owns engineering workflow behavior that consumes Policy, Permission,
+Capability, Health, View, Capsule, Event, Asset, and Schema language.
+
+## Wave 2 Service Ownership
+
+| Concept | Canonical Owner |
+| --- | --- |
+| RID Generation | Identity Service |
+| Alias Resolution | Identity Service |
+| Namespace Handling | Identity Service |
+| Identity Lookup | Identity Service |
+| Identity Merge Semantics | Identity Service |
+| Publish | Event Bus |
+| Subscribe | Event Bus |
+| Event Routing | Event Bus |
+| Correlation ID Handling | Event Bus |
+| Event Replay Boundary | Event Bus |
+| Persistence Abstraction | Storage Service |
+| Storage Backend Boundary | Storage Service |
+| Object Storage | Storage Service |
+| Object Metadata | Storage Service |
+| Transaction Boundary | Storage Service |
+| Versioning Hooks | Storage Service |
+| Configuration Loading | Configuration Service |
+| Layered Configuration | Configuration Service |
+| Environment Abstraction | Configuration Service |
+| Configuration Defaults | Configuration Service |
+| Configuration Validation | Configuration Service |
+| Runtime Configuration Access | Configuration Service |
+| Policy Evaluation | Policy Service |
+| Rule Execution | Policy Service |
+| Authorization Policy Evaluation | Policy Service |
+| Promotion Policy Evaluation | Policy Service |
+| Architectural Policy Evaluation | Policy Service |
+
+## Phase 4 Implementation Ownership
+
+| Concept | Canonical Owner |
+| --- | --- |
+| IdentityRecord Implementation | Identity Service |
+| Alias Resolver Implementation | Identity Service |
+| Identity Namespace Validator | Identity Service |
+| Identity Merge Decision Implementation | Identity Service |
+| Request Identity Generator | Identity Service |
+| Identity Health Signal | Identity Service |
+
