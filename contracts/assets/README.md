@@ -1,76 +1,53 @@
-# Asset Contracts
+# Asset Contract
 
 ## Purpose
 
-Asset Contracts define shared language for durable or referenced objects that Wayfinder observes, stores, relates, or acts upon.
+Defines the universal object crossing engine boundaries as an Asset in Context.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+ARK
 
-Canonical owner: `contracts/assets/`
-
-## Responsibilities
-
-- Asset reference
-- Asset type
-- Asset location
-- Asset ownership
-- Asset metadata
-- Asset lifecycle
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `asset_id`
-- `asset_type`
-- `owner_ref`
-- `location_ref`
-- `storage_ref`
-- `observed_ref`
-- `lifecycle_state`
-- `metadata`
-- `tags`
-
-## Relationships
-
-- References Identity, Observation, Storage, Provenance, Schema, and Permission language.
-- May describe files, media, devices, documents, datasets, or physical objects without owning domain behavior.
+Exactly one engine produces this contract across engine boundaries.
 
 ## Consumers
 
-- ARK reality graph
-- Storage
-- Domains
-- External integrations
-- Internal apps
+WEAVE, Interpretation, Reasoning, Views, Jarvis, ZWLib, Capsules, MIDAS, VALOR, MICE, Domains
+
+## Inputs
+
+RID, Observation, Evidence, Context, Provenance, Capability profile, CivPhys profile, lifecycle state.
+
+## Outputs
+
+Asset reference, Asset in Context reference, lifecycle reference, ownership reference, relationship-ready asset identity.
+
+## Invariants
+
+- An asset is not merely a representation.
+- Context changes interpretation without changing identity.
+- Asset identity is stable under the Law of Theseus when invariants remain continuous.
+- Asset claims require evidence.
+
+## Failure Modes
+
+Unknown identity, ambiguous identity, merge/split uncertainty, missing context, and unproven ownership remain explicit uncertainty.
+
+## Promotion Rules
+
+Asset knowledge becomes durable when identity, evidence, and provenance are sufficient for ARK promotion. Representations may be deleted without deleting the asset.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Inventory domain logic
-- Filesystem implementation
-- Object storage implementation
-- Device integration behavior
-
-## Future Implementation Owners
-
-Domains own asset-specific workflows; Storage owns persistence.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_ASSET_CONTRACT",
-  "reason": "The asset contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

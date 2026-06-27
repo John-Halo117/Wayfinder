@@ -64,3 +64,34 @@ Expected health-check memory: less than 64 MiB above baseline process memory.
 - Shared event routing owned by Event Bus
 - Shared persistence owned by Storage
 - Third-party provider adapters as canonical architecture
+
+## Constitutional Boundary
+
+### Purpose
+
+Owns engineering workflows with proof.
+
+### Owns
+
+Engineering change proposals, verification gates, patch/workflow artifacts, rollback evidence, and proof-backed engineering change.
+
+### Does Not Own
+
+Canonical specifications, reality preservation, navigation, reusable services, or external provider ownership.
+
+### Inputs
+
+Objectives, specifications, repository context, policies, route recommendations, and capsules.
+
+### Outputs
+
+Proven engineering changes, verification artifacts, rollback evidence, and engineering outputs.
+
+### Dependencies
+
+Build Bible, Policy, Capsules, Jarvis, Storage, Identity.
+
+### Consumers
+
+Internal applications, operators, Build Bible, operations, and domains.
+

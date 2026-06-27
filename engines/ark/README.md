@@ -45,3 +45,34 @@ Expected health-check memory: less than 64 MiB above baseline process memory.
 - `docs/duplicate-concepts.md`
 - `docs/extraction-opportunities.md`
 - `docs/migration-plan.md`
+
+## Constitutional Boundary
+
+### Purpose
+
+Preserves reality by maintaining append-only observations, evidence, provenance, and reality graph continuity.
+
+### Owns
+
+Observation behavior; evidence preservation; provenance; reality graph; proof-gated promotion into durable reality.
+
+### Does Not Own
+
+Storage, identity, event bus, policy, telemetry, navigation, reasoning, views, domain orchestration.
+
+### Inputs
+
+Observations, evidence, source references, proof criteria, contract language, and supporting services.
+
+### Outputs
+
+Durable reality records, provenance references, evidence records, reality graph outputs, and promoted reality knowledge.
+
+### Dependencies
+
+Reality, Observation Contracts, Evidence Contracts, Provenance Contracts, Identity Service, Event Bus, Storage, Policy.
+
+### Consumers
+
+WEAVE, Interpretation, Reasoning, Views, Jarvis, Capsules, domains, and internal applications.
+

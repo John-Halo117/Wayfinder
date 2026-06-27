@@ -65,3 +65,33 @@ Original source artifacts are preserved under `docs/source/`.
 The original `.env.example` is folded into `ingress/.env.example` because it
 defines external inputs and required runtime credentials.
 
+## Constitutional Boundary
+
+### Purpose
+
+Navigates capabilities and routes under uncertainty.
+
+### Owns
+
+Bearings, routes, recommendations, navigation posture, route tradeoffs, and capability navigation behavior.
+
+### Does Not Own
+
+Discovery registry ownership, reasoning, commitments, reality preservation, or task execution.
+
+### Inputs
+
+Objectives, capabilities, views, reasoning outputs, constraints, policies, and context.
+
+### Outputs
+
+Bearings, routes, recommendations, navigation decisions, and route proof requirements.
+
+### Dependencies
+
+Reasoning, Views, Capability Contracts, Bearing Contracts, Policy, Identity.
+
+### Consumers
+
+Internal applications, domains, MICE, Foundry, and operators.
+

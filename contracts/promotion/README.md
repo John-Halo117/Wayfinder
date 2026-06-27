@@ -1,77 +1,53 @@
-# Promotion Contracts
+# Promotion Contract
 
 ## Purpose
 
-Promotion Contracts define shared language for moving information from ephemeral or legacy status into durable canonical state after proof.
+Defines how proven outputs become durable in their canonical owner.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+ARK
 
-Canonical owner: `contracts/promotion/`
-
-## Responsibilities
-
-- Promotion candidate
-- Promotion criteria
-- Promotion proof reference
-- Promotion decision
-- Rollback reference
-- Promotion status
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `promotion_id`
-- `candidate_ref`
-- `from_owner`
-- `to_owner`
-- `criteria_refs`
-- `proof_refs`
-- `decision`
-- `decided_at`
-- `rollback_ref`
-- `confidence`
-- `metadata`
-
-## Relationships
-
-- References Evidence, Provenance, Policy, Health, Storage, and Schema language.
-- Consumed by ARK proof and governance flows.
+Exactly one engine produces this contract across engine boundaries.
 
 ## Consumers
 
-- ARK proofs
-- Promotion registry
-- Governance docs
-- Future services and engines
+All engines, Services, Domains, Internal applications, Operations
+
+## Inputs
+
+Proof, Evidence, Provenance, Asset, Context, canonical owner, rollback context, confidence.
+
+## Outputs
+
+Promotion record, durable knowledge reference, canonical owner reference, rollback reference.
+
+## Invariants
+
+- Nothing becomes durable without proof.
+- Promotion must target exactly one canonical owner.
+- Promotion must reduce or preserve ownership clarity.
+- Promotion must preserve rollback and provenance.
+
+## Failure Modes
+
+Missing proof, ambiguous owner, failed validation, duplicate ownership, unresolved contradiction, or missing rollback context block promotion.
+
+## Promotion Rules
+
+Promotion records are durable governance artifacts once accepted. Candidate promotions remain ephemeral until proof passes.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Promotion engine implementation
-- Test runner behavior
-- Storage migration
-- Runtime deployment
-
-## Future Implementation Owners
-
-ARK owns proof-gated reality promotion behavior; governance owns registry process.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_PROMOTION_CONTRACT",
-  "reason": "The promotion contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

@@ -1,76 +1,53 @@
-# Capsule Contracts
+# Capsule Contract
 
 ## Purpose
 
-Capsule Contracts define shared language for continuity packages that preserve context, state references, evidence, and handoff boundaries.
+Defines continuity packages that preserve context for future re-entry.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+Capsules
 
-Canonical owner: `contracts/capsules/`
-
-## Responsibilities
-
-- Capsule
-- Continuity boundary
-- Context reference
-- State reference
-- Evidence bundle reference
-- Handoff metadata
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `capsule_id`
-- `purpose`
-- `context_refs`
-- `state_refs`
-- `evidence_refs`
-- `owner_ref`
-- `created_at`
-- `expires_at`
-- `promotion_ref`
-- `metadata`
-
-## Relationships
-
-- References Identity, Evidence, Provenance, Storage, Events, Schemas, and Promotion language.
-- Supports the future Capsules engine.
+Exactly one engine produces this contract across engine boundaries.
 
 ## Consumers
 
-- Capsules engine
-- Foundry sessions
-- Jarvis navigation continuity
-- ARK preservation workflows
+Jarvis, Foundry, MICE, Domains, Internal applications, Operators
+
+## Inputs
+
+Asset, Context, Evidence, Provenance, State reference, Objective, owner reference, promotion reference.
+
+## Outputs
+
+Capsule, continuity boundary, handoff metadata, re-entry context, maturity signal.
+
+## Invariants
+
+- A capsule preserves continuity; it does not own generic storage.
+- A capsule must reference its context and evidence.
+- A capsule may contain representations without becoming the asset.
+- Re-entry requires enough context to resume meaningfully.
+
+## Failure Modes
+
+Insufficient context, stale capsule, missing owner, weak evidence, expired relevance, or low maturity remain explicit uncertainty.
+
+## Promotion Rules
+
+Capsules are durable only when continuity purpose, owner, evidence, and re-entry criteria are explicit. Draft capsules remain ephemeral.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Capsule runtime
-- Compression implementation
-- Storage implementation
-- Session UI
-
-## Future Implementation Owners
-
-Capsules engine owns continuity behavior; Storage owns persistence.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_CAPSULE_CONTRACT",
-  "reason": "The capsule contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

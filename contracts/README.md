@@ -1,28 +1,39 @@
 # Contracts
 
-Contracts define shared language and interfaces.
+Contracts define what crosses constitutional boundaries.
 
-Contracts may define identity, assets, events, observations, evidence, bearings,
-capsules, policies, permissions, schemas, and APIs.
+Engines define how contracts are fulfilled. Contracts define the stable language exchanged between engines, services, domains, internal applications, external integrations, operations, and tooling.
 
-Contracts never contain implementation.
+Contracts contain no runtime behavior, implementation APIs, storage formats, or engine internals.
 
-## Canonical Contract Families
+## Required Contract Set
 
-- `observations/` - observation source, subject, payload, metadata, integrity, and intake status language.
-- `evidence/` - support, validation, confidence, contradiction, and proof input language.
-- `provenance/` - lineage, derivation, source, method, and traceability language.
-- `identities/` - RID, canonical identity, alias, namespace, lifecycle, lookup, and merge language.
-- `assets/` - durable or referenced object language.
-- `events/` - event envelope, metadata, routing, correlation, causation, subscription, and replay language.
-- `policies/` - policy document, rule, decision, constraint, exception, and version language.
-- `permissions/` - principal, resource, action, scope, grant, deny, and delegation language.
-- `capabilities/` - stable verb, provider, requirement, route, invocation, and result language.
-- `bearings/` - navigation target, orientation, route intent, objective, and confidence language.
-- `views/` - projection, read model, display, query, refresh, and provenance language.
-- `capsules/` - continuity package, context, state reference, evidence bundle, and handoff language.
-- `promotion/` - promotion candidate, criteria, proof, decision, rollback, and status language.
-- `health/` - readiness, dependency status, probe result, health signal, and finding language.
-- `schemas/` - schema identity, version, validation, compatibility, and structured failure language.
+| Contract | Producer | Primary Output |
+| --- | --- | --- |
+| [Observation](observations/README.md) | ARK | Observation |
+| [Evidence](evidence/README.md) | ARK | Evidence |
+| [Representation](representations/README.md) | Views | Representation |
+| [Asset](assets/README.md) | ARK | Asset in Context reference |
+| [Context](context/README.md) | ARK | Context reference |
+| [Relationship](relationships/README.md) | WEAVE | Relationship |
+| [Capability](capabilities/README.md) | NOMAD | Capability/provider option |
+| [Bearing](bearings/README.md) | Jarvis | Bearing |
+| [Recommendation](recommendations/README.md) | Jarvis | Recommendation |
+| [Commitment](commitments/README.md) | MICE | Commitment |
+| [Transformation](transformations/README.md) | ZWLib | Transformation Path |
+| [Capsule](capsules/README.md) | Capsules | Capsule |
+| [Specification](specifications/README.md) | Build Bible | Specification |
+| [Proof](proofs/README.md) | ARK | Proof |
+| [Promotion](promotion/README.md) | ARK | Promotion record |
 
-Contracts contain no implementation.
+## Supporting Contracts
+
+Existing supporting contracts remain canonical for shared language: identities, events, policies, permissions, health, schemas, storage, provenance, and views.
+
+## Governance Reports
+
+- [Dependency Graph](dependency-graph.md)
+- [Ownership Matrix](ownership-matrix.md)
+- [Gap Analysis](gap-analysis.md)
+- [Duplicate Contract Analysis](duplicate-analysis.md)
+- [Constitutional Verification](verification.md)

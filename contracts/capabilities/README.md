@@ -1,76 +1,53 @@
-# Capability Contracts
+# Capability Contract
 
 ## Purpose
 
-Capability Contracts define shared language for stable architectural verbs, capability invocation, capability routing, and capability requirements.
+Defines stable outcome verbs and capability availability across engine boundaries.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+NOMAD
 
-Canonical owner: `contracts/capabilities/`
-
-## Responsibilities
-
-- Capability name
-- Capability request
-- Capability provider reference
-- Capability requirement
-- Capability result
-- Capability route reference
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `capability_id`
-- `verb`
-- `provider_ref`
-- `input_contract_ref`
-- `output_contract_ref`
-- `constraints`
-- `health_ref`
-- `policy_ref`
-- `metadata`
-
-## Relationships
-
-- References Events, Policies, Permissions, Health, Schemas, and Bearings.
-- Supports ARK mesh routing and Jarvis navigation without owning either implementation.
+Exactly one engine produces this contract across engine boundaries.
 
 ## Consumers
 
-- Jarvis
-- ARK mesh/discovery
-- Foundry tool selection
-- Services
-- Domains
+Jarvis, ZWLib, Foundry, MICE, Domains, Services, Internal applications
+
+## Inputs
+
+Asset, Context, Objective, constraints, provider reference, health reference, policy reference, evidence.
+
+## Outputs
+
+Capability, capability profile, provider option, requirement, capability result reference.
+
+## Invariants
+
+- Capability names describe outcomes rather than implementations.
+- Capabilities remain stable under changing providers.
+- Capability availability is context-sensitive.
+- Capability contracts do not own navigation decisions.
+
+## Failure Modes
+
+Unavailable provider, uncertain readiness, missing requirement, policy constraint, or insufficient evidence remain explicit uncertainty.
+
+## Promotion Rules
+
+Capability language is durable as contract vocabulary. Specific provider availability remains ephemeral until discovered and proven in context.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Service registry implementation
-- Navigation planning
-- Tool execution
-- Domain orchestration
-
-## Future Implementation Owners
-
-Capabilities remain contracts/capability grammar; Discovery service may implement registry behavior.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_CAPABILITY_CONTRACT",
-  "reason": "The capability contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.
