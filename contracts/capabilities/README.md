@@ -2,13 +2,13 @@
 
 ## Purpose
 
-Defines stable outcome verbs and capability availability across engine boundaries.
+Defines capability availability across engine boundaries while referencing the canonical capability verb language owned by `capabilities/`.
 
 ## Producer
 
 NOMAD
 
-Exactly one engine produces this contract across engine boundaries.
+Exactly one engine produces discovered capability availability. NOMAD discovers available providers, resources, and opportunities; it does not own or redefine the universal capability grammar.
 
 ## Consumers
 
@@ -16,14 +16,16 @@ Jarvis, ZWLib, Foundry, MICE, Domains, Services, Internal applications
 
 ## Inputs
 
-Asset, Context, Objective, constraints, provider reference, health reference, policy reference, evidence.
+Canonical capability verb, Asset, Context, Objective, constraints, provider reference, resource reference, health reference, policy reference, evidence.
 
 ## Outputs
 
-Capability, capability profile, provider option, requirement, capability result reference.
+Capability availability reference, capability profile, provider option, resource option, requirement, opportunity reference, capability result reference.
 
 ## Invariants
 
+- Capability verbs are canonical language owned by `capabilities/`.
+- NOMAD owns discovery of availability, providers, resources, and opportunities.
 - Capability names describe outcomes rather than implementations.
 - Capabilities remain stable under changing providers.
 - Capability availability is context-sensitive.
@@ -31,11 +33,11 @@ Capability, capability profile, provider option, requirement, capability result 
 
 ## Failure Modes
 
-Unavailable provider, uncertain readiness, missing requirement, policy constraint, or insufficient evidence remain explicit uncertainty.
+Unavailable provider, uncertain readiness, missing requirement, policy constraint, unavailable resource, or insufficient evidence remain explicit uncertainty.
 
 ## Promotion Rules
 
-Capability language is durable as contract vocabulary. Specific provider availability remains ephemeral until discovered and proven in context.
+Capability language is durable as capability grammar. Specific provider, resource, or opportunity availability remains ephemeral until discovered and proven in context.
 
 ## Constitutional Basis
 

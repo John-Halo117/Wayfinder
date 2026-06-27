@@ -60,7 +60,7 @@ behavior, and proof-gated promotion into durable reality.
 | Event Backbone | Publish, subscribe, transport, replay, event WAL, NATS/GSB. | Config, Storage for replay/WAL. | ARK, Foundry, agents, external emitters. | Duplicated in `gsb`, transport adapters, event WAL, contracts. | ARK legacy. | `services/event-bus/` | High | `engines/ark/docs/duplicate-concepts.md`, `services/event-bus/README.md` |
 | Event Contracts | Event envelope, metadata, routing, runtime schemas. | Schema contracts, Identity refs. | Event Bus, ARK, Foundry, external integrations. | Duplicated across Python schemas, JSON contracts, Go validators, MCP contracts. | ARK legacy. | `contracts/events/` and `contracts/schemas/` | High | `engines/ark/docs/duplicate-concepts.md`, `contracts/events/README.md` |
 | Storage/Persistence | Durable state, object persistence, SSOT, DuckDB, Redis state, WAL support. | Identity, Event metadata, Config. | ARK, Event Bus, Foundry artifacts, future engines. | DuckDB, Rust storage, Redis adapter, state docs all own storage-like behavior. | ARK legacy. | `services/storage/` | High | `engines/ark/docs/extraction-opportunities.md`, `services/storage/README.md` |
-| Identity/Subjects | Subject identity, identity rules, lookup references. | Identity contracts, Policy. | ARK observations, events, storage ownership, domains. | `subjects.py`, `subjects.go`, identity policy rules. | ARK legacy. | `services/identity/` and `contracts/identities/` | High | `engines/ark/docs/duplicate-concepts.md`, `services/identity/README.md` |
+| Identity | RID, canonical identity, aliases, namespaces, lifecycle, lookup references, and merge semantics. | Identity contracts, Policy. | ARK observations, events, storage ownership, domains. | Identity rules appeared beside ARK subject routing; routing subjects are Event Bus concerns. | ARK legacy evidence. | `services/identity/` and `contracts/identities/` | High | `engines/ark/docs/duplicate-concepts.md`, `services/identity/README.md`, `services/identity/docs/implementation-proof.md` |
 | Policy | Policy evaluation, placement rules, autonomy rules, failure classes, enforcement gates. | Contracts, Config, Evidence. | ARK, Foundry, runtime, operations. | Python, Go, JSON rules, MCP policy, epistemic policy. | ARK legacy. | `services/policy/` and `contracts/policies/` | High | `engines/ark/docs/duplicate-concepts.md` |
 | Configuration | Environment loading, manifests, tiering, system invariants, runtime settings. | Contracts, Policy. | All services and engines. | Python config, Go env loader, JSON manifests, env files. | ARK legacy. | `services/configuration/` | High | `engines/ark/docs/extraction-opportunities.md` |
 | Cryptography/Compression/Security | Hashing, envelopes, keys, compression, security checks. | Config, Policy, Storage. | ARK, Storage, Event Bus, Foundry. | Go crypto, cryptofabric, Rust compression, Python security. | ARK legacy. | `services/cryptography/` and `services/compression/` | High | `engines/ark/docs/duplicate-concepts.md` |
@@ -127,7 +127,7 @@ and guiding work through observable bounded execution paths.
 
 | Concept | Engines Involved | Evidence | Proposed Canonical Owner | Confidence |
 | --- | --- | --- | --- | --- |
-| Identity / Subject | ARK, Jarvis, Foundry consumers | ARK subjects/rules; Jarvis env identities; Foundry operator/session concepts. | `services/identity/`, `contracts/identities/` | High |
+| Identity | ARK, Jarvis, Foundry consumers | ARK identity rules; Jarvis env identities; Foundry operator/session concepts. Subject routing is Event Bus evidence. | `services/identity/`, `contracts/identities/` | High |
 | Events / Routing | ARK, Jarvis, Foundry consumers | ARK NATS/GSB/events; Jarvis route coordination; Foundry audit/artifact events. | `services/event-bus/`, `contracts/events/` | High |
 | Storage / State / Artifacts | ARK, Foundry, Jarvis consumers | ARK DuckDB/Redis/state; Foundry `.forge` artifacts; Jarvis future route state. | `services/storage/`, `contracts/storage/` | High |
 | Configuration / Environment | ARK, Jarvis, Foundry | ARK config/env; Jarvis `.env.example`; Foundry runtime config. | `services/configuration/` | High |
@@ -190,8 +190,8 @@ flowchart TD
 | Foundry canonicalization | Ready for inventory phase | Forge-origin files are copied and mapped, but runtime rename is not proven. |
 | Jarvis navigation | Needs deeper source inventory | Folded source is minimal; responsibility is clear, implementation evidence is thin. |
 | ARK reality core | Ready for contract extraction planning | Strong evidence, but extraction must preserve behavior. |
-| Policy service | Ready for census-to-inventory phase | Strong duplication; service scaffold does not yet exist. |
-| Configuration service | Ready for census-to-inventory phase | Strong duplication across all engines. |
+| Policy service | Ready for implementation proof phase | Strong duplication; service ownership and scaffold exist. |
+| Configuration service | Ready for implementation proof phase | Strong duplication across all engines; service ownership and scaffold exist. |
 | Telemetry/Health service | Ready for census-to-inventory phase | Strong duplication across ARK and health scaffolds. |
 | Discovery service | Needs boundary proof against Jarvis navigation | ARK mesh routing and Jarvis navigation overlap conceptually. |
 
@@ -249,7 +249,7 @@ Observation was already promoted before Wave 1 and remains canonical at
 
 | Concept | Responsibilities | Dependencies | Consumers | Duplication | Current Owner | Proposed Canonical Owner | Confidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Identity Service | RID, aliases, namespaces, lifecycle, lookup, merge semantics | Contracts: identities, schemas, events, policies | ARK, Jarvis, Foundry, Event Bus, Storage | ARK subjects and identity rules remain legacy duplicates | ARK legacy | `services/identity/` | High |
+| Identity Service | RID, aliases, namespaces, lifecycle, lookup, merge semantics | Contracts: identities, schemas, events, policies | ARK, Jarvis, Foundry, Event Bus, Storage | ARK identity rules remain legacy evidence; subject routing is Event Bus debt | ARK legacy evidence | `services/identity/` | High |
 | Event Bus Service | publish, subscribe, routing, metadata, correlation, replay | Contracts: events, identities, schemas, health | ARK, Jarvis, Foundry, Operations, future engines | ARK GSB/transport/WAL remain legacy duplicates | ARK legacy | `services/event-bus/` | High |
 | Storage Service | persistence abstraction, object storage, metadata, versioning, transactions | Contracts: storage, schemas, identities, events | ARK, Event Bus, Identity, Foundry, future domains | ARK DuckDB/Rust/Redis state remain legacy duplicates | ARK legacy | `services/storage/` | High |
 | Configuration Service | loading, layering, env abstraction, defaults, validation, runtime access | Contracts: schemas, policies, health | ARK, Jarvis, Foundry, Services, Operations | ARK/Foundry/Jarvis config loaders remain legacy duplicates | ARK and Foundry legacy | `services/configuration/` | Medium-High |
@@ -262,4 +262,9 @@ Wave 2 evidence is recorded in `docs/promotions/*-service.md` and in each servic
 | Concept | Responsibilities | Dependencies | Consumers | Duplication | Current Owner | Proposed Canonical Owner | Confidence |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Identity Implementation | identity record construction, namespace validation, alias lookup, merge decisions, request ID generation, health signal | Python standard library only; contract language from `contracts/identities/` | Future ARK, Jarvis, Foundry, Event Bus, Storage consumers | Reduced for reusable identity mechanics; ARK subject routing reclassified as Event Bus debt | ARK legacy evidence | `services/identity/` | Medium-High |
+## M-002 Event Bus Implementation Census
+
+| Concept | Responsibilities | Dependencies | Consumers | Duplication | Current Owner | Proposed Canonical Owner | Confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Event Bus Implementation | transport-neutral event envelopes, route normalization, wildcard route matching, bounded publish/subscribe, sequence replay, health signal | Python standard library only; contract language from `contracts/events/` | Future ARK, Jarvis, Foundry, MICE, Operations, external integration consumers | Reduced for reusable event mechanics; broker transport and engine adapters remain legacy debt | ARK legacy evidence | `services/event-bus/` | Medium-High |
 

@@ -4,7 +4,7 @@
 
 The Event Bus Service is the canonical owner of reusable platform infrastructure for event bus concerns across Wayfinder.
 
-Wave 2 promotes the service boundary and evidence-backed public responsibilities only. Legacy engine code remains in place until a later implementation migration proves compatibility.
+Wave 2 promoted the service boundary and evidence-backed public responsibilities. M-002 adds a minimal transport-neutral implementation proof while legacy engine code remains in place until a later consumer migration proves compatibility.
 
 ## Ownership
 
@@ -65,11 +65,11 @@ Forbidden dependencies:
 
 ## Health Signal
 
-A future implementation must expose a bounded health signal covering contract availability, dependency readiness, and degraded-mode status. This scaffold introduces no runtime code.
+The minimal implementation exposes a bounded health signal covering event count, subscriber count, next sequence, payload bounds, replay bounds, and capacity limits.
 
 ## Verification Status
 
-- Executable code added: no
+- Executable code added: yes, minimal implementation proof
 - Engine behavior changed: no
 - Engine files moved: no
 - Concrete technology selected: no

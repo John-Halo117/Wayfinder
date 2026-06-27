@@ -1,78 +1,53 @@
-# Provenance Contracts
+# Provenance Contract
 
 ## Purpose
 
-Provenance Contracts define shared language for tracing observations, evidence, claims, assets, and promoted records back to their sources.
+Defines shared language for tracing knowledge, claims, observations, representations, and promoted records back to their sources and transformations.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+ARK
 
-Canonical owner: `contracts/provenance/`
-
-## Responsibilities
-
-- Provenance edge
-- Source lineage
-- Derivation reference
-- Method reference
-- Actor reference
-- Time reference
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `provenance_id`
-- `source_ref`
-- `target_ref`
-- `relationship_type`
-- `method_ref`
-- `actor_ref`
-- `observed_at`
-- `derived_at`
-- `confidence`
-- `metadata`
-
-## Relationships
-
-- References Observations, Evidence, Assets, Identities, Events, and Schemas.
-- Supports ARK reality preservation and promotion auditability.
+Exactly one engine produces provenance boundary language for reality-preservation outputs.
 
 ## Consumers
 
-- ARK reality graph
-- ARK proofs
-- Event Bus metadata
-- Storage metadata
-- Foundry artifact lineage
+Evidence, Proof, Promotion, Capsules, Views, Reasoning, VALOR, MICE, Domains, Operations
+
+## Inputs
+
+Observation reference, evidence reference, source reference, representation reference, actor reference, event metadata, time frame, transformation reference, context.
+
+## Outputs
+
+Provenance record, source chain, derivation reference, custody reference, trust boundary reference, uncertainty reference.
+
+## Invariants
+
+- Provenance supports knowledge about an asset; it does not define asset identity.
+- Provenance is append-only once promoted.
+- Transformations and custody boundaries must remain traceable.
+- Missing provenance is an explicit evidence gap.
+
+## Failure Modes
+
+Unknown source, broken chain, conflicting custody, untrusted source, missing transformation reference, or ambiguous derivation remain explicit uncertainty.
+
+## Promotion Rules
+
+Provenance becomes durable when ARK promotes source and derivation evidence. Ephemeral derivation traces may guide proof but do not become durable without promotion.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Graph algorithms
-- Storage layout
-- Trust scoring
-- Evidence weighting
-- Promotion execution
-
-## Future Implementation Owners
-
-ARK owns provenance behavior in reality graph; Storage may persist provenance records.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_PROVENANCE_CONTRACT",
-  "reason": "The provenance contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

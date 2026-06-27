@@ -1,17 +1,19 @@
 # Contract Dependency Graph
 
-Contracts flow from more foundational concepts toward more derived concepts.
+Contracts flow from more foundational concepts toward more derived concepts. The graph is acyclic. Context may frame Observation, but Context does not require Observation for its own definition or identity.
 
 ```text
 Reality
+  ↓
+Context
   ↓
 Observation
   ↓
 Evidence + Provenance
   ↓
-Asset + Context
+Asset
   ↓
-Representation + Relationship + Capability
+Representation + Relationship + Capability Availability
   ↓
 Interpretation and Reasoning outputs through Evidence/Proof
   ↓
@@ -30,18 +32,20 @@ Promotion
 
 | From | To | Meaning |
 | --- | --- | --- |
+| Context | Observation | Observations may reference a situational frame. |
 | Observation | Evidence | Evidence supports claims using observations. |
-| Evidence | Proof | Proof evaluates evidence. |
 | Provenance | Evidence | Evidence must remain traceable. |
-| Asset | Context | Assets are interpreted in context. |
+| Evidence | Proof | Proof evaluates evidence. |
+| Evidence + Provenance | Asset | Asset knowledge requires support and traceability. |
 | Asset + Context | Relationship | Relationships connect assets under context. |
-| Asset + Context | Capability | Capabilities attach to assets in context. |
+| Capability Grammar | Capability Availability | Capability availability references canonical verbs. |
+| Asset + Context | Capability Availability | Capabilities attach to assets in context. |
 | Representation | Interpretation | Representations can be interpreted. |
 | Evidence + Relationship | Reasoning | Reasoning evaluates derived claims. |
 | Reasoning output | Bearing | Bearings use reasoned conclusions. |
 | Bearing | Recommendation | Recommendations propose routes from bearings. |
 | Recommendation | Commitment | MICE may turn accepted recommendations into commitments. |
-| Asset + Capability | Transformation | ZWLib maps possible transformations. |
+| Asset + Capability Availability | Transformation | ZWLib maps possible transformations. |
 | Context + Evidence | Capsule | Capsules preserve re-entry continuity. |
 | Proof | Promotion | Promotion requires proof. |
 | Promotion | Durable Knowledge | Promoted outputs become durable in canonical owners. |

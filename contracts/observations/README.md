@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Defines what crosses the boundary when reality is observed before interpretation.
+Defines what crosses the boundary when reality is observed before interpretation. Observations may reference Context as a situational frame.
 
 ## Producer
 
@@ -16,7 +16,7 @@ Evidence, Interpretation, Reasoning, Views, Jarvis, Capsules, MIDAS, Domains, In
 
 ## Inputs
 
-Reality, Observation Source, Asset or RID, Context, time, location, actor, capability, constraints.
+Reality, Observation Source, Asset or RID, Context reference or situational conditions, time, location, actor, capability, constraints.
 
 ## Outputs
 
@@ -28,6 +28,7 @@ Observation, source reference, subject reference, payload reference, integrity r
 - Observation does not decide meaning.
 - Observation is append-only once promoted.
 - Observation references representations without becoming a representation.
+- Observation may reference Context, but Context does not depend on Observation for identity.
 
 ## Failure Modes
 

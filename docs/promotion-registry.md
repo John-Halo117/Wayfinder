@@ -22,7 +22,7 @@ Nothing is considered promoted unless it has an entry here.
 | Name | Current Owner | Previous Owner | Proof | Date | Rollback | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
 | Wayfinder Constitution | `constitution/` | Initial prompt and repository foundation | `WAYFINDER.md`, `constitution/laws.md`, `constitution/architecture.md` | 2026-06-27 | Restore foundation docs from Git history or initial prompt evidence. | High |
-| Platform Substrate: Identity | `services/identity/`, `contracts/identities/` | ARK identity/subjects evidence, Wayfinder substrate phase | `services/identity/README.md`, `contracts/identities/README.md`, `docs/ownership-matrix.md` | 2026-06-27 | Reclassify as unpromoted substrate and restore ownership to census evidence. | Medium |
+| Platform Substrate: Identity | `services/identity/`, `contracts/identities/` | ARK identity evidence, Wayfinder substrate phase; subject routing reclassified to Event Bus | `services/identity/README.md`, `contracts/identities/README.md`, `docs/ownership-matrix.md` | 2026-06-27 | Reclassify as unpromoted substrate and restore ownership to census evidence. | Medium |
 | Platform Substrate: Event Bus | `services/event-bus/`, `contracts/events/` | ARK event backbone evidence, Wayfinder substrate phase | `services/event-bus/README.md`, `contracts/events/README.md`, `docs/ownership-matrix.md` | 2026-06-27 | Reclassify as unpromoted substrate and restore ownership to ARK event evidence. | Medium |
 | Platform Substrate: Storage | `services/storage/`, `contracts/storage/` | ARK storage/persistence evidence, Wayfinder substrate phase | `services/storage/README.md`, `contracts/storage/README.md`, `docs/ownership-matrix.md` | 2026-06-27 | Reclassify as unpromoted substrate and restore ownership to ARK storage evidence. | Medium |
 | Foundry Canonical Owner | `engines/foundry/` | Forge-origin ARK source | `engines/foundry/README.md`, `engines/foundry/docs/ark-forge-normalization.md` | 2026-06-27 | Keep Forge-origin material under ARK legacy as behavioral authority. | Medium |
@@ -46,6 +46,7 @@ Nothing is considered promoted unless it has an entry here.
 
 | Name | Proposed Owner | Evidence | Status |
 | --- | --- | --- | --- |
+| Reality Identity (RID) Model | `constitution/assets.md`, `contracts/identities/`, `services/identity/` | Asset Model, Identity Contract, Identity Service proof | Planning milestone next; no implementation promotion yet |
 | Telemetry Service | `services/telemetry/` | `docs/constitutional-census.md`, `contracts/health/README.md` | Pending future wave; do not promote during Wave 2 |
 | Discovery Service | `services/discovery/` | ARK mesh evidence and Jarvis navigation overlap | Needs boundary proof |
 | ARK Evidence Behavior | `engines/ark/proofs/` | `contracts/evidence/README.md`, ARK proof evidence | Pending engine behavior promotion |
@@ -55,7 +56,7 @@ Nothing is considered promoted unless it has an entry here.
 
 | Name | Current Owner | Previous Owner | Proof | Date | Rollback | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| Identity Service | `services/identity/` | ARK subjects modules and identity rules | `docs/promotions/identity-service.md` | 2026-06-27 | Remove service scaffold/governance entries; no runtime rollback | High |
+| Identity Service | `services/identity/` | ARK identity rules; subject routing evidence reclassified to Event Bus | `docs/promotions/identity-service.md` | 2026-06-27 | Remove service scaffold/governance entries; no runtime rollback | High |
 | Event Bus Service | `services/event-bus/` | ARK GSB, transport adapters, event WAL | `docs/promotions/event-bus-service.md` | 2026-06-27 | Remove service scaffold/governance entries; no runtime rollback | High |
 | Storage Service | `services/storage/` | ARK DuckDB, Rust storage, Redis state adapters | `docs/promotions/storage-service.md` | 2026-06-27 | Remove service scaffold/governance entries; no runtime rollback | High |
 | Configuration Service | `services/configuration/` | ARK env/config loaders, Foundry runtime config, Jarvis ingress env | `docs/promotions/configuration-service.md` | 2026-06-27 | Remove service scaffold/governance entries; no runtime rollback | Medium-High |
@@ -66,4 +67,9 @@ Nothing is considered promoted unless it has an entry here.
 | Name | Current Owner | Previous Owner | Proof | Date | Rollback | Confidence |
 | --- | --- | --- | --- | --- | --- | --- |
 | Identity Implementation | `services/identity/` | ARK truth-spine entity model and request ID middleware | `docs/promotions/identity-implementation.md` | 2026-06-27 | Remove implementation files/governance entries; no engine rollback | Medium-High |
+## M-002 Implementation Promotions
+
+| Name | Current Owner | Previous Owner | Proof | Date | Rollback | Confidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| Event Bus Implementation | `services/event-bus/` | ARK event schema, subject routing, event model, JSON event contract, and NATS transport evidence | `docs/promotions/event-bus-implementation.md`, `services/event-bus/docs/implementation-proof.md` | 2026-06-27 | Remove implementation files, tests, proof, and governance entries; no engine rollback required | Medium-High |
 

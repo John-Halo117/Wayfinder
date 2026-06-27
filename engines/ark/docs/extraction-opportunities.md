@@ -25,5 +25,5 @@
 | Health | health_v1.json, mesh heartbeat, runtime checks | contracts/health/ | Bounded health signal shared across services and engines. |
 | External actions | external_action_v1.json, action/action.go | contracts/actions/ | Action request/result schema independent of adapters. |
 | Runtime schemas | runtime_schemas_v1.json, runtime_contracts.py | contracts/runtime/ | Execution caps, status, failure model. |
-| Identity/Subjects | subjects.py, subjects.go, ark_identity_rules.json | contracts/identity/ | Subject identifiers and identity constraints. |
+| Identity and subject routing | subjects.py, subjects.go, ark_identity_rules.json | services/identity/ and services/event-bus/ | Identity constraints belong to Identity; subject routing belongs to Event Bus. |
 | Policies | definitions/policies.yaml, policy/*.json | contracts/policies/ | Policy document schema before service implementation. |
