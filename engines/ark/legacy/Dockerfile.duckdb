@@ -1,0 +1,40 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/* \
+    && groupadd --system ark \
+    && useradd --system --gid ark --home-dir /nonexistent --shell /usr/sbin/nologin ark
+
+RUN pip install --no-cache-dir --no-warn-script-location \
+    "duckdb>=0.10,<1"
+
+COPY --chown=ark:ark ark/ ./ark/
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app \
+    PYTHONHASHSEED=0
+
+USER ark
+
+VOLUME ["/data"]
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD python -c "import duckdb; duckdb.connect('/data/ark.duckdb').execute('SELECT 1')" || exit 1
+
+CMD ["python", "-c", "import duckdb, time; \
+conn = duckdb.connect('/data/ark.duckdb'); \
+conn.execute('CREATE TABLE IF NOT EXISTS events (id INTEGER PRIMARY KEY, type VARCHAR, payload JSON, created_at TIMESTAMP DEFAULT now())'); \
+conn.execute('CREATE INDEX IF NOT EXISTS idx_events_type ON events(type)'); \
+conn.execute('CREATE INDEX IF NOT EXISTS idx_events_created_at ON events(created_at)'); \
+conn.execute('CREATE TABLE IF NOT EXISTS state (key VARCHAR PRIMARY KEY, value JSON, updated_at TIMESTAMP DEFAULT now())'); \
+conn.execute('CREATE INDEX IF NOT EXISTS idx_state_updated_at ON state(updated_at)'); \
+conn.execute('CREATE TABLE IF NOT EXISTS metrics (name VARCHAR, value DOUBLE, timestamp TIMESTAMP, sample_time TIMESTAMP DEFAULT now())'); \
+conn.execute('CREATE INDEX IF NOT EXISTS idx_metrics_name_ts ON metrics(name, timestamp)'); \
+conn.execute('PRAGMA threads=2'); \
+conn.execute('PRAGMA memory_limit=\"1GB\"'); \
+conn.close(); \
+print('[DuckDB] Ready with indexes and tuning', flush=True); \
+time.sleep(86400)"]

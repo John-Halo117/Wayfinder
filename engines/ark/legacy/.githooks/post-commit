@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+COMMIT="$(git rev-parse HEAD)"
+QUEUE="$ROOT/.ark_ci/queue"
+
+mkdir -p "$ROOT/.ark_ci"
+echo "$COMMIT" >> "$QUEUE"
+
+echo "[ARK-Local] queued commit $COMMIT"
+
+# optional online ingest (non-blocking)
+INGEST_URL="${ARK_INGEST_URL:-}"
+if [[ -n "$INGEST_URL" ]] && command -v curl >/dev/null 2>&1; then
+  curl -s -X POST -H 'Content-Type: application/json' \
+    -d "{\"repo_path\":\"$ROOT\",\"commit_sha\":\"$COMMIT\"}" \
+    "$INGEST_URL" >/dev/null || true
+fi

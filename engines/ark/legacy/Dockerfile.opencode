@@ -1,0 +1,32 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/* \
+    && groupadd --system ark \
+    && useradd --system --gid ark --home-dir /nonexistent --shell /usr/sbin/nologin ark
+
+RUN pip install --no-cache-dir --no-warn-script-location \
+    "aiohttp>=3.10.11,<4" \
+    nats-py==2.4.0
+
+COPY --chown=ark:ark ark/ ./ark/
+COPY --chown=ark:ark agents/ ./agents/
+COPY --chown=ark:ark internal/contracts/ ./internal/contracts/
+COPY --chown=ark:ark policy/ ./policy/
+
+ENV INSTANCE_ID=opencode-0 \
+    NATS_URL=nats://nats:4222 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+USER ark
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD python -c "import nats, asyncio; asyncio.run(nats.connect('nats://nats:4222'))" || exit 1
+
+CMD ["python", "-c", "import asyncio; from agents.aider.agent import AiderAgent; async def main(): agent = AiderAgent('opencode'); await agent.connect(); await agent.register(); await asyncio.gather(agent.heartbeat_loop(), agent.subscribe_calls()); asyncio.run(main())"]

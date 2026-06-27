@@ -1,0 +1,347 @@
+version: '3.9'
+
+# Production-grade docker-compose with Traefik, PostgreSQL, pgBouncer, Prometheus
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+services:
+  # ═══════════════════════════════════════════════════════════════
+  # REVERSE PROXY & TLS (Traefik)
+  # ═══════════════════════════════════════════════════════════════
+  traefik:
+    image: traefik:v3.0
+    container_name: ark-traefik
+    restart: unless-stopped
+    networks:
+      - ark-net
+    ports:
+      - "80:80"
+      - "443:443"
+    expose:
+      - 8080
+    environment:
+      TRAEFIK_API_INSECURE: "false"
+      TRAEFIK_DASHBOARD_ENABLED: "true"
+      TRAEFIK_LOG_LEVEL: ${LOG_LEVEL:-info}
+      TRAEFIK_ENTRYPOINTS_WEB_ADDRESS: ":80"
+      TRAEFIK_ENTRYPOINTS_WEBSECURE_ADDRESS: ":443"
+      TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_HTTP_TO_HTTPS: "true"
+      TRAEFIK_ENTRYPOINTS_WEB_HTTP_REDIRECTIONS_ENTRYPOINT_HTTP_TO_HTTPS_PERMANENT: "true"
+      TRAEFIK_CERTIFICATESRESOLVERS_LETSENCRYPT_ACME_CASERVER: https://acme-v02.api.letsencrypt.org/directory
+      TRAEFIK_CERTIFICATESRESOLVERS_LETSENCRYPT_ACME_EMAIL: ${LETSENCRYPT_EMAIL:-admin@example.com}
+      TRAEFIK_CERTIFICATESRESOLVERS_LETSENCRYPT_ACME_STORAGE: /acme/acme.json
+      TRAEFIK_CERTIFICATESRESOLVERS_LETSENCRYPT_ACME_HTTPCHALLENGE_ENTRYPOINT: web
+      TRAEFIK_METRICS_PROMETHEUS: "true"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik-acme:/acme
+      - traefik-config:/config
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.network=ark-net"
+      - "--api=true"
+      - "--api.dashboard=true"
+      - "--entrypoints.web=true"
+      - "--entrypoints.websecure=true"
+      - "--certificatesresolvers.letsencrypt=true"
+      - "--metrics.prometheus=true"
+      - "--metrics.prometheus.buckets=0.1,0.3,1.2,5.0"
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.api.rule: "Host(`traefik.${DOMAIN}`)"
+      traefik.http.routers.api.service: "api@internal"
+      traefik.http.routers.api.entrypoints: "websecure"
+      traefik.http.routers.api.tls.certresolver: "letsencrypt"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # PRODUCTION DATABASE (PostgreSQL) - TUNED
+  # ═══════════════════════════════════════════════════════════════
+  postgres:
+    image: postgres:16-alpine
+    container_name: ark-postgres
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
+      POSTGRES_INITDB_ARGS: "-c log_min_duration_statement=1000"
+      PGDATA: /var/lib/postgresql/data/pgdata
+      TZ: ${TZ:-UTC}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    command: >
+      postgres
+      -c shared_buffers=256MB
+      -c effective_cache_size=1GB
+      -c maintenance_work_mem=64MB
+      -c checkpoint_completion_target=0.9
+      -c wal_buffers=16MB
+      -c default_statistics_target=100
+      -c random_page_cost=1.1
+      -c effective_io_concurrency=200
+      -c work_mem=4MB
+      -c min_wal_size=1GB
+      -c max_wal_size=4GB
+      -c max_connections=100
+      -c log_statement=ddl
+      -c log_duration=on
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -h localhost"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # PGBOUNCER (Connection Pooler)
+  # ═══════════════════════════════════════════════════════════════
+  pgbouncer:
+    image: edoburu/pgbouncer:latest
+    container_name: ark-pgbouncer
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 5432
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/n8n
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: 100
+      DEFAULT_POOL_SIZE: 20
+      MIN_POOL_SIZE: 5
+      RESERVE_POOL_SIZE: 5
+      RESERVE_POOL_TIMEOUT: 3
+      SERVER_IDLE_TIMEOUT: 60
+      SERVER_LIFETIME: 3600
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-p", "5432"]
+      interval: 5s
+      timeout: 2s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # PROMETHEUS (Metrics Collection)
+  # ═══════════════════════════════════════════════════════════════
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: ark-prometheus
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 9090
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.retention.time=7d'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:9090/-/healthy"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.prometheus.rule: "Host(`metrics.${DOMAIN}`)"
+      traefik.http.routers.prometheus.entrypoints: "websecure"
+      traefik.http.routers.prometheus.tls.certresolver: "letsencrypt"
+      traefik.http.services.prometheus.loadbalancer.server.port: "9090"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # POSTGRES EXPORTER (PostgreSQL Metrics)
+  # ═══════════════════════════════════════════════════════════════
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:latest
+    container_name: ark-postgres-exporter
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 9187
+    environment:
+      DATA_SOURCE_NAME: postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/postgres?sslmode=disable
+      PG_EXPORTER_EXTEND_QUERY_PATH: /etc/postgres_exporter/queries.yml
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:9187/metrics"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # REDIS EXPORTER (Redis Metrics)
+  # ═══════════════════════════════════════════════════════════════
+  redis-exporter:
+    image: oliver006/redis_exporter:latest
+    container_name: ark-redis-exporter
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 9121
+    environment:
+      REDIS_ADDR: redis://redis:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:9121/metrics"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # n8n exposed via Traefik (using pgBouncer)
+  # ═══════════════════════════════════════════════════════════════
+  n8n:
+    environment:
+      DB_POSTGRESDB_HOST: pgbouncer
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.n8n.rule: "Host(`n8n.${DOMAIN}`)"
+      traefik.http.routers.n8n.entrypoints: "websecure"
+      traefik.http.routers.n8n.tls.certresolver: "letsencrypt"
+      traefik.http.services.n8n.loadbalancer.server.port: "5678"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      pgbouncer:
+        condition: service_healthy
+
+  # ═══════════════════════════════════════════════════════════════
+  # Grafana exposed via Traefik
+  # ═══════════════════════════════════════════════════════════════
+  grafana:
+    volumes:
+      - ./grafana-dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./grafana-datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml:ro
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.grafana.rule: "Host(`grafana.${DOMAIN}`)"
+      traefik.http.routers.grafana.entrypoints: "websecure"
+      traefik.http.routers.grafana.tls.certresolver: "letsencrypt"
+      traefik.http.services.grafana.loadbalancer.server.port: "3000"
+
+  # ═══════════════════════════════════════════════════════════════
+  # Meilisearch exposed via Traefik
+  # ═══════════════════════════════════════════════════════════════
+  meilisearch:
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.meilisearch.rule: "Host(`search.${DOMAIN}`)"
+      traefik.http.routers.meilisearch.entrypoints: "websecure"
+      traefik.http.routers.meilisearch.tls.certresolver: "letsencrypt"
+      traefik.http.services.meilisearch.loadbalancer.server.port: "7700"
+
+  # ═══════════════════════════════════════════════════════════════
+  # MinIO exposed via Traefik (S3 API + Console)
+  # ═══════════════════════════════════════════════════════════════
+  minio:
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.minio-api.rule: "Host(`s3.${DOMAIN}`)"
+      traefik.http.routers.minio-api.entrypoints: "websecure"
+      traefik.http.routers.minio-api.tls.certresolver: "letsencrypt"
+      traefik.http.services.minio-api.loadbalancer.server.port: "9000"
+      traefik.http.routers.minio-console.rule: "Host(`minio.${DOMAIN}`)"
+      traefik.http.routers.minio-console.entrypoints: "websecure"
+      traefik.http.routers.minio-console.tls.certresolver: "letsencrypt"
+      traefik.http.services.minio-console.loadbalancer.server.port: "9001"
+
+networks:
+  ark-net:
+    driver: bridge
+
+volumes:
+  traefik-acme:
+    driver: local
+  traefik-config:
+    driver: local
+  postgres-data:
+    driver: local
+  prometheus-data:
+    driver: local

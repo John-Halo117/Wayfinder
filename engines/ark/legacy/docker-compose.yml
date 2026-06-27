@@ -1,0 +1,547 @@
+version: '3.9'
+
+services:
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 1: Event Backbone (NATS JetStream) - OPTIMIZED
+  # Internal only - NO public ports
+  # ═══════════════════════════════════════════════════════════════
+  nats:
+    image: nats:2.10-alpine
+    container_name: ark-nats
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 4222
+      - 6222
+      - 8222
+    command: >
+      -js -sd /data -m 8222
+      --max_payload 8MB
+      --max_pending 128MB
+      --max_connections 1000
+      --write_deadline 10s
+    volumes:
+      - nats-data:/data
+    environment:
+      TZ: ${TZ:-UTC}
+    healthcheck:
+      test: ["CMD", "nats", "--server", "nats://127.0.0.1:4222", "server", "info"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # REDIS: Cache & Deduplication Layer
+  # ═══════════════════════════════════════════════════════════════
+  redis:
+    image: redis:7-alpine
+    container_name: ark-redis
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 6379
+    command: >
+      redis-server
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --appendonly no
+      --save ""
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 2s
+      retries: 3
+      start_period: 3s
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 2: Service Mesh (Registry + Autoscaler) - OPTIMIZED
+  # Internal only - NO public ports
+  # ═══════════════════════════════════════════════════════════════
+  mesh-registry:
+    build:
+      context: .
+      dockerfile: Dockerfile.mesh
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 7000
+    environment:
+      NATS_URL: nats://nats:4222
+      REDIS_URL: redis://redis:6379
+      PYTHONUNBUFFERED: 1
+      PYTHONHASHSEED: 0
+      TZ: ${TZ:-UTC}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NATS_DRAIN_TIMEOUT: 5
+      NATS_CONNECT_TIMEOUT: 10
+    volumes:
+      - ./ark:/app/ark:ro
+      - ./policy:/app/policy:ro
+      - ./internal:/app/internal:ro
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  autoscaler:
+    build:
+      context: .
+      dockerfile: Dockerfile.autoscaler
+    container_name: ark-autoscaler
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 7001
+    environment:
+      NATS_URL: nats://nats:4222
+      REDIS_URL: redis://redis:6379
+      PYTHONUNBUFFERED: 1
+      PYTHONHASHSEED: 0
+      TZ: ${TZ:-UTC}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NATS_DRAIN_TIMEOUT: 5
+      NATS_CONNECT_TIMEOUT: 10
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./ark:/app/ark:ro
+      - ./policy:/app/policy:ro
+      - ./internal:/app/internal:ro
+      - ./config:/app/config:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 3: Intelligence Layer (Agents) - HORIZONTALLY SCALED
+  # Internal only - NO public ports
+  # ═══════════════════════════════════════════════════════════════
+  opencode:
+    build:
+      context: .
+      dockerfile: Dockerfile.opencode
+    restart: unless-stopped
+    networks:
+      - ark-net
+    environment:
+      NATS_URL: nats://nats:4222
+      REDIS_URL: redis://redis:6379
+      SERVICE_NAME: opencode
+      PYTHONUNBUFFERED: 1
+      PYTHONHASHSEED: 0
+      TZ: ${TZ:-UTC}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NATS_DRAIN_TIMEOUT: 5
+      NATS_CONNECT_TIMEOUT: 10
+    volumes:
+      - ./ark:/app/ark:ro
+      - ./agents:/app/agents:ro
+      - ./internal:/app/internal:ro
+      - ./policy:/app/policy:ro
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    stop_grace_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  openwolf:
+    build:
+      context: .
+      dockerfile: Dockerfile.openwolf
+    restart: unless-stopped
+    networks:
+      - ark-net
+    environment:
+      NATS_URL: nats://nats:4222
+      REDIS_URL: redis://redis:6379
+      SERVICE_NAME: openwolf
+      PYTHONUNBUFFERED: 1
+      PYTHONHASHSEED: 0
+      TZ: ${TZ:-UTC}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NATS_DRAIN_TIMEOUT: 5
+      NATS_CONNECT_TIMEOUT: 10
+    volumes:
+      - ./ark:/app/ark:ro
+      - ./agents:/app/agents:ro
+      - ./internal:/app/internal:ro
+      - ./policy:/app/policy:ro
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    stop_grace_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  composio:
+    build:
+      context: .
+      dockerfile: Dockerfile.composio
+    restart: unless-stopped
+    networks:
+      - ark-net
+    environment:
+      NATS_URL: nats://nats:4222
+      REDIS_URL: redis://redis:6379
+      SERVICE_NAME: composio
+      COMPOSIO_API_KEY: ${COMPOSIO_API_KEY:-}
+      PYTHONUNBUFFERED: 1
+      PYTHONHASHSEED: 0
+      TZ: ${TZ:-UTC}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      NATS_DRAIN_TIMEOUT: 5
+      NATS_CONNECT_TIMEOUT: 10
+    volumes:
+      - ./ark:/app/ark:ro
+      - ./agents:/app/agents:ro
+      - ./internal:/app/internal:ro
+      - ./policy:/app/policy:ro
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    stop_grace_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 4a: Data & Truth Spine (DuckDB) - INDEXED
+  # Internal only - NO public ports
+  # ═══════════════════════════════════════════════════════════════
+  duckdb:
+    build:
+      context: .
+      dockerfile: Dockerfile.duckdb
+    container_name: ark-duckdb
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 8000
+    environment:
+      PYTHONUNBUFFERED: 1
+      TZ: ${TZ:-UTC}
+    volumes:
+      - duckdb-data:/data
+      - ./definitions:/app/definitions:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 4b: Execution & Orchestration (n8n)
+  # Behind reverse proxy only - internal network
+  # ═══════════════════════════════════════════════════════════════
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: ark-n8n
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 5678
+    environment:
+      N8N_HOST: n8n.${DOMAIN:-localhost}
+      N8N_PORT: 5678
+      N8N_PROTOCOL: https
+      N8N_WEBHOOK_URL: https://n8n.${DOMAIN:-localhost}/
+      WEBHOOK_TUNNEL_URL: https://n8n.${DOMAIN:-localhost}/
+      N8N_SECURE_COOKIE: "true"
+      N8N_ENABLE_EXPERIMENTAL_FEATURES: "false"
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: ${N8N_DB_HOST:-postgres}
+      DB_POSTGRESDB_PORT: ${N8N_DB_PORT:-5432}
+      DB_POSTGRESDB_DATABASE: ${N8N_DB_NAME:-n8n}
+      DB_POSTGRESDB_USER: ${N8N_DB_USER:-n8n}
+      DB_POSTGRESDB_PASSWORD: ${N8N_DB_PASSWORD:-}
+      TZ: ${TZ:-UTC}
+      NODE_ENV: production
+    volumes:
+      - n8n-data:/home/node/n8n
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:5678/api/v1/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '1'
+          memory: 512M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      nats:
+        condition: service_healthy
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 4c: Observability (Grafana)
+  # Behind reverse proxy only - internal network
+  # ═══════════════════════════════════════════════════════════════
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: ark-grafana
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 3000
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-}
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USER:-admin}
+      GF_SERVER_ROOT_URL: https://grafana.${DOMAIN:-localhost}
+      GF_SERVER_SERVE_FROM_SUB_PATH: "true"
+      GF_INSTALL_PLUGINS: grafana-piechart-panel
+      GF_PATHS_LOGS: /var/log/grafana
+      GF_LOG_MODE: file
+      GF_DATABASE_URL: ${GRAFANA_DATABASE_URL:-}
+      TZ: ${TZ:-UTC}
+    volumes:
+      - grafana-data:/var/lib/grafana
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:3000/api/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 4d: Search & Event Ingestion (Meilisearch)
+  # Behind reverse proxy only - internal network
+  # ═══════════════════════════════════════════════════════════════
+  meilisearch:
+    image: getmeili/meilisearch:v1.8
+    container_name: ark-meilisearch
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 7700
+    environment:
+      MEILI_MASTER_KEY: ${MEILISEARCH_KEY:-}
+      MEILI_ENV: production
+      TZ: ${TZ:-UTC}
+    volumes:
+      - meilisearch-data:/meili_data
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:7700/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ═══════════════════════════════════════════════════════════════
+  # TIER 4e: Object Storage (MinIO)
+  # Behind reverse proxy only - internal network
+  # ═══════════════════════════════════════════════════════════════
+  minio:
+    image: minio/minio:latest
+    container_name: ark-minio
+    restart: unless-stopped
+    networks:
+      - ark-net
+    expose:
+      - 9000
+      - 9001
+    environment:
+      MINIO_ROOT_USER: ${MINIO_USER:-}
+      MINIO_ROOT_PASSWORD: ${MINIO_PASSWORD:-}
+      MINIO_BROWSER: "on"
+      MINIO_SERVER_URL: https://s3.${DOMAIN:-localhost}
+      MINIO_BROWSER_REDIRECT_URL: https://minio.${DOMAIN:-localhost}
+      TZ: ${TZ:-UTC}
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:9000/minio/health/live"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  ark-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+
+volumes:
+  nats-data:
+    driver: local
+  redis-data:
+    driver: local
+  duckdb-data:
+    driver: local
+  n8n-data:
+    driver: local
+  grafana-data:
+    driver: local
+  meilisearch-data:
+    driver: local
+  minio-data:
+    driver: local
