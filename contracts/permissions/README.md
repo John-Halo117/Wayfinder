@@ -1,76 +1,53 @@
-# Permission Contracts
+# Permission Contract
 
 ## Purpose
 
-Permission Contracts define shared language for allowed, denied, delegated, or scoped actions without implementing authorization.
+Defines shared language for whether an actor may exercise a capability on an asset in context.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+Policy Service
 
-Canonical owner: `contracts/permissions/`
-
-## Responsibilities
-
-- Permission grant
-- Permission scope
-- Principal reference
-- Resource reference
-- Action reference
-- Decision reference
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `permission_id`
-- `principal_ref`
-- `resource_ref`
-- `action`
-- `scope`
-- `effect`
-- `expires_at`
-- `policy_ref`
-- `reason`
-- `metadata`
-
-## Relationships
-
-- Depends on Identity, Policy, Asset, Capability, and Schema language.
-- Feeds future permissions/policy services.
+Exactly one service produces permission decision language. Permissions are evaluated through policy; engines do not own independent permission vocabularies.
 
 ## Consumers
 
-- Policy service
-- Internal applications
-- Engines invoking actions
-- External integration boundaries
+Blackwall, MICE, Jarvis, Foundry, Domains, Internal applications, Operations, External integrations
+
+## Inputs
+
+Actor identity, asset reference, capability reference, action intent, context, policy reference, evidence, delegation reference, commitment reference.
+
+## Outputs
+
+Permission decision, permission scope, denial reason, delegation boundary, audit reference, uncertainty reference.
+
+## Invariants
+
+- Permission is contextual and revocable.
+- Permission does not imply capability availability.
+- Denial and uncertainty must remain visible.
+- Permission language depends on policy but does not duplicate policy rules.
+
+## Failure Modes
+
+Unknown actor, missing policy, conflicting delegation, insufficient evidence, expired scope, ambiguous context, or denied capability remain explicit outcomes.
+
+## Promotion Rules
+
+Permission decisions remain ephemeral unless promoted as audit evidence, commitment evidence, or durable policy knowledge by the canonical owner.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Authentication
-- Authorization runtime
-- User interface roles
-- Provider-specific ACLs
-
-## Future Implementation Owners
-
-Permissions service or Policy service owns implementation after boundary proof.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_PERMISSION_CONTRACT",
-  "reason": "The permission contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

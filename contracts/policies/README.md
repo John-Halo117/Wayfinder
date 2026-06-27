@@ -1,78 +1,53 @@
-# Policy Contracts
+# Policy Contract
 
 ## Purpose
 
-Policy Contracts define shared language for rules, constraints, evaluation requests, decisions, and policy provenance.
+Defines shared language for rules, constraints, evaluation context, decisions, exceptions, and policy evidence.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+Policy Service
 
-Canonical owner: `contracts/policies/`
-
-## Responsibilities
-
-- Policy document
-- Policy rule
-- Evaluation request
-- Policy decision
-- Constraint
-- Exception
-- Policy version
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `policy_id`
-- `policy_version`
-- `scope`
-- `rule_id`
-- `condition`
-- `effect`
-- `decision`
-- `reason`
-- `evidence_ref`
-- `metadata`
-
-## Relationships
-
-- References Evidence, Identity, Permission, Capability, Event, Health, and Schema language.
-- Implemented later by Policy service.
+Exactly one service produces policy boundary language. Engines may apply policy results but do not own generic policy vocabulary.
 
 ## Consumers
 
-- ARK policy paths
-- Foundry guards
-- Jarvis route checks
-- Services
-- Operations
+ARK, Jarvis, Foundry, MICE, Blackwall, VALOR, Event Bus, Storage, Domains, Internal applications, Operations
+
+## Inputs
+
+Policy rule reference, actor identity, asset reference, capability reference, context, evidence, permission request, promotion request, event metadata, health signal.
+
+## Outputs
+
+Policy decision, rule reference, constraint, exception reference, escalation reference, audit reference, confidence reference.
+
+## Invariants
+
+- Policy evaluates constraints; it does not own the underlying asset, event, evidence, or capability.
+- Policy decisions must identify their rule basis when known.
+- Policy uncertainty must be explicit.
+- Permission handling uses policy language without duplicating policy ownership.
+
+## Failure Modes
+
+Missing rule, conflicting rules, unknown actor, insufficient evidence, stale policy, unsupported context, or ambiguous exception remain explicit uncertainty.
+
+## Promotion Rules
+
+Policy decisions remain ephemeral unless promoted as durable policy evidence, audit record, or constitutional governance artifact by the relevant owner.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Policy engine implementation
-- Authorization runtime
-- Domain-specific rule ownership
-- Secret management
-
-## Future Implementation Owners
-
-Policy Service owns implementation.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_POLICY_CONTRACT",
-  "reason": "The policy contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

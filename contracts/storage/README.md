@@ -1,75 +1,53 @@
-# Storage Contracts
+# Storage Contract
 
-Storage contracts define shared language for replaceable persistence. They
-contain no implementation.
+## Purpose
 
-## Owned Concepts
+Defines shared language for persistence boundaries, object references, metadata, transactions, versioning hooks, and storage ownership.
 
-- Storage address
-- Storage backend capability
-- Persistence operation
-- Transaction
-- Object
-- Object metadata
-- Version
-- Version hook
+## Producer
 
-## Contract Surfaces
+Storage Service
 
-### Storage Address
+Exactly one service produces storage boundary language. Engines preserve or retrieve durable knowledge through this contract; they do not own generic storage vocabulary.
 
-A storage address identifies a durable location without naming a required
-backend technology.
+## Consumers
 
-Required language:
+ARK, Capsules, Foundry, Jarvis, Event Bus, Identity Service, Policy Service, Domains, Internal applications, Operations
 
-- `storage_uri`
-- `namespace`
-- `collection`
-- `object_key`
-- `version`
+## Inputs
 
-### Object Metadata
+Object reference, asset reference, RID, metadata, durability intent, transaction boundary, version reference, policy reference, schema reference, provenance reference.
 
-Object metadata describes a stored object without owning the object payload.
+## Outputs
 
-Required language:
+Persistence reference, object storage reference, metadata reference, transaction reference, version hook reference, storage capability reference.
 
-- `object_key`
-- `content_type`
-- `content_length`
-- `content_hash`
-- `created_at`
-- `updated_at`
-- `owner_ref`
-- `tags`
+## Invariants
 
-### Transaction
+- Storage is infrastructure, not engine knowledge.
+- Storage references do not replace asset identity or evidence.
+- Backends remain replaceable under the Law of Theseus.
+- Transaction and version boundaries must remain explicit when relevant.
 
-A transaction describes a bounded set of storage operations.
+## Failure Modes
 
-Required language:
+Unknown object, unavailable backend, transaction conflict, version conflict, policy constraint, metadata ambiguity, or durability failure remain explicit failure states.
 
-- `transaction_id`
-- `operations`
-- `preconditions`
-- `commit_policy`
-- `rollback_policy`
+## Promotion Rules
 
-### Backend Capability
+Storage state becomes durable only when the owning concept authorizes persistence. Temporary caches, projections, indexes, and derived views remain ephemeral unless intentionally promoted.
 
-Backend capability describes what a storage backend can safely provide.
+## Constitutional Basis
 
-Required language:
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
-- `backend_id`
-- `supports_transactions`
-- `supports_versioning`
-- `supports_object_metadata`
-- `max_object_size_bytes`
-- `health_ref`
+## Non-Goals
 
-## Invalid Ownership
-
-These contracts do not define database vendors, engine-specific state machines,
-backup operations, or event routing.
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

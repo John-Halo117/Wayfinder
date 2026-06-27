@@ -1,80 +1,53 @@
-# Event Contracts
+# Event Contract
 
 ## Purpose
 
-Event Contracts define shared language for event envelopes, metadata, routing, correlation, causation, subscriptions, and replay cursors.
+Defines the event language crossing Wayfinder boundaries: event identity, envelope, metadata, routing reference, correlation, causation, and replay position.
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+## Producer
 
-## Canonical Owner
+Event Bus
 
-Canonical owner: `contracts/events/`
-
-## Responsibilities
-
-- Event envelope
-- Event metadata
-- Route
-- Publish request
-- Subscribe request
-- Correlation ID
-- Causation ID
-- Replay cursor
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `event_id`
-- `event_type`
-- `schema_version`
-- `source`
-- `subject_ref`
-- `correlation_id`
-- `causation_id`
-- `occurred_at`
-- `observed_at`
-- `payload_ref`
-- `metadata`
-
-## Relationships
-
-- Uses Identity, Observation, Schema, Policy, and Storage references.
-- Implemented later by Event Bus service.
+Exactly one service produces event boundary language. Engines emit and consume events through this contract; they do not own event vocabulary.
 
 ## Consumers
 
-- Event Bus
-- ARK ingress
-- Foundry audit events
-- Jarvis route events
-- External adapters
+ARK, Jarvis, Foundry, Capsules, MICE, Domains, Internal applications, Operations, External integrations
+
+## Inputs
+
+Event source, event type, payload reference, RID reference, actor reference, context reference, schema reference, policy reference, correlation reference, causation reference.
+
+## Outputs
+
+Event, event envelope, event metadata, event route reference, correlation ID, causation ID, replay cursor.
+
+## Invariants
+
+- Events describe boundary facts or requests; they do not own the durable truth they reference.
+- Correlation and causation remain explicit when known.
+- Event routes are transport-neutral constitutional language.
+- Replay position is a reference to ordered event history, not a storage implementation.
+
+## Failure Modes
+
+Unknown source, invalid schema reference, missing correlation, ambiguous route, policy constraint, replay gap, or duplicate event identity remain explicit uncertainty.
+
+## Promotion Rules
+
+Events become durable only when the canonical owner of the referenced concept promotes the event record or evidence derived from it. Routing and delivery state remain ephemeral unless explicitly promoted as operational evidence.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Broker implementation
-- NATS-specific APIs
-- Engine-specific interpretation
-- Storage implementation
-
-## Future Implementation Owners
-
-Event Bus owns implementation.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_EVENT_CONTRACT",
-  "reason": "The event contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

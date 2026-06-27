@@ -7,6 +7,14 @@ If a document defines a concept, it must point to the concept's canonical home.
 
 ## Migration Guidance
 
+- `developer-handbook.md` orients contributors to Constitution v1 practice.
+- `implementation-backlog.md` records implementation maturity, milestones, acceptance criteria, and definitions of done.
+- `programs/` is the entry point for implementation program index, dashboard, dependency graph, and release plan.
+- `reality-identity-program.md` records the planning-only RID implementation program and dependency update.
+- `universal-asset-ingestion-program.md` records the planning-only universal ingestion program and ARK prerequisite.
+- `wayfinder-infra-program.md` records the planning-only roadmap and backlog for the separate infrastructure repository.
+- `wayfinder-portfolio.md` records the repository portfolio, ownership, maturity, roadmaps, and backlogs.
+- `constitution-v1-release-audit.md` records the final Constitution v1 verification and tag recommendation.
 - `constitutional-census.md` records current folded-engine concepts,
   responsibilities, dependencies, consumers, duplication, ownership proposals,
   and confidence levels.

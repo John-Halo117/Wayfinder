@@ -89,4 +89,32 @@ Run this scorecard:
 | Contract purity | Pass | No contract code added |
 | Duplicate implementation reduced | Partial pass | Reusable identity mechanics now have canonical implementation; engine adapters remain deferred |
 | Proof coverage | Pass | Service tests and legacy smoke test recorded |
+## Constitution v1 Finalization
+
+| Area | Status | Evidence |
+| --- | --- | --- |
+| Language | Pass | Contract language normalized to common Producer template. |
+| Observation/Context cycle | Pass | Context no longer requires Observation for identity; Observation may reference Context. |
+| Asset ownership | Pass | Asset model ownership is separated from ARK production of durable asset knowledge. |
+| Capability grammar | Pass | `capabilities/` owns grammar; NOMAD owns availability discovery. |
+| Governance drift | Pass | Debt, census, ownership matrix, and promotion registry wording updated for Identity, Policy, Configuration, and Wave 2 services. |
+| Release readiness | Pass | `docs/constitution-v1-release-audit.md` records no Critical or Major issues. |
+## Implementation Program Scorecard
+
+| Metric | Status | Evidence |
+| --- | --- | --- |
+| Backlog visibility | Pass | `docs/implementation-backlog.md` defines stages, milestones, acceptance criteria, and definitions of done. |
+| Dependency order | Pass | Backlog records platform-to-engine implementation order. |
+| Current maturity | Pass | Backlog records Identity at Stage 2 and remaining foundational services at Stage 1. |
+| Next task clarity | Pass | Event Bus Minimal Implementation Proof is the recommended next milestone. |
+## M-002 Event Bus Implementation Scorecard
+
+| Metric | Status | Evidence |
+| --- | --- | --- |
+| One implementation promoted | Pass | Event Bus only |
+| Behavior preserved | Pass | No engine files changed; legacy event and subject smoke tests passed |
+| Service independence | Pass | Event Bus implementation imports standard library only |
+| Contract purity | Pass | No contract executable code added |
+| Duplicate implementation reduced | Partial pass | Reusable event envelope, route matching, publish/subscribe, and replay mechanics now have canonical implementation; engine adapters remain deferred |
+| Proof coverage | Pass | Service tests and legacy smoke tests recorded |
 

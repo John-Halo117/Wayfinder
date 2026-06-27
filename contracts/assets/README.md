@@ -2,13 +2,13 @@
 
 ## Purpose
 
-Defines the universal object crossing engine boundaries as an Asset in Context.
+Defines the universal object crossing engine boundaries as an Asset in Context. The constitutional Asset model is owned by `constitution/assets.md` and this contract; ARK produces durable asset knowledge without owning the universal Asset abstraction.
 
 ## Producer
 
 ARK
 
-Exactly one engine produces this contract across engine boundaries.
+Exactly one engine produces durable Asset knowledge across engine boundaries. Producer here means producer of promoted asset knowledge, not owner of the universal Asset model.
 
 ## Consumers
 
@@ -24,6 +24,8 @@ Asset reference, Asset in Context reference, lifecycle reference, ownership refe
 
 ## Invariants
 
+- The Asset model is constitutionally owned by `constitution/assets.md` and `contracts/assets/`.
+- ARK produces durable asset knowledge; it does not own the universal Asset abstraction.
 - An asset is not merely a representation.
 - Context changes interpretation without changing identity.
 - Asset identity is stable under the Law of Theseus when invariants remain continuous.

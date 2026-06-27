@@ -34,7 +34,9 @@ Every concept has exactly one canonical owner.
 | Policy Decision | Policy Contracts |
 | Permission | Permission Contracts |
 | Permission Scope | Permission Contracts |
-| Capability | Capability Contracts |
+| Capability | Capabilities |
+| Capability Grammar | Capabilities |
+| Capability Availability | Capability Contracts |
 | Capability Route Language | Capability Contracts |
 | Bearing | Bearing Contracts |
 | Route Target | Bearing Contracts |
@@ -72,14 +74,12 @@ Contracts own language only. They do not own implementation, runtime behavior,
 service adapters, engine algorithms, domain workflows, or external integration
 logic.
 
-Identity Contracts own identity language. Identity Service owns future identity
-implementation.
+Identity Contracts own identity language. Identity Service owns reusable identity implementation. Event Bus owns subject routing and event route semantics.
 
 Event Contracts own event language. Event Bus owns future event transport and
 routing implementation.
 
-Storage owns persistence abstraction and future storage implementation. Storage
-contracts remain language only.
+Storage Contracts own persistence language. Storage Service owns persistence abstraction and storage implementation boundaries.
 
 ARK owns reality-preservation behavior that consumes Observation, Evidence,
 Provenance, Promotion, Health, Event, Identity, Asset, Policy, Permission,
@@ -132,4 +132,14 @@ Capability, Health, View, Capsule, Event, Asset, and Schema language.
 | Identity Merge Decision Implementation | Identity Service |
 | Request Identity Generator | Identity Service |
 | Identity Health Signal | Identity Service |
+## M-002 Event Bus Implementation Ownership
+
+| Concept | Canonical Owner |
+| --- | --- |
+| EventEnvelope Implementation | Event Bus Service |
+| Route Pattern Matcher | Event Bus Service |
+| Publish Result Implementation | Event Bus Service |
+| Subscription Registry Implementation | Event Bus Service |
+| Replay Cursor Implementation | Event Bus Service |
+| Event Bus Health Signal | Event Bus Service |
 

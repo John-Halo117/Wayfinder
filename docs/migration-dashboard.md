@@ -44,6 +44,16 @@ It is evidence for planning. It does not move code.
 | Open architectural debts | 10 open, 2 resolved, 3 reduced by Wave 2 |
 | Linter implementation | Not implemented by design |
 
+## Platform Progress
+
+| Component | Stage | Status |
+| --- | :---: | --- |
+| Identity | 2 | ✅ |
+| Event Bus | 2 | ✅ |
+| Storage | 1 | 🔄 Next |
+| Configuration | 1 | ⏳ |
+| Policy | 1 | ⏳ |
+
 ## Wave 2 Platform Substrate Status
 
 | Service | Status | Concepts Promoted | Remaining Debt | Next Proof |
@@ -61,8 +71,42 @@ Wave 2 stopped after the five requested foundational services. Search, Discovery
 | Service | Implementation Status | Verification | Remaining Debt | Stop Point |
 | --- | --- | --- | --- | --- |
 | Identity | One reusable implementation promoted | 8 service tests passed; 26 legacy smoke tests passed | Engine consumers are not rewired; ARK subject routing belongs to Event Bus | Stop after Identity pending approval |
-| Event Bus | Not started | Not run | Legacy routing/transport implementation remains | Await approval |
+| Event Bus | One transport-neutral implementation promoted | 8 service tests passed; 45 legacy event/subject smoke tests passed | Engine consumers are not rewired; broker transport remains legacy/operations debt | Stop after Event Bus pending approval |
 | Storage | Not started | Not run | Legacy persistence implementation remains | Await approval |
 | Configuration | Not started | Not run | Legacy config loader implementation remains | Await approval |
 | Policy | Not started | Not run | Legacy policy evaluators remain | Await approval |
+## Implementation Backlog Status
+
+| Backlog | Status | Evidence |
+| --- | --- | --- |
+| M-001 Implementation Backlog Baseline | Complete | `docs/implementation-backlog.md` |
+| M-002 Event Bus Minimal Implementation Proof | Complete | `services/event-bus/docs/implementation-proof.md` |
+| M-003 Storage Minimal Implementation Proof | Recommended next | `contracts/storage/README.md`, `services/storage/README.md` |
+## Reality Identity Program Status
+
+| Component | Stage | Status | Next Milestone |
+| --- | :---: | --- | --- |
+| Identity Contracts | 1 | ✅ | Complete |
+| Identity Service | 2 | ✅ | Complete |
+| Reality ID (RID) | 2 | 🔄 Next | RID-M-003 RID Model |
+| Universal Asset Ingestion | 0 | ⏳ | After RID Model |
+| ARK RID Consumption | 1 | ⏳ | After Provenance Integration |
+
+RID dependency order: Identity Service -> Reality ID (RID) -> Universal Asset Ingestion -> Runtime Kernel -> ARK.
+## Universal Asset Ingestion Program Status
+
+| Component | Stage | Status | Next Milestone |
+| --- | :---: | --- | --- |
+| Pipeline Contracts | 0 | 🔄 Next after RID-M-003 | UAI-M-001 Pipeline Contracts |
+| Acquisition | 0 | ⏳ | UAI-M-002 |
+| Format Detection | 0 | ⏳ | UAI-M-003 |
+| Canonicalization | 0 | ⏳ | UAI-M-004 |
+| Semantic Normalization | 0 | ⏳ | UAI-M-005 |
+| Chunking | 0 | ⏳ | UAI-M-006 |
+| Identity Integration | 0 | ⏳ | UAI-M-007 |
+| Content Addressing | 0 | ⏳ | UAI-M-008 |
+| Knowledge Extraction | 0 | ⏳ | UAI-M-009 |
+| ARK Integration | 0 | ⏳ | UAI-M-010 |
+
+Universal ingestion dependency order: Identity -> Reality ID (RID) -> Universal Asset Ingestion -> Runtime Kernel -> ARK -> WEAVE -> Interpretation -> Reasoning -> Views -> Jarvis.
 

@@ -1,80 +1,53 @@
-# Identity Contracts
+# Identity Contract
 
 ## Purpose
 
-RID is constitutionally defined in [constitution/assets.md](../../constitution/assets.md).
+Defines shared language for stable identity: RIDs, aliases, namespaces, lifecycle, lookup, canonical identity, and merge semantics.
 
-Identity Contracts define shared language for canonical identity, RIDs, aliases, namespaces, lookup, lifecycle, and merge semantics.
+## Producer
 
-The contract defines vocabulary only. It contains no implementation, executable
-logic, imports, runtime behavior, or engine ownership.
+Identity Service
 
-## Canonical Owner
-
-Canonical owner: `contracts/identities/`
-
-## Responsibilities
-
-- RID
-- Canonical identity
-- Alias
-- Namespace
-- Identity lifecycle
-- Lookup result
-- Merge result
-
-## Scope
-
-This contract names shared language that may be consumed by services, engines,
-domains, internal applications, external integrations, operations, and tooling.
-
-## Public Language
-
-- `rid`
-- `namespace`
-- `local_id`
-- `canonical_rid`
-- `alias`
-- `lifecycle_state`
-- `merge_status`
-- `confidence`
-- `metadata_ref`
-
-## Relationships
-
-- Used by Observations, Events, Storage, Provenance, Assets, Permissions, Policies, and engines.
-- Implemented later by the Identity Service.
+Exactly one service produces identity boundary language. Engines consume identity references; they do not redefine identity vocabulary.
 
 ## Consumers
 
-- Identity Service
-- ARK observations
-- Event Bus subjects
-- Storage ownership metadata
-- Jarvis navigation
-- Foundry operator/session references
+ARK, Event Bus, Storage, Jarvis, Foundry, Capsules, MICE, Domains, Internal applications, Operations
+
+## Inputs
+
+Identity claim, RID reference, alias, namespace, lifecycle signal, evidence reference, provenance reference, policy reference, merge candidate, context.
+
+## Outputs
+
+RID, canonical identity reference, alias reference, namespace reference, lookup result, lifecycle reference, merge decision reference.
+
+## Invariants
+
+- RID identifies an asset or constitutional referent, not a representation.
+- Aliases never replace canonical identity.
+- Merge and split decisions preserve provenance and uncertainty.
+- Identity implementation belongs to Identity Service, while asset meaning remains constitutional.
+
+## Failure Modes
+
+Unknown identity, namespace conflict, alias collision, ambiguous merge, stale lifecycle state, or insufficient evidence remain explicit uncertainty.
+
+## Promotion Rules
+
+Identity claims become durable only when sufficient evidence and provenance support promotion. Temporary lookup results and candidate merges remain ephemeral until proven.
+
+## Constitutional Basis
+
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
 ## Non-Goals
 
-- Authentication implementation
-- Authorization policy
-- Domain profiles
-- Provider-specific identity adapters
-
-## Future Implementation Owners
-
-Identity Service owns implementation.
-
-## Failure Model
-
-Contract validation failures use the standard Wayfinder failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_IDENTITY_CONTRACT",
-  "reason": "The identity contract input is invalid.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.
