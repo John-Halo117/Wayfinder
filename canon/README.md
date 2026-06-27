@@ -17,3 +17,7 @@ Use [glossary.md](glossary.md) before adding or migrating concepts. If a term al
 - Service or engine behavior.
 - Domain-specific definitions that belong in domains.
 - Contract schemas that already belong under `contracts/`.
+
+## Core Semantic Anchors
+
+- [Asset in Context](../constitution/assets.md) is the universal object model every engine can operate on.

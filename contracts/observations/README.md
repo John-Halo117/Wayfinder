@@ -1,142 +1,53 @@
-# Observation Contracts
+# Observation Contract
 
-Observation contracts define shared language for recording what was observed
-before interpretation.
+## Purpose
 
-They contain no implementation.
+Defines what crosses the boundary when reality is observed before interpretation.
 
-## Ownership
+## Producer
 
-Canonical owner: `contracts/observations/`
+ARK
 
-Owned concepts:
+Exactly one engine produces this contract across engine boundaries.
 
-- Observation
-- Observation source
-- Observation subject reference
-- Observation time
-- Observed payload reference
-- Observation metadata
-- Observation integrity reference
-- Observation status
+## Consumers
 
-## Constitutional Rule
+Evidence, Interpretation, Reasoning, Views, Jarvis, Capsules, MIDAS, Domains, Internal applications
 
-Observation precedes interpretation.
+## Inputs
 
-An observation records that something was seen, received, measured, fetched, or
-reported. It does not decide what the observation means.
+Reality, Observation Source, Asset or RID, Context, time, location, actor, capability, constraints.
 
-## Contract Surfaces
+## Outputs
 
-### Observation
+Observation, source reference, subject reference, payload reference, integrity reference, observation metadata.
 
-An observation is a bounded record of source-facing reality.
+## Invariants
 
-Required language:
+- Observation precedes interpretation.
+- Observation does not decide meaning.
+- Observation is append-only once promoted.
+- Observation references representations without becoming a representation.
 
-- `observation_id`
-- `source_ref`
-- `subject_ref`
-- `observed_at`
-- `received_at`
-- `payload_ref`
-- `schema_ref`
-- `integrity_ref`
-- `metadata`
-- `status`
+## Failure Modes
 
-### Observation Source
+Missing source, uncertain subject, incomplete context, conflicting observation, untrusted source, or insufficient provenance are represented as uncertainty and evidence gaps.
 
-An observation source identifies where an observation came from without binding
-Wayfinder to a specific integration implementation.
+## Promotion Rules
 
-Required language:
+Observation remains ephemeral until ARK preserves it with sufficient source, integrity, and provenance. Promoted observations become durable reality references.
 
-- `source_id`
-- `source_type`
-- `source_uri`
-- `source_owner_ref`
-- `trust_ref`
+## Constitutional Basis
 
-### Payload Reference
+- [Asset Model](../../constitution/assets.md)
+- [Execution Semantics](../../constitution/execution.md)
+- [Repository Responsibilities](../../constitution/repository.md)
+- [Engine Boundaries](../../engines/README.md)
 
-A payload reference points to observed data without requiring the observation
-contract to own storage.
+## Non-Goals
 
-Required language:
-
-- `payload_uri`
-- `content_type`
-- `content_length`
-- `content_hash`
-- `storage_ref`
-
-### Integrity Reference
-
-An integrity reference names how the observation can be checked.
-
-Required language:
-
-- `hash_algorithm`
-- `hash_value`
-- `signature_ref`
-- `verification_status`
-
-### Observation Status
-
-Observation status is about intake validity, not truth.
-
-Allowed language:
-
-- `received`
-- `accepted`
-- `rejected`
-- `quarantined`
-
-## Dependencies
-
-Observation contracts may reference:
-
-- `contracts/identities/`
-- `contracts/events/`
-- `contracts/storage/`
-- `contracts/schemas/`
-
-Observation contracts must not depend on:
-
-- `engines/`
-- `services/`
-- `domains/`
-- `internal/`
-- `external/`
-- `operations/`
-
-## Invalid Ownership
-
-Observation contracts do not own:
-
-- Evidence weighting
-- Interpretation
-- Claims
-- Promotion criteria
-- Reality graph algorithms
-- Storage implementation
-- Event transport
-- External integration adapters
-
-Those concepts must be owned by their canonical contracts, services, or engines.
-
-## Failure Model
-
-Observation contract validation failures use the standard failure shape:
-
-```json
-{
-  "status": "error",
-  "error_code": "INVALID_OBSERVATION_CONTRACT",
-  "reason": "Observation contract input is missing a required language field.",
-  "context": {},
-  "recoverable": true
-}
-```
+- Runtime behavior.
+- Implementation APIs.
+- Storage formats.
+- Domain-specific schemas.
+- Engine internals.

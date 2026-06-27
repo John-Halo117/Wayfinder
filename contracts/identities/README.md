@@ -2,6 +2,8 @@
 
 ## Purpose
 
+RID is constitutionally defined in [constitution/assets.md](../../constitution/assets.md).
+
 Identity Contracts define shared language for canonical identity, RIDs, aliases, namespaces, lookup, lifecycle, and merge semantics.
 
 The contract defines vocabulary only. It contains no implementation, executable
