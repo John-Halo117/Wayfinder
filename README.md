@@ -23,6 +23,7 @@ Architectural integrity takes precedence over short-term convenience.
 
 ```text
 wayfinder/
+  canon/
   constitution/
   contracts/
   capabilities/
@@ -43,6 +44,7 @@ home, and all other locations reference that home.
 ## Getting Oriented
 
 - Start with [WAYFINDER.md](WAYFINDER.md) for the constitutional foundation.
+- Use [canon/glossary.md](canon/glossary.md) for canonical terms, aliases, deprecated names, and ownership boundaries.
 - Use [docs/repository-folding.md](docs/repository-folding.md) when moving an
   existing repository into the monorepo.
 - Use [docs/classification.md](docs/classification.md) before adding any new

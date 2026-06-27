@@ -20,6 +20,16 @@ Ask, in order:
 
 Only after classification should implementation begin.
 
+## Canonical Language Check
+
+Before classifying a new concept, check [canon/glossary.md](../canon/glossary.md).
+
+- If the concept already has a canonical term, use that term.
+- If the term is an alias, reference the canonical replacement.
+- If the term is deprecated, do not create a new owner for it.
+- If ownership is ambiguous, record the ambiguity in governance evidence before implementation.
+- Do not point an alias at another alias.
+
 ## Placement Rules
 
 - Constitutional principle: `constitution/`
