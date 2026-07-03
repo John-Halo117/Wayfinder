@@ -50,7 +50,7 @@ RID is the universal continuity anchor for Wayfinder. The Constitution defines R
 | --- | :---: | --- |
 | Identity Contracts | 1 | ✅ |
 | Identity Service | 2 | ✅ |
-| RID Model | 2 | 🔄 Next |
+| RID Model | 3 | ✅ |
 | Domain Identifiers | 1 | ⏳ |
 | Identity Encoding | 1 | ⏳ |
 | Identity Resolution | 2 | ⏳ |
@@ -77,7 +77,7 @@ RID becomes a prerequisite for full ARK implementation. ARK may continue to pres
 | --- | :---: | --- | --- |
 | RID-M-001 Identity Contracts | 1 | ✅ Complete | Constitution v1 |
 | RID-M-002 Identity Service | 2 | ✅ Complete | RID-M-001 |
-| RID-M-003 RID Model | 3 | 🔄 Next | RID-M-002 |
+| RID-M-003 RID Model | 3 | ✅ Complete | RID-M-002 |
 | RID-M-004 Domain Identifiers | 3 | ⏳ | RID-M-003 |
 | RID-M-005 Identity Encoding | 3 | ⏳ | RID-M-004 |
 | RID-M-006 Identity Resolution | 3 | ⏳ | RID-M-005 |
@@ -136,7 +136,11 @@ Evidence:
 
 ### RID-M-003 RID Model
 
-Status: Next.
+Status: Complete.
+
+Evidence:
+
+- `docs/reality-identity-model.md`
 
 Tasks:
 
@@ -269,9 +273,9 @@ Acceptance Criteria:
 
 ## Recommended Next Milestone
 
-RID-M-003 RID Model.
+UAI-M-001 Pipeline Contracts.
 
-Reason: Identity contracts and the minimal Identity Service proof already exist. The next gap is the explicit RID model and identifier-family plan needed before Universal Asset Ingestion and full ARK implementation.
+Reason: RID-M-003 is complete enough to unblock universal ingestion planning. RID-M-004 Domain Identifiers remains the next deeper RID-specific milestone.
 
 ## Validation
 
@@ -279,6 +283,7 @@ Reason: Identity contracts and the minimal Identity Service proof already exist.
 | --- | --- |
 | Dependency graph remains acyclic | Pass |
 | RID precedes full ARK implementation | Pass |
+| RID-M-003 model documented | Pass |
 | Identity ownership remains singular | Pass |
 | ARK remains RID consumer, not owner | Pass |
 | No implementation files changed by this planning task | Pass |

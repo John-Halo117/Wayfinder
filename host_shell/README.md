@@ -1,32 +1,15 @@
-# Host Shell
+# Host Shell Compatibility
 
-Host Shell owns interaction runtime routing. It decides which local workspace provider receives an explicit interaction request, then returns the provider response to the caller.
+`host_shell/` is retained as a compatibility shim for the generalized
+`execution_runtime/` architecture.
 
-Host Shell does not own truth. It does not write ARK observations, mutate canonical memory, manage inventory, decide bearings, or define constitutional logic. Provider output returns a `ProvenanceRecord` with `canonical=False` and remains non-canonical unless another owner validates and promotes it through the proper evidence path.
+Use `execution_runtime/` for new code:
 
-Host Shell responses are not candidate observations or candidate artifacts. Promotion must go through `artifact_promotion.CandidateArtifact` and a later explicit promotion decision. This package performs no ARK writes.
+- `HostShellProvider` → `ExecutionRuntimeProvider`
+- `HostShellRequest` → `ExecutionRuntimeRequest`
+- `HostShellResponse` → `ExecutionRuntimeResponse`
+- `HOST_SHELL` → `EXECUTION_RUNTIME`
 
-## Adapter vs Provider
-
-`external/odysseus` is the low-level reversible adapter. It knows how to call an Odysseus server safely.
-
-`host_shell/providers/odysseus.py` is the Host Shell provider. It maps `HostShellRequest` to `OdysseusPromptRequest`, delegates to the adapter, preserves the reusable `ProvenanceRecord`, and keeps `canonical=False`.
-
-This distinction keeps Odysseus replaceable. Odysseus is the first Host Shell provider, not a permanent Wayfinder dependency.
-
-## Configuration
-
-```bash
-HOST_SHELL=none
-```
-
-disables Host Shell network use.
-
-```bash
-HOST_SHELL=odysseus
-ODYSSEUS_ENABLED=true
-ODYSSEUS_BASE_URL=http://127.0.0.1:7000
-ODYSSEUS_TIMEOUT_SECONDS=5
-```
-
-selects Odysseus as the provider. No network call happens during provider construction. Network calls only occur when `health()` or `send()` is invoked, and those calls are delegated through the Odysseus adapter.
+The authority boundary is unchanged: runtime output is noncanonical, does not
+write ARK, does not create observations, and cannot bypass artifact promotion or
+ARK admission membranes.

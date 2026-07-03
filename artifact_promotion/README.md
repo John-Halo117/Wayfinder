@@ -2,7 +2,9 @@
 
 Artifact promotion is a membrane between runtime output and durable truth.
 
-`create_candidate_from_host_response(...)` can convert a noncanonical Host Shell response into a `CandidateArtifact` for review. It requires provenance and rejects canonical provenance because Host Shell output is workspace/runtime material, not ARK evidence.
+`create_candidate_from_runtime_response(...)` can convert a noncanonical Execution Runtime response into a `CandidateArtifact` for review. It requires provenance and rejects canonical provenance because runtime output is workspace material, not ARK evidence.
+
+`create_candidate_from_host_response(...)` remains as a compatibility wrapper.
 
 `review_candidate(...)` records a review decision: `accepted`, `rejected`, or `needs_review`.
 

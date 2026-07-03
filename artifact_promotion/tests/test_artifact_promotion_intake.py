@@ -2,8 +2,8 @@ from dataclasses import replace
 
 import pytest
 
-from artifact_promotion import CandidateArtifact, create_candidate_from_host_response, review_candidate
-from host_shell.interfaces import HostShellResponse
+from artifact_promotion import CandidateArtifact, create_candidate_from_runtime_response, review_candidate
+from execution_runtime.interfaces import ExecutionRuntimeResponse
 from provenance import noncanonical_external_output
 from provenance.interfaces import ProvenanceRecord
 
@@ -25,8 +25,8 @@ def _provenance(canonical: bool = False) -> ProvenanceRecord:
 _DEFAULT_PROVENANCE = object()
 
 
-def _host_response(provenance: ProvenanceRecord | None | object = _DEFAULT_PROVENANCE) -> HostShellResponse:
-    return HostShellResponse(
+def _runtime_response(provenance: ProvenanceRecord | None | object = _DEFAULT_PROVENANCE) -> ExecutionRuntimeResponse:
+    return ExecutionRuntimeResponse(
         status="ok",
         provider="odysseus",
         content="workspace output",
@@ -35,8 +35,8 @@ def _host_response(provenance: ProvenanceRecord | None | object = _DEFAULT_PROVE
     )
 
 
-def test_noncanonical_host_shell_response_can_become_candidate_artifact():
-    candidate = create_candidate_from_host_response(_host_response(), "workspace_note", summary="review this")
+def test_noncanonical_execution_runtime_response_can_become_candidate_artifact():
+    candidate = create_candidate_from_runtime_response(_runtime_response(), "workspace_note", summary="review this")
 
     assert isinstance(candidate, CandidateArtifact)
     assert candidate.status == "candidate"
@@ -47,17 +47,17 @@ def test_noncanonical_host_shell_response_can_become_candidate_artifact():
 
 
 def test_canonical_response_is_rejected_by_intake():
-    response = _host_response(_provenance(canonical=True))
+    response = _runtime_response(_provenance(canonical=True))
 
     with pytest.raises(ValueError, match="canonical provenance"):
-        create_candidate_from_host_response(response, "workspace_note")
+        create_candidate_from_runtime_response(response, "workspace_note")
 
 
 def test_missing_provenance_is_rejected_by_intake():
-    response = _host_response(provenance=None)
+    response = _runtime_response(provenance=None)
 
     with pytest.raises(ValueError, match="provenance is required"):
-        create_candidate_from_host_response(response, "workspace_note")
+        create_candidate_from_runtime_response(response, "workspace_note")
 
 
 def test_accepted_decision_still_does_not_write_to_ark(monkeypatch):
@@ -65,7 +65,7 @@ def test_accepted_decision_still_does_not_write_to_ark(monkeypatch):
         raise AssertionError("artifact review must not write to ARK")
 
     monkeypatch.setattr("builtins.open", fail_if_called)
-    candidate = create_candidate_from_host_response(_host_response(), "workspace_note")
+    candidate = create_candidate_from_runtime_response(_runtime_response(), "workspace_note")
 
     decision = review_candidate(candidate, "accepted", reviewer="tester", reason="looks useful")
 
@@ -76,7 +76,7 @@ def test_accepted_decision_still_does_not_write_to_ark(monkeypatch):
 
 
 def test_rejected_decision_preserves_provenance():
-    candidate = create_candidate_from_host_response(_host_response(), "workspace_note")
+    candidate = create_candidate_from_runtime_response(_runtime_response(), "workspace_note")
 
     decision = review_candidate(candidate, "rejected", reviewer="tester", reason="not relevant")
 

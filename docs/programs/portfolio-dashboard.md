@@ -2,7 +2,7 @@
 
 Date: 2026-06-27
 
-This dashboard answers: where is the project right now?
+This dashboard answers: where is the project right now? The canonical control table is `docs/programs/program-registry.md`.
 
 
 ## Planning Stack
@@ -15,16 +15,17 @@ Each program reports purpose, dependencies, maturity, milestones, current status
 
 ## At A Glance
 
-| Program | Maturity | Progress | Blockers | Next Milestone |
-| --- | --- | --- | --- | --- |
-| Platform Substrate | Stage 2 partial | Identity and Event Bus complete; Storage/Configuration/Policy pending | RID/UAI planning now precedes ARK, but service proofs remain valid | Storage Minimal Implementation Proof after planning gates |
-| Reality Identity (RID) | Stage 2 planning foundation | Identity contracts and service proof complete | RID model not yet specified | RID-M-003 RID Model |
-| Universal Asset Ingestion | Stage 0 program | Program, capabilities, roadmap, and backlog documented | Waiting on RID model | UAI-M-001 Pipeline Contracts |
-| Runtime Kernel | Stage 0 implied | Named in dependency order only | Waiting on UAI and platform service maturity | Runtime Kernel Program |
-| ARK Implementation | Stage 1 folded/contracts | Folded, inventoried, contract consumers known | Waiting on RID, UAI, runtime kernel, and platform services | ARK integration planning |
-| Engine Chain | Stage 0-1 mixed | Engine boundaries exist | Waiting on ARK foundation | WEAVE boundary refinement |
-| Infrastructure Repository | Stage 0 program | Program documented | Repository not scaffolded | Infra M-001 Repository Scaffold |
-| Repository Portfolio | Stage 0 program | Portfolio doc exists | Planned repos not scaffolded | `wayfinder-infra` scaffold |
+| Program | Current Stage | Completion % | Blockers | Current Milestone | Next Milestone | Verification State |
+| --- | --- | ---: | --- | --- | --- | --- |
+| Platform Substrate | Stage 2 partial | 40% | Storage/Configuration/Policy pending; planning gates before ARK | Storage Minimal Implementation Proof | Configuration Minimal Implementation Proof | Partial: Identity/Event Bus verified |
+| Reality Identity (RID) | Stage 3 model | 35% | Domain identifier details remain | RID-M-004 Domain Identifiers | RID-M-005 Identity Encoding | Partial: RID-M-003 verified as planning |
+| Universal Asset Ingestion | Stage 1 contracts | 20% | Acquisition boundary not planned | UAI-M-002 Acquisition | UAI-M-003 Format Detection | Pipeline contracts verified |
+| Runtime Kernel | Stage 0 implied | 0% | Waiting on UAI and platform service maturity | Program definition | Runtime Kernel milestones | Not started |
+| ARK Implementation | Stage 1 folded/contracts | 15% | Waiting on RID, UAI, Runtime Kernel, and platform services | ARK consumer planning | ARK integration plan | Fold/inventory verified; implementation pending |
+| Engine Chain | Stage 0-1 mixed | 5% | Waiting on ARK foundation | WEAVE boundary refinement | Interpretation planning | Engine stubs verified; program pending |
+| Digital Groundskeeper | Stage 1 contracts | 40% | Approval boundary not specified | DG-M-005 Approval Boundary | DG-M-006 Quarantine and Archive Plan | Observation, inventory, and recommendation contracts verified |
+| Infrastructure Repository | Stage 0 program | 10% | Repository not scaffolded | Infra M-001 Repository Scaffold | Shared Infrastructure | Planning verified |
+| Repository Portfolio | Stage 0 program | 10% | Planned repos not scaffolded | Portfolio repository programs | First domain repository program | Planning verified |
 
 ## Platform Service Progress
 
@@ -40,10 +41,11 @@ Each program reports purpose, dependencies, maturity, milestones, current status
 
 | Component | Stage | Status |
 | --- | :---: | --- |
-| RID Model | 2 | 🔄 Next |
-| Universal Asset Ingestion | 0 | ⏳ |
+| RID Model | 3 | ✅ |
+| Universal Asset Ingestion | 1 | ✅ |
 | Runtime Kernel | 0 | ⏳ |
 | ARK Integration | 1 | ⏳ |
+| Digital Groundskeeper | 1 | ✅ |
 | WEAVE | 0 | ⏳ |
 | Interpretation | 0 | ⏳ |
 | Reasoning | 0 | ⏳ |
@@ -52,7 +54,7 @@ Each program reports purpose, dependencies, maturity, milestones, current status
 
 ## Current Decision
 
-The next architecture-planning milestone is `RID-M-003 RID Model`.
+The next architecture-planning milestone is `UAI-M-002 Acquisition`.
 
 The next platform-service implementation milestone remains Storage, but it should follow the RID/UAI planning gates now recorded in the roadmap.
 
@@ -60,16 +62,17 @@ The next platform-service implementation milestone remains Storage, but it shoul
 
 | Blocker | Blocks | Resolution |
 | --- | --- | --- |
-| RID model not specified | UAI pipeline contracts, full ARK implementation | Complete RID-M-003 |
-| UAI pipeline contracts not specified | Runtime Kernel and ARK ingestion | Complete UAI-M-001 after RID-M-003 |
+| Acquisition boundary not planned | Runtime Kernel and ARK ingestion | Complete UAI-M-002 |
 | Storage implementation proof not complete | Configuration, Policy, durable platform substrate | Complete Storage Minimal Implementation Proof |
 | Runtime Kernel not defined | ARK implementation sequence | Create Runtime Kernel program after UAI planning |
+| Digital Groundskeeper approval boundary not specified | Observe-first digital maintenance | Complete DG-M-005 |
 | `wayfinder-infra` not scaffolded | Deployment implementation | Create infrastructure repository scaffold |
 
 ## Next Three Moves
 
 | Order | Milestone | Type | Why |
 | ---: | --- | --- | --- |
-| 1 | RID-M-003 RID Model | Planning | Stabilizes the continuity anchor before ingestion and ARK. |
-| 2 | UAI-M-001 Pipeline Contracts | Planning | Establishes universal ingestion before media adapters or ARK ingestion. |
-| 3 | Storage Minimal Implementation Proof | Implementation | Completes the next platform substrate service after planning gates. |
+| 1 | UAI-M-002 Acquisition | Planning | Applies the canonical pipeline contracts to the first ingestion stage without media adapter implementation. |
+| 2 | Storage Minimal Implementation Proof | Implementation | Completes the next platform substrate service after planning gates. |
+| 3 | RID-M-004 Domain Identifiers | Planning | Deepens identifier-family detail after the RID model. |
+| 4 | DG-M-005 Approval Boundary | Planning | Defines explicit approval requirements before quarantine, archive, or execution planning. |

@@ -11,10 +11,10 @@ Engine-specific tests live inside each engine.
 noncanonical workspace pipeline:
 
 ```text
-JarvisHostShellBridge
-→ HostShellRegistry
-→ OdysseusHostShellProvider (mocked)
-→ HostShellResponse
+JarvisExecutionBridge
+→ ExecutionRuntimeRegistry
+→ OdysseusExecutionRuntime (mocked)
+→ ExecutionRuntimeResponse
 → CandidateArtifact
 → PromotionDecision
 → AdmissionCandidate

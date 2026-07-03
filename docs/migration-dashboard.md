@@ -88,8 +88,8 @@ Wave 2 stopped after the five requested foundational services. Search, Discovery
 | --- | :---: | --- | --- |
 | Identity Contracts | 1 | ✅ | Complete |
 | Identity Service | 2 | ✅ | Complete |
-| Reality ID (RID) | 2 | 🔄 Next | RID-M-003 RID Model |
-| Universal Asset Ingestion | 0 | ⏳ | After RID Model |
+| Reality ID (RID) | 3 | ✅ | RID-M-004 Domain Identifiers |
+| Universal Asset Ingestion | 1 | ✅ | UAI-M-002 Acquisition |
 | ARK RID Consumption | 1 | ⏳ | After Provenance Integration |
 
 RID dependency order: Identity Service -> Reality ID (RID) -> Universal Asset Ingestion -> Runtime Kernel -> ARK.
@@ -97,8 +97,8 @@ RID dependency order: Identity Service -> Reality ID (RID) -> Universal Asset In
 
 | Component | Stage | Status | Next Milestone |
 | --- | :---: | --- | --- |
-| Pipeline Contracts | 0 | 🔄 Next after RID-M-003 | UAI-M-001 Pipeline Contracts |
-| Acquisition | 0 | ⏳ | UAI-M-002 |
+| Pipeline Contracts | 1 | ✅ | Complete |
+| Acquisition | 0 | 🔄 Next | UAI-M-002 |
 | Format Detection | 0 | ⏳ | UAI-M-003 |
 | Canonicalization | 0 | ⏳ | UAI-M-004 |
 | Semantic Normalization | 0 | ⏳ | UAI-M-005 |

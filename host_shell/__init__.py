@@ -1,7 +1,23 @@
-"""Host Shell interaction runtime provider boundary."""
+"""Compatibility aliases for the renamed Execution Runtime boundary."""
 
-from .interfaces import HostShellHealth, HostShellProvider, HostShellRequest, HostShellResponse
-from .registry import build_host_shell_provider
+from execution_runtime import (
+    ExecutionRuntimeHealth,
+    ExecutionRuntimeProvider,
+    ExecutionRuntimeRequest,
+    ExecutionRuntimeResponse,
+    build_execution_runtime_provider,
+)
+
+HostShellHealth = ExecutionRuntimeHealth
+HostShellProvider = ExecutionRuntimeProvider
+HostShellRequest = ExecutionRuntimeRequest
+HostShellResponse = ExecutionRuntimeResponse
+
+
+def build_host_shell_provider(values=None):
+    """Compatibility wrapper for build_execution_runtime_provider."""
+
+    return build_execution_runtime_provider(values)
 
 __all__ = (
     "HostShellHealth",

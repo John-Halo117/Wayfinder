@@ -1,4 +1,4 @@
-"""Host Shell provider implementations."""
+"""Compatibility provider aliases for Execution Runtime implementations."""
 
 from .odysseus import OdysseusHostShellProvider
 

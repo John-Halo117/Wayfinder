@@ -25,10 +25,14 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 | [Specification](specifications/README.md) | Build Bible | Specification |
 | [Proof](proofs/README.md) | ARK | Proof |
 | [Promotion](promotion/README.md) | ARK | Promotion record |
+| [Universal Asset Ingestion Pipeline](ingestion/README.md) | Universal Asset Ingestion | Ingestion stage artifacts |
+| [Digital Groundskeeper Observation Report](digital-groundskeeper-observation-reports/README.md) | Digital Groundskeeper | Observation report |
+| [Digital Groundskeeper Inventory](digital-groundskeeper-inventories/README.md) | Digital Groundskeeper | Digital asset inventory |
+| [Digital Groundskeeper Recommendation](digital-groundskeeper-recommendations/README.md) | Digital Groundskeeper | Digital maintenance recommendation |
 
 ## Supporting Contracts
 
-Existing supporting contracts remain canonical for shared language: identities, events, policies, permissions, health, schemas, storage, provenance, and views.
+Existing supporting contracts remain canonical for shared language: identities, events, policies, permissions, health, schemas, storage, provenance, views, ingestion stage artifacts, and observe-only digital maintenance reports, digital asset inventories, and approval-gated maintenance recommendations.
 
 ## Governance Reports
 

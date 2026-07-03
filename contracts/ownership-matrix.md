@@ -30,6 +30,21 @@ always mean ownership of the universal constitutional model.
 | Proof Contract | ARK | Promotion, Build Bible, Foundry, Reasoning, MICE, Capsules, Domains | Proof |
 | Promotion Contract | ARK | All engines, Services, Domains, Internal applications, Operations | Promotion record |
 | View Contract | Views | Jarvis, Foundry, Domains, Internal applications, Operators, Capsules, MICE | View reference |
+| Universal Asset Ingestion Pipeline Contract | Universal Asset Ingestion | Media adapters, Identity Service, Storage Service, ARK, WEAVE, Interpretation, Reasoning, Views, Jarvis, Domains | Ingestion stage artifact |
+| Acquisition Contract | Universal Asset Ingestion | Format Detection, Ingestion Provenance, ARK, Storage Service, Media adapters | Acquisition candidate |
+| Format Detection Contract | Universal Asset Ingestion | Canonicalization, Ingestion Provenance, Media adapters, ARK | Format detection result |
+| Canonicalization Contract | Universal Asset Ingestion | Semantic Normalization, Chunking, Ingestion Provenance, ARK, Views | Canonical representation candidate |
+| Semantic Normalization Contract | Universal Asset Ingestion | Chunking, Identity Assignment, Knowledge Extraction, ARK, Interpretation | Normalized contract-language artifact |
+| Chunking Contract | Universal Asset Ingestion | Identity Assignment, Deduplication, Compression, Content Addressing, Knowledge Extraction, ARK | Bounded chunk set |
+| Identity Assignment Contract | Universal Asset Ingestion | Deduplication, Content Addressing, Knowledge Extraction, ARK, WEAVE, Domains | RID assignment proposal or reference |
+| Deduplication Contract | Universal Asset Ingestion | Compression, Content Addressing, Knowledge Extraction, ARK, Storage Service | Duplicate candidate assessment |
+| Compression Contract | Universal Asset Ingestion | Content Addressing, Knowledge Extraction, ARK, Storage Service, Views | Compressed derived representation |
+| Content Addressing Contract | Universal Asset Ingestion | Knowledge Extraction, ARK, Storage Service, Evidence, Provenance | Content address reference |
+| Ingestion Provenance Contract | Universal Asset Ingestion | All ingestion stages, ARK, Evidence, Proof, Promotion, Audit | Ingestion provenance envelope |
+| Knowledge Extraction Contract | Universal Asset Ingestion | ARK, WEAVE, Interpretation, Reasoning, Views, Jarvis, Domains | Evidence-backed knowledge candidate |
+| Digital Groundskeeper Observation Report Contract | Digital Groundskeeper | Operators, Operations, ARK observation ingestion, Storage maintenance planning, Policy review, Universal Asset Ingestion, Domains, Internal applications | Observation report |
+| Digital Groundskeeper Inventory Contract | Digital Groundskeeper | Digital Groundskeeper Observation Reports, Operators, Operations, ARK observation ingestion, Storage maintenance planning, Policy review, Universal Asset Ingestion, Domains, Internal applications | Digital asset inventory |
+| Digital Groundskeeper Recommendation Contract | Digital Groundskeeper | Operators, Approval Boundary, Operations workflows, Policy review, ARK observation ingestion, Storage maintenance planning, Domains, Internal applications | Digital maintenance recommendation |
 
 ## Ownership Clarifications
 
@@ -37,3 +52,5 @@ always mean ownership of the universal constitutional model.
 - Capability grammar is owned by `capabilities/`; NOMAD produces discovered capability availability.
 - Context can frame Observation, but Context does not require Observation for identity.
 - Identity Service owns reusable identity implementation; Event Bus owns subject/routing semantics.
+- Universal Asset Ingestion owns pipeline stage language only; Identity Service owns identity generation, Storage owns persistence, and ARK owns reality preservation.
+- Digital Groundskeeper owns observe-only digital maintenance report, inventory, and maintenance recommendation language only; it does not own policy, storage, identity, ARK reality preservation, Jarvis route recommendations, MICE commitments, or execution approval.

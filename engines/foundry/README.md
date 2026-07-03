@@ -22,11 +22,19 @@ canonical owner is Foundry.
 
 ## Current Fold State
 
-Forge-labeled ARK source has been preserved under `legacy/`.
+Forge-labeled ARK source has been preserved under `legacy/`, including app
+launchers, runtime modules, planner ingress, verification tests, and Linux app
+packaging evidence.
 
 The legacy executable and module names are intentionally preserved for
 compatibility. Renaming runtime entrypoints requires a separate proof-backed
 compatibility phase.
+
+Detailed maps:
+
+- `docs/ark-forge-normalization.md`
+- `docs/forge-classification-ownership.md`
+- `docs/forge-compatibility.md`
 
 ## Lifecycle
 

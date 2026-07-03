@@ -88,14 +88,14 @@ RID program status:
 | --- | :---: | --- |
 | Identity Contracts | 1 | ✅ |
 | Identity Service | 2 | ✅ |
-| RID Model | 2 | 🔄 Next |
+| RID Model | 3 | ✅ |
 | Domain Identifiers | 1 | ⏳ |
 | Identity Encoding | 1 | ⏳ |
 | Identity Resolution | 2 | ⏳ |
 | Provenance Integration | 1 | ⏳ |
 | ARK Integration | 1 | ⏳ |
 
-Recommended RID milestone: RID-M-003 RID Model.
+Recommended RID-specific milestone: RID-M-004 Domain Identifiers.
 ## Universal Asset Ingestion Program
 
 Universal Asset Ingestion is tracked as a first-class implementation program in `docs/universal-asset-ingestion-program.md`. It is the reusable ingestion foundation for every asset type and becomes the canonical ingestion model for ARK. Media-specific pipelines are deprecated as architectural owners; media adapters remain valid implementation boundaries.
@@ -119,8 +119,8 @@ Universal ingestion status:
 
 | Component | Stage | Status |
 | --- | :---: | --- |
-| Pipeline Contracts | 0 | 🔄 Next |
-| Acquisition | 0 | ⏳ |
+| Pipeline Contracts | 1 | ✅ |
+| Acquisition | 0 | 🔄 Next |
 | Format Detection | 0 | ⏳ |
 | Canonicalization | 0 | ⏳ |
 | Semantic Normalization | 0 | ⏳ |
@@ -130,7 +130,46 @@ Universal ingestion status:
 | Knowledge Extraction | 0 | ⏳ |
 | ARK Integration | 0 | ⏳ |
 
-Recommended universal ingestion milestone: UAI-M-001 Pipeline Contracts after RID-M-003 RID Model.
+Recommended universal ingestion milestone: UAI-M-002 Acquisition.
+
+## Digital Groundskeeper Program
+
+Digital Groundskeeper is a planned execution-agent program for digital system care. It observes digital reality, inventories assets, assesses capability and continuity impact, recommends reversible actions, waits for approval, executes approved work, verifies results, and reports updated reality.
+
+It does not define policy. It does not replace ARK, Storage, Identity, Event Bus, Configuration, or Policy. Its default behavior is observe-only reporting.
+
+Digital Groundskeeper execution grammar:
+
+```text
+Reality
+  -> Observation
+  -> Inventory
+  -> Interpretation
+  -> Assessment
+  -> Recommendations
+  -> Execution Plan
+  -> Approval
+  -> Execution
+  -> Verification
+  -> Updated Reality
+```
+
+Digital Groundskeeper status:
+
+| Component | Stage | Status |
+| --- | :---: | --- |
+| Program Charter | 0 | ✅ |
+| Observation Report Contract | 1 | ✅ |
+| Inventory Contract | 1 | ✅ |
+| Recommendation Contract | 1 | ✅ |
+| Approval Boundary | 1 | 🔄 Next |
+| Quarantine and Archive Plan | 1 | ⏳ |
+| Observe-Only Slice | 2 | ⏳ |
+| Approval-Gated Maintenance Slice | 3 | ⏳ |
+| ARK Observation Integration Plan | 3 | ⏳ |
+| Operational Runbook | 4 | ⏳ |
+
+Recommended Digital Groundskeeper milestone: DG-M-005 Approval Boundary.
 ## Program Governance
 
 Implementation program governance lives in `docs/programs/`. The program index lists active and planned programs, the portfolio dashboard summarizes maturity and blockers, the cross-program dependency graph tracks program-level prerequisites, and the release plan maps milestones to target releases.

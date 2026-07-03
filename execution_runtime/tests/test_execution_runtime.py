@@ -1,8 +1,8 @@
 from artifact_promotion import CandidateArtifact
 from external.odysseus import HttpResponse, OdysseusPromptRequest, OdysseusWorkspaceAdapter
 from external.odysseus.config import load_odysseus_config
-from host_shell import HostShellRequest, build_host_shell_provider
-from host_shell.providers.odysseus import OdysseusHostShellProvider
+from execution_runtime import ExecutionRuntimeRequest, build_execution_runtime_provider
+from execution_runtime.providers.odysseus import OdysseusExecutionRuntime
 from provenance import noncanonical_external_output
 
 
@@ -57,30 +57,30 @@ class FakeOdysseusAdapter:
 
 
 def test_registry_disabled_mode_returns_noop_provider_without_network():
-    provider = build_host_shell_provider({"HOST_SHELL": "none"})
+    provider = build_execution_runtime_provider({"EXECUTION_RUNTIME": "none"})
 
     health = provider.health()
-    response = provider.send(HostShellRequest(prompt="hello", session_id="session-1"))
+    response = provider.send(ExecutionRuntimeRequest(prompt="hello", session_id="session-1"))
 
     assert health.status == "disabled"
     assert health.available is False
     assert health.canonical is False
     assert response.status == "error"
     assert response.failure is not None
-    assert response.failure.error_code == "HOST_SHELL_DISABLED"
+    assert response.failure.error_code == "EXECUTION_RUNTIME_DISABLED"
 
 
 def test_registry_odysseus_mode_builds_provider_without_health_probe():
     values = {
-        "HOST_SHELL": "odysseus",
+        "EXECUTION_RUNTIME": "odysseus",
         "ODYSSEUS_ENABLED": "true",
         "ODYSSEUS_BASE_URL": "http://127.0.0.1:7000",
         "ODYSSEUS_TIMEOUT_SECONDS": "2",
     }
 
-    provider = build_host_shell_provider(values)
+    provider = build_execution_runtime_provider(values)
 
-    assert isinstance(provider, OdysseusHostShellProvider)
+    assert isinstance(provider, OdysseusExecutionRuntime)
     assert provider.provider_name == "odysseus"
 
 
@@ -90,9 +90,9 @@ def test_registry_odysseus_mode_has_no_network_side_effects(monkeypatch):
 
     monkeypatch.setattr("external.odysseus.adapter.urlopen", fail_urlopen)
 
-    provider = build_host_shell_provider(
+    provider = build_execution_runtime_provider(
         {
-            "HOST_SHELL": "odysseus",
+            "EXECUTION_RUNTIME": "odysseus",
             "ODYSSEUS_ENABLED": "true",
             "ODYSSEUS_BASE_URL": "http://127.0.0.1:7000",
         }
@@ -103,9 +103,9 @@ def test_registry_odysseus_mode_has_no_network_side_effects(monkeypatch):
 
 def test_odysseus_provider_delegates_safely():
     adapter = FakeOdysseusAdapter()
-    provider = OdysseusHostShellProvider(adapter)  # type: ignore[arg-type]
+    provider = OdysseusExecutionRuntime(adapter)  # type: ignore[arg-type]
 
-    response = provider.send(HostShellRequest(prompt="  hello  ", session_id=" session-1 "))
+    response = provider.send(ExecutionRuntimeRequest(prompt="  hello  ", session_id=" session-1 "))
 
     assert response.status == "ok"
     assert response.content == "delegated response"
@@ -113,7 +113,7 @@ def test_odysseus_provider_delegates_safely():
     assert adapter.requests == [OdysseusPromptRequest(prompt="hello", session_id="session-1", include_provenance=True)]
 
 
-def test_host_shell_response_remains_noncanonical_with_real_adapter_mock():
+def test_execution_runtime_response_remains_noncanonical_with_real_adapter_mock():
     config = load_odysseus_config(
         {
             "ODYSSEUS_ENABLED": "true",
@@ -122,9 +122,9 @@ def test_host_shell_response_remains_noncanonical_with_real_adapter_mock():
         }
     )
     transport = FakeTransport((HttpResponse(200, b'{"response":"Workspace reply"}'),))
-    provider = OdysseusHostShellProvider(OdysseusWorkspaceAdapter(config, transport))
+    provider = OdysseusExecutionRuntime(OdysseusWorkspaceAdapter(config, transport))
 
-    response = provider.send(HostShellRequest(prompt="hello", session_id="session-1"))
+    response = provider.send(ExecutionRuntimeRequest(prompt="hello", session_id="session-1"))
 
     assert response.status == "ok"
     assert response.canonical is False
@@ -134,11 +134,11 @@ def test_host_shell_response_remains_noncanonical_with_real_adapter_mock():
     assert transport.calls[0][0] == "POST"
 
 
-def test_host_shell_response_is_not_candidate_artifact_or_observation():
+def test_execution_runtime_response_is_not_candidate_artifact_or_observation():
     adapter = FakeOdysseusAdapter()
-    provider = OdysseusHostShellProvider(adapter)  # type: ignore[arg-type]
+    provider = OdysseusExecutionRuntime(adapter)  # type: ignore[arg-type]
 
-    response = provider.send(HostShellRequest(prompt="hello", session_id="session-1"))
+    response = provider.send(ExecutionRuntimeRequest(prompt="hello", session_id="session-1"))
 
     assert not isinstance(response, CandidateArtifact)
     assert not hasattr(response, "observation")

@@ -9,14 +9,14 @@ This release plan maps implementation programs to target releases. Targets are p
 | Release | Theme | Included Milestones | Exit Criteria |
 | --- | --- | --- | --- |
 | v0.1.0 | Wayfinder Constitution v1 | Constitution, contracts, governance, engine boundaries, asset model, program planning baseline | No Critical or Major constitutional issues remain. |
-| v0.2.0 | Platform Substrate Proofs | Identity Service Stage 2, Event Bus Stage 2, Storage Stage 2, Configuration Stage 2, Policy Stage 2 | Foundational services have minimal implementation proofs and tests. |
-| v0.3.0 | Reality Identity and Ingestion Planning | RID-M-003 through RID-M-006, UAI-M-001 through UAI-M-006 | RID model and universal ingestion pipeline contracts are specified. |
-| v0.4.0 | Ingestion and ARK Integration Planning | UAI-M-007 through UAI-M-010, Runtime Kernel Program, ARK integration plan | ARK can be implemented against RID/UAI/runtime boundaries without media-specific ownership. |
-| v0.5.0 | ARK Minimal Implementation | ARK consumes platform services, RID, and universal ingestion in one bounded slice | Reality preservation slice passes compatibility and behavior-preservation proofs. |
-| v0.6.0 | Relationship and Interpretation Chain | WEAVE, Interpretation, Reasoning, Views planning and first slices | Derived knowledge remains evidence-backed and contract-bound. |
+| v0.2.0 | Platform Services, RID, UAI | Platform Services Stage 2 proofs; RID-M-003 through RID-M-006; UAI-M-001 through UAI-M-006 | Foundational services have minimal proofs; RID model is stable; universal ingestion contracts are specified. |
+| v0.3.0 | Runtime Kernel and ARK | Runtime Kernel Program; UAI-M-007 through UAI-M-010; ARK integration plan and first bounded ARK slice | ARK can consume RID/UAI/runtime boundaries without media-specific ownership. |
+| v0.4.0 | WEAVE, Interpretation, Reasoning | WEAVE boundary and first slice; Interpretation and Reasoning planning/first slices | Derived knowledge remains evidence-backed and contract-bound. |
+| v0.5.0 | Views and Jarvis | Views projection slice; Jarvis navigation planning and first route slice | Navigation consumes proven upstream outputs without rewriting reality. |
+| v0.6.0 | Continuity and Transformation | Capsules, ZWLib, Foundry slices | Continuity and transformation consume proven upstream outputs. |
 | v0.7.0 | Navigation and Continuity | Jarvis, Capsules, ZWLib, Foundry slices | Navigation and continuity consume proven upstream outputs. |
 | v0.8.0 | Coordination, Valuation, Protection | NOMAD, MIDAS, MICE, VALOR, Blackwall, NetWatch planning and slices | Coordination and safety engines preserve upstream ownership. |
-| v0.9.0 | Portfolio and Infrastructure Readiness | `wayfinder-infra` scaffold and operations proof; first domain repo program | Deployment remains replaceable and domain repos do not duplicate constitution. |
+| v0.9.0 | Portfolio, Infrastructure, and Digital Groundskeeper Readiness | `wayfinder-infra` scaffold and operations proof; Digital Groundskeeper observe-only contracts; first domain repo program | Deployment remains replaceable, digital maintenance is approval-gated, and domain repos do not duplicate constitution. |
 | v1.0.0 | Operational Wayfinder | End-to-end reality -> navigation -> action loop with proof and recovery | Core loop is usable, observable, recoverable, and governance-backed. |
 
 ## Current Release Position
@@ -24,9 +24,9 @@ This release plan maps implementation programs to target releases. Targets are p
 | Area | Current State |
 | --- | --- |
 | Last recommended tag | v0.1.0 Wayfinder Constitution v1 |
-| Current implementation track | v0.2.0 Platform Substrate Proofs |
-| Active planning gate | RID-M-003 RID Model |
-| Next planning gate | UAI-M-001 Pipeline Contracts |
+| Current implementation track | v0.2.0 Platform Services, RID, UAI |
+| Active planning gate | UAI-M-002 Acquisition |
+| Next planning gate | UAI-M-003 Format Detection, RID-M-004 Domain Identifiers, or Storage proof depending on track |
 | Next implementation proof | Storage Minimal Implementation Proof |
 
 ## Release Rules

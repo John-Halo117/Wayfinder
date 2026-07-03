@@ -70,14 +70,14 @@ Universal ingestion is represented as reusable capabilities. These are not addit
 
 | Component | Stage | Status |
 | --- | :---: | --- |
-| Pipeline Contracts | 0 | 🔄 Next |
-| Acquisition | 0 | ⏳ |
-| Format Detection | 0 | ⏳ |
-| Canonicalization | 0 | ⏳ |
-| Semantic Normalization | 0 | ⏳ |
+| Pipeline Contracts | 1 | ✅ |
+| Acquisition | 2 | ✅ MVP slice |
+| Format Detection | 2 | ✅ ChatGPT ZIP slice |
+| Canonicalization | 2 | ✅ Conversation slice |
+| Semantic Normalization | 2 | ✅ Message slice |
 | Chunking | 0 | ⏳ |
 | Identity Integration | 0 | ⏳ |
-| Content Addressing | 0 | ⏳ |
+| Content Addressing | 2 | ✅ Artifact SHA-256 slice |
 | Knowledge Extraction | 0 | ⏳ |
 | ARK Integration | 0 | ⏳ |
 
@@ -102,8 +102,8 @@ Universal Asset Ingestion precedes full ARK implementation. ARK may continue pre
 
 | Milestone | Target Stage | Status | Depends On |
 | --- | :---: | --- | --- |
-| UAI-M-001 Pipeline Contracts | 1 | 🔄 Next | RID-M-003 RID Model |
-| UAI-M-002 Acquisition | 2 | ⏳ | UAI-M-001 |
+| UAI-M-001 Pipeline Contracts | 1 | ✅ Complete | RID-M-003 RID Model |
+| UAI-M-002 Acquisition | 2 | 🔄 Next | UAI-M-001 |
 | UAI-M-003 Format Detection | 2 | ⏳ | UAI-M-002 |
 | UAI-M-004 Canonicalization | 2 | ⏳ | UAI-M-003 |
 | UAI-M-005 Semantic Normalization | 2 | ⏳ | UAI-M-004 |
@@ -132,7 +132,7 @@ UAI-M-001 Pipeline Contracts
 
 ### UAI-M-001 Pipeline Contracts
 
-Status: Next after RID-M-003.
+Status: Complete 2026-06-28.
 
 Tasks:
 
@@ -140,6 +140,7 @@ Tasks:
 - Classify inputs and outputs using Asset, RID, Observation, Evidence, Provenance, Representation, Schema, and Context language.
 - Define media adapter boundaries.
 - Mark media-specific pipelines as deprecated architectural owners.
+- Create `contracts/ingestion/` as the canonical contract family for UAI stage artifacts.
 
 Acceptance Criteria:
 
@@ -150,7 +151,7 @@ Acceptance Criteria:
 
 ### UAI-M-002 Acquisition
 
-Status: Planned.
+Status: Next after UAI-M-001.
 
 Tasks:
 
@@ -291,6 +292,50 @@ Media-specific pipelines are deprecated as canonical ingestion architecture. The
 
 ## Recommended Next Milestone
 
-UAI-M-001 Pipeline Contracts, after RID-M-003 RID Model.
+UAI-M-002 Acquisition, after UAI-M-001 Pipeline Contracts.
 
-Reason: Universal ingestion depends on RID stability. Pipeline contracts should be planned before acquisition, detection, adapters, or ARK integration.
+Reason: Pipeline contracts now define the canonical grammar and adapter boundary. The next proof should plan acquisition without deciding identity, meaning, persistence, or ARK promotion.
+
+
+### UAI-M-002 through UAI-M-008 MVP Slice
+
+Status: Implemented as local ChatGPT ZIP ingestion under
+`engines/ark/ingress/universal_ingestion/`.
+
+Scope:
+
+- ChatGPT ZIP acquisition and bounded format validation.
+- Conversation and message canonicalization into observation candidates.
+- Deterministic cSHAKE256 RID generation for imports, conversations,
+  observations, and artifacts.
+- Append-only local storage under `ARK/imports`, `ARK/observations`,
+  `ARK/artifacts`, and `ARK/provenance`.
+- Search and timeline queries over local observations.
+- Internal CLI and desktop workbench wrappers that consume the core API.
+
+Boundary note: this implementation satisfies the attached Foundry-ingestion
+request through the canonical ARK ingress/UAI boundary. It does not redefine the
+existing Foundry engineering engine.
+
+
+### UAI Phase 2: Universal Substrate Architecture
+
+Status: Implemented as an extension of the MVP.
+
+Scope:
+
+- Added canonical substrate interface folders under
+  `engines/ark/ingress/universal_ingestion/substrates/`.
+- Added bounded substrate detection for ChatGPT ZIP, archive, document,
+  geometry, image, video, speech/audio, structured data, code, email, calendar,
+  and filesystem artifacts.
+- Added `IngestionAPI.ingest(source)` auto-detection while preserving
+  `IngestionAPI.ingest("chatgpt", source)`.
+- Added recursive bounded folder ingestion through
+  `IngestionAPI.ingest("folder", folder)`.
+- Added first-class append-only artifact registry lookup by RID and checksum.
+- Extended CLI syntax to support `wf ingest export.zip` and
+  `wf ingest folder ~/Downloads`.
+
+Explicit non-scope remains unchanged: no embeddings, LLM extraction, ontology
+extraction, knowledge graph, constitution generation, or Jarvis integration.

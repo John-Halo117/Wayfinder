@@ -9,11 +9,17 @@ If a document defines a concept, it must point to the concept's canonical home.
 
 - `developer-handbook.md` orients contributors to Constitution v1 practice.
 - `implementation-backlog.md` records implementation maturity, milestones, acceptance criteria, and definitions of done.
-- `programs/` is the entry point for implementation program index, dashboard, dependency graph, and release plan.
+- `programs/` is the entry point for implementation program index, registry, lifecycle, template, dashboard, dependency graph, release plan, and verification.
 - `reality-identity-program.md` records the planning-only RID implementation program and dependency update.
+- `reality-identity-model.md` records the completed RID-M-003 model planning milestone.
+- `../contracts/ingestion/README.md` records the UAI-M-001 pipeline contract milestone.
 - `universal-asset-ingestion-program.md` records the planning-only universal ingestion program and ARK prerequisite.
 - `wayfinder-infra-program.md` records the planning-only roadmap and backlog for the separate infrastructure repository.
 - `wayfinder-portfolio.md` records the repository portfolio, ownership, maturity, roadmaps, and backlogs.
+- `digital-groundskeeper-program.md` records the planned execution-agent program for observe-first digital system care.
+- `../contracts/digital-groundskeeper-observation-reports/README.md` records the DG-M-002 observe-only report contract.
+- `../contracts/digital-groundskeeper-inventories/README.md` records the DG-M-003 digital asset inventory contract.
+- `../contracts/digital-groundskeeper-recommendations/README.md` records the DG-M-004 maintenance recommendation contract.
 - `constitution-v1-release-audit.md` records the final Constitution v1 verification and tag recommendation.
 - `constitutional-census.md` records current folded-engine concepts,
   responsibilities, dependencies, consumers, duplication, ownership proposals,

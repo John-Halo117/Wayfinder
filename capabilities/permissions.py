@@ -19,9 +19,16 @@ from typing import Literal
 from execution.interfaces import ExecutionRequest
 
 PermissionStatus = Literal["allowed", "denied", "requires_confirmation"]
-WORKSPACE_PROMPT_CAPABILITY = "host_shell.workspace_prompt"
-TOOL_EXECUTION_CAPABILITY = "host_shell.tool_execution"
-KNOWN_CAPABILITIES = (WORKSPACE_PROMPT_CAPABILITY, TOOL_EXECUTION_CAPABILITY)
+WORKSPACE_PROMPT_CAPABILITY = "execution_runtime.workspace_prompt"
+TOOL_EXECUTION_CAPABILITY = "execution_runtime.tool_execution"
+LEGACY_WORKSPACE_PROMPT_CAPABILITY = "host_shell.workspace_prompt"
+LEGACY_TOOL_EXECUTION_CAPABILITY = "host_shell.tool_execution"
+KNOWN_CAPABILITIES = (
+    WORKSPACE_PROMPT_CAPABILITY,
+    TOOL_EXECUTION_CAPABILITY,
+    LEGACY_WORKSPACE_PROMPT_CAPABILITY,
+    LEGACY_TOOL_EXECUTION_CAPABILITY,
+)
 MUTATION_INTENT_TOKENS = ("mutate", "write", "delete", "update", "create", "persist", "promote")
 
 
@@ -76,7 +83,7 @@ def check_execution_permission(request: ExecutionRequest) -> PermissionDecision:
             intent=intent,
             reason="mutation intents are denied by default",
         )
-    if capability_id == TOOL_EXECUTION_CAPABILITY or intent.startswith("tool."):
+    if capability_id in {TOOL_EXECUTION_CAPABILITY, LEGACY_TOOL_EXECUTION_CAPABILITY} or intent.startswith("tool."):
         if bool(request.constraints.get("explicit_confirmation")):
             return PermissionDecision(
                 status="allowed",
@@ -93,7 +100,7 @@ def check_execution_permission(request: ExecutionRequest) -> PermissionDecision:
             reason="tool execution requires explicit confirmation",
             requires_confirmation=True,
         )
-    if capability_id == WORKSPACE_PROMPT_CAPABILITY and _is_read_only_workspace_prompt(intent):
+    if capability_id in {WORKSPACE_PROMPT_CAPABILITY, LEGACY_WORKSPACE_PROMPT_CAPABILITY} and _is_read_only_workspace_prompt(intent):
         return PermissionDecision(
             status="allowed",
             allowed=True,

@@ -1,6 +1,6 @@
-import jarvis.host_shell_bridge as bridge_module
-from host_shell.interfaces import HostShellResponse
-from jarvis import JarvisHostShellBridge
+import jarvis.execution_bridge as bridge_module
+from execution_runtime.interfaces import ExecutionRuntimeResponse
+from jarvis import JarvisExecutionBridge
 from provenance import noncanonical_external_output
 
 
@@ -12,7 +12,7 @@ class FakeProvider:
 
     def send(self, request):
         self.requests.append(request)
-        return HostShellResponse(
+        return ExecutionRuntimeResponse(
             status="ok",
             provider="odysseus",
             content="workspace reply",
@@ -28,8 +28,8 @@ class FakeProvider:
         )
 
 
-def test_bridge_fails_gracefully_when_host_shell_none():
-    bridge = JarvisHostShellBridge({"HOST_SHELL": "none"})
+def test_bridge_fails_gracefully_when_execution_runtime_none():
+    bridge = JarvisExecutionBridge({"EXECUTION_RUNTIME": "none"})
 
     result = bridge.send_workspace_prompt("session-1", "hello")
 
@@ -37,18 +37,18 @@ def test_bridge_fails_gracefully_when_host_shell_none():
     assert result.provider == "none"
     assert result.canonical is False
     assert result.failure is not None
-    assert result.failure.error_code == "HOST_SHELL_DISABLED"
+    assert result.failure.error_code == "EXECUTION_RUNTIME_DISABLED"
 
 
 def test_bridge_uses_registry_and_mocked_odysseus_provider(monkeypatch):
     fake_provider = FakeProvider()
 
     def fake_build_provider(values=None):
-        assert values == {"HOST_SHELL": "odysseus"}
+        assert values == {"EXECUTION_RUNTIME": "odysseus"}
         return fake_provider
 
-    monkeypatch.setattr(bridge_module.host_shell_registry, "build_host_shell_provider", fake_build_provider)
-    bridge = JarvisHostShellBridge({"HOST_SHELL": "odysseus"})
+    monkeypatch.setattr(bridge_module.execution_runtime_registry, "build_execution_runtime_provider", fake_build_provider)
+    bridge = JarvisExecutionBridge({"EXECUTION_RUNTIME": "odysseus"})
 
     result = bridge.send_workspace_prompt(" session-1 ", "hello", context={"route": "workspace"})
 
@@ -64,7 +64,7 @@ def test_bridge_uses_registry_and_mocked_odysseus_provider(monkeypatch):
     assert fake_provider.requests[0].prompt == "hello\n\nContext:\n- route: workspace"
 
 
-def test_denied_permission_never_reaches_host_shell(monkeypatch):
+def test_denied_permission_never_reaches_execution_runtime(monkeypatch):
     def deny_request(_request):
         return type(
             "Decision",
@@ -72,7 +72,7 @@ def test_denied_permission_never_reaches_host_shell(monkeypatch):
             {
                 "allowed": False,
                 "status": "denied",
-                "capability_id": "host_shell.workspace_prompt",
+                "capability_id": "execution_runtime.workspace_prompt",
                 "intent": "workspace.prompt.write",
                 "reason": "mutation intents are denied by default",
                 "requires_confirmation": False,
@@ -80,13 +80,13 @@ def test_denied_permission_never_reaches_host_shell(monkeypatch):
         )()
 
     def fail_build_provider(values=None):
-        raise AssertionError("denied requests must not reach Host Shell registry")
+        raise AssertionError("denied requests must not reach Execution Runtime registry")
 
     monkeypatch.setattr(bridge_module, "check_execution_permission", deny_request)
-    monkeypatch.setattr(bridge_module.host_shell_registry, "build_host_shell_provider", fail_build_provider)
+    monkeypatch.setattr(bridge_module.execution_runtime_registry, "build_execution_runtime_provider", fail_build_provider)
 
-    result = JarvisHostShellBridge({"HOST_SHELL": "odysseus"}).send_workspace_prompt("session-1", "hello")
+    result = JarvisExecutionBridge({"EXECUTION_RUNTIME": "odysseus"}).send_workspace_prompt("session-1", "hello")
 
     assert result.status == "error"
     assert result.failure is not None
-    assert result.failure.error_code == "JARVIS_HOST_SHELL_PERMISSION_DENIED"
+    assert result.failure.error_code == "JARVIS_EXECUTION_PERMISSION_DENIED"

@@ -7,10 +7,17 @@ The ARK fold identified Forge-labeled engineering and self-coding material. Wayf
 - Historical source: `engines/ark/legacy/`
 - Canonical owner: `engines/foundry/`
 - Compatibility source copy: `engines/foundry/legacy/`
+- Preserved compatibility artifacts: 82 files
 
 ## Compatibility Rule
 
 Legacy executable names such as `forge`, `forge-app`, `forge.cmd`, `forge.ps1`, and `Forge App.*` are preserved as historical compatibility entrypoints. They are not renamed in this phase.
+
+See [Forge compatibility](forge-compatibility.md) for the legacy-name map.
+
+See [Forge classification and ownership](forge-classification-ownership.md)
+for extraction ownership across app, runtime, planner, proof, and artifact
+surfaces.
 
 ## Copied Files
 
@@ -66,12 +73,29 @@ Legacy executable names such as `forge`, `forge-app`, `forge.cmd`, `forge.ps1`, 
 - `ark-core/scripts/ai/codex_prompt.txt`
 - `ark-core/scripts/ai/forge.py`
 - `ark-core/scripts/ai/orchestrator.py`
+- `ark-core/tests/conftest.py`
+- `ark-core/tests/test_forge_banlist.py`
+- `ark-core/tests/test_forge_bootstrap.py`
+- `ark-core/tests/test_forge_browser.py`
+- `ark-core/tests/test_forge_diff_apply.py`
+- `ark-core/tests/test_forge_launcher.py`
+- `ark-core/tests/test_forge_linux.py`
+- `ark-core/tests/test_forge_loc.py`
+- `ark-core/tests/test_forge_mcp.py`
+- `ark-core/tests/test_forge_mvp.py`
+- `ark-core/tests/test_forge_ollama.py`
+- `ark-core/tests/test_forge_propose.py`
+- `ark-core/tests/test_forge_security.py`
+- `ark-core/tests/test_forge_session.py`
+- `ark-core/tests/test_forge_ui_app.py`
 - `ark/forge_planner.py`
 - `forge`
 - `forge-app`
 - `forge.cmd`
 - `forge.ps1`
 - `install-forge-arch.sh`
+- `packaging/linux/forge-app.desktop.in`
+- `packaging/linux/forge-app.svg`
 - `scripts/ai/apply_proposal.sh`
 - `scripts/ai/assembly_line.py`
 - `scripts/ai/autonomous_repair.py`

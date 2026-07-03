@@ -53,7 +53,7 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 | --- | :---: | --- |
 | Identity Contracts | 1 | ✅ |
 | Identity Service | 2 | ✅ |
-| RID Model | 2 | 🔄 Next |
+| RID Model | 3 | ✅ |
 | Domain Identifiers | 1 | ⏳ |
 | Identity Encoding | 1 | ⏳ |
 | Identity Resolution | 2 | ⏳ |
@@ -68,7 +68,7 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 | --- | :---: | --- |
 | RID-M-001 Identity Contracts | 1 | ✅ Complete |
 | RID-M-002 Identity Service | 2 | ✅ Complete |
-| RID-M-003 RID Model | 3 | 🔄 Next |
+| RID-M-003 RID Model | 3 | ✅ Complete |
 | RID-M-004 Domain Identifiers | 3 | ⏳ |
 | RID-M-005 Identity Encoding | 3 | ⏳ |
 | RID-M-006 Identity Resolution | 3 | ⏳ |
@@ -82,8 +82,8 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 
 | Component | Stage | Status |
 | --- | :---: | --- |
-| Pipeline Contracts | 0 | 🔄 Next |
-| Acquisition | 0 | ⏳ |
+| Pipeline Contracts | 1 | ✅ |
+| Acquisition | 0 | 🔄 Next |
 | Format Detection | 0 | ⏳ |
 | Canonicalization | 0 | ⏳ |
 | Semantic Normalization | 0 | ⏳ |
@@ -97,8 +97,8 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 
 | Milestone | Target Stage | Status |
 | --- | :---: | --- |
-| UAI-M-001 Pipeline Contracts | 1 | 🔄 Next after RID-M-003 |
-| UAI-M-002 Acquisition | 2 | ⏳ |
+| UAI-M-001 Pipeline Contracts | 1 | ✅ Complete |
+| UAI-M-002 Acquisition | 2 | 🔄 Next |
 | UAI-M-003 Format Detection | 2 | ⏳ |
 | UAI-M-004 Canonicalization | 2 | ⏳ |
 | UAI-M-005 Semantic Normalization | 2 | ⏳ |
@@ -128,8 +128,8 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 | Storage Service | Stage 1 - Contracts | `contracts/storage/README.md`, `services/storage/README.md` | Stage 2 - Minimal Implementation |
 | Configuration Service | Stage 1 - Contracts | `services/configuration/README.md` | Stage 2 - Minimal Implementation |
 | Policy Service | Stage 1 - Contracts | `contracts/policies/README.md`, `contracts/permissions/README.md`, `services/policy/README.md` | Stage 2 - Minimal Implementation |
-| Reality ID (RID) | Stage 2 - Planning / Identity Service foundation | `constitution/assets.md`, `contracts/identities/README.md`, `services/identity/docs/implementation-proof.md` | Stage 3 - RID Model |
-| Universal Asset Ingestion | Stage 0 - Program | RID program, Asset Model, ARK boundary, and `docs/universal-asset-ingestion-program.md` | Stage 1 - Pipeline Contracts |
+| Reality ID (RID) | Stage 3 - RID Model | `docs/reality-identity-model.md`, `constitution/assets.md`, `contracts/identities/README.md`, `services/identity/docs/implementation-proof.md` | Stage 3 - Domain Identifiers |
+| Universal Asset Ingestion | Stage 1 - Pipeline Contracts | `contracts/ingestion/README.md`, stage contracts, RID program, Asset Model, and ARK boundary | Stage 2 - Acquisition |
 | Runtime Kernel | Stage 0 - Constitution implied | Dependency order names it, but no canonical service home exists yet | Stage 1 - Contract and boundary evidence after RID and asset ingestion planning mature |
 | ARK | Stage 1 - Contracts and Folded Evidence | ARK constitutional README, legacy fold, inventories, contracts | Stage 2 after RID, asset ingestion, and platform services can be consumed |
 | WEAVE | Stage 0 - Constitution | Engine boundary exists | Stage 1 contract refinement after ARK service consumers stabilize |
@@ -253,6 +253,7 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 ### RID-M-003: RID Model
 
 - Stage: Stage 3 - RID Model
+- Status: Complete 2026-06-27
 - Dependencies: RID-M-001 Identity Contracts, RID-M-002 Identity Service, Asset Model
 - Tasks:
   - Define RID model as implementation planning.
@@ -273,6 +274,7 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
 ### UAI-M-001: Pipeline Contracts
 
 - Stage: Stage 1 - Contracts
+- Status: Complete 2026-06-28
 - Dependencies: RID-M-003 RID Model, Asset Model, Observation/Evidence/Provenance contracts
 - Tasks:
   - Define universal ingestion pipeline contracts as planning evidence.
@@ -288,6 +290,94 @@ This backlog converts Constitution v1 into implementation milestones. It is evid
   - Dependency graph is acyclic.
   - Maturity and roadmap tables are updated.
   - ARK remains the consumer of universal ingestion output.
+  - `contracts/ingestion/` defines the canonical grammar and stage contracts.
+
+### UAI-M-002: Acquisition
+
+- Stage: Stage 2 - Minimal Implementation Planning
+- Status: Next
+- Dependencies: UAI-M-001 Pipeline Contracts
+- Tasks:
+  - Plan acquisition without deciding identity, meaning, persistence, or ARK promotion.
+  - Preserve source, trust boundary, context, and evidence references.
+  - Keep media-specific code inside adapters.
+- Acceptance Criteria:
+  - Acquisition output conforms to `contracts/ingestion/acquisition/README.md`.
+  - Acquisition remains bounded, evidence-ready, and implementation-neutral until a later proof.
+- Definition of Done:
+  - Acquisition plan is documented.
+  - No media adapter implementation begins.
+
+### DG-M-002: Observation Report Contract
+
+- Stage: Stage 1 - Contracts
+- Status: Complete 2026-06-28
+- Dependencies: Asset Model, Universal Asset Ingestion contracts, ARK boundary, Policy Service
+- Tasks:
+  - Define the observe-only report contract for Digital Groundskeeper.
+  - Separate Facts, Interpretations, Recommendations, and Unknowns.
+  - Require evidence, confidence, alternatives, rollback, and verification fields for recommendations.
+  - Preserve default observe-only behavior.
+- Acceptance Criteria:
+  - No system modification is planned or implemented.
+  - Recommendations remain approval-gated.
+  - Digital assets are treated as Assets in Context.
+- Definition of Done:
+  - Observation report contract is documented.
+  - Program registry and dashboard are updated.
+  - `contracts/digital-groundskeeper-observation-reports/README.md` defines the contract.
+
+### DG-M-003: Inventory Contract
+
+- Stage: Stage 1 - Contracts
+- Status: Complete 2026-06-28
+- Dependencies: DG-M-002 Observation Report Contract, Asset Model, RID Model, Universal Asset Ingestion contracts
+- Tasks:
+  - Define digital asset inventory language using Asset in Context.
+  - Require metadata, relationships, dependencies, timestamps, usage, and evidence.
+  - Prohibit reasoning from file names alone.
+- Acceptance Criteria:
+  - Inventory remains observe-only and implementation-free.
+  - Digital assets are classified without changing the system.
+- Definition of Done:
+  - Inventory contract is documented.
+  - Digital Groundskeeper program tracking is updated.
+  - `contracts/digital-groundskeeper-inventories/README.md` defines the contract.
+
+### DG-M-004: Recommendation Contract
+
+- Stage: Stage 1 - Contracts
+- Status: Complete 2026-06-28
+- Dependencies: DG-M-002 Observation Report Contract, DG-M-003 Inventory Contract, Policy Contract, Recommendation Contract
+- Tasks:
+  - Define Digital Groundskeeper recommendation language for evidence-backed, approval-gated maintenance proposals.
+  - Require observation, evidence, interpretation, confidence, alternatives, expected benefit, downside, risks, rollback, and verification.
+  - Preserve separation from Jarvis recommendations and MICE commitments.
+- Acceptance Criteria:
+  - Recommendations do not authorize execution.
+  - Destructive actions remain approval-gated.
+  - Recommendation language remains implementation-free.
+- Definition of Done:
+  - Digital Groundskeeper recommendation contract is documented.
+  - Roadmap and program tracking are updated.
+  - `contracts/digital-groundskeeper-recommendations/README.md` defines the contract.
+
+### DG-M-005: Approval Boundary
+
+- Stage: Stage 1 - Contracts
+- Status: Next
+- Dependencies: DG-M-004 Recommendation Contract, Policy Contract, Permission Contract
+- Tasks:
+  - Define what requires explicit approval before Digital Groundskeeper action.
+  - Separate observe-only, reversible, quarantine, archive, destructive, and irreversible boundaries.
+  - Define how approval evidence relates to recommendations and future execution plans.
+- Acceptance Criteria:
+  - Approval boundary remains implementation-free.
+  - Destructive and irreversible actions require explicit human approval.
+  - Approval does not replace policy, permission, MICE commitment, or ARK proof.
+- Definition of Done:
+  - Approval boundary contract is documented.
+  - Roadmap and program tracking are updated.
 
 ## Dependency Order
 
@@ -301,6 +391,7 @@ Identity
   -> Policy
   -> Runtime Kernel
   -> ARK
+  -> Digital Groundskeeper
   -> WEAVE
   -> Interpretation
   -> Reasoning
@@ -332,6 +423,6 @@ Every milestone must verify:
 
 ## Recommended Next Task
 
-RID-M-003: RID Model.
+UAI-M-002: Acquisition.
 
-Reason: RID remains the immediate prerequisite. After RID-M-003, the next architecture prerequisite is UAI-M-001 Pipeline Contracts. Storage remains the next platform service proof after these planning milestones.
+Reason: UAI-M-001 is complete. Acquisition is the next bounded UAI milestone and should preserve the adapter boundary before media adapters, runtime kernel work, or ARK integration begin. Storage remains the next platform service implementation proof after the architecture gates.

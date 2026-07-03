@@ -17,6 +17,7 @@ Platform Services
   -> Reasoning
   -> Views
   -> Jarvis
+  -> Digital Groundskeeper
 ```
 
 ## Expanded Graph
@@ -47,6 +48,7 @@ Constitution v1
                                       -> VALOR
                                       -> Blackwall
                                       -> NetWatch
+  -> Digital Groundskeeper
   -> Repository Portfolio
       -> wayfinder-infra
       -> domain repositories
@@ -60,6 +62,7 @@ Constitution v1
 - Runtime Kernel depends on platform services and universal ingestion boundaries.
 - ARK depends on Runtime Kernel, Universal Asset Ingestion, RID, and platform services.
 - WEAVE and later engines depend on ARK reality outputs.
+- Digital Groundskeeper depends on Asset Model, UAI, ARK, Storage, and Policy boundaries.
 - Infrastructure and domain repositories depend on Wayfinder platform boundaries, not the reverse.
 
 ## Acyclicity Check
@@ -71,6 +74,7 @@ Constitution v1
 | UAI -> Runtime Kernel | Pass |
 | Runtime Kernel -> ARK | Pass |
 | ARK -> WEAVE -> Interpretation -> Reasoning -> Views -> Jarvis | Pass |
+| Digital Groundskeeper boundaries | Pass |
 | Wayfinder -> Portfolio repositories | Pass |
 
 No program-level dependency points back toward a prerequisite.

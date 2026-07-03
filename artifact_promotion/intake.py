@@ -1,26 +1,26 @@
 """Artifact promotion intake membrane.
 
-This module converts noncanonical Host Shell output into review candidates only.
+This module converts noncanonical Execution Runtime output into review candidates only.
 It does not create observations, persist artifacts, or write to ARK.
 """
 
 from __future__ import annotations
 
-from host_shell.interfaces import HostShellResponse
+from execution_runtime.interfaces import ExecutionRuntimeResponse
 
 from .interfaces import CandidateArtifact, freeze_metadata, normalize_artifact_type
 
 
-def create_candidate_from_host_response(
-    response: HostShellResponse,
+def create_candidate_from_runtime_response(
+    response: ExecutionRuntimeResponse,
     artifact_type: str,
     summary: str | None = None,
 ) -> CandidateArtifact:
-    """Create a candidate artifact from noncanonical Host Shell output.
+    """Create a candidate artifact from noncanonical Execution Runtime output.
 
-    Inputs: HostShellResponse, artifact type, optional summary.
+    Inputs: ExecutionRuntimeResponse, artifact type, optional summary.
     Outputs: CandidateArtifact with status="candidate".
-    Runtime: O(content length + summary length), bounded by upstream Host Shell
+    Runtime: O(content length + summary length), bounded by upstream Execution Runtime
     caps and metadata caps.
     Memory: O(content length + metadata keys).
     Failure: raises ValueError for failed response, missing content, missing
@@ -52,6 +52,16 @@ def create_candidate_from_host_response(
         status="candidate",
         metadata=freeze_metadata(metadata),
     )
+
+
+def create_candidate_from_host_response(
+    response: ExecutionRuntimeResponse,
+    artifact_type: str,
+    summary: str | None = None,
+) -> CandidateArtifact:
+    """Compatibility wrapper for create_candidate_from_runtime_response."""
+
+    return create_candidate_from_runtime_response(response, artifact_type, summary)
 
 
 def _candidate_id(provider: str, artifact_type: str, request_id: str) -> str:

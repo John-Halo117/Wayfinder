@@ -117,4 +117,26 @@ Run this scorecard:
 | Contract purity | Pass | No contract executable code added |
 | Duplicate implementation reduced | Partial pass | Reusable event envelope, route matching, publish/subscribe, and replay mechanics now have canonical implementation; engine adapters remain deferred |
 | Proof coverage | Pass | Service tests and legacy smoke tests recorded |
+## Program Governance Scorecard
 
+| Metric | Status | Evidence |
+| --- | --- | --- |
+| Program registry | Pass | `docs/programs/program-registry.md` lists every implementation program once. |
+| Program lifecycle | Pass | `docs/programs/program-lifecycle.md` defines Proposed through Maintenance. |
+| Program template | Pass | `docs/programs/program-template.md` defines required future program structure. |
+| Dashboard completeness | Pass | `docs/programs/portfolio-dashboard.md` reports stage, completion, blockers, current/next milestone, and verification state. |
+| Release grouping | Pass | `docs/programs/release-plan.md` groups v0.2 Platform/RID/UAI, v0.3 Runtime/ARK, and v0.4 WEAVE/Interpretation/Reasoning. |
+| Synchronization rules | Pass | Lifecycle requires backlog, dashboard, registry, release, promotion, and scorecard updates when milestones complete. |
+
+
+
+## UAI-M-001 Pipeline Contract Scorecard
+
+| Metric | Status | Evidence |
+| --- | --- | --- |
+| Pipeline contracts exist | Pass | `contracts/ingestion/README.md` and eleven stage contracts define the canonical ingestion grammar. |
+| Contracts implementation-free | Pass | UAI-M-001 added Markdown contract language only. |
+| One producer per stage | Pass | Each stage contract names Universal Asset Ingestion as producer. |
+| Ownership separation | Pass | Identity generation remains Identity Service, persistence remains Storage, and reality preservation remains ARK. |
+| Dependency direction | Pass | Ingestion graph flows Reality -> Acquisition -> Knowledge Extraction -> ARK without cycles. |
+| Adapter boundary | Pass | Media-specific logic is limited to adapters and ceases after canonicalization. |
