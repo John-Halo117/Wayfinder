@@ -35,5 +35,9 @@ If a document defines a concept, it must point to the concept's canonical home.
 - `system-architecture-v1.md` records the end-to-end truth pipeline and layer
   model across ARK, compiler, governance, retrieval, views, capsules,
   reasoning, and Jarvis.
+- `first-contact/` records privacy-safe real export validation, evidence
+  assimilation, and consolidation reports. Raw validation outputs remain local
+  under `.wayfinder-validation/` and are ignored by Git.
 - `ownership-matrix.md` records canonical concept ownership.
+- `adrs/` records architecture decisions accepted from evidence.
 - [Wave 2 Verification](wave-2-verification.md)
