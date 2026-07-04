@@ -37,6 +37,9 @@ htmlcov/
 .nox/
 .hypothesis/
 
+# Local Wayfinder validation outputs may contain private source artifacts.
+.wayfinder-validation/
+
 # Virtual environments
 .venv/
 venv/
@@ -47,4 +50,3 @@ ENV/
 .idea/
 .vscode/
 .DS_Store
-
