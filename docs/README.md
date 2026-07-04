@@ -32,5 +32,8 @@ If a document defines a concept, it must point to the concept's canonical home.
 - `classification.md` defines the ordered classification grammar.
 - `repository-folding.md` defines how existing repositories are folded into the
   Wayfinder monorepo.
+- `system-architecture-v1.md` records the end-to-end truth pipeline and layer
+  model across ARK, compiler, governance, retrieval, views, capsules,
+  reasoning, and Jarvis.
 - `ownership-matrix.md` records canonical concept ownership.
 - [Wave 2 Verification](wave-2-verification.md)
