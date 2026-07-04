@@ -22,6 +22,9 @@ The Oracle reports validation issues. It does not silently repair source data.
 | `TIMESTAMP_INCONSISTENCY` | warning | Source timestamp order is inconsistent. |
 | `MESSAGE_RELATIONSHIP_LIMIT` | error | Message relationship count exceeds configured cap. |
 
+Numeric timestamps are normalized from seconds or milliseconds when possible.
+Unrepresentable timestamp values are preserved as their original value.
+
 ## Missing Files
 
 The Oracle cannot know which optional export files should exist for a given
