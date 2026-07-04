@@ -28,6 +28,7 @@ not global Wayfinder contracts.
 | Field | Meaning |
 | --- | --- |
 | `original_file` | File containing the observation. |
+| `source_file` | Canonical source file field; additive alias of `original_file`. |
 | `original_path` | Exact source location. |
 | `byte_offset` | Byte offset when available; currently `null`. |
 | `conversation_id` | Source conversation ID when present. |
@@ -36,6 +37,7 @@ not global Wayfinder contracts.
 | `parser_name` | Parser identity. |
 | `parser_version` | Parser version. |
 | `import_timestamp` | Explicit or default deterministic import timestamp. |
+| `source_hash` | Canonical source hash field; additive alias of `hash`. |
 | `hash` | Source file or export hash. |
 
 ## Relationship Schema

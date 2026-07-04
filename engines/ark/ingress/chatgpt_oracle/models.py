@@ -56,6 +56,7 @@ class ProvenanceRecord:
     """Traceability fields attached to each observation."""
 
     original_file: str
+    source_file: str
     original_path: str
     byte_offset: int | None
     conversation_id: str | None
@@ -64,6 +65,7 @@ class ProvenanceRecord:
     parser_name: str
     parser_version: str
     import_timestamp: str
+    source_hash: str
     hash: str
 
 

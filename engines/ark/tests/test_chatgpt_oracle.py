@@ -100,6 +100,8 @@ def test_import_is_deterministic_and_preserves_relationships(tmp_path):
     assert any(item.relationship_type == "message_replies_to_message" for item in first.relationships)
     assert any(item.relationship_type == "message_references_attachment" for item in first.relationships)
     assert any(item.relationship_type == "conversation_belongs_to_project" for item in first.relationships)
+    assert first.observations[0].provenance.source_file == first.observations[0].provenance.original_file
+    assert first.observations[0].provenance.source_hash == first.observations[0].provenance.hash
 
 
 def test_unknown_and_corrupt_artifacts_are_reported_without_silent_repair(tmp_path):

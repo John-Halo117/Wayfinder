@@ -750,6 +750,7 @@ class ChatGPTExportOracle:
     ) -> ProvenanceRecord:
         return ProvenanceRecord(
             original_file=original_file,
+            source_file=original_file,
             original_path=original_path,
             byte_offset=None,
             conversation_id=conversation_id,
@@ -758,6 +759,7 @@ class ChatGPTExportOracle:
             parser_name=PARSER_NAME,
             parser_version=PARSER_VERSION,
             import_timestamp=self._import_timestamp,
+            source_hash=source_hash,
             hash=source_hash,
         )
 
