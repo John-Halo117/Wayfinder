@@ -58,6 +58,12 @@ Jarvis
 
 Only ARK preserves reality.
 
+Observation Sources produce canonical observation-shaped records.
+
+ARK preserves observations and explicit Source Relationships.
+
+WEAVE owns durable relationship topology.
+
 Everything below ARK is derived.
 
 Everything below ARK can be rebuilt, except explicitly promoted durable
@@ -144,6 +150,9 @@ Relationship Topology / WEAVE
 Reality
   |
   v
+Observation Source
+  |
+  v
 Observation
   |
   v
@@ -185,7 +194,7 @@ Navigation
 ```text
 Reality              owns itself
 Oracles              observe
-ARK                  preserves
+ARK                  preserves observations, Source Relationships, provenance, replay, and LVR
 Knowledge Compiler   proposes
 Knowledge Governance approves
 Durable Knowledge    remembers
@@ -201,6 +210,8 @@ Jarvis               navigates
 - Reality is never modified.
 - Observations are append-only.
 - Provenance is never discarded.
+- Observation Sources discover and parse; ARK preserves.
+- Source Relationships are explicit source evidence; WEAVE owns durable topology.
 - Identity is owned by the Identity Service.
 - Relationship topology is owned by WEAVE.
 - ARK preserves reality but does not reason.
@@ -219,6 +230,7 @@ These implementations can be replaced independently as long as constitutional
 contracts remain stable:
 
 - Observation Sources
+- Import Profiles
 - Storage backend
 - Search backend
 - Embedding model
@@ -282,6 +294,18 @@ Every stage is independently replaceable.
 
 Every stage preserves the constitutional separation between reality, knowledge,
 and navigation.
+
+## First Contact Alignment
+
+First Contact validated the following refinements:
+
+- Observation Sources produce observation-shaped records; ARK preserves them.
+- ARK may preserve explicit Source Relationships without owning WEAVE topology.
+- Import Profiles are required for large private imports.
+- Candidate paging and grouped governance intake are required before real
+  export-scale candidate review.
+- Private validation outputs under `.wayfinder-validation/` remain local and
+  must not be committed.
 
 ## Canonical References
 

@@ -47,3 +47,17 @@ A higher responsibility may reference lower responsibility language. A lower res
 Repository topology is independent from execution flow.
 
 The repository says where a concept lives. It does not say when a concept executes. Execution semantics are defined in `constitution/execution.md`.
+
+## Private Validation Artifacts
+
+Local validation payloads are not repository knowledge.
+
+Generated observations, preserved source artifacts, replay outputs, temporary
+indexes, import payloads, validation workspaces, and other source-derived local
+artifacts must remain outside Git history unless explicitly promoted through a
+privacy-safe report. The repository ignores `.wayfinder-validation/` for this
+reason.
+
+Validation reports committed to `docs/` must summarize aggregate evidence and
+must not include raw private source content, generated observation payloads, or
+preserved source artifacts.

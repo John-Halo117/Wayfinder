@@ -6,7 +6,7 @@ always mean ownership of the universal constitutional model.
 
 | Contract | Producer | Consumers | Canonical Output |
 | --- | --- | --- | --- |
-| Observation Contract | ARK | Evidence, Interpretation, Reasoning, Views, Jarvis, Capsules, MIDAS, Domains, Internal applications | Observation |
+| Observation Contract | Observation Source role | ARK, Evidence, Interpretation, Reasoning, Views, Jarvis, Capsules, MIDAS, Domains, Internal applications | Observation |
 | Evidence Contract | ARK | Proof, Promotion, Interpretation, Reasoning, VALOR, MIDAS, Jarvis, MICE, Blackwall | Evidence item |
 | Provenance Contract | ARK | Evidence, Proof, Promotion, Capsules, Views, Reasoning, VALOR, MICE, Domains, Operations | Provenance record |
 | Identity Contract | Identity Service | ARK, Event Bus, Storage, Jarvis, Foundry, Capsules, MICE, Domains, Internal applications, Operations | RID / canonical identity reference |
@@ -37,3 +37,5 @@ always mean ownership of the universal constitutional model.
 - Capability grammar is owned by `capabilities/`; NOMAD produces discovered capability availability.
 - Context can frame Observation, but Context does not require Observation for identity.
 - Identity Service owns reusable identity implementation; Event Bus owns subject/routing semantics.
+- The Observation Source role produces observation-shaped records; ARK preserves them.
+- ARK may preserve explicit Source Relationships as evidence; WEAVE owns durable relationship topology.

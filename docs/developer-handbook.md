@@ -58,6 +58,10 @@ Working state is disposable by default. Caches, projections, summaries, simulati
 
 Repository topology is independent of execution flow. Execution flows through Reality, Observation, Ephemeral Computation, Proof, Promotion, Durable Knowledge, Navigation, and Action.
 
+First Contact refined that flow: Observation Sources produce
+observation-shaped records, ARK preserves them, and WEAVE owns later durable
+relationship topology.
+
 ## Engine Model
 
 ### Engine
@@ -75,6 +79,9 @@ A capability is a stable architectural verb describing an outcome. Implementatio
 ### Contract
 
 A contract defines what crosses boundaries. It names producers, consumers, inputs, outputs, invariants, failure modes, and promotion rules without defining implementation APIs.
+
+For observations, the producer role is Observation Source. ARK is the
+preservation authority that consumes observation-shaped records.
 
 ### Domain
 
@@ -116,6 +123,9 @@ A new engine must satisfy this checklist:
 - No capability grammar ownership.
 
 Create a constitutional stub before implementation. The stub must define Purpose, Owns, Does Not Own, Inputs, Outputs, Dependencies, and Consumers.
+
+Placeholder engine folders and lifecycle templates are not implementations.
+Mark planned engines clearly as pending until there is proof-backed behavior.
 
 ## Adding New Services
 
@@ -159,6 +169,23 @@ Canonical Adoption
 ```
 
 A constitutional change starts as a proposal with evidence. Review tests it against One Concept, One Home, dependency direction, CivPhys, the Asset model, contracts, and engine boundaries. Proof demonstrates that the change reduces ambiguity or debt without breaking continuity. Promotion records the canonical owner, rollback path, date, and confidence. Canonical adoption updates the relevant constitution, contract, ownership, debt, census, and dashboard documents.
+
+## Local Validation Outputs
+
+Validation payloads, generated observations, replay outputs, temporary indexes,
+import artifacts, and preserved source artifacts are local by default. The
+repository ignores `.wayfinder-validation/`; do not commit files from that
+directory. Commit privacy-safe aggregate reports under `docs/` instead.
+
+## First Contact Follow-Up Rules
+
+- Add Import Profiles before larger private imports.
+- Use Candidate Pages or equivalent bounded intake before storing real
+  export-scale compiler output in governance.
+- Keep streamable event publication as a future improvement before larger
+  import volumes.
+- Do not add embeddings, Knowledge Graph behavior, Jarvis, Reasoning, or new
+  Oracles until the First Contact consolidation items are reviewed.
 
 ## Contributor Rule Of Thumb
 

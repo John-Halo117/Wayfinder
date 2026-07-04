@@ -18,6 +18,9 @@ Interpretation, Reasoning, Views, Jarvis, ZWLib, MICE, VALOR, Domains
 
 Asset, RID, Context, Evidence, Provenance, relationship type, confidence, lifecycle.
 
+Source Relationships may be consumed as evidence when they were explicitly
+present in source data and preserved by ARK.
+
 ## Outputs
 
 Relationship, relationship topology reference, relationship evidence reference.
@@ -28,6 +31,7 @@ Relationship, relationship topology reference, relationship evidence reference.
 - Relationships require evidence when durable.
 - Relationship vocabulary remains minimal.
 - A relationship is not proof by itself.
+- Source Relationships are evidence, not durable topology.
 
 ## Failure Modes
 
@@ -36,6 +40,9 @@ Unknown endpoint, ambiguous relation, conflicting evidence, missing context, or 
 ## Promotion Rules
 
 Relationships remain ephemeral until WEAVE can reference sufficient evidence and provenance. Durable relationships remain traceable to ARK-preserved reality.
+
+ARK may preserve explicit Source Relationships without producing WEAVE
+topology. WEAVE owns durable relationship topology after proof and promotion.
 
 ## Constitutional Basis
 

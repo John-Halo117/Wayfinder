@@ -8,6 +8,7 @@ Repository topology is organized by responsibility. Execution describes how know
 
 ```text
 Reality
+  -> Observation Source
   -> Observation
   -> Ephemeral Computation
   -> Proof
@@ -30,6 +31,25 @@ Reality is not owned by an engine. ARK preserves observations of reality, but re
 Observation records what was seen, received, measured, fetched, or reported.
 
 Observation precedes interpretation. Observation does not decide what the observation means.
+
+Observation Sources produce canonical observation-shaped records from external
+source material. ARK preserves those records into append-only reality when they
+satisfy the Observation Contract.
+
+### Source Relationships
+
+Source Relationships are explicit relationships present in source data. They
+are observed before interpretation and may be preserved by ARK as source
+evidence. WEAVE may later interpret, extend, or promote durable relationship
+topology from preserved evidence, but source preservation is not topology
+ownership.
+
+### Import Profiles
+
+An Import Profile bounds an import run before execution begins. It defines
+resource limits, validation posture, runtime expectations, and replay behavior.
+Import Profiles keep large local imports deterministic and reviewable without
+changing source facts.
 
 ### Ephemeral Computation
 

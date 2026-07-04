@@ -6,9 +6,11 @@ Defines what crosses the boundary when reality is observed before interpretation
 
 ## Producer
 
-ARK
+Observation Source role
 
-Exactly one engine produces this contract across engine boundaries.
+An Observation Source produces canonical observation-shaped records. ARK
+consumes and preserves those records into append-only reality when they satisfy
+this contract.
 
 ## Consumers
 
@@ -36,7 +38,10 @@ Missing source, uncertain subject, incomplete context, conflicting observation, 
 
 ## Promotion Rules
 
-Observation remains ephemeral until ARK preserves it with sufficient source, integrity, and provenance. Promoted observations become durable reality references.
+Observation remains ephemeral until ARK preserves it with sufficient source,
+integrity, and provenance. Preserved observations become durable reality
+references. ARK preserves observations; it does not discover or parse source
+exports.
 
 ## Constitutional Basis
 

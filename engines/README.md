@@ -29,8 +29,8 @@ The structure gives each engine a common constitutional shape. It does not imply
 
 | Engine | Purpose | Owns | Does Not Own | Inputs | Outputs |
 | --- | --- | --- | --- | --- | --- |
-| [ARK](ark/README.md) | Preserves reality by maintaining append-only observations, evidence, provenance, and reality graph continuity. | Observation behavior; evidence preservation; provenance; reality graph; proof-gated promotion into durable reality. | Storage, identity, event bus, policy, telemetry, navigation, reasoning, views, domain orchestration. | Observations, evidence, source references, proof criteria, contract language, and supporting services. | Durable reality records, provenance references, evidence records, reality graph outputs, and promoted reality knowledge. |
-| [WEAVE](weave/README.md) | Maintains relationship topology among durable entities, observations, assets, and concepts. | Relationship topology, adjacency, relationship context, and connection structure. | Reality preservation, interpretation, reasoning, navigation decisions, or storage infrastructure. | Durable reality, identity references, evidence references, asset references, and context. | Relationship topology and relationship surfaces for interpretation, reasoning, views, and navigation. |
+| [ARK](ark/README.md) | Preserves reality by maintaining append-only observations, explicit Source Relationships, evidence, provenance, replay, and LVR. | Preservation, provenance, append-only reality, replay, Last Verified Reality, and source relationship preservation. | Observation discovery, parsing, storage, identity, event bus, policy, telemetry, topology, navigation, reasoning, views, or domain orchestration. | Observation-shaped records, Source Relationships, evidence, source references, proof criteria, contract language, and supporting services. | Durable reality records, provenance references, evidence records, preserved source relationships, replay outputs, and LVR. |
+| [WEAVE](weave/README.md) | Maintains relationship topology among durable entities, observations, assets, and concepts. | Relationship topology, adjacency, relationship context, and connection structure. | Reality preservation, Source Relationship preservation, interpretation, reasoning, navigation decisions, or storage infrastructure. | Durable reality, identity references, evidence references, preserved Source Relationships, asset references, and context. | Relationship topology and relationship surfaces for interpretation, reasoning, views, and navigation. |
 | [Capsules](capsules/README.md) | Preserves continuity packages for future re-entry. | Capsules, re-entry context, continuity bundles, capsule maturity, handoff boundaries. | Generic storage, reality preservation, navigation, or commitment ownership. | Durable knowledge, context references, state references, evidence references, objectives, and owner references. | Continuity capsules, re-entry context, handoff packages, and capsule maturity signals. |
 | [Interpretation](interpretation/README.md) | Produces meaning candidates from observations, representations, and relationships. | Interpretive hypotheses, semantic candidates, ambiguity surfaces, and candidate meanings. | Reality preservation, final inference, navigation, commitments, or views. | Observations, representations, relationship topology, evidence, context, and schemas. | Interpretation candidates with uncertainty and evidence references. |
 | [Reasoning](reasoning/README.md) | Evaluates interpretations and evidence to infer conclusions under uncertainty. | Inference, argument structure, contradiction handling, confidence posture, and reasoned conclusions. | Observation storage, view presentation, commitments, route choice, or action execution. | Evidence, interpretations, objectives, constraints, policies, and durable knowledge. | Reasoned conclusions, uncertainty assessments, open questions, and proof inputs. |
@@ -50,7 +50,9 @@ The structure gives each engine a common constitutional shape. It does not imply
 ## Boundary Rules
 
 - ARK preserves what is.
-- WEAVE relates what is.
+- Observation Sources observe what is.
+- ARK preserves what was observed.
+- WEAVE relates what has been preserved.
 - Interpretation proposes what it may mean.
 - Reasoning evaluates what follows.
 - Views present what can be seen.
@@ -74,3 +76,10 @@ The structure gives each engine a common constitutional shape. It does not imply
 - Engines must not duplicate another engine's unique responsibility.
 - Engines expose durable outputs and capabilities, not private internal state.
 - If an engine boundary becomes ambiguous, record the ambiguity in governance before implementation.
+
+## Implementation Status
+
+Several engine folders are constitutional placeholders or legacy quarantines.
+They are not implemented merely because a folder exists. First Contact
+exercised ARK, Knowledge Compiler, Knowledge Governance, Knowledge Retrieval,
+Knowledge Views, Identity Service, and Event Bus proofs only.
