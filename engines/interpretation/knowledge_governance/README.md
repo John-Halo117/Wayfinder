@@ -19,6 +19,8 @@ canonical documents directly.
 ## Responsibilities
 
 - store candidate artifacts
+- accept bounded Candidate Pages or grouped candidate intake when candidate
+  volume exceeds one repository batch
 - group related candidates
 - expose deterministic review views
 - preserve review history
@@ -41,6 +43,13 @@ canonical documents directly.
 - semantic search
 - navigation
 - Jarvis behavior
+
+## First Contact Scale Lesson
+
+First Contact produced 250,000 compiler candidates and exceeded the current
+100,000 candidate repository cap. Governance must remain bounded and
+human-reviewed; future intake should accept deterministic Candidate Pages or
+grouped pages instead of requiring a single unbounded batch.
 
 ## Documentation
 

@@ -1,5 +1,15 @@
 # Review Workflow
 
+## First Contact Intake Rule
+
+Candidate review intake must be bounded. When compiler output exceeds one
+repository limit, candidates should arrive as deterministic Candidate Pages.
+Each page must preserve candidate provenance, grouping keys, review status,
+and validation issues without promoting knowledge.
+
+Streaming or paged intake is a future implementation requirement; this document
+does not add a new governance engine.
+
 Every candidate starts in `discovered`.
 
 ```text

@@ -57,3 +57,20 @@ Debt is acceptable only when it is named, bounded, owned, and tracked.
 | --- | --- | --- | --- | --- |
 | DEBT-003 | Event Bus duplication | Reduced by Wave 2 ownership promotion | Further reduced 2026-06-27; reusable transport-neutral Event Bus implementation promoted | ARK broker transport, GSB/WAL adapters, and engine consumers are not yet rewired |
 
+## First Contact Debt Update
+
+These entries come from First Contact validation and Phase 8B evidence
+assimilation. None are silently closed by Phase 8C.
+
+| ID | Priority | Owner | Evidence | Impact | Dependencies | Suggested repayment | Migration path | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| FC-DEBT-001 | High | Contracts | Observation contract named ARK as producer while ChatGPT Oracle emitted 110,619 observations before ARK preservation. | Contract language drift can cause future Oracles to duplicate ARK behavior. | Observation Source glossary and ontology entries. | Align producer tables and contract wording. | Update docs first; preserve runtime interfaces. | Open, reduced by Phase 8C |
+| FC-DEBT-002 | High | Contracts / WEAVE / ARK | ARK preserved 217,994 explicit relationships while WEAVE was not implemented. | Relationship topology could leak into ARK. | Source Relationship ontology entry. | Clarify Source Relationship versus WEAVE topology. | Update contracts and ARK docs; implement WEAVE later only after proof. | Open, reduced by Phase 8C |
+| FC-DEBT-003 | Medium | ARK | Default ARK observation cap rejected a 110,619-observation export. | Real imports need explicit bounded profiles. | Import Profile concept. | Add first-contact import profiles before larger imports. | Document profile now; implement reusable config only when needed. | Open |
+| FC-DEBT-004 | High | Knowledge Compiler | Compiler reached 250,000 candidates with 34,910 low-confidence warnings. | Candidate noise blocks human review. | Governance intake design. | Add candidate grouping and Candidate Pages. | Design and test page semantics before changing compiler output. | Open |
+| FC-DEBT-005 | High | Knowledge Governance | Governance repository rejected 250,000 candidates at its 100,000 cap. | Review queue cannot ingest real export-scale output. | Candidate Page and grouping. | Add bounded page intake and partial-page validation. | Add docs first; implement repository intake with tests later. | Open |
+| FC-DEBT-006 | Medium | ARK / Event Bus | First Contact accumulated 328,614 event publication records. | Larger imports may consume excessive memory. | Event Bus streaming boundary. | Add streamable event publication or bounded event reporting. | Preserve current proof API; add streaming adapter later. | Open |
+| FC-DEBT-007 | Medium | Repository Governance | 67 exact duplicate-content groups, mostly ARK/Foundry legacy. | Historical folders look active and duplicate ownership. | Legacy preservation manifest. | Remove duplicate mirrors after review. | Create simplification branch; keep manifest pointers and Git history. | Open |
+| FC-DEBT-008 | Medium | Repository Governance | Many placeholder lifecycle readmes contain no local evidence. | Placeholder folders can appear implemented. | Engine template policy. | Mark placeholders explicitly and collapse redundant docs later. | Documentation-only clarification first; deletion only after review. | Open |
+| FC-DEBT-009 | Medium | Canon | `constitution/glossary.md` lagged richer `canon/glossary.md`. | Contributors may choose conflicting canonical terms. | Canon ontology and glossary updates. | Keep `canon/` as semantic kernel and link constitution glossary to it. | Update references; avoid duplicate definitions. | Open, reduced by Phase 8C |
+| FC-DEBT-010 | Low | ChatGPT Oracle | 250 `.dat` files were preserved as attachments; richer attachment metadata could improve traceability. | Attachment-to-message traceability may remain incomplete. | ChatGPT metadata evidence. | Parse attachment metadata only when it improves provenance. | Keep blobs opaque now; add parser only with tests. | Open |
