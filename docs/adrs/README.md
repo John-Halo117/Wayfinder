@@ -11,3 +11,4 @@ evidence, and rollback.
 - [ADR-0003: Require Import Profiles For Large Private Imports](0003-import-profiles.md)
 - [ADR-0004: Keep Private Validation Outputs Local](0004-private-validation-outputs.md)
 - [ADR-0005: Page Governance Candidate Intake](0005-candidate-paging-governance-intake.md)
+- [ADR-0006: Treat Canonical Language As Derived Substrate](0006-canonical-language-substrate.md)

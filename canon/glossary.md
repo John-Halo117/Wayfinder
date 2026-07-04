@@ -2316,6 +2316,210 @@ External Integration, Operation.
 See Also:
 engines/README.md
 
+# Canonical Language Terms
+
+## Canonical Language
+
+Status:
+Proposed
+
+Acronym:
+CL (Canonical Language)
+
+Expanded Name:
+Canonical Language
+
+Definition:
+A deterministic, rebuildable, source-agnostic language normalization and
+compression substrate derived from ARK-preserved reality.
+
+Purpose:
+Gives every Oracle a shared language substrate before interpretation.
+
+Owns:
+Canonical English, Statements, Chunks, language dictionaries, structural
+language relationships, and rebuild validation.
+
+Does Not Own:
+Reality, raw artifacts, durable knowledge, reasoning, navigation,
+summarization, embeddings, or truth evaluation.
+
+Relationships:
+ARK, Observation, Statement, Chunk, Knowledge Compiler, Retrieval.
+
+Aliases:
+CL; language substrate.
+
+Deprecated Aliases:
+Knowledge; reality; summary layer.
+
+Evidence:
+Phase 8D Canonical Language Architecture.
+
+See Also:
+docs/canonical-language/README.md
+
+## Canonical English
+
+Status:
+Proposed
+
+Acronym:
+CE (Canonical English)
+
+Expanded Name:
+Canonical English
+
+Definition:
+The deterministic normalized English surface used for language deduplication
+and content-addressed IDs.
+
+Purpose:
+Normalizes language without losing raw source traceability.
+
+Owns:
+Whitespace normalization, safe punctuation normalization, source-preserving
+case/display rules, and structural text normalization.
+
+Does Not Own:
+Translation, meaning repair, summarization, or AI correction.
+
+Relationships:
+Canonical Language, Statement, Phrase, Word.
+
+Aliases:
+Normalized English surface.
+
+Deprecated Aliases:
+Cleaned truth; summary text.
+
+Evidence:
+Phase 8D requires AI never to own normalization.
+
+See Also:
+docs/canonical-language/architecture.md
+
+## Statement
+
+Status:
+Proposed
+
+Acronym:
+STMT (Statement)
+
+Expanded Name:
+Statement
+
+Definition:
+The primary reusable language unit: a deterministic source-derived surface unit
+prepared for compiler, retrieval, and future AI consumption.
+
+Purpose:
+Provides a unit more useful than a Phrase and more precise than a Chunk.
+
+Owns:
+Statement content identity, occurrence identity, structural type, normalized
+surface, and provenance links.
+
+Does Not Own:
+Truth, claim validation, promotion, or interpretation.
+
+Relationships:
+Canonical Language, Chunk, Phrase, Word, Observation.
+
+Aliases:
+Canonical Statement.
+
+Deprecated Aliases:
+Claim when truth has not been evaluated.
+
+Evidence:
+Phase 8D selected Statement as the primary reusable unit.
+
+See Also:
+docs/canonical-language/statement-architecture.md
+
+## Chunk
+
+Status:
+Proposed
+
+Acronym:
+CHK (Chunk)
+
+Expanded Name:
+Chunk
+
+Definition:
+A bounded ordered window of Statements used for retrieval, context expansion,
+and future AI input.
+
+Purpose:
+Carries enough context around Statements without becoming the primary language
+identity.
+
+Owns:
+Chunk profile, ordered Statement membership, stable ordinal under profile,
+content ID, occurrence ID, and retrieval context.
+
+Does Not Own:
+Raw source, truth, summary, or durable knowledge.
+
+Relationships:
+Statement, Paragraph, Message, Section, Retrieval.
+
+Aliases:
+Context window.
+
+Deprecated Aliases:
+Summary chunk.
+
+Evidence:
+Phase 8D chunk architecture.
+
+See Also:
+docs/canonical-language/chunk-architecture.md
+
+## Canonical Dictionary
+
+Status:
+Proposed
+
+Acronym:
+CD (Canonical Dictionary)
+
+Expanded Name:
+Canonical Dictionary
+
+Definition:
+A versioned, content-addressed dictionary for canonical Words, Phrases,
+Statements, and Chunks.
+
+Purpose:
+Deduplicates language and supports compression, frequency, and retrieval.
+
+Owns:
+Dictionary entry identity, occurrence references, versioning, and rebuildable
+frequency indexes.
+
+Does Not Own:
+Raw source, mutable content IDs, or knowledge promotion.
+
+Relationships:
+Word Dictionary, Phrase Dictionary, Statement Dictionary, Chunk Dictionary.
+
+Aliases:
+Language dictionary.
+
+Deprecated Aliases:
+Memory store; knowledge base.
+
+Evidence:
+Phase 8D dictionary architecture.
+
+See Also:
+docs/canonical-language/dictionary-architecture.md
+
 # Aliases and Deprecated Terms
 
 ## Forge

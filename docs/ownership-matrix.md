@@ -12,6 +12,11 @@ Every concept has exactly one canonical owner.
 | Import Profile | Execution Semantics |
 | Candidate Page | Knowledge Governance |
 | Opaque Attachment | Asset Contracts and source-specific Oracle docs |
+| Canonical Language | Canonical Language Design |
+| Canonical English | Canonical Language Design |
+| Statement | Canonical Language Design |
+| Chunk | Canonical Language Design |
+| Canonical Dictionary | Canonical Language Design |
 | Evidence | Evidence Contracts |
 | Evidence Bundle | Evidence Contracts |
 | Provenance | Provenance Contracts |
@@ -94,6 +99,10 @@ Policy, Permission, Capability, View, Capsule, and Schema language.
 
 WEAVE owns durable relationship topology. ARK-preserved Source Relationships
 remain evidence until WEAVE consumes and promotes topology.
+
+Canonical Language owns derived language normalization and compression
+artifacts. It consumes ARK-preserved observations and remains rebuildable. It
+does not own reality, knowledge, reasoning, navigation, or source parsing.
 
 Jarvis owns navigation behavior that consumes Bearing and Capability language.
 

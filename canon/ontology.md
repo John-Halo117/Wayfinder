@@ -169,3 +169,163 @@ evidence-backed parser.
 
 Evidence: First Contact classified and preserved 250 `.dat` files as attachment
 source files and normalized 700 attachment artifacts.
+
+## Canonical Language Concepts
+
+### Canonical Language
+
+Architectural Name: Canonical Language
+
+Technical Name: `CanonicalLanguageArtifact`
+
+Status: Proposed
+
+Definition: A deterministic, rebuildable, source-agnostic language
+normalization and compression substrate derived from ARK-preserved reality.
+
+Responsibilities: Normalize source language; segment blocks, paragraphs,
+Statements, Phrases, and Words; build dictionaries; create Chunk windows;
+preserve traceability to observations and raw artifacts.
+
+Non-responsibilities: Preserving reality; evaluating truth; creating durable
+knowledge; reasoning; navigation; summarization; embedding generation.
+
+Canonical Owner: Proposed `docs/canonical-language/` until implementation
+owner is selected.
+
+Accepted Aliases: CL, language substrate.
+
+Deprecated Aliases: knowledge, reality, summary layer.
+
+Relationships: Consumes ARK-preserved observations; produces Statements,
+Chunks, dictionaries, and structural relationships; feeds Knowledge Compiler
+and Retrieval.
+
+Lifecycle: preserved observation -> deterministic extraction -> Canonical
+English normalization -> dictionary lookup or append -> Statement and Chunk
+emission -> validation -> rebuildable indexes.
+
+Evidence: Phase 8D design requirement that future Oracles normalize into one
+substrate before compiler and future AI consumption.
+
+### Canonical English
+
+Architectural Name: Canonical English
+
+Technical Name: `CanonicalEnglishV1`
+
+Status: Proposed
+
+Definition: The deterministic normalized English surface used for deduplication
+and language IDs.
+
+Responsibilities: Normalize whitespace, punctuation variants, structural
+boundaries, and safe lexical forms while preserving raw source by reference.
+
+Non-responsibilities: Translation, summarization, meaning repair, fact
+extraction, or AI correction.
+
+Canonical Owner: Proposed Canonical Language subsystem.
+
+Accepted Aliases: normalized English surface.
+
+Deprecated Aliases: cleaned truth, summary text.
+
+Relationships: Produces Word, Phrase, Statement, and Chunk content IDs.
+
+Lifecycle: raw source text reference -> deterministic normalization ->
+versioned normalized surface -> content-addressed IDs.
+
+Evidence: Phase 8D requirement that AI never own normalization.
+
+### Statement
+
+Architectural Name: Statement
+
+Technical Name: `CanonicalStatement`
+
+Status: Proposed
+
+Definition: The primary reusable language unit, smaller than a Chunk and more
+useful than a Phrase for compiler and retrieval inputs.
+
+Responsibilities: Represent a deterministic surface unit such as sentence,
+heading, bullet item, table cell, transcript utterance, or metadata field.
+
+Non-responsibilities: Asserting truth, resolving claims, promoting knowledge,
+or summarizing source content.
+
+Canonical Owner: Proposed Canonical Language subsystem.
+
+Accepted Aliases: canonical statement.
+
+Deprecated Aliases: claim when truth has not been evaluated.
+
+Relationships: Contains Phrases and Words; belongs to Paragraphs, Blocks, and
+Chunks; traces to Observations.
+
+Lifecycle: segmented from source language -> normalized -> content ID assigned
+-> occurrence ID linked to observation -> consumed by compiler/retrieval.
+
+Evidence: Phase 8D selected Statement as the primary reusable unit.
+
+### Chunk
+
+Architectural Name: Chunk
+
+Technical Name: `CanonicalChunk`
+
+Status: Proposed
+
+Definition: A bounded ordered window of Statements used for retrieval, context
+expansion, and future AI input.
+
+Responsibilities: Preserve source-near context windows, stable numbering under
+a chunk profile, and traceability to statement occurrences.
+
+Non-responsibilities: Primary meaning, truth, source preservation, or summary.
+
+Canonical Owner: Proposed Canonical Language subsystem.
+
+Accepted Aliases: context window.
+
+Deprecated Aliases: summary chunk.
+
+Relationships: Contains Statement occurrences; expands to Paragraph, Message,
+Section, Conversation, or Document.
+
+Lifecycle: statements emitted -> chunk profile selected -> boundaries applied
+-> content and occurrence IDs assigned -> retrieval indexes rebuilt.
+
+Evidence: Phase 8D chunk architecture.
+
+### Canonical Dictionary
+
+Architectural Name: Canonical Dictionary
+
+Technical Name: `CanonicalDictionary`
+
+Status: Proposed
+
+Definition: A versioned, content-addressed, rebuildable dictionary for Words,
+Phrases, Statements, and Chunks.
+
+Responsibilities: Deduplicate language units, track occurrences, rebuild
+frequencies, and support compression/retrieval.
+
+Non-responsibilities: Owning raw text, mutating content IDs, or promoting
+knowledge.
+
+Canonical Owner: Proposed Canonical Language subsystem.
+
+Accepted Aliases: language dictionary.
+
+Deprecated Aliases: memory store, knowledge base.
+
+Relationships: Contains Word Dictionary, Phrase Dictionary, Statement
+Dictionary, and Chunk Dictionary.
+
+Lifecycle: normalize unit -> content-address lookup -> append immutable entry
+if absent -> rebuild frequency indexes.
+
+Evidence: Phase 8D dictionary architecture.

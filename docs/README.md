@@ -38,6 +38,8 @@ If a document defines a concept, it must point to the concept's canonical home.
 - `first-contact/` records privacy-safe real export validation, evidence
   assimilation, and consolidation reports. Raw validation outputs remain local
   under `.wayfinder-validation/` and are ignored by Git.
+- `canonical-language/` records the Phase 8D design for the derived,
+  source-agnostic language normalization substrate.
 - `ownership-matrix.md` records canonical concept ownership.
 - `adrs/` records architecture decisions accepted from evidence.
 - [Wave 2 Verification](wave-2-verification.md)

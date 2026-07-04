@@ -25,6 +25,10 @@ ARK
 Reality Preservation Engine
   |
   v
+Canonical Language
+(Derived Language Substrate)
+  |
+  v
 Knowledge Compiler
 (Candidate Knowledge)
   |
@@ -86,6 +90,9 @@ ARK
   | +--> Policy / Configuration
   |
   v
+Canonical Language
+  |
+  v
 Knowledge Compiler
   |
   v
@@ -117,14 +124,15 @@ Layer 0   Reality
 Layer 1   Observation Sources / Oracles
 Layer 2   Observation Contract
 Layer 3   ARK / Reality Preservation
-Layer 4   Interpretation / Knowledge Compiler
-Layer 5   Governance / Knowledge Governance
-Layer 6   Durable Knowledge
-Layer 7   Retrieval
-Layer 8   Views
-Layer 9   Capsules
-Layer 10  Reasoning
-Layer 11  Navigation / Jarvis
+Layer 4   Canonical Language / Derived Language Substrate
+Layer 5   Interpretation / Knowledge Compiler
+Layer 6   Governance / Knowledge Governance
+Layer 7   Durable Knowledge
+Layer 8   Retrieval
+Layer 9   Views
+Layer 10  Capsules
+Layer 11  Reasoning
+Layer 12  Navigation / Jarvis
 ```
 
 ## Supporting Services
@@ -162,6 +170,9 @@ Evidence
 Preservation
   |
   v
+Canonical Language
+  |
+  v
 Candidate Knowledge
   |
   v
@@ -195,6 +206,7 @@ Navigation
 Reality              owns itself
 Oracles              observe
 ARK                  preserves observations, Source Relationships, provenance, replay, and LVR
+Canonical Language   normalizes derived language
 Knowledge Compiler   proposes
 Knowledge Governance approves
 Durable Knowledge    remembers
@@ -215,6 +227,7 @@ Jarvis               navigates
 - Identity is owned by the Identity Service.
 - Relationship topology is owned by WEAVE.
 - ARK preserves reality but does not reason.
+- Canonical Language is derived, rebuildable, and not knowledge.
 - The Knowledge Compiler proposes but never preserves.
 - Knowledge Governance promotes but never rewrites history.
 - Durable Knowledge is the canonical knowledge store.
@@ -231,6 +244,7 @@ contracts remain stable:
 
 - Observation Sources
 - Import Profiles
+- Canonical Language implementation
 - Storage backend
 - Search backend
 - Embedding model
