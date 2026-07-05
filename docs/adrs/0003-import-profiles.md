@@ -4,6 +4,12 @@ Status: Accepted
 
 Date: 2026-07-03
 
+## Architecture Sections
+
+- [02 Perception](../architecture/02-perception.md)
+- [03 Observations](../architecture/03-observations.md)
+- [18 Cross-Cutting Systems](../architecture/18-cross-cutting.md)
+
 ## Context
 
 The default ARK observation cap of 100,000 rejected the First Contact export,

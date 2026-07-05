@@ -4,6 +4,12 @@ Status: Proposed
 
 Date: 2026-07-05
 
+## Architecture Sections
+
+- [02 Perception](../architecture/02-perception.md)
+- [17 Actions](../architecture/17-actions.md)
+- [20 Repository Map](../architecture/20-repository-map.md)
+
 ## Context
 
 External integrations are currently visible mostly in preserved legacy code:

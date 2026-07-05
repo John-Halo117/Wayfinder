@@ -4,6 +4,9 @@ ADRs record evidence-backed architecture decisions. They do not implement
 features. Each ADR must state status, context, decision, consequences,
 evidence, and rollback.
 
+Each ADR must reference one or more canonical architecture sections under
+[`../architecture/`](../architecture/).
+
 ## Index
 
 - [ADR-0001: Observation Sources Produce Observations](0001-observation-sources.md)

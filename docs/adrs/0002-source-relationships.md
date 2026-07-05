@@ -4,6 +4,12 @@ Status: Accepted
 
 Date: 2026-07-03
 
+## Architecture Sections
+
+- [03 Observations](../architecture/03-observations.md)
+- [04 ARK](../architecture/04-ark.md)
+- [08 Networks](../architecture/08-networks.md)
+
 ## Context
 
 First Contact preserved 217,994 explicit relationships from source structure.

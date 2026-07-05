@@ -4,6 +4,12 @@ Status: Accepted
 
 Date: 2026-07-03
 
+## Architecture Sections
+
+- [01 Reality](../architecture/01-reality.md)
+- [04 ARK](../architecture/04-ark.md)
+- [18 Cross-Cutting Systems](../architecture/18-cross-cutting.md)
+
 ## Context
 
 First Contact generated large source-derived outputs, including preserved

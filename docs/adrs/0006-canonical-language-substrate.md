@@ -4,6 +4,12 @@ Status: Accepted
 
 Date: 2026-07-03
 
+## Architecture Sections
+
+- [05 Representations](../architecture/05-representations.md)
+- [07 Understanding](../architecture/07-understanding.md)
+- [18 Cross-Cutting Systems](../architecture/18-cross-cutting.md)
+
 ## Context
 
 First Contact validated the observation-preservation pipeline. Future Oracles

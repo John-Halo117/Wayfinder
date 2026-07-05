@@ -30,6 +30,9 @@ If a document defines a concept, it must point to the concept's canonical home.
 - `architectural-analysis-2026-07-05.md` records the current repository
   architecture analysis, duplication report, dependency analysis, and migration
   roadmap.
+- `architecture/` is the canonical architecture reference, including the
+  dependency-ordered layer model, repository map, health dashboard, and
+  migration roadmap.
 - `constitutional-migration-agent.md` defines the required migration posture,
   deliverables, and behavioral constraints.
 - `classification.md` defines the ordered classification grammar.

@@ -4,6 +4,12 @@ Status: Proposed
 
 Date: 2026-07-05
 
+## Architecture Sections
+
+- [18 Cross-Cutting Systems](../architecture/18-cross-cutting.md)
+- [20 Repository Map](../architecture/20-repository-map.md)
+- [21 Roadmap](../architecture/21-roadmap.md)
+
 ## Context
 
 Tracked duplicate analysis found 67 duplicate hash groups, dominated by

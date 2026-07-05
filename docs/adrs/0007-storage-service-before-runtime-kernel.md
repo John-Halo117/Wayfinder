@@ -4,6 +4,12 @@ Status: Proposed
 
 Date: 2026-07-05
 
+## Architecture Sections
+
+- [04 ARK](../architecture/04-ark.md)
+- [18 Cross-Cutting Systems](../architecture/18-cross-cutting.md)
+- [21 Roadmap](../architecture/21-roadmap.md)
+
 ## Context
 
 Wayfinder already identifies shared infrastructure as service-owned.

@@ -4,6 +4,12 @@ Status: Accepted
 
 Date: 2026-07-03
 
+## Architecture Sections
+
+- [06 Focus](../architecture/06-focus.md)
+- [07 Understanding](../architecture/07-understanding.md)
+- [21 Roadmap](../architecture/21-roadmap.md)
+
 ## Context
 
 First Contact produced 250,000 compiler candidates and hit the configured

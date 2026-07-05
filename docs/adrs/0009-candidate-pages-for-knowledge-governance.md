@@ -4,6 +4,12 @@ Status: Proposed
 
 Date: 2026-07-05
 
+## Architecture Sections
+
+- [06 Focus](../architecture/06-focus.md)
+- [07 Understanding](../architecture/07-understanding.md)
+- [21 Roadmap](../architecture/21-roadmap.md)
+
 ## Context
 
 First Contact showed that real exports can produce candidate volumes larger

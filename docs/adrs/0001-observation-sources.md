@@ -4,6 +4,12 @@ Status: Accepted
 
 Date: 2026-07-03
 
+## Architecture Sections
+
+- [02 Perception](../architecture/02-perception.md)
+- [03 Observations](../architecture/03-observations.md)
+- [04 ARK](../architecture/04-ark.md)
+
 ## Context
 
 First Contact proved that the ChatGPT Export Oracle emitted 110,619
