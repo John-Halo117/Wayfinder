@@ -8,6 +8,7 @@ from tooling.export_mining.mine_wayfinder_export import (
     WayfinderExportMiner,
     write_knowledge_base,
 )
+from tooling.export_mining.compile_knowledge import compile_knowledge_base
 
 
 def test_export_miner_reconstructs_order_and_deduplicates(tmp_path: Path) -> None:
@@ -169,3 +170,50 @@ def test_export_miner_redacts_local_paths(tmp_path: Path) -> None:
     assert "C:/Users" not in statements
     assert "docs/example.md" in statements
     assert "[local-path]" in statements
+
+
+def test_knowledge_compiler_builds_graph_search_and_reports(tmp_path: Path) -> None:
+    shard = tmp_path / "conversations-000.json"
+    shard.write_text(
+        json.dumps(
+            [
+                {
+                    "id": "conv-1",
+                    "conversation_id": "conv-1",
+                    "title": "Wayfinder Pipeline",
+                    "mapping": {
+                        "root": {"id": "root", "parent": None, "message": None},
+                        "msg": {
+                            "id": "msg",
+                            "parent": "root",
+                            "message": {
+                                "id": "msg-1",
+                                "create_time": 1,
+                                "author": {"role": "assistant"},
+                                "content": {
+                                    "parts": [
+                                        "Wayfinder must preserve provenance for every Pipeline requirement.",
+                                    ]
+                                },
+                            },
+                        },
+                    },
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    output = tmp_path / "Knowledge"
+    result = WayfinderExportMiner().mine_paths((shard,))
+    write_knowledge_base(result, output)
+
+    compiled = compile_knowledge_base(output)
+
+    assert compiled.status == "ok"
+    assert (output / "graph" / "nodes.jsonl").exists()
+    assert (output / "graph" / "edges.jsonl").exists()
+    assert (output / "graph" / "provenance.jsonl").exists()
+    assert (output / "search" / "sqlite.db").exists()
+    assert (output / "search" / "fts5.db").exists()
+    assert (output / "reports" / "quality_gates.json").exists()
+    assert compiled.quality_gates["provenance_missing_count"] == 0

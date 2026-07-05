@@ -28,6 +28,27 @@ python3 -m tooling.export_mining.mine_wayfinder_export \
 Graph records are written in chunks so large exports do not create a single
 huge JSON file.
 
+## Compiler
+
+Compile the mined evidence into stable UUID graph records, SQLite/FTS search
+databases, and quality reports:
+
+```bash
+python3 -m tooling.export_mining.compile_knowledge \
+  --input-manifest .wayfinder-validation/export-mining/source-files.txt \
+  --knowledge Knowledge
+```
+
+For fast reruns after mining, omit `--input-manifest`:
+
+```bash
+python3 -m tooling.export_mining.compile_knowledge --knowledge Knowledge
+```
+
+The compiler writes fallback JSONL graph tables when optional Parquet
+dependencies are unavailable. Embeddings are disabled unless a local
+`sentence-transformers` model dependency is installed explicitly.
+
 ## Privacy Boundary
 
 Generated source inventories include file names, sizes, artifact classes, and
