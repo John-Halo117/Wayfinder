@@ -17,7 +17,14 @@ raw export payloads into the repository.
 
 ## Low-Token Reruns
 
-Put source paths in a text file and pass it with `--input-manifest`:
+Build a source manifest once, then pass it with `--input-manifest`:
+
+```bash
+python3 -m tooling.export_mining.build_source_manifest \
+  --source-dir /mnt/c/Users/<user>/AppData/Local/Temp \
+  --conversation-version 2 \
+  --output .wayfinder-validation/export-mining/source-files.txt
+```
 
 ```bash
 python3 -m tooling.export_mining.mine_wayfinder_export \

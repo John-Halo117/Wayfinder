@@ -9,6 +9,7 @@ from tooling.export_mining.mine_wayfinder_export import (
     write_knowledge_base,
 )
 from tooling.export_mining.compile_knowledge import compile_knowledge_base
+from tooling.export_mining.build_source_manifest import build_source_manifest
 
 
 def test_export_miner_reconstructs_order_and_deduplicates(tmp_path: Path) -> None:
@@ -217,3 +218,23 @@ def test_knowledge_compiler_builds_graph_search_and_reports(tmp_path: Path) -> N
     assert (output / "search" / "fts5.db").exists()
     assert (output / "reports" / "quality_gates.json").exists()
     assert compiled.quality_gates["provenance_missing_count"] == 0
+
+
+def test_source_manifest_builder_selects_one_json_generation(tmp_path: Path) -> None:
+    (tmp_path / "conversations-000.json").write_text("[]", encoding="utf-8")
+    (tmp_path / "conversations-000 (2).json").write_text("[]", encoding="utf-8")
+    (tmp_path / "conversations-001 (2).json").write_text("[]", encoding="utf-8")
+    (tmp_path / "user (3).json").write_text("{}", encoding="utf-8")
+    (tmp_path / "user_settings (3).json").write_text("[]", encoding="utf-8")
+    (tmp_path / "file_abc.dat").write_bytes(b"asset")
+    output = tmp_path / "sources.txt"
+
+    result = build_source_manifest(tmp_path, output, conversation_version=2)
+    lines = output.read_text(encoding="utf-8").splitlines()
+
+    assert result.source_count == 5
+    assert result.conversation_shards == 2
+    assert result.metadata_json == 2
+    assert result.dat_files == 1
+    assert any(line.endswith("user (3).json") for line in lines)
+    assert any(line.endswith("user_settings (3).json") for line in lines)
