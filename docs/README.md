@@ -27,6 +27,9 @@ If a document defines a concept, it must point to the concept's canonical home.
 - `promotion-checklist.md` defines promotion gates.
 - `fitness-functions.md` defines objective architectural tests.
 - `migration-dashboard.md` summarizes engine migration status.
+- `architectural-analysis-2026-07-05.md` records the current repository
+  architecture analysis, duplication report, dependency analysis, and migration
+  roadmap.
 - `constitutional-migration-agent.md` defines the required migration posture,
   deliverables, and behavioral constraints.
 - `classification.md` defines the ordered classification grammar.
