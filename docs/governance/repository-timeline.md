@@ -1,0 +1,15 @@
+# Repository Timeline
+
+- `adr`: [ADR-0001: Observation Sources Produce Observations](../adrs/0001-observation-sources.md)
+- `adr`: [ADR-0002: Preserve Source Relationships Before Topology](../adrs/0002-source-relationships.md)
+- `adr`: [ADR-0003: Require Import Profiles For Large Private Imports](../adrs/0003-import-profiles.md)
+- `adr`: [ADR-0004: Keep Private Validation Outputs Local](../adrs/0004-private-validation-outputs.md)
+- `adr`: [ADR-0005: Page Governance Candidate Intake](../adrs/0005-candidate-paging-governance-intake.md)
+- `adr`: [ADR-0006: Treat Canonical Language As Derived Substrate](../adrs/0006-canonical-language-substrate.md)
+- `adr`: [ADR 0007: Promote Storage Service Proof Before Runtime Kernel Extraction](../adrs/0007-storage-service-before-runtime-kernel.md)
+- `adr`: [ADR 0008: Introduce A Compatibility Layer For External Integrations](../adrs/0008-compatibility-layer-for-external-integrations.md)
+- `adr`: [ADR 0009: Add Candidate Pages For Bounded Knowledge Governance](../adrs/0009-candidate-pages-for-knowledge-governance.md)
+- `adr`: [ADR 0010: Consolidate Duplicate Forge Legacy With Compatibility Aliases](../adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md)
+- `milestone`: [constitution-v1-release-audit](../constitution-v1-release-audit.md)
+- `milestone`: [release-plan](../programs/release-plan.md)
+- `milestone`: [PRODUCTION_RELEASE_v1.0](../../engines/ark/legacy/PRODUCTION_RELEASE_v1.0.md)

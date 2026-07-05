@@ -33,6 +33,9 @@ If a document defines a concept, it must point to the concept's canonical home.
 - `architecture/` is the canonical architecture reference, including the
   dependency-ordered layer model, repository map, health dashboard, and
   migration roadmap.
+- `governance/` contains generated Architecture Doctor reports, architecture
+  graphs, dashboards, audits, drift detection, and CI-oriented validation
+  outputs.
 - `constitutional-migration-agent.md` defines the required migration posture,
   deliverables, and behavioral constraints.
 - `classification.md` defines the ordered classification grammar.
