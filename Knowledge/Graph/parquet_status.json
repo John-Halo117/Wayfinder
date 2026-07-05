@@ -1,0 +1,5 @@
+{
+  "fallback": "jsonl",
+  "reason": "pyarrow unavailable: ModuleNotFoundError",
+  "status": "unavailable"
+}

@@ -1,0 +1,5 @@
+{
+  "policy": "No embeddings generated without explicit local model dependency.",
+  "reason": "sentence-transformers unavailable: ModuleNotFoundError",
+  "status": "unavailable"
+}

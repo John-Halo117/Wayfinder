@@ -1,0 +1,54 @@
+# Duplicates
+
+Duplicate normalized statement groups: 4887
+
+- `domain_model, interface_api`: """docstring = describe, schema = signature"""
+- `domain_model, interface_api`: "add to the bottom of schema/01-ark-core.sql a full insert for ark_event_type with at least these 20 rows covering all 10 clusters (infrastructure, sensor, environmental, water, energy, food, resource, knowledge, media, intelligence).
+- `constitutional_principle, constraint`: "ark is local-first distributed continuity infrastructure."
+- `constitutional_principle, constraint`: "build a version-controlled docker infrastructure repository for my local-first wayfinder stack.
+- `architectural_decision, terminology`: "bundle" is functional, but i don't think it's the right canonical term.
+- `constitutional_principle, constraint, pattern`: "define ark core philosophy: local-first, privacy-first, modular, replaceable",
+- `constitutional_principle, constraint`: "description": "phase 0-6 roadmap for a portable, self-hosted, privacy-first ark stack, with nas core, cyberdeck nodes, and real-world sensors.",
+- `architectural_decision, pattern, terminology`: "extract the canonical ontology."
+- `constitutional_principle, domain_model`: "manual is master"** → human override is *always* a constitutional right.
+- `domain_model, future_work`: "observation" just looks like the missing noun that lets the truth spine, trisca, civphys, and jarvis all speak the same language.
+- `domain_model, interface_api`: "schema": "energy.yaml",
+- `domain_model, pattern, requirement`: "what observation should be preserved?"
+- `domain_model, interface_api`: "write the complete production-ready postgresql ddl for the ark ssot mvp in schema/01-ark-core.sql.
+- `architectural_decision, pipeline`: # **1) canonical end-to-end pipeline (correct order)**
+- `domain_model, interface_api`: # **5) delta + binary schema design**
+- `boundary, constraint`: # **ark founder privacy & ownership clause**
+- `architectural_decision, pipeline`: # 1) canonical ark data pipeline (final form)
+- `constitutional_principle, terminology`: # 1) first principles (what “one ontology” means)
+- `domain_model, interface_api`: # 1) globalize the contract (one schema to rule it)
+- `constitutional_principle, pipeline`: # 1) why replay works (first principles)
+- `domain_model, interface_api`: # 10) schema validator
+- `future_work, pipeline, terminology`: # 2) determinsitic replay engine (missing core)
+- `domain_model, interface_api`: # 2) memory schema (what you actually store)
+- `domain_model, pipeline`: # 24 - provenance & replay (audit)
+- `interface_api, terminology`: # 3) openclaw definition (explicit contract)
+- `constraint, domain_model, interface_api`: # 3) schema-driven event system (global constraint layer)
+- `constraint, pipeline, terminology`: # 4) integration → deterministic accounting + replay
+- `pipeline, terminology`: # 5) determinism + replay
+- `constitutional_principle, pipeline`: # 5) key rule: ark never parses by default
+- `pipeline, terminology`: # 7) determinism + replay
+- `constraint, pipeline`: # 8) cache (idempotent, replay)
+- `pipeline, terminology`: # 8) determinism and replay tests
+- `pipeline, terminology`: # 9) determinism + replay
+- `architectural_decision, pipeline`: # 9) example pipeline (canonical)
+- `domain_model, pipeline`: # ark universal asset ingestion architecture
+- `architectural_decision, domain_model, pipeline`: # ark universal asset ingestion engine - canonical architecture specification
+- `constraint, terminology`: # b) rust ark controller (deterministic brain)
+- `architectural_decision, terminology`: # canonical ontology
+- `domain_model, interface_api`: # ci/schema-validator.py
+- `domain_model, terminology`: # core ontology domains
+- `architectural_decision, terminology`: # create the canonical glossary for the wayfinder repository
+- `domain_model, interface_api`: # data schema format (5w+h)
+- `domain_model, interface_api`: # dynamic plugin configuration schema
+- `domain_model, interface_api`: # enable or disable schema-on-read
+- `domain_model, interface_api`: # here you'd plug in json schema/yaml validator
+- `architectural_decision, pipeline`: # jarvis pipeline (canonical)
+- `pattern, requirement`: # jarvis should preserve escalation integrity
+- `domain_model, interface_api`: # layer 1 - meta-schema
+- `domain_model, interface_api`: # layer 3 - domain registry
+- `domain_model, interface_api`: # layer 5 - observation schema
