@@ -1,0 +1,38 @@
+{
+  "chunk_count": 6,
+  "chunk_size": 5000,
+  "chunks": [
+    {
+      "path": "facts/part-0000.json",
+      "record_count": 5000,
+      "sha256": "e15cd1db262d4ef62d01bb6171df716781b46efe277ca27b2716f92367bc153e"
+    },
+    {
+      "path": "facts/part-0001.json",
+      "record_count": 5000,
+      "sha256": "d566326a34ad8b9e05f52764c5bf6373acfa36c35a87c9a94a12409b76c1ff5e"
+    },
+    {
+      "path": "facts/part-0002.json",
+      "record_count": 5000,
+      "sha256": "c6adf5e0dae81e95fcaabaa203a5be1a4422f62d2509fb8b8680d22a4b2c484c"
+    },
+    {
+      "path": "facts/part-0003.json",
+      "record_count": 5000,
+      "sha256": "431b40d4e45ce1d68c3b3215801e47790db9d9c45a3de6cabf72feac87574b09"
+    },
+    {
+      "path": "facts/part-0004.json",
+      "record_count": 5000,
+      "sha256": "717c3e9f61a4dd36afe5053997664ffc36c77b0830b865c24e5e3e14698f03db"
+    },
+    {
+      "path": "facts/part-0005.json",
+      "record_count": 2935,
+      "sha256": "53365480ee5c20a38045924bd2dfa48cac990e384e80e846563e1384bc054a72"
+    }
+  ],
+  "record_count": 27935,
+  "schema": "wayfinder.export_mining.facts.chunks.v1"
+}

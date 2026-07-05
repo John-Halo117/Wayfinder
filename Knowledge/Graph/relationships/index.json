@@ -1,0 +1,73 @@
+{
+  "chunk_count": 13,
+  "chunk_size": 5000,
+  "chunks": [
+    {
+      "path": "relationships/part-0000.json",
+      "record_count": 5000,
+      "sha256": "7fcbcbeb90fe6cd8fcb20bdb32599ac096c5e1fc2a406b9c0a381c9cfb0fd1d4"
+    },
+    {
+      "path": "relationships/part-0001.json",
+      "record_count": 5000,
+      "sha256": "90cf6c93253fd9f92f9317dc2c9f3e04d882f79441a50fc8860c9f1c9272c2bb"
+    },
+    {
+      "path": "relationships/part-0002.json",
+      "record_count": 5000,
+      "sha256": "b56ad8b2b53c40e103123fad37ef1f1b05968ffcad11aba4cd3b90bd131f1274"
+    },
+    {
+      "path": "relationships/part-0003.json",
+      "record_count": 5000,
+      "sha256": "2afe27ec4e2df65c419c8eb3309d4318cc02b6a6dbca2d24e939c5ef4b3973b9"
+    },
+    {
+      "path": "relationships/part-0004.json",
+      "record_count": 5000,
+      "sha256": "a0d4f8767f794458863b80ca4ebf3327d8e924489a3b33e9ebe16d99b15f9045"
+    },
+    {
+      "path": "relationships/part-0005.json",
+      "record_count": 5000,
+      "sha256": "30113f46c23fbd4aa9534fbaa8ddeb9f6aa07d4ab8ce22a8ff746cab145f3112"
+    },
+    {
+      "path": "relationships/part-0006.json",
+      "record_count": 5000,
+      "sha256": "bf47b21bde708a78afce46b8fd1a3f1fc71f3bfe16537fc21fb8685571a5e7be"
+    },
+    {
+      "path": "relationships/part-0007.json",
+      "record_count": 5000,
+      "sha256": "c07cd304b14acaa62c03f38f072ee1f5d6836770734531da5bb6ebb425db11e9"
+    },
+    {
+      "path": "relationships/part-0008.json",
+      "record_count": 5000,
+      "sha256": "686981674031536f4b9d1cf7a60b3cc92f4441f46193b831750bf262d74cb37e"
+    },
+    {
+      "path": "relationships/part-0009.json",
+      "record_count": 5000,
+      "sha256": "09c27cc09decac274e0a1194dc93757352bf93c515b45b05d399c79bad59acd0"
+    },
+    {
+      "path": "relationships/part-0010.json",
+      "record_count": 5000,
+      "sha256": "e2717d92deb3a0087ce8e852983c9c67c407587f85f6f25575d6737b16114128"
+    },
+    {
+      "path": "relationships/part-0011.json",
+      "record_count": 5000,
+      "sha256": "66ec5b875e9f5dab5544798eaf13e7fd86109d622c6c2a9758f7a4a2166baa43"
+    },
+    {
+      "path": "relationships/part-0012.json",
+      "record_count": 4060,
+      "sha256": "45a8e14c2ae139cde3164bbdd312b405cc0995181c51a152b73f9adc9fba2f83"
+    }
+  ],
+  "record_count": 64060,
+  "schema": "wayfinder.export_mining.relationships.chunks.v1"
+}

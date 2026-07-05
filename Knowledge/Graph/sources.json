@@ -1,0 +1,3152 @@
+[
+  {
+    "artifact_type": "AssetIndex",
+    "name": "conversation_asset_file_names (5).json",
+    "sha256": "29d8c38a6f751d91db27544797694d56ea9dd549d55f1402f0b39760a03857ac",
+    "size_bytes": 13913
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-000 (2).json",
+    "sha256": "b2bbc0175f12bfb9f2962c49fa04ee4c1c278e07d5fbbdca6fc4d8a423675c56",
+    "size_bytes": 24678562
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-001 (2).json",
+    "sha256": "f22801e44aa86d5de851d6ceec43c90105653bc499958903cd011fbb456a02db",
+    "size_bytes": 20362562
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-002 (2).json",
+    "sha256": "e63f73cd2526e3e551a6593f209f1c0a0607051753a8aa5b80251b8dbedda3dd",
+    "size_bytes": 35494367
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-003 (2).json",
+    "sha256": "b2a6edf90efc48c26e8f5611da2cabfd68b2e51cee8a9cddf3354b544e75f69d",
+    "size_bytes": 37609726
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-004 (2).json",
+    "sha256": "b379678c6f4f3d7e925720da17186260661433e2c14b1bad88b3057f7e3e379d",
+    "size_bytes": 12256489
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-005 (2).json",
+    "sha256": "1b2341b20ff9fdbd4c559b60c2774362ecc3e07f4f4c2a6379f3c43d1da7cab9",
+    "size_bytes": 16976202
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-006 (2).json",
+    "sha256": "920a7f69bc6ae2e542660a926ee844b4951a996cce842a8020bd19b323e2f9e4",
+    "size_bytes": 15481985
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-007 (2).json",
+    "sha256": "02cfca6a137d30db4c76280c077a4a0e3fbcec6ef583efe351d211b09a88e345",
+    "size_bytes": 23817282
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-008 (2).json",
+    "sha256": "da1e9f64674388d590583c4c1ca9c8589191025c04ce541305ee0f01927918ab",
+    "size_bytes": 16501209
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-009 (2).json",
+    "sha256": "b0f140267e3c90c75a1f465caded6e8598e50cd5227f98fb26d15ead3f8b8603",
+    "size_bytes": 32134833
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-010 (2).json",
+    "sha256": "b95c11585b5b5ad8f78f3012388d0873a67327254693c059c472834a5349f31f",
+    "size_bytes": 25437298
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-011 (2).json",
+    "sha256": "a4ba98ea23579d67183f03c2231ed6f35dccac180f1cdedfb7b5ef7bae6fc3be",
+    "size_bytes": 24757024
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-012 (2).json",
+    "sha256": "d30ab7067551ddc57d9da7474fca48c7269fa487d240b6c241103ff900f461ea",
+    "size_bytes": 23294248
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-013 (2).json",
+    "sha256": "0a938f07cba77c4079829f3a3e309a603494e817c46ff9a82fde3bbc693f489f",
+    "size_bytes": 22984913
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-014 (2).json",
+    "sha256": "6353e329a1a045c5cb2e848cd9986927be4c5dfad0c0af937dee51188368eef6",
+    "size_bytes": 17670917
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-015 (2).json",
+    "sha256": "935d2b02c2d87148c0eed6565a9766a7b5041e8675ec915717884f25f46cb2c1",
+    "size_bytes": 14849696
+  },
+  {
+    "artifact_type": "ConversationShard",
+    "name": "conversations-016 (2).json",
+    "sha256": "980bed2cf41f53cc1de212ce2dfb9415be5c8c956f82b17e7f264cfef3af29ef",
+    "size_bytes": 8633509
+  },
+  {
+    "artifact_type": "ExportManifest",
+    "name": "export_manifest (4).json",
+    "sha256": "69f104b901833400e57e6f45a94f7d4dc018d145d2671d01914fcf8ecf79d0d2",
+    "size_bytes": 67698
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-1CbV47R3kUvtprDX9YfP8y (1).dat",
+    "sha256": "e18a1059d5f34ac2aef1d16e761115ce9220ea8333572e22f59abbd9861c9285",
+    "size_bytes": 18338
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-1CbV47R3kUvtprDX9YfP8y.dat",
+    "sha256": "e18a1059d5f34ac2aef1d16e761115ce9220ea8333572e22f59abbd9861c9285",
+    "size_bytes": 18338
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-4P3BrXjNfiZAPMymTW1s8E (1).dat",
+    "sha256": "36bce746f8829e958c719cdd541ebb93bbb659a76ba8360c4a50fd6e9499c1ea",
+    "size_bytes": 83939
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-4P3BrXjNfiZAPMymTW1s8E.dat",
+    "sha256": "36bce746f8829e958c719cdd541ebb93bbb659a76ba8360c4a50fd6e9499c1ea",
+    "size_bytes": 83939
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-6pq5WucLVNVvyzV6brvg3u (1).dat",
+    "sha256": "49cc005cef2616be0d54c7dd577ff76d942ea3aef004a238eff01585ab1e528a",
+    "size_bytes": 569774
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-6pq5WucLVNVvyzV6brvg3u.dat",
+    "sha256": "49cc005cef2616be0d54c7dd577ff76d942ea3aef004a238eff01585ab1e528a",
+    "size_bytes": 569774
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-PL8tDLCyfCnNkDB5TtuSRS (1).dat",
+    "sha256": "a4a8c5f74a5440a0602900855090ef0be84982fd59e9f37bd8eed0a708c77855",
+    "size_bytes": 26955
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-PL8tDLCyfCnNkDB5TtuSRS.dat",
+    "sha256": "a4a8c5f74a5440a0602900855090ef0be84982fd59e9f37bd8eed0a708c77855",
+    "size_bytes": 26955
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-QYMJwcFTyCnYjmK63ysFj5 (1).dat",
+    "sha256": "35d3827eff9a9d7919c9992ae58d267a4f0be84d7445751aa87f546cd204a9ad",
+    "size_bytes": 15419
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-QYMJwcFTyCnYjmK63ysFj5.dat",
+    "sha256": "35d3827eff9a9d7919c9992ae58d267a4f0be84d7445751aa87f546cd204a9ad",
+    "size_bytes": 15419
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-R9zjSEibpkHiPudWnenipZ (1).dat",
+    "sha256": "7ce1086d769f4c982cb7c98dc96ecea7c4d2397ad327f2872246479fdf9d9a46",
+    "size_bytes": 1988851
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-R9zjSEibpkHiPudWnenipZ.dat",
+    "sha256": "7ce1086d769f4c982cb7c98dc96ecea7c4d2397ad327f2872246479fdf9d9a46",
+    "size_bytes": 1988851
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-UaiucNyX2gaZ9jyNKPj7YJ (1).dat",
+    "sha256": "7ce1086d769f4c982cb7c98dc96ecea7c4d2397ad327f2872246479fdf9d9a46",
+    "size_bytes": 1988851
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file-UaiucNyX2gaZ9jyNKPj7YJ.dat",
+    "sha256": "7ce1086d769f4c982cb7c98dc96ecea7c4d2397ad327f2872246479fdf9d9a46",
+    "size_bytes": 1988851
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000000cc722fbd172561674a1b74 (1).dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000000cc722fbd172561674a1b74.dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000001b471fda1c4ada5e05ad45a (1).dat",
+    "sha256": "4c8d67001d3c2977e5d6bf0a4f8add80cd564bd1df60b7569fd23751e7dda02a",
+    "size_bytes": 556216
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000001b471fda1c4ada5e05ad45a.dat",
+    "sha256": "4c8d67001d3c2977e5d6bf0a4f8add80cd564bd1df60b7569fd23751e7dda02a",
+    "size_bytes": 556216
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000001e071f5bcf928c0c7edf063 (1).dat",
+    "sha256": "6ef534823b3f2614a62856bec11ce0275720b0198e0a12c74698c4dd835a6f05",
+    "size_bytes": 214239
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000001e071f5bcf928c0c7edf063.dat",
+    "sha256": "6ef534823b3f2614a62856bec11ce0275720b0198e0a12c74698c4dd835a6f05",
+    "size_bytes": 214239
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000024071f59843c3e8a85c6698 (1).dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000024071f59843c3e8a85c6698.dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000003d0722f82f6f93e602ec9f5 (1).dat",
+    "sha256": "bbcffdd7bd5c40385590b67baf8f63449335b7492c9239c7cd673406dac6d9a7",
+    "size_bytes": 387404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000003d0722f82f6f93e602ec9f5.dat",
+    "sha256": "bbcffdd7bd5c40385590b67baf8f63449335b7492c9239c7cd673406dac6d9a7",
+    "size_bytes": 387404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000003fc71f79943943aafca987f (1).dat",
+    "sha256": "6bde2a63f5fdf5278d074e593e5c6d9becfe4a9a4fe04e2946eeb2029d29c59f",
+    "size_bytes": 90438
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000003fc71f79943943aafca987f.dat",
+    "sha256": "6bde2a63f5fdf5278d074e593e5c6d9becfe4a9a4fe04e2946eeb2029d29c59f",
+    "size_bytes": 90438
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000004dc722f9b09d598494fa364 (1).dat",
+    "sha256": "1c5d1a0a009053be37f38b987bebcd3f6397723f2a4e4687ed818d7a2ae01e88",
+    "size_bytes": 443687
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000004dc722f9b09d598494fa364.dat",
+    "sha256": "1c5d1a0a009053be37f38b987bebcd3f6397723f2a4e4687ed818d7a2ae01e88",
+    "size_bytes": 443687
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000088871f8a95780872a613c00 (1).dat",
+    "sha256": "8d9cd5f210c0204d2a1ddaeaf82db1071e242126f4e18b9c350d8b1680bae400",
+    "size_bytes": 5766468
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000088871f8a95780872a613c00.dat",
+    "sha256": "8d9cd5f210c0204d2a1ddaeaf82db1071e242126f4e18b9c350d8b1680bae400",
+    "size_bytes": 5766468
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000008f472309df67bf496185fcf (1).dat",
+    "sha256": "782c4aa4874470dcb7d8a38d872d88a50860cf7b660ae2dbb0c831876cb6ffa9",
+    "size_bytes": 139264
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000008f472309df67bf496185fcf.dat",
+    "sha256": "782c4aa4874470dcb7d8a38d872d88a50860cf7b660ae2dbb0c831876cb6ffa9",
+    "size_bytes": 139264
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000a1471fd8d5633d09e9aec63 (1).dat",
+    "sha256": "f52aa193fe7fc562c82facb18261834bdb30e61cfca0feb2effba758f8a2cf80",
+    "size_bytes": 682986
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000a1471fd8d5633d09e9aec63.dat",
+    "sha256": "f52aa193fe7fc562c82facb18261834bdb30e61cfca0feb2effba758f8a2cf80",
+    "size_bytes": 682986
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000a8471fdb190c9c329a33d83 (1).dat",
+    "sha256": "46bd0824c4f8b3cea6cfda98dbdc8d873f7f051576989f712248cc2c51de3955",
+    "size_bytes": 183768
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000a8471fdb190c9c329a33d83.dat",
+    "sha256": "46bd0824c4f8b3cea6cfda98dbdc8d873f7f051576989f712248cc2c51de3955",
+    "size_bytes": 183768
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000b0071f5a07a20a4e3b2023b (1).dat",
+    "sha256": "1c6ee851032b78b5640cc22aedf5834af54571063a1ddce390b0606fe125b993",
+    "size_bytes": 306145
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000b0071f5a07a20a4e3b2023b.dat",
+    "sha256": "1c6ee851032b78b5640cc22aedf5834af54571063a1ddce390b0606fe125b993",
+    "size_bytes": 306145
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000b3c71fd8cf880fff1df8713 (1).dat",
+    "sha256": "2d310ac7c5aedd9a50ccfa34ae8cb687a1285a1ceeb43735a49403bd7fa2b26a",
+    "size_bytes": 459938
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000b3c71fd8cf880fff1df8713.dat",
+    "sha256": "2d310ac7c5aedd9a50ccfa34ae8cb687a1285a1ceeb43735a49403bd7fa2b26a",
+    "size_bytes": 459938
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000d2071f585d8704001e26d8f (1).dat",
+    "sha256": "39ee880dee787324972f633171e1ac780ee20ea9e7e911e0bc84364579fb3dd7",
+    "size_bytes": 1989243
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000d2071f585d8704001e26d8f.dat",
+    "sha256": "39ee880dee787324972f633171e1ac780ee20ea9e7e911e0bc84364579fb3dd7",
+    "size_bytes": 1989243
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000d8071f88518f2fbc648a6af (1).dat",
+    "sha256": "d3fdc0f8b6a24922d70a23e92a4ec5e07259b07d7191393fefa94967bb51650f",
+    "size_bytes": 26355
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000d8071f88518f2fbc648a6af.dat",
+    "sha256": "d3fdc0f8b6a24922d70a23e92a4ec5e07259b07d7191393fefa94967bb51650f",
+    "size_bytes": 26355
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000fb471fb8d6489861d25a952 (1).dat",
+    "sha256": "953739fb2970eeb3ecb2623ca0dd1d795a43c054ca5e4c2d92d1fc6b6cbcdb57",
+    "size_bytes": 2430
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000000fb471fb8d6489861d25a952.dat",
+    "sha256": "953739fb2970eeb3ecb2623ca0dd1d795a43c054ca5e4c2d92d1fc6b6cbcdb57",
+    "size_bytes": 2430
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000121071f5836e24978de8e05c (1).dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000121071f5836e24978de8e05c.dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001260720cbbbdae22e5fa0ef6 (1).dat",
+    "sha256": "a253d3af9d771eb6cb688e8bb4a463a9d0f694d56577ac7ad5f0876663bd266e",
+    "size_bytes": 294696
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001260720cbbbdae22e5fa0ef6.dat",
+    "sha256": "a253d3af9d771eb6cb688e8bb4a463a9d0f694d56577ac7ad5f0876663bd266e",
+    "size_bytes": 294696
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000140871fdb9af06b426a40458 (1).dat",
+    "sha256": "820b91ab933d286a639bca00e4b843787b039d7d76cdd40e8f70780f4c15658a",
+    "size_bytes": 228682
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000140871fdb9af06b426a40458.dat",
+    "sha256": "820b91ab933d286a639bca00e4b843787b039d7d76cdd40e8f70780f4c15658a",
+    "size_bytes": 228682
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000144c722f8456372b55c40585 (1).dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000144c722f8456372b55c40585.dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000014c471fd816142c25d9c65ee (1).dat",
+    "sha256": "909d6f6e6747c1790d81608f835b4e81c8a6f8b101d5b7529fcb36d097f51ccd",
+    "size_bytes": 447254
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000014c471fd816142c25d9c65ee.dat",
+    "sha256": "909d6f6e6747c1790d81608f835b4e81c8a6f8b101d5b7529fcb36d097f51ccd",
+    "size_bytes": 447254
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000152c71fb87e7babfa6b3f197 (1).dat",
+    "sha256": "27fe2af4fe64e7f000f89a69ce22edc10c5e321a339c26d86f706347dde9e2a5",
+    "size_bytes": 469048
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000152c71fb87e7babfa6b3f197.dat",
+    "sha256": "27fe2af4fe64e7f000f89a69ce22edc10c5e321a339c26d86f706347dde9e2a5",
+    "size_bytes": 469048
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001590722f9c410e0d3ef61764 (1).dat",
+    "sha256": "25c07c6bf1fe764cff21caf2fae7b7989c16e3d3934fbd94ac593f087819249d",
+    "size_bytes": 164026
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001590722f9c410e0d3ef61764.dat",
+    "sha256": "25c07c6bf1fe764cff21caf2fae7b7989c16e3d3934fbd94ac593f087819249d",
+    "size_bytes": 164026
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000017f471f7a43fa8f9eefac3d1 (1).dat",
+    "sha256": "762cb48ee74a77fc2eae0188c74f2ad2dc4c47e722691e1d44d41a8cc8113221",
+    "size_bytes": 234196
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000017f471f7a43fa8f9eefac3d1.dat",
+    "sha256": "762cb48ee74a77fc2eae0188c74f2ad2dc4c47e722691e1d44d41a8cc8113221",
+    "size_bytes": 234196
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001b7071fb86bfcd87f574cf9f (1).dat",
+    "sha256": "cf49299b4c8eb48cbce74106855cad09562de0bc8161c136c412811d8781c6ab",
+    "size_bytes": 4516
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001b7071fb86bfcd87f574cf9f.dat",
+    "sha256": "cf49299b4c8eb48cbce74106855cad09562de0bc8161c136c412811d8781c6ab",
+    "size_bytes": 4516
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001c0871f8921e39fff4cd725f (1).dat",
+    "sha256": "27ea6c2a78831051b9d6bc5f4916f8a8198c580e1760269e24bc6ac7aeb0147b",
+    "size_bytes": 359290
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001c0871f8921e39fff4cd725f.dat",
+    "sha256": "27ea6c2a78831051b9d6bc5f4916f8a8198c580e1760269e24bc6ac7aeb0147b",
+    "size_bytes": 359290
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001e8c722fa1c7e24a2ee701f1 (1).dat",
+    "sha256": "02c54a4e9ecb443ffc9e38c65a1521aa80f0f17198d766e9d8c932c0dc14ee26",
+    "size_bytes": 174880
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000001e8c722fa1c7e24a2ee701f1.dat",
+    "sha256": "02c54a4e9ecb443ffc9e38c65a1521aa80f0f17198d766e9d8c932c0dc14ee26",
+    "size_bytes": 174880
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000020dc71fd81272ecbda4033bd (1).dat",
+    "sha256": "c21b8018e7b044dac8c926efb39fb86dae8919a19b09590a886016d98da56b7c",
+    "size_bytes": 497730
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000020dc71fd81272ecbda4033bd.dat",
+    "sha256": "c21b8018e7b044dac8c926efb39fb86dae8919a19b09590a886016d98da56b7c",
+    "size_bytes": 497730
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000231871f5a71f2c868e0ab208 (1).dat",
+    "sha256": "3a0ffd2fd41f80bb2fb8faaf649cb4c81a0ce892bce975c21d5b4ebe18fa56ed",
+    "size_bytes": 385322
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000231871f5a71f2c868e0ab208.dat",
+    "sha256": "3a0ffd2fd41f80bb2fb8faaf649cb4c81a0ce892bce975c21d5b4ebe18fa56ed",
+    "size_bytes": 385322
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002460722fa27850cdc62495b5 (1).dat",
+    "sha256": "27ea6c2a78831051b9d6bc5f4916f8a8198c580e1760269e24bc6ac7aeb0147b",
+    "size_bytes": 359290
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002460722fa27850cdc62495b5.dat",
+    "sha256": "27ea6c2a78831051b9d6bc5f4916f8a8198c580e1760269e24bc6ac7aeb0147b",
+    "size_bytes": 359290
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000024c8722f990726e2d770a039 (1).dat",
+    "sha256": "d351123636ad75857553083a63274033c8cff891af3ac76b26d9fc33c3c9e144",
+    "size_bytes": 250564
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000024c8722f990726e2d770a039.dat",
+    "sha256": "d351123636ad75857553083a63274033c8cff891af3ac76b26d9fc33c3c9e144",
+    "size_bytes": 250564
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000255471f88e037d80861ed4f2 (1).dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000255471f88e037d80861ed4f2.dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000262c71f587f1de66710d8075 (1).dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000262c71f587f1de66710d8075.dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000269071f58770b01d5f84a362 (1).dat",
+    "sha256": "d63148eb52f57ae508d4c12ac09b30c386013bf6e0be4af6954a370c51691b5e",
+    "size_bytes": 253896
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000269071f58770b01d5f84a362.dat",
+    "sha256": "d63148eb52f57ae508d4c12ac09b30c386013bf6e0be4af6954a370c51691b5e",
+    "size_bytes": 253896
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000026f471fdb81cc47133606df6 (1).dat",
+    "sha256": "8c75c95ee8ed70ff27c69cb1dffdac58bdabd643ae4c011f1fc0c834a20c4380",
+    "size_bytes": 478979
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000026f471fdb81cc47133606df6.dat",
+    "sha256": "8c75c95ee8ed70ff27c69cb1dffdac58bdabd643ae4c011f1fc0c834a20c4380",
+    "size_bytes": 478979
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000290c71fbab9d8ec9d11fc84c (1).dat",
+    "sha256": "77a4a17e5b98bf178b79f07e54a99e8860c41ac0933365687ec9347673227fb5",
+    "size_bytes": 74060
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000290c71fbab9d8ec9d11fc84c.dat",
+    "sha256": "77a4a17e5b98bf178b79f07e54a99e8860c41ac0933365687ec9347673227fb5",
+    "size_bytes": 74060
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000293871f8a40e50e0bd0bad99 (1).dat",
+    "sha256": "71461a26350752d80938ba9e64e71a9b155dbd0a7ed3c0670b4181f5e54d9837",
+    "size_bytes": 400195
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000293871f8a40e50e0bd0bad99.dat",
+    "sha256": "71461a26350752d80938ba9e64e71a9b155dbd0a7ed3c0670b4181f5e54d9837",
+    "size_bytes": 400195
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002a3c71fd9e0bb39d23a2a74a (1).dat",
+    "sha256": "c02b09b2cf2cfab32527ee1a88ee311500c1c2f4c95d20fe0898c9e0407a4d86",
+    "size_bytes": 167
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002a3c71fd9e0bb39d23a2a74a.dat",
+    "sha256": "c02b09b2cf2cfab32527ee1a88ee311500c1c2f4c95d20fe0898c9e0407a4d86",
+    "size_bytes": 167
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002a4071fd8615c11fbf3aa8c1 (1).dat",
+    "sha256": "6dd9cfbe43ece8060caedb7fce400cadf1ebbb339721bc13000997230610d7a9",
+    "size_bytes": 403417
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002a4071fd8615c11fbf3aa8c1.dat",
+    "sha256": "6dd9cfbe43ece8060caedb7fce400cadf1ebbb339721bc13000997230610d7a9",
+    "size_bytes": 403417
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002ba8722f92d8f4af66140da6 (1).dat",
+    "sha256": "1a279995c98cbd24076f4ac1ef3d78a490cc9c592bd387fd082237b1c65824a7",
+    "size_bytes": 130176
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002ba8722f92d8f4af66140da6.dat",
+    "sha256": "1a279995c98cbd24076f4ac1ef3d78a490cc9c592bd387fd082237b1c65824a7",
+    "size_bytes": 130176
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002c7c71fdafd4f21e1691723b (1).dat",
+    "sha256": "7ed3c2be31fc3f974859e8aa47b6a91f5edc86d41577ab63e7161be1882ca3be",
+    "size_bytes": 272262
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002c7c71fdafd4f21e1691723b.dat",
+    "sha256": "7ed3c2be31fc3f974859e8aa47b6a91f5edc86d41577ab63e7161be1882ca3be",
+    "size_bytes": 272262
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002d1871f5bcdf1aa7139a5910 (1).dat",
+    "sha256": "9679490877c01fdb1637336a63786e939da6f0078719b8bb4987230007d3a484",
+    "size_bytes": 4268288
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002d1871f5bcdf1aa7139a5910.dat",
+    "sha256": "9679490877c01fdb1637336a63786e939da6f0078719b8bb4987230007d3a484",
+    "size_bytes": 4268288
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002ee071f5875bc8e85ecf55ac (1).dat",
+    "sha256": "5a7eec583278c7b1dbe581d17863b3331717dee0d9f0ceba3827ef6d62a5dfe3",
+    "size_bytes": 467485
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000002ee071f5875bc8e85ecf55ac.dat",
+    "sha256": "5a7eec583278c7b1dbe581d17863b3331717dee0d9f0ceba3827ef6d62a5dfe3",
+    "size_bytes": 467485
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000332c71fd9c41f9f669ffbd4a (1).dat",
+    "sha256": "7084778ffd96676eef2a777ccc4fd9f77d22617f86da90d76a1a35421196daba",
+    "size_bytes": 424347
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000332c71fd9c41f9f669ffbd4a.dat",
+    "sha256": "7084778ffd96676eef2a777ccc4fd9f77d22617f86da90d76a1a35421196daba",
+    "size_bytes": 424347
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000348c720c95953c79df8953e3 (1).dat",
+    "sha256": "e7b6b0ade18519a475bf34ac290a997b143e8300efb1350949b32a4c996ec9b5",
+    "size_bytes": 302513
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000348c720c95953c79df8953e3.dat",
+    "sha256": "e7b6b0ade18519a475bf34ac290a997b143e8300efb1350949b32a4c996ec9b5",
+    "size_bytes": 302513
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000370c71fdaf8a82f6ac5c758a (1).dat",
+    "sha256": "8742606ff6cde630ca05d2bd03e763156a7814fbf5909a534f2d0f117e0b2b87",
+    "size_bytes": 91
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000370c71fdaf8a82f6ac5c758a.dat",
+    "sha256": "8742606ff6cde630ca05d2bd03e763156a7814fbf5909a534f2d0f117e0b2b87",
+    "size_bytes": 91
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000384471fb833bb5bbad88d2de (1).dat",
+    "sha256": "7035beed244abe38f8ebb4a34e2f3c0d3e6880ddbbeb230109c25961fad028c6",
+    "size_bytes": 3748
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000384471fb833bb5bbad88d2de.dat",
+    "sha256": "7035beed244abe38f8ebb4a34e2f3c0d3e6880ddbbeb230109c25961fad028c6",
+    "size_bytes": 3748
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000038c4720c9b06aa778f3c162c (1).dat",
+    "sha256": "5307a1559f1279f5fe42e5b6d5e9ba6d3f807801692d6d5a5a079c834e40b10b",
+    "size_bytes": 190364
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000038c4720c9b06aa778f3c162c.dat",
+    "sha256": "5307a1559f1279f5fe42e5b6d5e9ba6d3f807801692d6d5a5a079c834e40b10b",
+    "size_bytes": 190364
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000038f4720caa4af38deb4bb557 (1).dat",
+    "sha256": "19543aca22763755b5b35eef396ec6d069e28de3b10b848cab4b8669ea8d8dc8",
+    "size_bytes": 454678
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000038f4720caa4af38deb4bb557.dat",
+    "sha256": "19543aca22763755b5b35eef396ec6d069e28de3b10b848cab4b8669ea8d8dc8",
+    "size_bytes": 454678
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000003a3071fdb987db6fa2dd04a5 (1).dat",
+    "sha256": "e7081353de78006cfabbea0fff64fc982c64aaedaede64dfe786568413fe0624",
+    "size_bytes": 199123
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000003a3071fdb987db6fa2dd04a5.dat",
+    "sha256": "e7081353de78006cfabbea0fff64fc982c64aaedaede64dfe786568413fe0624",
+    "size_bytes": 199123
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000003ba071fd8738ca2e66b439ad (1).dat",
+    "sha256": "f73be376b0e1704da118312e202be49e8ac04a6b2e19b588cdfc2707c7f3e25d",
+    "size_bytes": 47404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000003ba071fd8738ca2e66b439ad.dat",
+    "sha256": "f73be376b0e1704da118312e202be49e8ac04a6b2e19b588cdfc2707c7f3e25d",
+    "size_bytes": 47404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000003f5c71f7a51318364c2a992f (1).dat",
+    "sha256": "39a6c383fd310808b305521c8e1eeda6d5215427b2c0dc8d071e6d109612a93d",
+    "size_bytes": 136964
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000003f5c71f7a51318364c2a992f.dat",
+    "sha256": "39a6c383fd310808b305521c8e1eeda6d5215427b2c0dc8d071e6d109612a93d",
+    "size_bytes": 136964
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000408071fdbb119e25dd9cb51f (1).dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000408071fdbb119e25dd9cb51f.dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000443071f7915e0a98b29cb44a (1).dat",
+    "sha256": "8d16de95accdc0add19b7d0d651ff7bf62d1825d81b94876a99ba831f47b5b13",
+    "size_bytes": 95675
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000443071f7915e0a98b29cb44a.dat",
+    "sha256": "8d16de95accdc0add19b7d0d651ff7bf62d1825d81b94876a99ba831f47b5b13",
+    "size_bytes": 95675
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000451c71fb973a5db0ada983de (1).dat",
+    "sha256": "d4c10f669958a3d55900bcd827cc5375bc150c214c3e7a3622bdf692930d1451",
+    "size_bytes": 1918
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000451c71fb973a5db0ada983de.dat",
+    "sha256": "d4c10f669958a3d55900bcd827cc5375bc150c214c3e7a3622bdf692930d1451",
+    "size_bytes": 1918
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000045e071fda5e0d7c53707ea76 (1).dat",
+    "sha256": "2784446b2198f56f9e81e8b41b7d01fac83764e9013e41b1e9d60fae5664d1c9",
+    "size_bytes": 136374
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000045e071fda5e0d7c53707ea76.dat",
+    "sha256": "2784446b2198f56f9e81e8b41b7d01fac83764e9013e41b1e9d60fae5664d1c9",
+    "size_bytes": 136374
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000045ec71f5b66793bcc670a23e (1).dat",
+    "sha256": "4f56ab03c78742a8a5dd1ffa3de79fc065bb9a4c0600f0e207b03f612e904052",
+    "size_bytes": 130702
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000045ec71f5b66793bcc670a23e.dat",
+    "sha256": "4f56ab03c78742a8a5dd1ffa3de79fc065bb9a4c0600f0e207b03f612e904052",
+    "size_bytes": 130702
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000047b471fbaf5b263dff970fc6 (1).dat",
+    "sha256": "346bae1bba6db873b10201328ddda33635358ef4a5f2f316b008b3661908ee19",
+    "size_bytes": 2398
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000047b471fbaf5b263dff970fc6.dat",
+    "sha256": "346bae1bba6db873b10201328ddda33635358ef4a5f2f316b008b3661908ee19",
+    "size_bytes": 2398
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000047dc71f5b15918330c8bd45e (1).dat",
+    "sha256": "bbcffdd7bd5c40385590b67baf8f63449335b7492c9239c7cd673406dac6d9a7",
+    "size_bytes": 387404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000047dc71f5b15918330c8bd45e.dat",
+    "sha256": "bbcffdd7bd5c40385590b67baf8f63449335b7492c9239c7cd673406dac6d9a7",
+    "size_bytes": 387404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000490c722f83f466d1a73cb407 (1).dat",
+    "sha256": "07b73d50bd767ab6ee26298308407b93ad0da129cac21646abd946dea1167b64",
+    "size_bytes": 148676
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000490c722f83f466d1a73cb407.dat",
+    "sha256": "07b73d50bd767ab6ee26298308407b93ad0da129cac21646abd946dea1167b64",
+    "size_bytes": 148676
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004940722fb2a7ef41fdb474fe (1).dat",
+    "sha256": "df4bc16f12ff6823a39af0a6eb9c31a90f37a0d0bcafd789efcaf653e7f099ac",
+    "size_bytes": 429817
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004940722fb2a7ef41fdb474fe.dat",
+    "sha256": "df4bc16f12ff6823a39af0a6eb9c31a90f37a0d0bcafd789efcaf653e7f099ac",
+    "size_bytes": 429817
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004af0720c9654db33949f6984 (1).dat",
+    "sha256": "19543aca22763755b5b35eef396ec6d069e28de3b10b848cab4b8669ea8d8dc8",
+    "size_bytes": 454678
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004af0720c9654db33949f6984.dat",
+    "sha256": "19543aca22763755b5b35eef396ec6d069e28de3b10b848cab4b8669ea8d8dc8",
+    "size_bytes": 454678
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004c0071fdab698175fdf13596 (1).dat",
+    "sha256": "d351123636ad75857553083a63274033c8cff891af3ac76b26d9fc33c3c9e144",
+    "size_bytes": 250564
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004c0071fdab698175fdf13596.dat",
+    "sha256": "d351123636ad75857553083a63274033c8cff891af3ac76b26d9fc33c3c9e144",
+    "size_bytes": 250564
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004d4871fdba202834f19f758a (1).dat",
+    "sha256": "0cc19d9fd394432acab9a4679f577dcb91f0daa4ae76ad244fedad202d2c28b7",
+    "size_bytes": 48432
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004d4871fdba202834f19f758a.dat",
+    "sha256": "0cc19d9fd394432acab9a4679f577dcb91f0daa4ae76ad244fedad202d2c28b7",
+    "size_bytes": 48432
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004e9c71f8b707a307d069c3d0 (1).dat",
+    "sha256": "941f56559d4c418782755bb7b76f31934bcbb444405c649b3f7d8dd1490bdeac",
+    "size_bytes": 315569
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004e9c71f8b707a307d069c3d0.dat",
+    "sha256": "941f56559d4c418782755bb7b76f31934bcbb444405c649b3f7d8dd1490bdeac",
+    "size_bytes": 315569
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004f7871fdba3cb2a3ee198d6e (1).dat",
+    "sha256": "5ae6a5e55a31c6b403196f56d6639ba6705da181ce4f63ff01ccae5e9a7af33e",
+    "size_bytes": 1138176
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004f7871fdba3cb2a3ee198d6e.dat",
+    "sha256": "5ae6a5e55a31c6b403196f56d6639ba6705da181ce4f63ff01ccae5e9a7af33e",
+    "size_bytes": 1138176
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004fc0722f81884b07b553aa29 (1).dat",
+    "sha256": "cf4d98390088476880d965c536daea10f8561e2510ec60aba109329e83c4c54f",
+    "size_bytes": 5412
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004fc0722f81884b07b553aa29.dat",
+    "sha256": "cf4d98390088476880d965c536daea10f8561e2510ec60aba109329e83c4c54f",
+    "size_bytes": 5412
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004fc4722f8f6875e27d2b31ad (1).dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000004fc4722f8f6875e27d2b31ad.dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000051b871fd86e1d0ba080444a0 (1).dat",
+    "sha256": "97e6bfa538eb0bbd6755e250679e8c6eb6d3d6cb43bd7903040c87743ca381f4",
+    "size_bytes": 12704
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000051b871fd86e1d0ba080444a0.dat",
+    "sha256": "97e6bfa538eb0bbd6755e250679e8c6eb6d3d6cb43bd7903040c87743ca381f4",
+    "size_bytes": 12704
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000051f071f59a083399e93b7c07 (1).dat",
+    "sha256": "1fe08bfe53f3edf745e95f8abb914e87976f4ac7d2aef20247866b078446bae5",
+    "size_bytes": 128349
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000051f071f59a083399e93b7c07.dat",
+    "sha256": "1fe08bfe53f3edf745e95f8abb914e87976f4ac7d2aef20247866b078446bae5",
+    "size_bytes": 128349
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000052c071fdb28950fbca6542da (1).dat",
+    "sha256": "87a311e0a65d6950fae67c83ecbb949093121d2806c9843c9339df6ba3e943c2",
+    "size_bytes": 218827
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000052c071fdb28950fbca6542da.dat",
+    "sha256": "87a311e0a65d6950fae67c83ecbb949093121d2806c9843c9339df6ba3e943c2",
+    "size_bytes": 218827
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000539c71f888abc44940fa870b (1).dat",
+    "sha256": "3ee24f37cfdf47183bb84dc9f5a2373809cda1aec65520b9657c69c00da5c6b0",
+    "size_bytes": 1013578
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000539c71f888abc44940fa870b.dat",
+    "sha256": "3ee24f37cfdf47183bb84dc9f5a2373809cda1aec65520b9657c69c00da5c6b0",
+    "size_bytes": 1013578
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000053b071f592f58c9219cbb7ff (1).dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000053b071f592f58c9219cbb7ff.dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000550471fdaa307ac6f3fae8d5 (1).dat",
+    "sha256": "d3d6c8dade237f19390f11f0b648d3f627c98ecd5c6811ab31895c3ffc49514a",
+    "size_bytes": 1214082
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000550471fdaa307ac6f3fae8d5.dat",
+    "sha256": "d3d6c8dade237f19390f11f0b648d3f627c98ecd5c6811ab31895c3ffc49514a",
+    "size_bytes": 1214082
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000550871fb8363fdc66080bb7e (1).dat",
+    "sha256": "6b4903c0dadfcf242afa732beb9fa16c86240bb53e900b0c75af5ef9adfdb71b",
+    "size_bytes": 1651
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000550871fb8363fdc66080bb7e.dat",
+    "sha256": "6b4903c0dadfcf242afa732beb9fa16c86240bb53e900b0c75af5ef9adfdb71b",
+    "size_bytes": 1651
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000559c71fb90d9b2647544e439 (1).dat",
+    "sha256": "3d29e4887c2a0c12415df6b831e5620582dce62e2c558b1824ce852805938a7b",
+    "size_bytes": 4282
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000559c71fb90d9b2647544e439.dat",
+    "sha256": "3d29e4887c2a0c12415df6b831e5620582dce62e2c558b1824ce852805938a7b",
+    "size_bytes": 4282
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000578871fb803324473b466737 (1).dat",
+    "sha256": "645189ec56ac84368f6dbd5e5d8b4a661f3e8accd0668ffdc1f885d47731969e",
+    "size_bytes": 2443
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000578871fb803324473b466737.dat",
+    "sha256": "645189ec56ac84368f6dbd5e5d8b4a661f3e8accd0668ffdc1f885d47731969e",
+    "size_bytes": 2443
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000585071fd80c63fc171a2fb96 (1).dat",
+    "sha256": "34b41de3f65166440ea2ce40121eb1c9b9c2bb92d188bd32a8e6091cd92316db",
+    "size_bytes": 4548208
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000585071fd80c63fc171a2fb96.dat",
+    "sha256": "34b41de3f65166440ea2ce40121eb1c9b9c2bb92d188bd32a8e6091cd92316db",
+    "size_bytes": 4548208
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000058dc71fbb40155981c71786e (1).dat",
+    "sha256": "b46f0b279bfccc412057a9684a705272b713b10eec2800e376d8364d82abb080",
+    "size_bytes": 2857
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000058dc71fbb40155981c71786e.dat",
+    "sha256": "b46f0b279bfccc412057a9684a705272b713b10eec2800e376d8364d82abb080",
+    "size_bytes": 2857
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005988722fa285de412af6ab5c (1).dat",
+    "sha256": "63542f4932d143eb4556ee4b62b6b8d857dc21a63258e06defce558f773b8d89",
+    "size_bytes": 356308
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005988722fa285de412af6ab5c.dat",
+    "sha256": "63542f4932d143eb4556ee4b62b6b8d857dc21a63258e06defce558f773b8d89",
+    "size_bytes": 356308
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000059c8722f9e6754172899e5df (1).dat",
+    "sha256": "31787ca9a4fb3df1d2a84ccb7cbdcdc5cc233ea11c8776092ccaecec8db8a759",
+    "size_bytes": 5744
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000059c8722f9e6754172899e5df.dat",
+    "sha256": "31787ca9a4fb3df1d2a84ccb7cbdcdc5cc233ea11c8776092ccaecec8db8a759",
+    "size_bytes": 5744
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005a5871f89665cb5019d241b7 (1).dat",
+    "sha256": "d54018fd326667df9a66f69d43da1464857619625e3fdae8c703cfe72c0fcca8",
+    "size_bytes": 176128
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005a5871f89665cb5019d241b7.dat",
+    "sha256": "d54018fd326667df9a66f69d43da1464857619625e3fdae8c703cfe72c0fcca8",
+    "size_bytes": 176128
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005a7c7230abf014103d7bc05e (1).dat",
+    "sha256": "ec6612d2f42e9b06136c0b658285adc7095de49cea0126318586d73204fc0dbd",
+    "size_bytes": 352153
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005a7c7230abf014103d7bc05e.dat",
+    "sha256": "ec6612d2f42e9b06136c0b658285adc7095de49cea0126318586d73204fc0dbd",
+    "size_bytes": 352153
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005cc0722faa175ad7288dc90a (1).dat",
+    "sha256": "e966789626c41181c2eaefac1b508e797004dd596b556060f8da4446315738f9",
+    "size_bytes": 180612
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005cc0722faa175ad7288dc90a.dat",
+    "sha256": "e966789626c41181c2eaefac1b508e797004dd596b556060f8da4446315738f9",
+    "size_bytes": 180612
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005d4c71f5b9ce6b7bb6415a62 (1).dat",
+    "sha256": "c1dc328539edfa96f5a5956f65460a0d03fb649ad66bfcc5152be150eaf59993",
+    "size_bytes": 169353
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005d4c71f5b9ce6b7bb6415a62.dat",
+    "sha256": "c1dc328539edfa96f5a5956f65460a0d03fb649ad66bfcc5152be150eaf59993",
+    "size_bytes": 169353
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005e0c71fdaffda1a9a7e88c52 (1).dat",
+    "sha256": "1c28aaf59fec35beaae47ac398d17b46a9372c19054b4455937be2894f19530a",
+    "size_bytes": 477806
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000005e0c71fdaffda1a9a7e88c52.dat",
+    "sha256": "1c28aaf59fec35beaae47ac398d17b46a9372c19054b4455937be2894f19530a",
+    "size_bytes": 477806
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006054722fbd8a992b3448baab (1).dat",
+    "sha256": "408af1f17f765a5a714bb4360a67d9bad012fd704ba1ba9abea53d5a846f2bbc",
+    "size_bytes": 192425
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006054722fbd8a992b3448baab.dat",
+    "sha256": "408af1f17f765a5a714bb4360a67d9bad012fd704ba1ba9abea53d5a846f2bbc",
+    "size_bytes": 192425
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000060d471f7aa720e53a54b09b6 (1).dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000060d471f7aa720e53a54b09b6.dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000618871f8bec4c96051454c64 (1).dat",
+    "sha256": "f504fae83f6ff354f4ef31e3dbfc518efe0eac21a15c457c8fcbb015ca9443ce",
+    "size_bytes": 310138
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000618871f8bec4c96051454c64.dat",
+    "sha256": "f504fae83f6ff354f4ef31e3dbfc518efe0eac21a15c457c8fcbb015ca9443ce",
+    "size_bytes": 310138
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000619871fbbc8f2ea36541b07e (1).dat",
+    "sha256": "207d90c62c0360ae903a014924e644afcca136be5e54fe6484191f3efb1f8b2c",
+    "size_bytes": 44800
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000619871fbbc8f2ea36541b07e.dat",
+    "sha256": "207d90c62c0360ae903a014924e644afcca136be5e54fe6484191f3efb1f8b2c",
+    "size_bytes": 44800
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006208720cbacfbc1701c26bf6 (1).dat",
+    "sha256": "367ae9cbfed2789fe30eba21d9758673bc09da408fb375535ae01d8cc5db1970",
+    "size_bytes": 395150
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006208720cbacfbc1701c26bf6.dat",
+    "sha256": "367ae9cbfed2789fe30eba21d9758673bc09da408fb375535ae01d8cc5db1970",
+    "size_bytes": 395150
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000062bc71fd9455f25822cee02f (1).dat",
+    "sha256": "600221ac5e0f33e4fcc54827d9aa7f0ac6391a8fa9de06801ac9e35b34b474fc",
+    "size_bytes": 1329951
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000062bc71fd9455f25822cee02f.dat",
+    "sha256": "600221ac5e0f33e4fcc54827d9aa7f0ac6391a8fa9de06801ac9e35b34b474fc",
+    "size_bytes": 1329951
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000658071fd9bb99ea6759bc789 (1).dat",
+    "sha256": "10ae7ecef295f577ee937884fb53b245f79fbc8254db058dfaf775a4a34fd5aa",
+    "size_bytes": 62263
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000658071fd9bb99ea6759bc789.dat",
+    "sha256": "10ae7ecef295f577ee937884fb53b245f79fbc8254db058dfaf775a4a34fd5aa",
+    "size_bytes": 62263
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000677471fb8d7f11f76abe759c (1).dat",
+    "sha256": "402fe66d4e976f250708182e4fcdcdb1594fb3f5c35c6eb585ba6a615e2feb3b",
+    "size_bytes": 1978
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000677471fb8d7f11f76abe759c.dat",
+    "sha256": "402fe66d4e976f250708182e4fcdcdb1594fb3f5c35c6eb585ba6a615e2feb3b",
+    "size_bytes": 1978
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006a2071fb8c73079381a5e04b (1).dat",
+    "sha256": "2814a10502b6a5a2ffb3a6a12dd65fbf39c19ab66e8dad5e6dcdf4c1e6b35d91",
+    "size_bytes": 383700
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006a2071fb8c73079381a5e04b.dat",
+    "sha256": "2814a10502b6a5a2ffb3a6a12dd65fbf39c19ab66e8dad5e6dcdf4c1e6b35d91",
+    "size_bytes": 383700
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006a307230b9ebb802e89cd4cc (1).dat",
+    "sha256": "e4498bb3342ef8bd39a83826d409e9ab98b7c26af93fae7df9ea484b44aff765",
+    "size_bytes": 431482
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006a307230b9ebb802e89cd4cc.dat",
+    "sha256": "e4498bb3342ef8bd39a83826d409e9ab98b7c26af93fae7df9ea484b44aff765",
+    "size_bytes": 431482
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006d6c71f8acc50dae68142562 (1).dat",
+    "sha256": "a2b93e6c2db05d6bbbf6f27d413ec73269735b7b679019c8a5aa9670ff0ffbf2",
+    "size_bytes": 8482020
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000006d6c71f8acc50dae68142562.dat",
+    "sha256": "a2b93e6c2db05d6bbbf6f27d413ec73269735b7b679019c8a5aa9670ff0ffbf2",
+    "size_bytes": 8482020
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000702871f5a2777088799fcb9a (1).dat",
+    "sha256": "760915e00a986c92299f49ddc5f087810f0b0bc5a56b99e4dd43bc1e0d457067",
+    "size_bytes": 415619
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000702871f5a2777088799fcb9a.dat",
+    "sha256": "760915e00a986c92299f49ddc5f087810f0b0bc5a56b99e4dd43bc1e0d457067",
+    "size_bytes": 415619
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007044722f8194e665baac1dc3 (1).dat",
+    "sha256": "989435c049ccc4a07183f13f7776628ad72653a0663cf1ee1cd967c5c04b3b5f",
+    "size_bytes": 16212
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007044722f8194e665baac1dc3.dat",
+    "sha256": "989435c049ccc4a07183f13f7776628ad72653a0663cf1ee1cd967c5c04b3b5f",
+    "size_bytes": 16212
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000070cc720ca2f133f648e441ed (1).dat",
+    "sha256": "175908c6cb3c34567c8140bb54cc47a2e8eeec3fa293f5af8c7d456002b1c705",
+    "size_bytes": 152495
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000070cc720ca2f133f648e441ed.dat",
+    "sha256": "175908c6cb3c34567c8140bb54cc47a2e8eeec3fa293f5af8c7d456002b1c705",
+    "size_bytes": 152495
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000722071f5849d29ea78367503 (1).dat",
+    "sha256": "34f4fa58566ebf16959f3790b4ce8fc5c3287861a5703a7eab050156792a7513",
+    "size_bytes": 347465
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000722071f5849d29ea78367503.dat",
+    "sha256": "34f4fa58566ebf16959f3790b4ce8fc5c3287861a5703a7eab050156792a7513",
+    "size_bytes": 347465
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000726471f5b2cab36fba40375a (1).dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000726471f5b2cab36fba40375a.dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000072c071fb91f52d32802fba0f (1).dat",
+    "sha256": "377eac84aa96b50c1b198c01e529cbd36c2c317a0db3f6314404a5496112acd9",
+    "size_bytes": 6389
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000072c071fb91f52d32802fba0f.dat",
+    "sha256": "377eac84aa96b50c1b198c01e529cbd36c2c317a0db3f6314404a5496112acd9",
+    "size_bytes": 6389
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000072dc71f5aeb460db3838be78 (1).dat",
+    "sha256": "4353993612e0dd01ed9e5c7119a66740ab585c94fc858193453a6bbfe2d2c60e",
+    "size_bytes": 340319
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000072dc71f5aeb460db3838be78.dat",
+    "sha256": "4353993612e0dd01ed9e5c7119a66740ab585c94fc858193453a6bbfe2d2c60e",
+    "size_bytes": 340319
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000073047230a93ce138fd8ef487 (1).dat",
+    "sha256": "11c8010f522054363bcb270bbfd95db057562e0de19867b6ac8b4ae5bcf02ad6",
+    "size_bytes": 107092
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000073047230a93ce138fd8ef487.dat",
+    "sha256": "11c8010f522054363bcb270bbfd95db057562e0de19867b6ac8b4ae5bcf02ad6",
+    "size_bytes": 107092
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000750471fba0f621516f84253f (1).dat",
+    "sha256": "24b85064e8dd92b626ec92317b4b3f27ffe534815bc24760d3d98cc10d7d929a",
+    "size_bytes": 118392
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000750471fba0f621516f84253f.dat",
+    "sha256": "24b85064e8dd92b626ec92317b4b3f27ffe534815bc24760d3d98cc10d7d929a",
+    "size_bytes": 118392
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000776471f59d4b862004e5fce9 (1).dat",
+    "sha256": "24c5f0669a7d0cb5ef2fbb22ac43ad426a2335f75c02bc4ae64bea11771b701c",
+    "size_bytes": 155306
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000776471f59d4b862004e5fce9.dat",
+    "sha256": "24c5f0669a7d0cb5ef2fbb22ac43ad426a2335f75c02bc4ae64bea11771b701c",
+    "size_bytes": 155306
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000786071fd9809f3ffaa039a67 (1).dat",
+    "sha256": "34b41de3f65166440ea2ce40121eb1c9b9c2bb92d188bd32a8e6091cd92316db",
+    "size_bytes": 4548208
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000786071fd9809f3ffaa039a67.dat",
+    "sha256": "34b41de3f65166440ea2ce40121eb1c9b9c2bb92d188bd32a8e6091cd92316db",
+    "size_bytes": 4548208
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000787871fdbf7224c04ea588b3 (1).dat",
+    "sha256": "a030dbd29e1e9d979de679759d0796da9502280982fc2af82d132bbd1824b2ba",
+    "size_bytes": 152364
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000787871fdbf7224c04ea588b3.dat",
+    "sha256": "a030dbd29e1e9d979de679759d0796da9502280982fc2af82d132bbd1824b2ba",
+    "size_bytes": 152364
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000078d471f5adeb6c07aa2edbe1 (1).dat",
+    "sha256": "27ea6c2a78831051b9d6bc5f4916f8a8198c580e1760269e24bc6ac7aeb0147b",
+    "size_bytes": 359290
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000078d471f5adeb6c07aa2edbe1.dat",
+    "sha256": "27ea6c2a78831051b9d6bc5f4916f8a8198c580e1760269e24bc6ac7aeb0147b",
+    "size_bytes": 359290
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000079c871fb8e21993905254de0 (1).dat",
+    "sha256": "f198eee12ee30e94eb3c78e931a07d7c9ab93a37025ad7cf67d0881848e36bd4",
+    "size_bytes": 2761
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000079c871fb8e21993905254de0.dat",
+    "sha256": "f198eee12ee30e94eb3c78e931a07d7c9ab93a37025ad7cf67d0881848e36bd4",
+    "size_bytes": 2761
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007a7071f88c0144065f6124d7 (1).dat",
+    "sha256": "78ea4ae15767f8b0994e78d7cead05043f1cfad584d6d752c597501169ba2327",
+    "size_bytes": 166823
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007a7071f88c0144065f6124d7.dat",
+    "sha256": "78ea4ae15767f8b0994e78d7cead05043f1cfad584d6d752c597501169ba2327",
+    "size_bytes": 166823
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007ab871fdae3724514c31b87e (1).dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007ab871fdae3724514c31b87e.dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007b2071f5a44c54312c6e30bd (1).dat",
+    "sha256": "96f898146bdb7c5dd575be4d0b9edf593d328bead31432fe3717a7ebacdd0998",
+    "size_bytes": 50916
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007b2071f5a44c54312c6e30bd.dat",
+    "sha256": "96f898146bdb7c5dd575be4d0b9edf593d328bead31432fe3717a7ebacdd0998",
+    "size_bytes": 50916
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007bb071fd975b9f97144ab172 (1).dat",
+    "sha256": "be6dc235cc13104982f8d4bc114668ebaadc3956bdfd6edbe9ddc5621792b8e0",
+    "size_bytes": 188228
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007bb071fd975b9f97144ab172.dat",
+    "sha256": "be6dc235cc13104982f8d4bc114668ebaadc3956bdfd6edbe9ddc5621792b8e0",
+    "size_bytes": 188228
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007c40722fb4c83754468d911c (1).dat",
+    "sha256": "06189e461140ed2773a5a97c9243eb154c571c4fad8d797ae7410864ade81ef1",
+    "size_bytes": 232998
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007c40722fb4c83754468d911c.dat",
+    "sha256": "06189e461140ed2773a5a97c9243eb154c571c4fad8d797ae7410864ade81ef1",
+    "size_bytes": 232998
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007d48722f9da463c28fea334b (1).dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007d48722f9da463c28fea334b.dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007e5071fd88241491a771d32f (1).dat",
+    "sha256": "ae86d1531558ce78cf5d03e678992064bece3598ac99dc13516d5e75cec61407",
+    "size_bytes": 158426
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007e5071fd88241491a771d32f.dat",
+    "sha256": "ae86d1531558ce78cf5d03e678992064bece3598ac99dc13516d5e75cec61407",
+    "size_bytes": 158426
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007f3071f5bf51add7a5897053 (1).dat",
+    "sha256": "a7792f4b253f7577d59196749fe8a58696ef96433d6aa42a55a06be2506a7cbf",
+    "size_bytes": 186142
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007f3071f5bf51add7a5897053.dat",
+    "sha256": "a7792f4b253f7577d59196749fe8a58696ef96433d6aa42a55a06be2506a7cbf",
+    "size_bytes": 186142
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007f7071fdbaac21436226d203 (1).dat",
+    "sha256": "3f891b4a6fd84b1b3e193a96588adebfe438cac91b52bd68d73b1d26d89dd631",
+    "size_bytes": 94434
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000007f7071fdbaac21436226d203.dat",
+    "sha256": "3f891b4a6fd84b1b3e193a96588adebfe438cac91b52bd68d73b1d26d89dd631",
+    "size_bytes": 94434
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000804071fba8cdede0fad9ff12 (1).dat",
+    "sha256": "692d763f27488956c88c4d56be177e60412cb1d2106dfc42ce649e0945811b4e",
+    "size_bytes": 5922
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000804071fba8cdede0fad9ff12.dat",
+    "sha256": "692d763f27488956c88c4d56be177e60412cb1d2106dfc42ce649e0945811b4e",
+    "size_bytes": 5922
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000809871f7bd9ad9ce58ed4ec3 (1).dat",
+    "sha256": "cd304b1363a72f6f7c9335f99d48e73dfd3593a35c9f1af1f55fa2cbce7d951b",
+    "size_bytes": 151484
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000809871f7bd9ad9ce58ed4ec3.dat",
+    "sha256": "cd304b1363a72f6f7c9335f99d48e73dfd3593a35c9f1af1f55fa2cbce7d951b",
+    "size_bytes": 151484
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000823c71fd89ea2bcaa3aad483 (1).dat",
+    "sha256": "f504fae83f6ff354f4ef31e3dbfc518efe0eac21a15c457c8fcbb015ca9443ce",
+    "size_bytes": 310138
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000823c71fd89ea2bcaa3aad483.dat",
+    "sha256": "f504fae83f6ff354f4ef31e3dbfc518efe0eac21a15c457c8fcbb015ca9443ce",
+    "size_bytes": 310138
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000082a871fd8f7bc85c6a0601c5 (1).dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000082a871fd8f7bc85c6a0601c5.dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000082c4722faca54f7e41442f5b (1).dat",
+    "sha256": "537c2b4f268e4e8ee8d72a9e121bddf0a7aece2ea12d5a6a50d6bca801b604c2",
+    "size_bytes": 101453
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000082c4722faca54f7e41442f5b.dat",
+    "sha256": "537c2b4f268e4e8ee8d72a9e121bddf0a7aece2ea12d5a6a50d6bca801b604c2",
+    "size_bytes": 101453
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000083d071fba1e0c1f482f41b7a (1).dat",
+    "sha256": "00898eaee3a926a6a2e939df2ac919970db28594a8c19ee141f07bdd73eaa986",
+    "size_bytes": 3130
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000083d071fba1e0c1f482f41b7a.dat",
+    "sha256": "00898eaee3a926a6a2e939df2ac919970db28594a8c19ee141f07bdd73eaa986",
+    "size_bytes": 3130
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000852471fd84717d7be78b293c (1).dat",
+    "sha256": "97b31969bfe7ebf894c12afdf6a5dcb6e87e64114697782802fe933e693eacd8",
+    "size_bytes": 383844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000852471fd84717d7be78b293c.dat",
+    "sha256": "97b31969bfe7ebf894c12afdf6a5dcb6e87e64114697782802fe933e693eacd8",
+    "size_bytes": 383844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000085b471f8af3e40e305d34c3e (1).dat",
+    "sha256": "57df6c71fcd77c561873d393e19be498899a2b6923dbda004a584a2e1e479f3b",
+    "size_bytes": 149921
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000085b471f8af3e40e305d34c3e.dat",
+    "sha256": "57df6c71fcd77c561873d393e19be498899a2b6923dbda004a584a2e1e479f3b",
+    "size_bytes": 149921
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000867c71fb851f7a9ea5a25e91 (1).dat",
+    "sha256": "9372ae7463eefea76c234c3a14996abf2524f3f298e353153e820066a0c2539c",
+    "size_bytes": 62122
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000867c71fb851f7a9ea5a25e91.dat",
+    "sha256": "9372ae7463eefea76c234c3a14996abf2524f3f298e353153e820066a0c2539c",
+    "size_bytes": 62122
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000087b471fdbd730c2303c5fcb7 (1).dat",
+    "sha256": "de94550d8bbaea14c827ba340b1c29d5cc036896b518b7ab0470fb7e2f7fbcb2",
+    "size_bytes": 105233
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000087b471fdbd730c2303c5fcb7 (2).dat",
+    "sha256": "de94550d8bbaea14c827ba340b1c29d5cc036896b518b7ab0470fb7e2f7fbcb2",
+    "size_bytes": 105233
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000087b471fdbd730c2303c5fcb7.dat",
+    "sha256": "de94550d8bbaea14c827ba340b1c29d5cc036896b518b7ab0470fb7e2f7fbcb2",
+    "size_bytes": 105233
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000887871fda0d634cd7d81e19f (1).dat",
+    "sha256": "01bcff80c96d9d8e8e4dd43e3f7c08af17c8bd379ffc73d9315e97f976fa5dc5",
+    "size_bytes": 5331
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000887871fda0d634cd7d81e19f.dat",
+    "sha256": "01bcff80c96d9d8e8e4dd43e3f7c08af17c8bd379ffc73d9315e97f976fa5dc5",
+    "size_bytes": 5331
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000088f471fd85ec56910bdcf917 (1).dat",
+    "sha256": "a5802ca1fb101fd7a8fe4b3fbfca4831734c42bb3249c03ba222b03c04b76e9a",
+    "size_bytes": 326282
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000088f471fd85ec56910bdcf917.dat",
+    "sha256": "a5802ca1fb101fd7a8fe4b3fbfca4831734c42bb3249c03ba222b03c04b76e9a",
+    "size_bytes": 326282
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000899471f8b479c2df53db09ff (1).dat",
+    "sha256": "86937b82436e96bc761df582522f37be15dd36cf23f7d9964f7e37c9518386eb",
+    "size_bytes": 528003
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000899471f8b479c2df53db09ff.dat",
+    "sha256": "86937b82436e96bc761df582522f37be15dd36cf23f7d9964f7e37c9518386eb",
+    "size_bytes": 528003
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008a5871f5919bfcb777d3a76b (1).dat",
+    "sha256": "6ec0034b20f5749b5f54b707710d46695982e7e0412148a978c8d873f3452ce9",
+    "size_bytes": 89897
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008a5871f5919bfcb777d3a76b.dat",
+    "sha256": "6ec0034b20f5749b5f54b707710d46695982e7e0412148a978c8d873f3452ce9",
+    "size_bytes": 89897
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008a7c71fdab46e47395818f00 (1).dat",
+    "sha256": "60937a25b6255f3b4cddd98a8e71cae66ccc9deed3a4dfb4cd99ffe152f6d6ed",
+    "size_bytes": 230237
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008a7c71fdab46e47395818f00.dat",
+    "sha256": "60937a25b6255f3b4cddd98a8e71cae66ccc9deed3a4dfb4cd99ffe152f6d6ed",
+    "size_bytes": 230237
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008af071fd972a4d43b778f581 (1).dat",
+    "sha256": "4c8d67001d3c2977e5d6bf0a4f8add80cd564bd1df60b7569fd23751e7dda02a",
+    "size_bytes": 556216
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008af071fd972a4d43b778f581.dat",
+    "sha256": "4c8d67001d3c2977e5d6bf0a4f8add80cd564bd1df60b7569fd23751e7dda02a",
+    "size_bytes": 556216
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008be471fd8cdcccdd91d96fd4 (1).dat",
+    "sha256": "1a8e42188e5b76e94ca7238be62c86f40fd47e1fa92d49030b33e05fcf1d91be",
+    "size_bytes": 131130
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008be471fd8cdcccdd91d96fd4.dat",
+    "sha256": "1a8e42188e5b76e94ca7238be62c86f40fd47e1fa92d49030b33e05fcf1d91be",
+    "size_bytes": 131130
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008c9871f8b805d54572260b8c (1).dat",
+    "sha256": "0df5bb2017c0f357db34f03ba5207cdfcd1597b1684f9aadf5d9686487209c49",
+    "size_bytes": 480161
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008c9871f8b805d54572260b8c.dat",
+    "sha256": "0df5bb2017c0f357db34f03ba5207cdfcd1597b1684f9aadf5d9686487209c49",
+    "size_bytes": 480161
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008ca8722fb4741b25aeac48fe (1).dat",
+    "sha256": "5a7eec583278c7b1dbe581d17863b3331717dee0d9f0ceba3827ef6d62a5dfe3",
+    "size_bytes": 467485
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008ca8722fb4741b25aeac48fe.dat",
+    "sha256": "5a7eec583278c7b1dbe581d17863b3331717dee0d9f0ceba3827ef6d62a5dfe3",
+    "size_bytes": 467485
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008cb871f587e9c8aaf7d1f272 (1).dat",
+    "sha256": "4353993612e0dd01ed9e5c7119a66740ab585c94fc858193453a6bbfe2d2c60e",
+    "size_bytes": 340319
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008cb871f587e9c8aaf7d1f272.dat",
+    "sha256": "4353993612e0dd01ed9e5c7119a66740ab585c94fc858193453a6bbfe2d2c60e",
+    "size_bytes": 340319
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008d9c71fda6e6adc799059a44 (1).dat",
+    "sha256": "1c6ee851032b78b5640cc22aedf5834af54571063a1ddce390b0606fe125b993",
+    "size_bytes": 306145
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008d9c71fda6e6adc799059a44.dat",
+    "sha256": "1c6ee851032b78b5640cc22aedf5834af54571063a1ddce390b0606fe125b993",
+    "size_bytes": 306145
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008db871f78ec961469e25a45b (1).dat",
+    "sha256": "b3fe61eeb75f6153af6c7003e163cd8458c3c7dce340c698f52d77a43320dfea",
+    "size_bytes": 158952
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008db871f78ec961469e25a45b.dat",
+    "sha256": "b3fe61eeb75f6153af6c7003e163cd8458c3c7dce340c698f52d77a43320dfea",
+    "size_bytes": 158952
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008de071fb95a6b8325a1fa0e4 (1).dat",
+    "sha256": "5935e06bbc93e4a1458b8bb56c3a8e6b98940ec1e71d7664b0bfcd7f0c148df2",
+    "size_bytes": 3196
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008de071fb95a6b8325a1fa0e4.dat",
+    "sha256": "5935e06bbc93e4a1458b8bb56c3a8e6b98940ec1e71d7664b0bfcd7f0c148df2",
+    "size_bytes": 3196
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008f9871fd9a866350452e1518 (1).dat",
+    "sha256": "8e5c9b8550a5eebdec6b63005d1bbca5494810e058f74f8d4aecf30e22e0cf41",
+    "size_bytes": 423261
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000008f9871fd9a866350452e1518.dat",
+    "sha256": "8e5c9b8550a5eebdec6b63005d1bbca5494810e058f74f8d4aecf30e22e0cf41",
+    "size_bytes": 423261
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000090a471f8ae1afcc72eaaa601 (1).dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000090a471f8ae1afcc72eaaa601.dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000092a471f598e84d64248057a5 (1).dat",
+    "sha256": "bd5e273b3138359ea4f0d2e38f33820dba4416db501a2f9c1172551ccdf835d4",
+    "size_bytes": 66287
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000092a471f598e84d64248057a5.dat",
+    "sha256": "bd5e273b3138359ea4f0d2e38f33820dba4416db501a2f9c1172551ccdf835d4",
+    "size_bytes": 66287
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000092ec71fdbadce20ef8ef654c (1).dat",
+    "sha256": "7815eb0a582e56a374ebec80458860fcff2d80304a1136ae6ed02bfea7b0b73d",
+    "size_bytes": 503054
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000092ec71fdbadce20ef8ef654c.dat",
+    "sha256": "7815eb0a582e56a374ebec80458860fcff2d80304a1136ae6ed02bfea7b0b73d",
+    "size_bytes": 503054
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000936071f58dd4cd6e6f67f7a8 (1).dat",
+    "sha256": "4e3ecdafe14a5bf11d5df3c729ed39c33b3aff87f81bbbfdc63e265c7a2ae826",
+    "size_bytes": 436791
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000936071f58dd4cd6e6f67f7a8.dat",
+    "sha256": "4e3ecdafe14a5bf11d5df3c729ed39c33b3aff87f81bbbfdc63e265c7a2ae826",
+    "size_bytes": 436791
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000093d471f8b54dcd06c965c9f6 (1).dat",
+    "sha256": "29445948e432137e0de104dec389e956d72633aa0e4cb04ca572bb8e378e3d35",
+    "size_bytes": 4744692
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000093d471f8b54dcd06c965c9f6.dat",
+    "sha256": "29445948e432137e0de104dec389e956d72633aa0e4cb04ca572bb8e378e3d35",
+    "size_bytes": 4744692
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000093e4722f820f81b90bdba774 (1).dat",
+    "sha256": "6c799ceb4f51db6b7491be48e7c3469b7e9721734d6e34a4b00df68314c0b9eb",
+    "size_bytes": 164385
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000093e4722f820f81b90bdba774.dat",
+    "sha256": "6c799ceb4f51db6b7491be48e7c3469b7e9721734d6e34a4b00df68314c0b9eb",
+    "size_bytes": 164385
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000946471f589ee489025c5a518 (1).dat",
+    "sha256": "44a9d75f6779436394fc3da2de388208b887052b29d4dcdddf7242c809faab25",
+    "size_bytes": 91455
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000946471f589ee489025c5a518.dat",
+    "sha256": "44a9d75f6779436394fc3da2de388208b887052b29d4dcdddf7242c809faab25",
+    "size_bytes": 91455
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000094a071fdac2fbad9a0ee1eb6 (1).dat",
+    "sha256": "dec5111f62ff24b7786086f97259106834deee726c28a31e5db38c1fec6f712c",
+    "size_bytes": 173
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000094a071fdac2fbad9a0ee1eb6.dat",
+    "sha256": "dec5111f62ff24b7786086f97259106834deee726c28a31e5db38c1fec6f712c",
+    "size_bytes": 173
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000961871fda3934cbc7eb4cdec (1).dat",
+    "sha256": "53f222d53e22cb212b46fff01c7e34b0d5fcbaf6caa53abccfda09a8e42dc7f8",
+    "size_bytes": 260833
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000961871fda3934cbc7eb4cdec.dat",
+    "sha256": "53f222d53e22cb212b46fff01c7e34b0d5fcbaf6caa53abccfda09a8e42dc7f8",
+    "size_bytes": 260833
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000096ac71f593257c81c008bf8b (1).dat",
+    "sha256": "3055216f2f0cab9cc497f135317c98f37a94659daa74f40e3275c1055b7c5219",
+    "size_bytes": 181961
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_0000000096ac71f593257c81c008bf8b.dat",
+    "sha256": "3055216f2f0cab9cc497f135317c98f37a94659daa74f40e3275c1055b7c5219",
+    "size_bytes": 181961
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009b5471f7872dfc85c392990d (1).dat",
+    "sha256": "299b9cd47f28dfd32bf4c0f87bed4f01d364de01579d7192a284c9b747ec136d",
+    "size_bytes": 222615
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009b5471f7872dfc85c392990d.dat",
+    "sha256": "299b9cd47f28dfd32bf4c0f87bed4f01d364de01579d7192a284c9b747ec136d",
+    "size_bytes": 222615
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009b9c71f8920999d966c8509d (1).dat",
+    "sha256": "97e6bfa538eb0bbd6755e250679e8c6eb6d3d6cb43bd7903040c87743ca381f4",
+    "size_bytes": 12704
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009b9c71f8920999d966c8509d.dat",
+    "sha256": "97e6bfa538eb0bbd6755e250679e8c6eb6d3d6cb43bd7903040c87743ca381f4",
+    "size_bytes": 12704
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009bcc71fd94b0429ec65d34ec (1).dat",
+    "sha256": "1a08c5c5ade0a0f53faad956e096ed2a6f92a44b6209199208aeab9652efa010",
+    "size_bytes": 392197
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009bcc71fd94b0429ec65d34ec.dat",
+    "sha256": "1a08c5c5ade0a0f53faad956e096ed2a6f92a44b6209199208aeab9652efa010",
+    "size_bytes": 392197
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009cf471fdb62f55b46414ff61 (1).dat",
+    "sha256": "49cc005cef2616be0d54c7dd577ff76d942ea3aef004a238eff01585ab1e528a",
+    "size_bytes": 569774
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009cf471fdb62f55b46414ff61.dat",
+    "sha256": "49cc005cef2616be0d54c7dd577ff76d942ea3aef004a238eff01585ab1e528a",
+    "size_bytes": 569774
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009d3871f8bad4e3b2455234e6 (1).dat",
+    "sha256": "e4729520deb3d2fab570e39727bee2f55e3b5d5952175f0b9d03bff5b52f7f7a",
+    "size_bytes": 146945
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_000000009d3871f8bad4e3b2455234e6.dat",
+    "sha256": "e4729520deb3d2fab570e39727bee2f55e3b5d5952175f0b9d03bff5b52f7f7a",
+    "size_bytes": 146945
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a49471fdb418d60bc77fa3a7 (1).dat",
+    "sha256": "bd725a7a38939e5b59904e1b7a7265919ecec256166ece69d515c21005165907",
+    "size_bytes": 1243500
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a49471fdb418d60bc77fa3a7.dat",
+    "sha256": "bd725a7a38939e5b59904e1b7a7265919ecec256166ece69d515c21005165907",
+    "size_bytes": 1243500
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a52471fbb5ab017f12e008be (1).dat",
+    "sha256": "8458efdd97732d916dd436548ad0a6336ec360be248270d3f9944a53f1d332ce",
+    "size_bytes": 3013
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a52471fbb5ab017f12e008be.dat",
+    "sha256": "8458efdd97732d916dd436548ad0a6336ec360be248270d3f9944a53f1d332ce",
+    "size_bytes": 3013
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a68071fd9aafc8ffd80c6e3c (1).dat",
+    "sha256": "75617489cf8256ebdfce0d6744f9b8914c745d91c2b61a2e539ac93acb72e82f",
+    "size_bytes": 537639
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a68071fd9aafc8ffd80c6e3c.dat",
+    "sha256": "75617489cf8256ebdfce0d6744f9b8914c745d91c2b61a2e539ac93acb72e82f",
+    "size_bytes": 537639
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a6a071fdb3adad98f52892aa (1).dat",
+    "sha256": "a3422fc50917f296ed74aa68573ecbbc26c8d3575987bf1f38f0b09e6a3eeaf1",
+    "size_bytes": 8494
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a6a071fdb3adad98f52892aa.dat",
+    "sha256": "a3422fc50917f296ed74aa68573ecbbc26c8d3575987bf1f38f0b09e6a3eeaf1",
+    "size_bytes": 8494
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a6c871fbb4c3dad608084f8f (1).dat",
+    "sha256": "edeb4eadac4265ad4e3fb0d401a1b71dcefd42ce33a20112ae510bc66543ca5c",
+    "size_bytes": 2836
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a6c871fbb4c3dad608084f8f.dat",
+    "sha256": "edeb4eadac4265ad4e3fb0d401a1b71dcefd42ce33a20112ae510bc66543ca5c",
+    "size_bytes": 2836
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a778722fa6780989f0d63dbf (1).dat",
+    "sha256": "0ddbbf0e01395cee1dabaac94a73934e84ec06c1e48dc91584fb7632622898ca",
+    "size_bytes": 5383
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a778722fa6780989f0d63dbf.dat",
+    "sha256": "0ddbbf0e01395cee1dabaac94a73934e84ec06c1e48dc91584fb7632622898ca",
+    "size_bytes": 5383
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a98071fda2e83ce39931f8e8 (1).dat",
+    "sha256": "8742606ff6cde630ca05d2bd03e763156a7814fbf5909a534f2d0f117e0b2b87",
+    "size_bytes": 91
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000a98071fda2e83ce39931f8e8.dat",
+    "sha256": "8742606ff6cde630ca05d2bd03e763156a7814fbf5909a534f2d0f117e0b2b87",
+    "size_bytes": 91
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000aae471fdb430c3c182787bd0 (1).dat",
+    "sha256": "a2b93e6c2db05d6bbbf6f27d413ec73269735b7b679019c8a5aa9670ff0ffbf2",
+    "size_bytes": 8482020
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000aae471fdb430c3c182787bd0.dat",
+    "sha256": "a2b93e6c2db05d6bbbf6f27d413ec73269735b7b679019c8a5aa9670ff0ffbf2",
+    "size_bytes": 8482020
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ab9071fd81a9d123fc603f96 (1).dat",
+    "sha256": "e662ab9addeecd031b9470897459bd3715058f4aff95390314580f3fda537308",
+    "size_bytes": 1934
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ab9071fd81a9d123fc603f96.dat",
+    "sha256": "e662ab9addeecd031b9470897459bd3715058f4aff95390314580f3fda537308",
+    "size_bytes": 1934
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000abac71f5be4be7c5b13d8b9a (1).dat",
+    "sha256": "f87d0d01c6d070bd21ce90609b58afee778f033ed704312785aee5302bd94189",
+    "size_bytes": 81838
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000abac71f5be4be7c5b13d8b9a.dat",
+    "sha256": "f87d0d01c6d070bd21ce90609b58afee778f033ed704312785aee5302bd94189",
+    "size_bytes": 81838
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000abf871fda17e06d2b1883c7d (1).dat",
+    "sha256": "dec5111f62ff24b7786086f97259106834deee726c28a31e5db38c1fec6f712c",
+    "size_bytes": 173
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000abf871fda17e06d2b1883c7d.dat",
+    "sha256": "dec5111f62ff24b7786086f97259106834deee726c28a31e5db38c1fec6f712c",
+    "size_bytes": 173
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ac3071f89db571e49de3e7af (1).dat",
+    "sha256": "97b31969bfe7ebf894c12afdf6a5dcb6e87e64114697782802fe933e693eacd8",
+    "size_bytes": 383844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ac3071f89db571e49de3e7af.dat",
+    "sha256": "97b31969bfe7ebf894c12afdf6a5dcb6e87e64114697782802fe933e693eacd8",
+    "size_bytes": 383844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ad98722f8cc32c4549271c69 (1).dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ad98722f8cc32c4549271c69.dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000adc871f5b556784683108e98 (1).dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000adc871f5b556784683108e98.dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000afdc71fb800929b635f73668 (1).dat",
+    "sha256": "50f5457211318fe49f5ce854ccfa8eeac9172a1e0d838f0a20f4c48bca921fd5",
+    "size_bytes": 681
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000afdc71fb800929b635f73668.dat",
+    "sha256": "50f5457211318fe49f5ce854ccfa8eeac9172a1e0d838f0a20f4c48bca921fd5",
+    "size_bytes": 681
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b07c71f5aabd07de981ef7b0 (1).dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b07c71f5aabd07de981ef7b0.dat",
+    "sha256": "14522e544d1b05d92ffe0aff2b33602f27bac38bc19a754f9d4ea8c9edcc0131",
+    "size_bytes": 112844
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b0e071fd8b390387f8ac9860 (1).dat",
+    "sha256": "3eefc179cb972cdeadad3abdb985f2794248a68fe863b1e608fe0eb6a8a0828d",
+    "size_bytes": 16005
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b0e071fd8b390387f8ac9860.dat",
+    "sha256": "3eefc179cb972cdeadad3abdb985f2794248a68fe863b1e608fe0eb6a8a0828d",
+    "size_bytes": 16005
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b1dc71f59a9a02da07cf21ce (1).dat",
+    "sha256": "c5b2d2fc7e6c6f44fe0f1c2c4cac2461335085177796a87cb80d490813c6194b",
+    "size_bytes": 9073145
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b1dc71f59a9a02da07cf21ce.dat",
+    "sha256": "c5b2d2fc7e6c6f44fe0f1c2c4cac2461335085177796a87cb80d490813c6194b",
+    "size_bytes": 9073145
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b2bc7230bea7a3c96cbd68bb (1).dat",
+    "sha256": "91b56fdb6f17c024dc9e61537b53d7e9fa883d6136adffaca2754168b80b6e83",
+    "size_bytes": 1137837
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b2bc7230bea7a3c96cbd68bb.dat",
+    "sha256": "91b56fdb6f17c024dc9e61537b53d7e9fa883d6136adffaca2754168b80b6e83",
+    "size_bytes": 1137837
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b37c71f885fc98e3240802ec (1).dat",
+    "sha256": "4c82f11ddc00698295c2abd92e7df07d06070032403ece2f39f6ccf4b8164cc1",
+    "size_bytes": 465335
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b37c71f885fc98e3240802ec.dat",
+    "sha256": "4c82f11ddc00698295c2abd92e7df07d06070032403ece2f39f6ccf4b8164cc1",
+    "size_bytes": 465335
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b53471fb93920cbdb81977a3 (1).dat",
+    "sha256": "563a9bc7e1b2496c37e853b045d0a8c6e7da30f2c82446737b784d0e514f9495",
+    "size_bytes": 3567
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b53471fb93920cbdb81977a3.dat",
+    "sha256": "563a9bc7e1b2496c37e853b045d0a8c6e7da30f2c82446737b784d0e514f9495",
+    "size_bytes": 3567
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b6fc71fb9e6095a3cd95eeae (1).dat",
+    "sha256": "9b5f64ec62325d4de1b72c8c25ac2d2eb27b5e3712b32485e7317e3cd7e0bc84",
+    "size_bytes": 2138
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b6fc71fb9e6095a3cd95eeae.dat",
+    "sha256": "9b5f64ec62325d4de1b72c8c25ac2d2eb27b5e3712b32485e7317e3cd7e0bc84",
+    "size_bytes": 2138
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b7e47230bba530e267606ff2 (1).dat",
+    "sha256": "3d4ea82bad3931971fb189faba2e7f9a8bf209b9148d375b4bc7ae67060d0435",
+    "size_bytes": 260381
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b7e47230bba530e267606ff2.dat",
+    "sha256": "3d4ea82bad3931971fb189faba2e7f9a8bf209b9148d375b4bc7ae67060d0435",
+    "size_bytes": 260381
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b80871f7adc0e44830447635 (1).dat",
+    "sha256": "17236dfc8195855d567a2f7b0461ec6d8d2caa9606231f18327338a5ab22bc12",
+    "size_bytes": 150043
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b80871f7adc0e44830447635.dat",
+    "sha256": "17236dfc8195855d567a2f7b0461ec6d8d2caa9606231f18327338a5ab22bc12",
+    "size_bytes": 150043
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b90c71f59e016cb019910bb3 (1).dat",
+    "sha256": "cb95ce073c417d0e3274c28609ccc9ba641571fac65323cd6f29fe12ebe7215d",
+    "size_bytes": 274285
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000b90c71f59e016cb019910bb3.dat",
+    "sha256": "cb95ce073c417d0e3274c28609ccc9ba641571fac65323cd6f29fe12ebe7215d",
+    "size_bytes": 274285
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ba2471f8b7e8d219c265b40f (1).dat",
+    "sha256": "e10fb1c90665f3b199539592eed3c23e2752ff2f7ed9eeceefa759f7045d1204",
+    "size_bytes": 326620
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ba2471f8b7e8d219c265b40f.dat",
+    "sha256": "e10fb1c90665f3b199539592eed3c23e2752ff2f7ed9eeceefa759f7045d1204",
+    "size_bytes": 326620
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bab871f5b173705c3bcd1446 (1).dat",
+    "sha256": "211be7b24ad096fe0565db30d8bf24ccdabc3222bee6653a3e3039eea7dc7fd2",
+    "size_bytes": 183618
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bab871f5b173705c3bcd1446.dat",
+    "sha256": "211be7b24ad096fe0565db30d8bf24ccdabc3222bee6653a3e3039eea7dc7fd2",
+    "size_bytes": 183618
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bba471fba565d9fe77aed98b (1).dat",
+    "sha256": "1c9ac07613f208a86094d190a81afb83225b8ba49614eb214da7737ffeb6be88",
+    "size_bytes": 713
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bba471fba565d9fe77aed98b.dat",
+    "sha256": "1c9ac07613f208a86094d190a81afb83225b8ba49614eb214da7737ffeb6be88",
+    "size_bytes": 713
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bbf471fb930fa8fcb8c48a25 (1).dat",
+    "sha256": "8458efdd97732d916dd436548ad0a6336ec360be248270d3f9944a53f1d332ce",
+    "size_bytes": 3013
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bbf471fb930fa8fcb8c48a25.dat",
+    "sha256": "8458efdd97732d916dd436548ad0a6336ec360be248270d3f9944a53f1d332ce",
+    "size_bytes": 3013
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bc8071fd99ea46e65ee1ba74 (1).dat",
+    "sha256": "1e0287def9ba7fa431bd6c16444329860974c8f43cd5bca59939bbee0395481f",
+    "size_bytes": 422401
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bc8071fd99ea46e65ee1ba74.dat",
+    "sha256": "1e0287def9ba7fa431bd6c16444329860974c8f43cd5bca59939bbee0395481f",
+    "size_bytes": 422401
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bdb871fbb6abbc82f7134298 (1).dat",
+    "sha256": "faa835d1f814bb35357a70d71eb6541f7d4ac611e380173867b028ef3ea24d36",
+    "size_bytes": 3222
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000bdb871fbb6abbc82f7134298.dat",
+    "sha256": "faa835d1f814bb35357a70d71eb6541f7d4ac611e380173867b028ef3ea24d36",
+    "size_bytes": 3222
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000be1871f89525e642c0354569 (1).dat",
+    "sha256": "bd725a7a38939e5b59904e1b7a7265919ecec256166ece69d515c21005165907",
+    "size_bytes": 1243500
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000be1871f89525e642c0354569.dat",
+    "sha256": "bd725a7a38939e5b59904e1b7a7265919ecec256166ece69d515c21005165907",
+    "size_bytes": 1243500
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c17071fdb812af38749d0236 (1).dat",
+    "sha256": "c02b09b2cf2cfab32527ee1a88ee311500c1c2f4c95d20fe0898c9e0407a4d86",
+    "size_bytes": 167
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c17071fdb812af38749d0236.dat",
+    "sha256": "c02b09b2cf2cfab32527ee1a88ee311500c1c2f4c95d20fe0898c9e0407a4d86",
+    "size_bytes": 167
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c36471f7941e56313fe32448 (1).dat",
+    "sha256": "0ae3df4e55604c6ec839e5d919800e811b50bb40d208708264639625f680e616",
+    "size_bytes": 178197
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c36471f7941e56313fe32448.dat",
+    "sha256": "0ae3df4e55604c6ec839e5d919800e811b50bb40d208708264639625f680e616",
+    "size_bytes": 178197
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c44c720c8940ce0152d007e9 (1).dat",
+    "sha256": "9c72ae03f76bd0aa123fdc2e33f764dfa0db2b84c484e93b046d8cab7152fe03",
+    "size_bytes": 472410
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c44c720c8940ce0152d007e9.dat",
+    "sha256": "9c72ae03f76bd0aa123fdc2e33f764dfa0db2b84c484e93b046d8cab7152fe03",
+    "size_bytes": 472410
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c67471fbb4ee73ecbeb1f1a2 (1).dat",
+    "sha256": "434ec538d7bf04bf41cf075763ae61a3d80216c279ba6844219d742964d16657",
+    "size_bytes": 92197
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c67471fbb4ee73ecbeb1f1a2.dat",
+    "sha256": "434ec538d7bf04bf41cf075763ae61a3d80216c279ba6844219d742964d16657",
+    "size_bytes": 92197
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c9b871f5a0ba9fa94dba436d (1).dat",
+    "sha256": "5a7eec583278c7b1dbe581d17863b3331717dee0d9f0ceba3827ef6d62a5dfe3",
+    "size_bytes": 467485
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000c9b871f5a0ba9fa94dba436d.dat",
+    "sha256": "5a7eec583278c7b1dbe581d17863b3331717dee0d9f0ceba3827ef6d62a5dfe3",
+    "size_bytes": 467485
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ca2471f5871d851a2821ebd0 (1).dat",
+    "sha256": "77a67ddba30ad1d674c53434f0f17f199c54a8a5b482ba5618d2debbc5d2b6ce",
+    "size_bytes": 191821
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ca2471f5871d851a2821ebd0.dat",
+    "sha256": "77a67ddba30ad1d674c53434f0f17f199c54a8a5b482ba5618d2debbc5d2b6ce",
+    "size_bytes": 191821
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000cb8c71f8a23040f8fcc15d17 (1).dat",
+    "sha256": "a50ac3002963b5709747eff0c7f5672a44cf17eb1cf8ae71827ba78f42f0b509",
+    "size_bytes": 172
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000cb8c71f8a23040f8fcc15d17.dat",
+    "sha256": "a50ac3002963b5709747eff0c7f5672a44cf17eb1cf8ae71827ba78f42f0b509",
+    "size_bytes": 172
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000cc8c71fd83a11c15c387370d (1).dat",
+    "sha256": "d883cfafcb9cf7d18f8d10bae5639233ac4d6bb89c73bfd006c5f2f6f17e4778",
+    "size_bytes": 361358
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000cc8c71fd83a11c15c387370d.dat",
+    "sha256": "d883cfafcb9cf7d18f8d10bae5639233ac4d6bb89c73bfd006c5f2f6f17e4778",
+    "size_bytes": 361358
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ccb071f7ba1c5bf65ac45b18 (1).dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ccb071f7ba1c5bf65ac45b18.dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000cd4c71f8b1f5752ec5c2b9b2 (1).dat",
+    "sha256": "c7393974f6a161551d23a2c13c890960fcae46f0794ca2a9db32b522ac246978",
+    "size_bytes": 5795
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000cd4c71f8b1f5752ec5c2b9b2.dat",
+    "sha256": "c7393974f6a161551d23a2c13c890960fcae46f0794ca2a9db32b522ac246978",
+    "size_bytes": 5795
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ce2c71fd967599def9227c5f (1).dat",
+    "sha256": "782c4aa4874470dcb7d8a38d872d88a50860cf7b660ae2dbb0c831876cb6ffa9",
+    "size_bytes": 139264
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ce2c71fd967599def9227c5f.dat",
+    "sha256": "782c4aa4874470dcb7d8a38d872d88a50860cf7b660ae2dbb0c831876cb6ffa9",
+    "size_bytes": 139264
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d03471f893bd5537bfd4e81e (1).dat",
+    "sha256": "5ae6a5e55a31c6b403196f56d6639ba6705da181ce4f63ff01ccae5e9a7af33e",
+    "size_bytes": 1138176
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d03471f893bd5537bfd4e81e.dat",
+    "sha256": "5ae6a5e55a31c6b403196f56d6639ba6705da181ce4f63ff01ccae5e9a7af33e",
+    "size_bytes": 1138176
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d0c471fdb6617c6b253ca571 (1).dat",
+    "sha256": "29445948e432137e0de104dec389e956d72633aa0e4cb04ca572bb8e378e3d35",
+    "size_bytes": 4744692
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d0c471fdb6617c6b253ca571.dat",
+    "sha256": "29445948e432137e0de104dec389e956d72633aa0e4cb04ca572bb8e378e3d35",
+    "size_bytes": 4744692
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d19471f5898202f58ba8eec6 (1).dat",
+    "sha256": "7897baad1cde1606af8b394e5251cb0a5adde87a8d79e817f0cd6b0301cf7537",
+    "size_bytes": 169204
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d19471f5898202f58ba8eec6.dat",
+    "sha256": "7897baad1cde1606af8b394e5251cb0a5adde87a8d79e817f0cd6b0301cf7537",
+    "size_bytes": 169204
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d2ac71f5b0d9d82df3cd708a (1).dat",
+    "sha256": "f9d06f09dc47d6e9f7d39b43c551e1a286f846c227ba8a95bb4661a7a4b8b047",
+    "size_bytes": 88337
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d2ac71f5b0d9d82df3cd708a.dat",
+    "sha256": "f9d06f09dc47d6e9f7d39b43c551e1a286f846c227ba8a95bb4661a7a4b8b047",
+    "size_bytes": 88337
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d2e871fb9cf3476c0f8feafc (1).dat",
+    "sha256": "805c4de3a2eedbb1479c671cfdf155926fe4cb65ec735b34233e843f68a4e796",
+    "size_bytes": 3046
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d2e871fb9cf3476c0f8feafc.dat",
+    "sha256": "805c4de3a2eedbb1479c671cfdf155926fe4cb65ec735b34233e843f68a4e796",
+    "size_bytes": 3046
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d37c720c8686551be3a31bd8 (1).dat",
+    "sha256": "87aea71480493ff180fd93a228747265ede906658db6d81a0c8bcd34f22c2705",
+    "size_bytes": 154729
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d37c720c8686551be3a31bd8.dat",
+    "sha256": "87aea71480493ff180fd93a228747265ede906658db6d81a0c8bcd34f22c2705",
+    "size_bytes": 154729
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d60471fd90791e07333a79e7 (1).dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d60471fd90791e07333a79e7.dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d63c722f9f89c4e85f3a001a (1).dat",
+    "sha256": "8446d1dc07fef33ae7ece6f280bf29cb33b31324adf36c1999fd3dfe94fda51c",
+    "size_bytes": 185940
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d63c722f9f89c4e85f3a001a.dat",
+    "sha256": "8446d1dc07fef33ae7ece6f280bf29cb33b31324adf36c1999fd3dfe94fda51c",
+    "size_bytes": 185940
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d8507230bb83af9fd4c9ec00 (1).dat",
+    "sha256": "e19f0c522432b5ca303ba23f878786608684d89a6f4549537b4915c17215c359",
+    "size_bytes": 149183
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000d8507230bb83af9fd4c9ec00.dat",
+    "sha256": "e19f0c522432b5ca303ba23f878786608684d89a6f4549537b4915c17215c359",
+    "size_bytes": 149183
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000dbe871fd9f855005d1e2ae3f (1).dat",
+    "sha256": "e662ab9addeecd031b9470897459bd3715058f4aff95390314580f3fda537308",
+    "size_bytes": 1934
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000dbe871fd9f855005d1e2ae3f.dat",
+    "sha256": "e662ab9addeecd031b9470897459bd3715058f4aff95390314580f3fda537308",
+    "size_bytes": 1934
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000dfd871f89aa09c10cfd46dd2 (1).dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000dfd871f89aa09c10cfd46dd2.dat",
+    "sha256": "20a1602654715abf756246bdf8d885f1b94a305e57732d503f9276badfaccb5b",
+    "size_bytes": 260215
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e15071fbad7795ab7eb080c4 (1).dat",
+    "sha256": "93221d6af31e3f45702ba4bde564af664e8d533777fe4499d963291432690ea4",
+    "size_bytes": 1907
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e15071fbad7795ab7eb080c4.dat",
+    "sha256": "93221d6af31e3f45702ba4bde564af664e8d533777fe4499d963291432690ea4",
+    "size_bytes": 1907
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e22c71fbb9cc614b11c10301 (1).dat",
+    "sha256": "df0e7bf1b75b1b2cb2621430f1b673f8dfa1dff7fbd6d87107b6e9b4273d92d4",
+    "size_bytes": 4013
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e22c71fbb9cc614b11c10301.dat",
+    "sha256": "df0e7bf1b75b1b2cb2621430f1b673f8dfa1dff7fbd6d87107b6e9b4273d92d4",
+    "size_bytes": 4013
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e47071f5a2261bb9e5ebc033 (1).dat",
+    "sha256": "04a01bfdc621180855bd1078c86654c7f7e44230d8524d1aef84ece66e7aa57f",
+    "size_bytes": 38208
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e47071f5a2261bb9e5ebc033.dat",
+    "sha256": "04a01bfdc621180855bd1078c86654c7f7e44230d8524d1aef84ece66e7aa57f",
+    "size_bytes": 38208
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e53471f58781d0e1b9d5dfde (1).dat",
+    "sha256": "96f898146bdb7c5dd575be4d0b9edf593d328bead31432fe3717a7ebacdd0998",
+    "size_bytes": 50916
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e53471f58781d0e1b9d5dfde.dat",
+    "sha256": "96f898146bdb7c5dd575be4d0b9edf593d328bead31432fe3717a7ebacdd0998",
+    "size_bytes": 50916
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e68071fbab7845766e702fc8 (1).dat",
+    "sha256": "2058e20fb43f08af81086aa520bc16bde215cd1749d9d5827128e3dee2619db3",
+    "size_bytes": 2025
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e68071fbab7845766e702fc8.dat",
+    "sha256": "2058e20fb43f08af81086aa520bc16bde215cd1749d9d5827128e3dee2619db3",
+    "size_bytes": 2025
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e74871f8948cadd5e993b118 (1).dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e74871f8948cadd5e993b118.dat",
+    "sha256": "9284f10a3ebe703a61c9c8ab0c1c889fddf8276405d2ac33c7377537d1cde448",
+    "size_bytes": 1072
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e90871fd9ee1ae64654c79c6 (1).dat",
+    "sha256": "49cc005cef2616be0d54c7dd577ff76d942ea3aef004a238eff01585ab1e528a",
+    "size_bytes": 569774
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000e90871fd9ee1ae64654c79c6.dat",
+    "sha256": "49cc005cef2616be0d54c7dd577ff76d942ea3aef004a238eff01585ab1e528a",
+    "size_bytes": 569774
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ea587230a002a7ed0a751d9c (1).dat",
+    "sha256": "a50ac3002963b5709747eff0c7f5672a44cf17eb1cf8ae71827ba78f42f0b509",
+    "size_bytes": 172
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ea587230a002a7ed0a751d9c.dat",
+    "sha256": "a50ac3002963b5709747eff0c7f5672a44cf17eb1cf8ae71827ba78f42f0b509",
+    "size_bytes": 172
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ebf471f7a3bf2cc929158ba2 (1).dat",
+    "sha256": "2c125153462f13a4fcc662eb061cb8c688c50d7dc420cc2956a3963a8f40cd26",
+    "size_bytes": 88471
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ebf471f7a3bf2cc929158ba2.dat",
+    "sha256": "2c125153462f13a4fcc662eb061cb8c688c50d7dc420cc2956a3963a8f40cd26",
+    "size_bytes": 88471
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ec1071f7a8c727659f57d24d (1).dat",
+    "sha256": "0be4bbbef43cc9dd660b835d5b88ef93033be24aa390e18737c42cbb6c964802",
+    "size_bytes": 68722
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ec1071f7a8c727659f57d24d.dat",
+    "sha256": "0be4bbbef43cc9dd660b835d5b88ef93033be24aa390e18737c42cbb6c964802",
+    "size_bytes": 68722
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000eca471fdb502d70790ec27b0 (1).dat",
+    "sha256": "d351123636ad75857553083a63274033c8cff891af3ac76b26d9fc33c3c9e144",
+    "size_bytes": 250564
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000eca471fdb502d70790ec27b0.dat",
+    "sha256": "d351123636ad75857553083a63274033c8cff891af3ac76b26d9fc33c3c9e144",
+    "size_bytes": 250564
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ed4c71fd969dde32f58402ab (1).dat",
+    "sha256": "1ee4ce29da52356b49b8a4aaa752741dd364ee8e471b98234ea22f7d6f11fd6b",
+    "size_bytes": 229060
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ed4c71fd969dde32f58402ab.dat",
+    "sha256": "1ee4ce29da52356b49b8a4aaa752741dd364ee8e471b98234ea22f7d6f11fd6b",
+    "size_bytes": 229060
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000eed472308291c888b8e4f515 (1).dat",
+    "sha256": "f52aa193fe7fc562c82facb18261834bdb30e61cfca0feb2effba758f8a2cf80",
+    "size_bytes": 682986
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000eed472308291c888b8e4f515.dat",
+    "sha256": "f52aa193fe7fc562c82facb18261834bdb30e61cfca0feb2effba758f8a2cf80",
+    "size_bytes": 682986
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f06471f88cc23bef307d0d6a (1).dat",
+    "sha256": "2ed9ad27e372e5e696590be82ce6f6a1d88823539652ea31d989cadfd360896c",
+    "size_bytes": 140882
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f06471f88cc23bef307d0d6a.dat",
+    "sha256": "2ed9ad27e372e5e696590be82ce6f6a1d88823539652ea31d989cadfd360896c",
+    "size_bytes": 140882
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f13471fb8755e9ba300a51ff (1).dat",
+    "sha256": "953739fb2970eeb3ecb2623ca0dd1d795a43c054ca5e4c2d92d1fc6b6cbcdb57",
+    "size_bytes": 2430
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f13471fb8755e9ba300a51ff.dat",
+    "sha256": "953739fb2970eeb3ecb2623ca0dd1d795a43c054ca5e4c2d92d1fc6b6cbcdb57",
+    "size_bytes": 2430
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f1cc71fd950445b3645f8c50 (1).dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f1cc71fd950445b3645f8c50.dat",
+    "sha256": "c6ffc7b78a6182875ae49a9a335e6b253ad700191770dcd6288b9d1903f71703",
+    "size_bytes": 481428
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f38c71f8b9a3bc303895ec91 (1).dat",
+    "sha256": "8d9cd5f210c0204d2a1ddaeaf82db1071e242126f4e18b9c350d8b1680bae400",
+    "size_bytes": 5766468
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f38c71f8b9a3bc303895ec91.dat",
+    "sha256": "8d9cd5f210c0204d2a1ddaeaf82db1071e242126f4e18b9c350d8b1680bae400",
+    "size_bytes": 5766468
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f47471f5b228696c169931f9 (1).dat",
+    "sha256": "c9cec3918adf109c5f2efcf77b43cf6b36f7d2503199840c5f735a717e28287b",
+    "size_bytes": 138632
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f47471f5b228696c169931f9.dat",
+    "sha256": "c9cec3918adf109c5f2efcf77b43cf6b36f7d2503199840c5f735a717e28287b",
+    "size_bytes": 138632
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f51c720ca29b056a3f060446 (1).dat",
+    "sha256": "d560aa86b2235716dac8491f0dbda671e1fd0a19d5034d10228124f50e7e4558",
+    "size_bytes": 231694
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f51c720ca29b056a3f060446.dat",
+    "sha256": "d560aa86b2235716dac8491f0dbda671e1fd0a19d5034d10228124f50e7e4558",
+    "size_bytes": 231694
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f5f0720cac35f083c0ca6af6 (1).dat",
+    "sha256": "bc6371de9a32a469c3681ef5ed8b0f8d518be7c03919617fbe020183402ec1d5",
+    "size_bytes": 365130
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f5f0720cac35f083c0ca6af6.dat",
+    "sha256": "bc6371de9a32a469c3681ef5ed8b0f8d518be7c03919617fbe020183402ec1d5",
+    "size_bytes": 365130
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f79c71f8bdf4a5932fa5e809 (1).dat",
+    "sha256": "60a5b57d93d2802c88551165407f5c9eaa389515d351dbd5490eb33e907637dd",
+    "size_bytes": 13862
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f79c71f8bdf4a5932fa5e809.dat",
+    "sha256": "60a5b57d93d2802c88551165407f5c9eaa389515d351dbd5490eb33e907637dd",
+    "size_bytes": 13862
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f91071fd8ea704acd1ecdb07 (1).dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f91071fd8ea704acd1ecdb07.dat",
+    "sha256": "fd39af7579a2cb32885a25097cab1cede7fad911ca393aed5700198752af3e32",
+    "size_bytes": 318094
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f9bc71f58f8ce5e14b39c3bd (1).dat",
+    "sha256": "41deeba2421646f17560ede875feb7b8274340f318a79c5e19a77399e15588b0",
+    "size_bytes": 171766
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000f9bc71f58f8ce5e14b39c3bd.dat",
+    "sha256": "41deeba2421646f17560ede875feb7b8274340f318a79c5e19a77399e15588b0",
+    "size_bytes": 171766
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fb74720cbfe6f68ac865707c (1).dat",
+    "sha256": "ec9e6b852e4b3ce59b05996ae2384e4b932c21f2fcbff9cdebb3d2b3897caf4c",
+    "size_bytes": 426204
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fb74720cbfe6f68ac865707c.dat",
+    "sha256": "ec9e6b852e4b3ce59b05996ae2384e4b932c21f2fcbff9cdebb3d2b3897caf4c",
+    "size_bytes": 426204
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fcc071fdbcba7d5346840647 (1).dat",
+    "sha256": "e083d6fc980649b5d61a8f14c2b4a24ee88a51e8b1272407491894dc00b2f56e",
+    "size_bytes": 930653
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fcc071fdbcba7d5346840647.dat",
+    "sha256": "e083d6fc980649b5d61a8f14c2b4a24ee88a51e8b1272407491894dc00b2f56e",
+    "size_bytes": 930653
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fd3471fda68016a82c8006bc (1).dat",
+    "sha256": "f73be376b0e1704da118312e202be49e8ac04a6b2e19b588cdfc2707c7f3e25d",
+    "size_bytes": 47404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fd3471fda68016a82c8006bc.dat",
+    "sha256": "f73be376b0e1704da118312e202be49e8ac04a6b2e19b588cdfc2707c7f3e25d",
+    "size_bytes": 47404
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fdc871f5859bdf37775cacd1 (1).dat",
+    "sha256": "c02d47a4f25e5b01996985c857664d6960ac46aa6c17d209631935341839c241",
+    "size_bytes": 8134
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fdc871f5859bdf37775cacd1.dat",
+    "sha256": "c02d47a4f25e5b01996985c857664d6960ac46aa6c17d209631935341839c241",
+    "size_bytes": 8134
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fddc71fda663b08a6ec37bd0 (1).dat",
+    "sha256": "19543aca22763755b5b35eef396ec6d069e28de3b10b848cab4b8669ea8d8dc8",
+    "size_bytes": 454678
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000fddc71fda663b08a6ec37bd0.dat",
+    "sha256": "19543aca22763755b5b35eef396ec6d069e28de3b10b848cab4b8669ea8d8dc8",
+    "size_bytes": 454678
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000feb471fd8b36cbc8e34d257c (1).dat",
+    "sha256": "d54018fd326667df9a66f69d43da1464857619625e3fdae8c703cfe72c0fcca8",
+    "size_bytes": 176128
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000feb471fd8b36cbc8e34d257c.dat",
+    "sha256": "d54018fd326667df9a66f69d43da1464857619625e3fdae8c703cfe72c0fcca8",
+    "size_bytes": 176128
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ff8871fdb9d86a07ea336c23 (1).dat",
+    "sha256": "7ce1086d769f4c982cb7c98dc96ecea7c4d2397ad327f2872246479fdf9d9a46",
+    "size_bytes": 1988851
+  },
+  {
+    "artifact_type": "ConversationAssetBlob",
+    "name": "file_00000000ff8871fdb9d86a07ea336c23.dat",
+    "sha256": "7ce1086d769f4c982cb7c98dc96ecea7c4d2397ad327f2872246479fdf9d9a46",
+    "size_bytes": 1988851
+  },
+  {
+    "artifact_type": "LibraryFiles",
+    "name": "library_files (3).json",
+    "sha256": "c3ad2c2591416b1e1ca2daf41e95ae47e4b7dd2292b7b7bec8e53fd8cdf6f786",
+    "size_bytes": 547110
+  },
+  {
+    "artifact_type": "MessageFeedback",
+    "name": "message_feedback (3).json",
+    "sha256": "2f2fd914e469792ad513c5ffcac4af951539db90ba0475fb9a33ba9a1efa54a5",
+    "size_bytes": 2746
+  },
+  {
+    "artifact_type": "SharedConversationIndex",
+    "name": "shared_conversations (3).json",
+    "sha256": "bb5e44bb1089294f6f40d664d9c9f682dd06753766c39878452a48147de72746",
+    "size_bytes": 744
+  },
+  {
+    "artifact_type": "UserProfile",
+    "name": "user (3).json",
+    "sha256": "f868e273aa0b52c546a5627f7e710a835c31cb4b276ff3df10785aeacecc010f",
+    "size_bytes": 136
+  },
+  {
+    "artifact_type": "UserSettings",
+    "name": "user_settings (3).json",
+    "sha256": "e3cc8b11253a5357554efaf865de78b72610306dc7b028913ac97a257a7e1f69",
+    "size_bytes": 4474
+  }
+]

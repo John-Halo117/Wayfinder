@@ -1,0 +1,13 @@
+{
+  "chunk_count": 1,
+  "chunk_size": 5000,
+  "chunks": [
+    {
+      "path": "contradictions/part-0000.json",
+      "record_count": 344,
+      "sha256": "d9cd947ed89e7cbd81ad0642fc33217e144b3f8356bf0a1f47c7436207243149"
+    }
+  ],
+  "record_count": 344,
+  "schema": "wayfinder.export_mining.contradictions.chunks.v1"
+}
