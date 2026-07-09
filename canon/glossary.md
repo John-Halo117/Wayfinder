@@ -192,6 +192,35 @@ Ephemeral State, Proof Before Promotion, Durable Knowledge.
 See Also:
 constitution/laws.md
 
+## Progressive Discovery
+
+Status:
+Canonical
+
+Definition:
+Progressive Discovery retrieves the smallest sufficient representation for the
+current objective and escalates depth only when confidence is insufficient.
+
+Purpose:
+Minimizes tokens, I/O, latency, storage access, privacy exposure, and
+unnecessary computation.
+
+Owns:
+Retrieval progression; bounded traversal posture; preference for indexes,
+metadata, summaries, relationships, deltas, hashes, and references before full
+content.
+
+Does Not Own:
+Source truth, durable knowledge, domain-specific classification rules, or a
+new engine/service implementation.
+
+Relationships:
+Reality First, Ephemeral First, Proof Before Promotion, Representation,
+Retrieval, Focus.
+
+See Also:
+constitution/laws.md; constitution/execution.md; docs/canonical-language/retrieval-strategy.md
+
 ## Proof Before Promotion
 
 Status:

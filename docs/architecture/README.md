@@ -48,6 +48,7 @@ in this directory.
 | Oracle audit | [02 Perception](02-perception.md) |
 | Representation audit | [05 Representations](05-representations.md) |
 | Knowledge audit | [07 Understanding](07-understanding.md), [18 Cross-Cutting Systems](18-cross-cutting.md) |
+| Progressive discovery and retrieval | [00 Overview](00-overview.md), [18 Cross-Cutting Systems](18-cross-cutting.md), [Canonical Language Retrieval Strategy](../canonical-language/retrieval-strategy.md) |
 | Media graph migration | [05 Representations](05-representations.md), [21 Roadmap](21-roadmap.md) |
 | Seven Roots audit | [07 Understanding](07-understanding.md) |
 | Cross-cutting audit | [18 Cross-Cutting Systems](18-cross-cutting.md) |

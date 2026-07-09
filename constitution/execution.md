@@ -57,6 +57,28 @@ Ephemeral computation is disposable work performed over observations, representa
 
 Ephemeral computation may produce projections, summaries, hypotheses, indexes, simulations, or candidate interpretations. These are not durable knowledge until proven.
 
+Ephemeral computation should retrieve the smallest sufficient representation
+needed for the current objective. It should prefer indexes over scans, metadata
+over content, summaries over complete documents, relationships over exhaustive
+traversal, deltas over rescans, hashes over byte comparisons, and references
+over duplication.
+
+Canonical retrieval escalates only when confidence is insufficient:
+
+```text
+Reality
+  -> Root Inventory
+  -> Metadata
+  -> Structure
+  -> Summary
+  -> Relationships
+  -> Candidate Selection
+  -> Targeted Retrieval
+  -> Full Content
+```
+
+Full content retrieval is the last step, not the default.
+
 ### Proof
 
 Proof validates whether an ephemeral result can be trusted enough for promotion.

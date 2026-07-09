@@ -19,3 +19,4 @@ Each ADR must reference one or more canonical architecture sections under
 - [ADR-0008: Introduce A Compatibility Layer For External Integrations](0008-compatibility-layer-for-external-integrations.md)
 - [ADR-0009: Add Candidate Pages For Bounded Knowledge Governance](0009-candidate-pages-for-knowledge-governance.md)
 - [ADR-0010: Consolidate Duplicate Forge Legacy With Compatibility Aliases](0010-legacy-forge-consolidation-with-compatibility-aliases.md)
+- [ADR-0011: Adopt Progressive Discovery And Minimal Retrieval](0011-progressive-discovery-minimal-retrieval.md)

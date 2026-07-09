@@ -17,3 +17,7 @@ and architectural decisions.
 - [repository.md](repository.md) defines top-level repository responsibilities.
 - [architecture.md](architecture.md) defines the architectural stack and dependency direction.
 - [glossary.md](glossary.md) provides concise constitutional terms.
+
+Progressive Discovery is the constitutional retrieval discipline used across
+execution, repository operations, generated indexes, and future capability
+domains.

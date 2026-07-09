@@ -22,6 +22,9 @@ knowledge, interpretation, reasoning, navigation, or summarization.
 - [Phase 9 Implementation Plan](phase-9-implementation-plan.md)
 - [Phase 8D Report](phase-8d-report.md)
 
+Retrieval Strategy owns the canonical Progressive Discovery progression for
+derived language retrieval and references the constitutional invariant.
+
 ## Constitutional Boundary
 
 Canonical Language receives ARK-preserved observations and produces derived,

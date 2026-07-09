@@ -35,3 +35,14 @@ documentation inventory, not a file move plan.
 | `docs/` | Governance | analysis, ADRs, roadmaps | all evidence | contributors | active | keep linked to canonical owners |
 | `tests/` | Verification | repo-level tests | active modules | CI/reviewers | active | expand with linter |
 
+## Repository Operation Flow
+
+Repository and filesystem changes follow progressive discovery:
+
+```text
+Observe -> Inventory -> Classify -> Build Canonical Destinations -> Simulate -> Execute -> Verify -> Report
+```
+
+Never reorganize before completing an inventory. Low-confidence items go to a
+review queue. Build destination structures before moving files. Every move
+must be reversible, logged, verified, and reported with confidence.

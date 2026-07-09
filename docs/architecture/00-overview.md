@@ -40,7 +40,19 @@ must not depend on later layers for identity or truth.
 - Composition before duplication.
 - Identity before representation.
 - Capability before implementation.
+- Progressive discovery before full retrieval.
 - Preserve invariants; replace implementations.
+
+## Progressive Discovery
+
+All Wayfinder workflows should retrieve the smallest sufficient
+representation needed for the current objective. They should traverse
+incrementally, prefer indexes over scans, metadata over content, summaries over
+complete documents, relationships over exhaustive traversal, deltas over
+rescans, hashes over byte comparisons, and references over duplication.
+
+Retrieval depth escalates only when confidence is insufficient, and traversal
+stops when the objective can be satisfied with adequate confidence.
 
 ## Current Implementation Posture
 
@@ -87,4 +99,3 @@ flowchart TD
   Exp --> Act["Actions"]
   Act -. re-observed .-> R
 ```
-

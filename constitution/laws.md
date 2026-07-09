@@ -30,7 +30,12 @@ Shared infrastructure belongs in services. Unique behavior belongs in engines.
 
 Working state is disposable unless intentionally promoted.
 
+## Progressive Discovery
+
+Retrieve the smallest sufficient representation first. Escalate from
+inventory, metadata, structure, summaries, relationships, and targeted content
+to full content only when confidence is insufficient.
+
 ## Proof Before Promotion
 
 Durable knowledge requires an ephemeral proof.
-

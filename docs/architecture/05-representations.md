@@ -30,6 +30,13 @@ layers, and media derivatives.
 | Feature vectors | Deterministic token-vector in Knowledge Retrieval | Derived index |
 | GIS | Planned/evidence in docs/Knowledge | No canonical runtime implementation |
 
+## Progressive Discovery Boundary
+
+Representations exist to make progressive retrieval possible without treating
+derived artifacts as reality. Indexes, metadata, summaries, hashes, deltas,
+relationships, and feature vectors are disposable aids for selecting smaller
+targeted retrievals before full source content is loaded.
+
 ## Media Architecture
 
 Media should move toward a unified Media Graph built on Asset, Context,
@@ -48,4 +55,3 @@ Supported future dynamic views:
 
 Migration rule: media-specific pipelines may be adapters, not canonical
 architecture owners.
-

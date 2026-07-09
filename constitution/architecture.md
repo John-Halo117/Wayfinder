@@ -75,6 +75,18 @@ declares limits, validation expectations, runtime expectations, and replay
 behavior. Import Profiles do not repair source data or introduce
 source-specific semantics beyond explicit limits and validation posture.
 
+## Progressive Discovery
+
+Progressive Discovery constrains every retrieval, indexing, import,
+repository, and future domain workflow. Wayfinder should start from reality and
+root inventories, then use metadata, structure, summaries, relationships,
+candidate selection, and targeted retrieval before loading full content.
+
+This discipline applies across ARK, conversation memory, repositories,
+containers, OSINT, home systems, media, Build Bible records, and future
+capability domains. It is not a separate engine; it is a resource, latency,
+privacy, and confidence invariant applied by the owner of each workflow.
+
 
 
 ## Repository And Execution

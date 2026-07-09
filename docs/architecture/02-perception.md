@@ -38,3 +38,9 @@ Keep source-specific behavior in Observation Sources. Extract shared discovery,
 limits, status, and adapter classification only after at least two sources need
 the same behavior.
 
+## Progressive Discovery Rule
+
+Observation Sources discover incrementally. They begin with source existence,
+root inventory, metadata, structure, and candidate classification before
+loading full content. Unknown or low-confidence artifacts remain review items
+instead of being guessed into canonical categories.

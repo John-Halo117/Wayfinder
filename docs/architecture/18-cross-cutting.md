@@ -55,6 +55,7 @@ not become hidden owners of domain or engine behavior.
 | Configuration | `services/configuration/` | Scaffold | After Storage. |
 | Policy | `services/policy/` | Scaffold | After Configuration. |
 | Search/Index | Retrieval + tooling | Split | Revisit after Storage. |
+| Progressive Discovery | Constitution + Retrieval Strategy | Canonical invariant | Apply across ARK, conversation memory, repositories, containers, OSINT, home systems, media, and future domains. |
 | Logging/Telemetry | Legacy/docs | Not canonicalized | Future service only with evidence. |
 | Scheduling/Caching | Legacy/tooling | Not canonicalized | Do not extract prematurely. |
 | Serialization | repeated helpers | Low-risk duplication | Extract only after service need. |
@@ -69,3 +70,9 @@ not become hidden owners of domain or engine behavior.
 - Knowledge remains reproducible: pass, source manifest and source hash are
   recorded.
 
+## Progressive Discovery Health
+
+Cross-cutting retrieval, indexing, import, and repository workflows should
+prefer bounded inventories, metadata, summaries, relationships, deltas, hashes,
+and references before full content. New implementations should expose enough
+status to show retrieval depth, confidence, and stop conditions.
