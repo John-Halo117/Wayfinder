@@ -51,7 +51,49 @@ def loc_count(patch):
     return adds + dels
 
 for i in range(max_attempts):
-    prompt = f"Fix the following failures. Output ONLY a unified diff.\n{failure_blob}"
+    prompt = f"""Mission
+Produce one minimal repair patch for the current failure batch.
+
+Inheritance
+- Prompt Architecture Standard.
+- Repository policy loaded from policy/autonomy_rules.json.
+- Current failing CI result artifacts.
+
+Inputs
+- Failure batch:
+{failure_blob}
+
+Objectives
+- Fix the reported failures.
+- Preserve unrelated behavior.
+- Minimize patch size.
+
+Tasks
+1. Inspect the failure batch.
+2. Identify the smallest repair.
+3. Emit one unified diff.
+
+Rules
+- Output only a unified diff.
+- Do not include prose.
+- Do not restate inherited policy.
+
+Validation
+- Patch applies.
+- Tests pass in the detached worktree.
+- Patch is not a duplicate candidate.
+
+Outputs
+- Unified diff only.
+
+Prohibited
+- Markdown.
+- Explanations.
+- Unrelated refactors.
+
+Success Criteria
+Does the diff fix the failure batch with the smallest bounded change?
+"""
     req = urllib.request.Request(API, data=json.dumps({"model":MODEL,"prompt":prompt}).encode(), headers={"Content-Type":"application/json"})
     patch = urllib.request.urlopen(req).read().decode()
 
