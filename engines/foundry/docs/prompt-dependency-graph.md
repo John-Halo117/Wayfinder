@@ -79,3 +79,4 @@ Bootstrap artifacts
 | `prompts/P2.5.md` | Validate knowledge integrity and classify uncertainty. | Bootstrap artifacts, P0, P1, P2. | P3 readiness artifacts. |
 | `prompts/P3.md` | Discover evidence-backed architectural opportunities. | Bootstrap artifacts, P0, P1, P2, P2.5. | Architectural intelligence artifacts. |
 | `prompts/P4.md` | Compose opportunities into coherent bundles. | Bootstrap artifacts, P0-P3. | Bundle composition artifacts. |
+| `prompts/P5.md` | Prioritize implementation bundles. | Bootstrap artifacts, P0-P4. | Priority intelligence artifacts. |

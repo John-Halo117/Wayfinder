@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:capability",
+  "title": "Build Bible Capability",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "provider_scope_id",
+    "type",
+    "operating_range",
+    "dependencies",
+    "constraints",
+    "monitoring",
+    "maintenance",
+    "reserve_capacity",
+    "failure_modes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:capability:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "provider_scope_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operating_range": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring": {
+      "type": "string",
+      "minLength": 1
+    },
+    "maintenance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reserve_capacity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+

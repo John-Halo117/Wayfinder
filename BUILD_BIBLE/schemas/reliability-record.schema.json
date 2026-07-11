@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:reliability-record",
+  "title": "Build Bible Reliability Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "scope_or_capability_id",
+    "intended_function",
+    "operational_states",
+    "failure_modes",
+    "degradation_models",
+    "inspection_standards",
+    "verification_standards",
+    "monitoring_patterns",
+    "recovery_procedures",
+    "resilience_patterns",
+    "fallback_behavior",
+    "service_history"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:reliability:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "scope_or_capability_id": {
+      "type": "string"
+    },
+    "intended_function": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operational_states": {
+      "type": "array",
+      "items": {
+        "enum": ["planned", "installed", "commissioning", "normal", "idle", "active", "maintenance", "testing", "fault", "emergency", "offline", "retired"]
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "degradation_models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inspection_standards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_standards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recovery_procedures": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resilience_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fallback_behavior": {
+      "type": "string"
+    },
+    "service_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+

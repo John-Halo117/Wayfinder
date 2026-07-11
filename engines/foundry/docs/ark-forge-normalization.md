@@ -12,6 +12,22 @@ The ARK fold identified Forge-labeled engineering and self-coding material. Wayf
 
 Legacy executable names such as `forge`, `forge-app`, `forge.cmd`, `forge.ps1`, and `Forge App.*` are preserved as historical compatibility entrypoints. They are not renamed in this phase.
 
+Canonical Foundry entrypoints have been added beside them:
+
+- `foundry`
+- `foundry-app`
+- `foundry.cmd`
+- `foundry.ps1`
+- `install-foundry-arch.sh`
+- `packaging/linux/foundry-app.desktop.in`
+- `packaging/linux/foundry-app.svg`
+- `Foundry App.cmd`
+- `Foundry App.ps1`
+- `Foundry App.sh`
+
+The root Wayfinder launcher exposes these through `wf foundry`, `wf foundry-app`,
+and `wf foundry-cli`.
+
 ## Copied Files
 
 - `FORGE_START_HERE.md`
@@ -79,6 +95,16 @@ Legacy executable names such as `forge`, `forge-app`, `forge.cmd`, `forge.ps1`, 
 - `scripts/ai/enqueue_task.sh`
 - `scripts/ai/forge.py`
 - `scripts/ai/local_codegen_loop.py`
+
+## Canonical Foundry App Files
+
+- `Foundry App.cmd`
+- `Foundry App.ps1`
+- `Foundry App.sh`
+- `foundry`
+- `foundry-app`
+- `foundry.cmd`
+- `foundry.ps1`
 
 ## Missing Files
 

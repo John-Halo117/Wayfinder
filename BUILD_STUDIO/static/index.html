@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Build Bible Studio</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="mark">BB</span>
+          <div>
+            <strong>Build Bible Studio</strong>
+            <span>Aurora Engineering IDE</span>
+          </div>
+        </div>
+        <div class="toolbar">
+          <button data-view="workspace" class="active">Workspace</button>
+          <button data-view="platform">Platform</button>
+          <button data-view="repositories">Repositories</button>
+          <button data-view="property">Property</button>
+          <button data-view="graph">Graph</button>
+          <button data-view="validation">Validation</button>
+          <button data-view="compiler">Compiler</button>
+          <button data-view="review">Review</button>
+          <button data-view="digitalTwin">Digital Twin</button>
+          <button data-view="git">Git</button>
+          <button data-view="settings">Settings</button>
+        </div>
+        <div class="status-strip" id="statusStrip">Indexing...</div>
+      </header>
+
+      <aside class="activity-bar">
+        <button title="Explorer" data-panel="explorer" class="active">EX</button>
+        <button title="Search" data-panel="search">SE</button>
+        <button title="Tasks" data-panel="tasks">TA</button>
+        <button title="Reports" data-panel="reports">RE</button>
+        <button title="Events" data-panel="events">EV</button>
+      </aside>
+
+      <aside class="sidebar">
+        <section class="panel" id="explorerPanel">
+          <div class="panel-head">
+            <h2>Repository Explorer</h2>
+            <button id="refreshButton">Refresh</button>
+          </div>
+          <input id="treeFilter" class="input" aria-label="Filter repository">
+          <div id="tree" class="tree"></div>
+        </section>
+
+        <section class="panel hidden" id="searchPanel">
+          <div class="panel-head">
+            <h2>Search</h2>
+          </div>
+          <input id="searchInput" class="input" aria-label="Search repository">
+          <div class="quick-queries">
+            <button data-query="wet room">Wet rooms</button>
+            <button data-query="Room Spine">Room Spine</button>
+            <button data-query="Drainage">Drainage</button>
+            <button data-query="potable water">Potable water</button>
+          </div>
+          <div id="searchResults" class="result-list"></div>
+        </section>
+
+        <section class="panel hidden" id="tasksPanel">
+          <div class="panel-head">
+            <h2>Tasks</h2>
+          </div>
+          <div id="tasksList" class="task-list"></div>
+        </section>
+
+        <section class="panel hidden" id="reportsPanel">
+          <div class="panel-head">
+            <h2>Reports</h2>
+          </div>
+          <div id="reportsList" class="report-list"></div>
+        </section>
+
+        <section class="panel hidden" id="eventsPanel">
+          <div class="panel-head">
+            <h2>Events</h2>
+          </div>
+          <div id="eventsList" class="report-list"></div>
+        </section>
+      </aside>
+
+      <main class="workspace">
+        <section class="view active" id="workspaceView">
+          <div class="split">
+            <article class="editor">
+              <div class="editor-head">
+                <span id="currentPath">No document selected</span>
+                <span id="currentLayer"></span>
+              </div>
+              <pre id="editorText">Select a document from the explorer or search results.</pre>
+            </article>
+            <aside class="inspector">
+              <h2>Inspector</h2>
+              <div id="inspectorContent"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="platformView">
+          <div class="view-head">
+            <h1>Engineering Platform</h1>
+            <p>UI-independent services, event bus, plugin slots, AI gateway, and Jarvis client interfaces.</p>
+          </div>
+          <div id="platformContent" class="cards"></div>
+        </section>
+
+        <section class="view" id="repositoriesView">
+          <div class="view-head">
+            <h1>Repository Registry</h1>
+            <p>Independent repositories, relationships, dependencies, health, and compatibility.</p>
+          </div>
+          <div id="repositoriesContent" class="cards"></div>
+        </section>
+
+        <section class="view" id="propertyView">
+          <div class="view-head">
+            <h1>Property Workspace</h1>
+            <p>Property repositories instantiate Build Bible patterns without duplicating canonical source.</p>
+          </div>
+          <div id="propertyContent" class="cards"></div>
+        </section>
+
+        <section class="view" id="graphView">
+          <div class="view-head">
+            <h1>Knowledge Graph</h1>
+            <p>Document nodes and typed relationships inferred from canonical links.</p>
+          </div>
+          <svg id="graphCanvas" role="img" aria-label="Knowledge graph"></svg>
+          <div id="graphLegend" class="legend"></div>
+        </section>
+
+        <section class="view" id="validationView">
+          <div class="view-head">
+            <h1>Validation</h1>
+            <p>Schema, reference, README, and boundary diagnostics.</p>
+          </div>
+          <div id="validationSummary" class="metric-grid"></div>
+          <div id="diagnostics" class="diagnostics"></div>
+        </section>
+
+        <section class="view" id="compilerView">
+          <div class="view-head">
+            <h1>Compiler Orchestration</h1>
+            <p>Compiler backend slots are explicit extension points in this phase.</p>
+          </div>
+          <div id="compilerTargets" class="cards"></div>
+        </section>
+
+        <section class="view" id="reviewView">
+          <div class="view-head">
+            <h1>Engineering Review</h1>
+            <p>EDRs, architectural reviews, validation failures, and coverage signals.</p>
+          </div>
+          <div id="reviewContent" class="cards"></div>
+        </section>
+
+        <section class="view" id="digitalTwinView">
+          <div class="view-head">
+            <h1>Digital Twin Readiness</h1>
+            <p>Source readiness for future spatial models and generated twins.</p>
+          </div>
+          <div id="digitalTwinContent" class="cards"></div>
+        </section>
+
+        <section class="view" id="gitView">
+          <div class="view-head">
+            <h1>Git Changes</h1>
+            <p>Git remains the canonical history surface.</p>
+          </div>
+          <div id="gitContent" class="git-list"></div>
+        </section>
+
+        <section class="view" id="settingsView">
+          <div class="view-head">
+            <h1>Settings And Extension Surfaces</h1>
+            <p>Plugin, compiler, AI, and Jarvis interfaces are abstract extension points.</p>
+          </div>
+          <div id="settingsContent" class="cards"></div>
+        </section>
+      </main>
+    </div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

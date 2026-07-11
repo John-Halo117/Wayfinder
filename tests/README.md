@@ -1,7 +1,18 @@
-# Tests
+# Testing Organization
 
-Repository-level tests validate architectural integrity, dependency direction,
-contract compatibility, failure paths, and proof-promotion boundaries.
+This directory is reserved for future validation tests.
 
-Engine-specific tests live inside each engine.
+Expected future validation areas:
+
+- mission and ownership conformance;
+- semantic artifact compatibility;
+- dependency vocabulary;
+- no runtime dependency on ecosystem repositories;
+- no consumer semantic forks;
+- Commons publication handoff;
+- ARK evidence boundary;
+- Observatory telemetry boundary;
+- governance and ADR/RFC traceability.
+
+No executable tests are present in this skeleton.
 

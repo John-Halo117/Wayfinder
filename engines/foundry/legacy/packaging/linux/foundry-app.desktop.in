@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Foundry
+GenericName=Wayfinder engineering app
+Comment=Local engineering app for Wayfinder
+TryExec=__BIN__/foundry-app
+Exec=__BIN__/foundry-app
+Icon=foundry-app
+Terminal=false
+Categories=Development;IDE;
+Keywords=foundry;wayfinder;ark;ollama;code;developer;local;

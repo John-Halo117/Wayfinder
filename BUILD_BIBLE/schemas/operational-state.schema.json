@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:operational-state",
+  "title": "Build Bible Operational State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scope_id",
+    "state",
+    "entry_condition",
+    "exit_condition",
+    "allowed_actions",
+    "prohibited_actions",
+    "monitoring_expectations",
+    "failure_escalation",
+    "documentation_requirement"
+  ],
+  "properties": {
+    "scope_id": {
+      "type": "string"
+    },
+    "state": {
+      "enum": ["planned", "installed", "commissioning", "normal", "idle", "active", "maintenance", "testing", "fault", "emergency", "offline", "retired"]
+    },
+    "entry_condition": {
+      "type": "string"
+    },
+    "exit_condition": {
+      "type": "string"
+    },
+    "allowed_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prohibited_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_expectations": {
+      "type": "string"
+    },
+    "failure_escalation": {
+      "type": "string"
+    },
+    "documentation_requirement": {
+      "type": "string"
+    }
+  }
+}
+

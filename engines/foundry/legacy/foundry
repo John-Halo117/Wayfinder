@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$ROOT_DIR/../../.." && pwd)"
+ARK_LEGACY_ROOT="$REPO_ROOT/engines/ark/legacy"
+PYTHON_BIN="$ROOT_DIR/ark-core/.venv/bin/python"
+
+if [[ ! -x "$PYTHON_BIN" ]]; then
+  if command -v python3 >/dev/null 2>&1; then
+    PYTHON_BIN="$(command -v python3)"
+  elif command -v python >/dev/null 2>&1; then
+    PYTHON_BIN="$(command -v python)"
+  else
+    echo "Foundry could not find a usable Python interpreter." >&2
+    exit 1
+  fi
+fi
+
+if [[ -d "$ARK_LEGACY_ROOT" ]]; then
+  export PYTHONPATH="$ARK_LEGACY_ROOT${PYTHONPATH:+:$PYTHONPATH}"
+fi
+
+exec "$PYTHON_BIN" "$ROOT_DIR/ark-core/scripts/ai/forge.py" --repo-root "$ROOT_DIR" "$@"

@@ -1,0 +1,120 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PORT="${FOUNDRY_DESKTOP_PORT:-${FORGE_DESKTOP_PORT:-4765}}"
+URL="http://127.0.0.1:${PORT}/"
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/foundry"
+PID_FILE="$STATE_DIR/browser-app-${PORT}.pid"
+LOG_FILE="$STATE_DIR/browser-app-${PORT}.log"
+
+mkdir -p "$STATE_DIR"
+
+usage() {
+  cat <<EOF
+Usage: foundry-app [--status] [--stop] [--cleanup] [--no-open] [--port PORT]
+
+Launch the Foundry browser app from Wayfinder.
+
+Options:
+  --status       Report whether the browser app is responding.
+  --stop         Stop the browser app process recorded for this port.
+  --cleanup      Alias for --stop.
+  --no-open      Start the server without opening a browser tab.
+  --port PORT    Override the desktop port.
+
+Environment:
+  FOUNDRY_DESKTOP_PORT  Default desktop port. Falls back to FORGE_DESKTOP_PORT.
+EOF
+}
+
+status() {
+  if curl --fail --silent --max-time 1 "${URL}api/state" >/dev/null 2>&1; then
+    echo "Foundry is running at $URL"
+    return 0
+  fi
+  echo "Foundry is not running."
+  return 1
+}
+
+stop_app() {
+  if [[ -f "$PID_FILE" ]]; then
+    local pid
+    pid="$(cat "$PID_FILE")"
+    if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" >/dev/null 2>&1; then
+      kill "$pid" >/dev/null 2>&1 || true
+    fi
+    rm -f "$PID_FILE"
+  fi
+  echo "Stopped Foundry browser app if it was running."
+}
+
+open_browser() {
+  if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$URL" >/dev/null 2>&1 &
+  elif command -v wslview >/dev/null 2>&1; then
+    wslview "$URL" >/dev/null 2>&1 &
+  elif command -v open >/dev/null 2>&1; then
+    open "$URL" >/dev/null 2>&1 &
+  else
+    echo "Foundry launched at $URL"
+  fi
+}
+
+NO_OPEN=0
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    --status)
+      status
+      exit $?
+      ;;
+    --stop|--cleanup)
+      stop_app
+      exit 0
+      ;;
+    --no-open)
+      NO_OPEN=1
+      shift
+      ;;
+    --port)
+      if [[ $# -lt 2 ]]; then
+        echo "foundry-app: --port requires a value." >&2
+        exit 2
+      fi
+      PORT="$2"
+      URL="http://127.0.0.1:${PORT}/"
+      PID_FILE="$STATE_DIR/browser-app-${PORT}.pid"
+      LOG_FILE="$STATE_DIR/browser-app-${PORT}.log"
+      shift 2
+      ;;
+    *)
+      echo "foundry-app: unknown option: $1" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+done
+
+stop_app >/dev/null 2>&1 || true
+"$ROOT_DIR/foundry" --desktop --no-browser --desktop-port "$PORT" >"$LOG_FILE" 2>&1 &
+echo "$!" >"$PID_FILE"
+
+for _ in $(seq 1 40); do
+  if curl --fail --silent --max-time 1 "${URL}api/state" >/dev/null 2>&1; then
+    if [[ "$NO_OPEN" -eq 0 ]]; then
+      open_browser
+    else
+      echo "Foundry browser app is running at $URL"
+    fi
+    exit 0
+  fi
+  sleep 1
+done
+
+echo "Foundry started but the browser app did not become ready at $URL." >&2
+echo "Log: $LOG_FILE" >&2
+exit 1

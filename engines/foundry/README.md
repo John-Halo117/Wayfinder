@@ -28,9 +28,16 @@ canonical owner is Foundry.
 
 Forge-labeled ARK source has been preserved under `legacy/`.
 
-The legacy executable and module names are intentionally preserved for
-compatibility. Renaming runtime entrypoints requires a separate proof-backed
-compatibility phase.
+Canonical Foundry launchers now live beside the preserved legacy entrypoints:
+
+- `./wf foundry` launches the Foundry browser app through Wayfinder.
+- `./wf foundry --status` checks whether the app is responding.
+- `./wf foundry --stop` stops the app listener recorded for the current port.
+- `./wf foundry-cli` invokes the underlying preserved engineering runtime.
+
+Legacy executable and module names such as `forge`, `forge-app`, and
+`ark-core/forge/` remain compatibility surfaces and historical source names.
+They are not canonical owners.
 
 ## Canonical Layout
 

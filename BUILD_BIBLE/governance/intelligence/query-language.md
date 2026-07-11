@@ -85,4 +85,3 @@ item rather than an inferred fact.
 - Relationship model: [Knowledge Graph Relationship Model](knowledge-graph-relationship-model.md)
 - Metadata: [Document Metadata Standard](document-metadata-standard.md)
 - Validation: [Repository Validation Standard](../validation/repository-validation-standard.md)
-- Wayfinder retrieval: [Canonical Language Retrieval Strategy](../../../docs/canonical-language/retrieval-strategy.md)

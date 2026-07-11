@@ -1,23 +1,9 @@
-# Constitution
+# Constitution and Architecture Semantics
 
-The constitution contains immutable architectural knowledge.
+Wayfinder owns ecosystem invariants, layers, ownership, architecture
+semantics, and standards.
 
-Canonical topics include reality, CivPhys, principles, objectives, capability
-grammar, navigation, laws, security and trust, naming, architecture, glossary,
-and architectural decisions.
+This directory is reserved for placeholders describing future constitutional
+semantic artifacts. It must not duplicate or replace Foundation v2.0 unless an
+accepted ADR changes constitutional authority.
 
-
-
-## Canonical Documents
-
-- [laws.md](laws.md) defines Wayfinder's constitutional laws.
-- [civphys.md](civphys.md) defines the universal mechanics layer.
-- [assets.md](assets.md) defines the universal Asset in Context model.
-- [execution.md](execution.md) defines execution semantics independent of repository topology.
-- [repository.md](repository.md) defines top-level repository responsibilities.
-- [architecture.md](architecture.md) defines the architectural stack and dependency direction.
-- [glossary.md](glossary.md) provides concise constitutional terms.
-
-Progressive Discovery is the constitutional retrieval discipline used across
-execution, repository operations, generated indexes, and future capability
-domains.

@@ -1,4 +1,4 @@
-"""Low-friction Forge launcher."""
+"""Low-friction Foundry launcher."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ MAX_PROMPT_ATTEMPTS = 3
 
 
 def main() -> int:
-    """Launch Forge with Codex-like defaults."""
+    """Launch Foundry with Codex-like defaults."""
 
     parser = _build_parser()
     args = parser.parse_args()
@@ -35,7 +35,7 @@ def main() -> int:
             args,
             repo_root,
             runtime_summary,
-            f"Forge hit a recoverable error and moved on ({type(exc).__name__}).",
+            f"Foundry hit a recoverable error and moved on ({type(exc).__name__}).",
         )
 
 
@@ -89,7 +89,7 @@ def _run_main(args: argparse.Namespace, repo_root: Path) -> int:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("task", nargs="?", help="Natural language task for Forge")
+    parser.add_argument("task", nargs="?", help="Natural language task for Foundry")
     parser.add_argument("files", nargs="*", help="Target files to constrain the task")
     parser.add_argument(
         "--repo-root",
@@ -121,13 +121,13 @@ def _build_parser() -> argparse.ArgumentParser:
         "--examples", action="store_true", help="Show copy-paste examples and exit"
     )
     parser.add_argument(
-        "--desktop", action="store_true", help="Open the browser-based Forge app"
+        "--desktop", action="store_true", help="Open the browser-based Foundry app"
     )
     parser.add_argument(
         "--desktop-port",
         type=int,
         default=DEFAULT_UI_STATE_CONFIG.default_browser_port,
-        help="Port for the browser-based Forge app",
+        help="Port for the browser-based Foundry app",
     )
     parser.add_argument(
         "--no-browser",
@@ -135,7 +135,7 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Do not auto-open a browser tab for the browser app",
     )
     parser.add_argument(
-        "--ui", action="store_true", help="Open the Forge control-panel TUI"
+        "--ui", action="store_true", help="Open the Foundry control-panel TUI"
     )
     parser.add_argument(
         "--no-ui", action="store_true", help="Skip the TUI and stay in CLI mode"
@@ -268,18 +268,18 @@ def _interactive_request(
         print(_render_runtime_bootstrap())
 
     task_text = _prompt_until_nonempty(
-        "What do you want Forge to do?\nforge> ",
+        "What do you want Foundry to do?\nfoundry> ",
         attempts=MAX_PROMPT_ATTEMPTS,
     )
     if not task_text:
-        print("Forge did not get a task, so it stayed in guidance mode.")
+        print("Foundry did not get a task, so it stayed in guidance mode.")
         return None, [], [], True, False
     files = _split_words(
         _prompt(
-            "Files to focus on (optional, space-separated; press Enter to let Forge decide): "
+            "Files to focus on (optional, space-separated; press Enter to let Foundry decide): "
         )
     )
-    constraint = _prompt("Anything Forge must preserve? (optional): ")
+    constraint = _prompt("Anything Foundry must preserve? (optional): ")
     dry_run = _prompt_yes_no("Preview only first? [y/N]: ", default=False)
     apply_accepted = (
         False
@@ -344,7 +344,7 @@ def _prompt_yes_no(label: str, *, default: bool) -> bool:
         if value in {"n", "no"}:
             return False
         print("Please answer y or n.")
-    print("Forge kept the default answer so the flow could continue.")
+    print("Foundry kept the default answer so the flow could continue.")
     return default
 
 
@@ -377,9 +377,9 @@ def _render_summary(
     repo_root: Path, runtime_summary: str, result: dict[str, object]
 ) -> str:
     lines = [
-        f"Forge repo: {repo_root}",
-        f"Forge runtime: {runtime_summary}",
-        f"Forge status: {result['status']}",
+        f"Foundry repo: {repo_root}",
+        f"Foundry runtime: {runtime_summary}",
+        f"Foundry status: {result['status']}",
         f"Detail: {result['detail']}",
         f"Phi: {result['phi']:.3f} | Mode: {result['mode']} | Applied: {result['applied']}",
     ]
@@ -399,22 +399,22 @@ def _render_check_summary(
     models: list[str],
 ) -> str:
     lines = [
-        f"Forge repo default: {repo_root}",
-        f"Forge runtime: {runtime_summary}",
+        f"Foundry repo default: {repo_root}",
+        f"Foundry runtime: {runtime_summary}",
     ]
     if models:
         lines.append(f"Installed models: {', '.join(models)}")
     if endpoint is None:
         lines.append(
-            "Next step: start Ollama or pass --ollama-url to point Forge at a running instance."
+            "Next step: start Ollama or pass --ollama-url to point Foundry at a running instance."
         )
     elif model is None:
         lines.append(
             "Next step: pull a coder model or pass --model to choose one explicitly."
         )
     else:
-        lines.append("Fastest start: run `./forge` to open the Forge control panel.")
-        lines.append("Browser app: `./forge --desktop`")
+        lines.append("Fastest start: run `./wf foundry` to open the Foundry app.")
+        lines.append("CLI: `./wf foundry-cli`")
         lines.append(
             'One-liner: ./forge "fix the failing test" path/to/file.py tests/test_file.py'
         )
@@ -425,7 +425,7 @@ def _render_check_summary(
 def _render_welcome(repo_root: Path, runtime_summary: str) -> str:
     return "\n".join(
         [
-            "Forge interactive mode",
+            "Foundry interactive mode",
             f"Repo: {repo_root}",
             f"Runtime: {runtime_summary}",
             "Just answer the prompts. Press Ctrl+C any time to stop.",
@@ -436,7 +436,7 @@ def _render_welcome(repo_root: Path, runtime_summary: str) -> str:
 def _render_runtime_bootstrap() -> str:
     return "\n".join(
         [
-            "Forge could not find a ready Ollama runtime.",
+            "Foundry could not find a ready Ollama runtime.",
             "Try this first:",
             "  1. Start Ollama: `ollama serve`",
             "  2. Pull a coder model: `ollama pull qwen3-coder:30b`",
@@ -449,12 +449,12 @@ def _render_runtime_bootstrap() -> str:
 def _render_start_here(repo_root: Path, runtime_summary: str) -> str:
     return "\n".join(
         [
-            "Forge start here",
+            "Foundry start here",
             f"Repo: {repo_root}",
             f"Runtime: {runtime_summary}",
             "Run one of these from the ARK repo root:",
             "  ./forge",
-            "  ./forge --desktop",
+            "  ./wf foundry",
             "  ./forge --ui",
             "  ./forge --check",
             '  ./forge "fix the failing test" path/to/file.py tests/test_file.py',
@@ -467,10 +467,10 @@ def _render_start_here(repo_root: Path, runtime_summary: str) -> str:
 def _render_examples(repo_root: Path) -> str:
     return "\n".join(
         [
-            "Forge examples",
+            "Foundry examples",
             f"Repo default: {repo_root}",
             "Control panel: ./forge",
-            "Browser app: ./forge --desktop",
+            "Browser app: ./wf foundry",
             "Runtime check: ./forge --check",
             'Fix a bug: ./forge "fix the failing login test" app/auth.py tests/test_auth.py',
             'Preview only: ./forge --dry-run "refactor the parser without changing behavior" parser.py',

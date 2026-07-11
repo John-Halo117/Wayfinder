@@ -1,4 +1,4 @@
-"""Browser-based Forge operator app."""
+"""Browser-based Foundry operator app."""
 
 from __future__ import annotations
 
@@ -86,7 +86,7 @@ def _runtime_status_for_browser(
         return RuntimeStatus(
             phase="ready",
             title="AI is ready",
-            message="Forge can start working right away.",
+            message="Foundry can start working right away.",
             summary=summary,
             endpoint=endpoint,
             model=model,
@@ -96,7 +96,7 @@ def _runtime_status_for_browser(
         return RuntimeStatus(
             phase="installing",
             title="Finishing AI setup",
-            message="Forge found the local AI engine and is preparing a coding model.",
+            message="Foundry found the local AI engine and is preparing a coding model.",
             summary=summary,
             endpoint=endpoint,
             model=model,
@@ -105,7 +105,7 @@ def _runtime_status_for_browser(
     return RuntimeStatus(
         phase="starting",
         title="Waking up local AI",
-        message="Forge is trying to start the local AI runtime in the background.",
+        message="Foundry is trying to start the local AI runtime in the background.",
         summary=summary,
         endpoint=endpoint,
         model=model,
@@ -114,7 +114,7 @@ def _runtime_status_for_browser(
 
 
 class BrowserState:
-    """Thin browser wrapper over the shared Forge operator controller."""
+    """Thin browser wrapper over the shared Foundry operator controller."""
 
     def __init__(
         self,
@@ -140,7 +140,7 @@ class BrowserState:
             runtime_status_probe=_runtime_status_for_browser,
         )
         if not restored_logs:
-            self.controller.log("Forge browser app ready. Type a task and press Start.")
+            self.controller.log("Foundry browser app ready. Type a task and press Start.")
 
     def attach_server(self, server: ThreadingHTTPServer) -> None:
         self.server = server
@@ -194,7 +194,7 @@ class BrowserState:
             )
         if action == "shutdown":
             with self._lock:
-                self.controller.log("Shutting down Forge browser app.")
+                self.controller.log("Shutting down Foundry browser app.")
             threading.Thread(target=self.shutdown_server, daemon=True).start()
             return {"ok": True}
         return {"ok": False, "error": f"unknown action: {action}"}
@@ -205,7 +205,7 @@ class BrowserState:
         files = tuple(_split_files(files_text))
         with self._lock:
             if self.controller.running:
-                self.controller.log("Forge is already running.")
+                self.controller.log("Foundry is already running.")
                 return {"ok": False, "error": "already running"}
             self.controller.update_inputs(task_text, files_text)
             self.controller.apply_controls(dict(payload.get("controls", {})), auto=auto)
@@ -328,7 +328,7 @@ class BrowserState:
     def resume_last_request(self) -> dict[str, Any]:
         with self._lock:
             if self.controller.running:
-                self.controller.log("Forge is already running.")
+                self.controller.log("Foundry is already running.")
                 return {"ok": False, "error": "already running"}
             request = self.controller.build_resume_request()
             if request is None:
@@ -401,7 +401,7 @@ class BrowserState:
             self.controller.set_running_state(False)
             if self.controller.stop_requested:
                 self.controller.set_stage("INTERRUPTED", "interrupted")
-                self.controller.log("Forge stopped by operator.")
+                self.controller.log("Foundry stopped by operator.")
 
     def _run_attempt(
         self, request: RunRequest, attempt: int
@@ -463,7 +463,7 @@ class BrowserState:
 
 
 class _LegacyBrowserState:
-    """Shared mutable state for the Forge browser app."""
+    """Shared mutable state for the Foundry browser app."""
 
     def __init__(
         self,
@@ -504,7 +504,7 @@ class _LegacyBrowserState:
         self.refresh_runtime()
         self.refresh_history()
         if not restored_logs:
-            self._log("Forge browser app ready. Type a task and press Start.")
+            self._log("Foundry browser app ready. Type a task and press Start.")
 
     def attach_server(self, server: ThreadingHTTPServer) -> None:
         """Attach the backing HTTP server so the app can shut itself down."""
@@ -533,7 +533,7 @@ class _LegacyBrowserState:
             self._log(summary)
 
     def refresh_history(self) -> None:
-        """Reload persisted Forge runs."""
+        """Reload persisted Foundry runs."""
 
         with self._lock:
             self.history = load_history_records(artifacts_dir_for_repo(self.repo_root))
@@ -631,7 +631,7 @@ class _LegacyBrowserState:
                 self.machine_state["status"] = "RUNNING"
                 self.machine_state["stage_label"] = "stop requested"
                 self._log(
-                    "Stop requested. Forge will stop after the current iteration."
+                    "Stop requested. Foundry will stop after the current iteration."
                 )
             return {"ok": True}
         if action == "check_runtime":
@@ -652,19 +652,19 @@ class _LegacyBrowserState:
             self.select_history(str(payload.get("id", "")))
             return {"ok": True}
         if action == "shutdown":
-            self._log("Shutting down Forge browser app.")
+            self._log("Shutting down Foundry browser app.")
             threading.Thread(target=self.shutdown_server, daemon=True).start()
             return {"ok": True}
         return {"ok": False, "error": f"unknown action: {action}"}
 
     def start_run(self, payload: dict[str, Any], *, auto: bool) -> dict[str, Any]:
-        """Start a new Forge run in the background."""
+        """Start a new Foundry run in the background."""
 
         task_text = str(payload.get("task", "")).strip()
         files = _split_files(str(payload.get("files", "")))
         with self._lock:
             if self.running:
-                self._log("Forge is already running.")
+                self._log("Foundry is already running.")
                 return {"ok": False, "error": "already running"}
             if not task_text:
                 self._log("Type a task first, like: fix the failing tests")
@@ -968,7 +968,7 @@ class _LegacyBrowserState:
             self._persist_session()
             if value == "fast":
                 self._log(
-                    "Test mode fast: Forge will target explicit test files when possible."
+                    "Test mode fast: Foundry will target explicit test files when possible."
                 )
             else:
                 self._log(f"Test mode {value} enabled.")
@@ -979,7 +979,7 @@ class _LegacyBrowserState:
 
         with self._lock:
             if not self.applied_history:
-                self._log("Nothing in Forge lineage is ready to revert.")
+                self._log("Nothing in Foundry lineage is ready to revert.")
                 return {"ok": False, "error": "nothing to revert"}
             latest = self.applied_history[-1]
             touched = ", ".join(latest.files_touched[:4]) or "unknown files"
@@ -990,11 +990,11 @@ class _LegacyBrowserState:
         return {"ok": True}
 
     def apply_safe_revert(self) -> dict[str, Any]:
-        """Undo the most recent applied Forge delta."""
+        """Undo the most recent applied Foundry delta."""
 
         with self._lock:
             if not self.applied_history:
-                self._log("Nothing in Forge lineage is ready to revert.")
+                self._log("Nothing in Foundry lineage is ready to revert.")
                 return {"ok": False, "error": "nothing to revert"}
             latest = self.applied_history[-1]
         try:
@@ -1153,10 +1153,10 @@ class _LegacyBrowserState:
             self._set_running_state(False)
             if self.stop_requested:
                 self._set_stage("INTERRUPTED", "interrupted")
-                self._log("Forge stopped by operator.")
+                self._log("Foundry stopped by operator.")
 
     def handle_event(self, event: dict[str, Any]) -> None:
-        """Apply one streaming Forge event."""
+        """Apply one streaming Foundry event."""
 
         stage = str(event.get("stage", "event"))
         with self._lock:
@@ -1188,7 +1188,7 @@ class _LegacyBrowserState:
             self._persist_session()
 
     def record_result(self, result: dict[str, Any]) -> None:
-        """Ingest the final Forge result payload."""
+        """Ingest the final Foundry result payload."""
 
         record = history_record_from_result(result)
         with self._lock:
@@ -1393,7 +1393,7 @@ def launch(
     port: int = DEFAULT_BROWSER_PORT,
     open_browser: bool = True,
 ) -> int:
-    """Launch the Forge browser app."""
+    """Launch the Foundry browser app."""
 
     state = BrowserState(
         repo_root,
@@ -1406,9 +1406,9 @@ def launch(
     server.daemon_threads = True
     state.attach_server(server)
     url = f"http://{host}:{server.server_port}/"
-    print(f"Forge browser app: {url}")
+    print(f"Foundry browser app: {url}")
     print(
-        "Press Ctrl+C in this process or use the Shutdown button in the browser to stop Forge."
+        "Press Ctrl+C in this process or use the Shutdown button in the browser to stop Foundry."
     )
     if open_browser:
         try:
@@ -1494,7 +1494,7 @@ def _split_files(raw: str) -> list[str]:
 
 def _runtime_block_message() -> str:
     return (
-        "Forge could not find a ready Ollama runtime. "
+        "Foundry could not find a ready Ollama runtime. "
         "Run `./forge --check`, then start Ollama or pull a coder model if needed."
     )
 
@@ -1505,7 +1505,7 @@ def _browser_page() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Forge</title>
+  <title>Foundry</title>
   <style>
     :root {
       --bg: #000000;
@@ -1975,13 +1975,13 @@ def _browser_page() -> str:
 <body>
   <header class="topbar">
     <div>
-      <h1>Forge</h1>
+      <h1>Foundry</h1>
       <p>Type a task. Review the patch. Use it only when it looks right.</p>
     </div>
     <div id="status-pill" class="pill">WAITING</div>
   </header>
 
-  <section id="status-strip" class="status-strip">Loading Forge…</section>
+  <section id="status-strip" class="status-strip">Loading Foundry...</section>
   <section id="runtime-banner" class="runtime-banner hidden"></section>
   <section id="health-grid" class="health-grid"></section>
 
@@ -2007,17 +2007,17 @@ def _browser_page() -> str:
       </section>
       <details class="soft-details">
         <summary>Project Map</summary>
-        <p class="section-note">A small codebase wiki Forge can use before it edits.</p>
+        <p class="section-note">A small codebase wiki Foundry can use before it edits.</p>
         <div id="wiki-view" class="task-examples"></div>
       </details>
       <details class="soft-details">
-        <summary>Forge Roadmap</summary>
+        <summary>Foundry Roadmap</summary>
         <p class="section-note">Next upgrades queued for this app.</p>
         <div id="improvement-view" class="task-examples"></div>
       </details>
       <section id="candidate-card" class="card hidden">
         <h2>Choices to Review</h2>
-        <p class="section-note">Forge may compare more than one safe-looking option. Pick one to inspect.</p>
+        <p class="section-note">Foundry may compare more than one safe-looking option. Pick one to inspect.</p>
         <div id="candidate-list" class="list"></div>
       </section>
       <section id="history-card" class="card hidden">
@@ -2029,13 +2029,13 @@ def _browser_page() -> str:
 
     <section class="main">
       <section class="card">
-        <h2>What Forge Is Doing</h2>
+        <h2>What Foundry Is Doing</h2>
         <pre id="control-summary" class="summary">Loading…</pre>
       </section>
       <section class="workspace">
         <section class="card pane wide">
           <h2>Proposed Change</h2>
-          <p class="section-note">This is the exact code change Forge wants to make.</p>
+          <p class="section-note">This is the exact code change Foundry wants to make.</p>
           <pre id="diff-view">No diffs yet.</pre>
         </section>
         <details class="card pane soft-details">
@@ -2045,7 +2045,7 @@ def _browser_page() -> str:
         </details>
         <details class="card pane soft-details">
           <summary>Safety Review</summary>
-          <p class="section-note">How Forge tried to break the change.</p>
+          <p class="section-note">How Foundry tried to break the change.</p>
           <pre id="redteam-view">No result selected yet.</pre>
         </details>
         <section class="card pane wide">
@@ -2064,7 +2064,7 @@ def _browser_page() -> str:
               </section>
               <section class="nerd-block">
                 <div class="helper-title">Activity log</div>
-                <pre id="logs-view">Starting Forge…</pre>
+                <pre id="logs-view">Starting Foundry...</pre>
               </section>
               <section class="nerd-block">
                 <div class="helper-title">Files involved</div>
@@ -2084,7 +2084,7 @@ def _browser_page() -> str:
   <section class="composer">
     <div class="composer-top">
       <div class="composer-head">
-        <strong>What should Forge change?</strong>
+        <strong>What should Foundry change?</strong>
         <span>Plain English is perfect.</span>
       </div>
       <textarea id="task-input" placeholder="Example: Make the login error easier to understand without changing how sign-in works."></textarea>
@@ -2346,7 +2346,7 @@ def _browser_page() -> str:
 
     function renderWiki(items) {
       if (!items.length) {
-        ids.wiki.innerHTML = '<div class="empty">Forge has not mapped this repo yet.</div>';
+        ids.wiki.innerHTML = '<div class="empty">Foundry has not mapped this repo yet.</div>';
         return;
       }
       ids.wiki.innerHTML = items.map(item => {
@@ -2464,11 +2464,11 @@ def _browser_page() -> str:
       if (!("Notification" in window) || Notification.permission !== "granted") return;
       if (status === lastStatusText) return;
       if (status.includes("COMMIT READY")) {
-        new Notification("Forge patch ready", {body: "Review it, then choose Use This Change."});
+        new Notification("Foundry patch ready", {body: "Review it, then choose Use This Change."});
       }
       const runtimeReady = data.runtime && data.runtime.ready;
       if (runtimeReady && lastStatusText && lastStatusText.includes("WAITING")) {
-        new Notification("Forge AI ready", {body: "Ollama is connected."});
+        new Notification("Foundry AI ready", {body: "Ollama is connected."});
       }
     }
 

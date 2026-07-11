@@ -1,8 +1,28 @@
 #!/usr/bin/env python3
 """Wayfinder repository command launcher."""
 
+from __future__ import annotations
+
+import os
+import sys
+from pathlib import Path
+
 from tooling.architecture_intelligence.cli import main
 
 
+def _exec_foundry(command: str, args: list[str]) -> int:
+    repo_root = Path(__file__).resolve().parent
+    launcher_name = "foundry" if command == "foundry-cli" else "foundry-app"
+    launcher = repo_root / "engines" / "foundry" / "legacy" / launcher_name
+    if not launcher.exists():
+        print(f"wf: Foundry launcher is missing: {launcher}", file=sys.stderr)
+        return 1
+    os.execv(str(launcher), [str(launcher), *args])
+    return 1
+
+
 if __name__ == "__main__":
-    raise SystemExit(main())
+    argv = sys.argv[1:]
+    if argv and argv[0] in {"foundry", "foundry-app", "foundry-cli"}:
+        raise SystemExit(_exec_foundry(argv[0], argv[1:]))
+    raise SystemExit(main(argv))

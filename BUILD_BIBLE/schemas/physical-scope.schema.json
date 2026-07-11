@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:physical-scope",
+  "title": "Build Bible Physical Scope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "parent_id",
+    "lifecycle_state",
+    "operational_state",
+    "boundary",
+    "spatial_address",
+    "verification",
+    "capabilities",
+    "interfaces",
+    "constraints",
+    "capacity",
+    "service_paths",
+    "inspection_paths",
+    "upgrade_paths",
+    "replacement_paths",
+    "maintenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:[a-z0-9-]+:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_id": {
+      "type": ["string", "null"],
+      "pattern": "^bb:[a-z0-9-]+:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "lifecycle_state": {
+      "enum": ["acquire", "observe", "plan", "prepare", "build", "commission", "operate", "maintain", "expand", "renew", "retire"]
+    },
+    "operational_state": {
+      "enum": ["planned", "installed", "commissioning", "normal", "idle", "active", "maintenance", "testing", "fault", "emergency", "offline", "retired"]
+    },
+    "boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "spatial_address": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parent_id", "description", "last_verified"],
+      "properties": {
+        "parent_id": {
+          "type": ["string", "null"]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinates": {
+          "type": ["object", "null"]
+        },
+        "last_verified": {
+          "type": ["string", "null"],
+          "format": "date"
+        }
+      }
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "capacity": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "service_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inspection_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "upgrade_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "replacement_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "maintenance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "last_verified", "evidence"],
+      "properties": {
+        "state": {
+          "enum": ["unverified", "observed", "inferred", "designed", "installed", "retired"]
+        },
+        "last_verified": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
