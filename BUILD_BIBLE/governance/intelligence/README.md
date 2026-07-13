@@ -19,6 +19,7 @@ before full document access, and review queues for low-confidence results.
 - [Build Bible Query Language](query-language.md)
 - [Compiler Model](compiler-model.md)
 - [Repository Style Guide](repository-style-guide.md)
+- [Conversation Ingestion v2](conversation-ingestion.md)
 
 ## Relationships
 

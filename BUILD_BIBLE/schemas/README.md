@@ -27,3 +27,8 @@ instead of inferred silently.
 - `decision-record.schema.json`
 - `digital-twin-state.schema.json`
 - `generated-artifact-manifest.schema.json`
+- `conversation-ingestion-manifest.schema.json`
+- `semantic-observation.schema.json`
+- `evidence-score.schema.json`
+- `knowledge-candidate.schema.json`
+- `review-item.schema.json`
