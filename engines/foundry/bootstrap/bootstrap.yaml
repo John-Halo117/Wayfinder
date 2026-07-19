@@ -1,0 +1,176 @@
+bootstrap:
+  version: "1.0.0"
+  entrypoint: "engines/foundry/bootstrap/bootstrap.yaml"
+  lockfile: "engines/foundry/bootstrap/bootstrap.lock"
+
+boot_policy:
+  required: true
+  stop_on_failure: true
+  fail_on_missing_required_documents: true
+  confidence_threshold: 0.80
+  engineering_requires_successful_bootstrap: true
+  prompts_may_not_restate_bootstrap_knowledge: true
+
+session_behavior:
+  bootstrap_first: true
+  reuse_lock_when_valid: true
+  incremental_rebuilds: true
+  invalidate_on_document_hash_change: true
+  invalidate_on_artifact_hash_change: true
+  inherited_artifacts_are_authoritative: true
+  discovery_occurs_once: true
+
+document_order:
+  - id: "00_README"
+    path: "engines/foundry/bootstrap/00_README.md"
+    required: true
+    mode: "static"
+  - id: "01_EISENGARTEN"
+    path: "engines/foundry/bootstrap/01_EISENGARTEN.md"
+    required: true
+    mode: "static"
+  - id: "02_CONSTITUTION"
+    path: "engines/foundry/bootstrap/02_CONSTITUTION.md"
+    required: true
+    mode: "static"
+  - id: "03_AMENDMENTS"
+    path: "engines/foundry/bootstrap/03_AMENDMENTS.md"
+    required: true
+    mode: "dynamic"
+  - id: "04_VOCABULARY"
+    path: "engines/foundry/bootstrap/04_VOCABULARY.md"
+    required: true
+    mode: "static"
+  - id: "05_ARCHITECTURE"
+    path: "engines/foundry/bootstrap/05_ARCHITECTURE.md"
+    required: true
+    mode: "static"
+  - id: "06_ROADMAP"
+    path: "engines/foundry/bootstrap/06_ROADMAP.md"
+    required: true
+    mode: "dynamic"
+  - id: "07_ENGINEERING"
+    path: "engines/foundry/bootstrap/07_ENGINEERING.md"
+    required: true
+    mode: "static"
+  - id: "08_PROMPT_STANDARD"
+    path: "engines/foundry/bootstrap/08_PROMPT_STANDARD.md"
+    required: true
+    mode: "static"
+  - id: "09_FOUNDATION_COMPLETE"
+    path: "engines/foundry/bootstrap/09_FOUNDATION_COMPLETE.md"
+    required: true
+    mode: "static"
+
+required_source_documents:
+  static:
+    - "WAYFINDER.md"
+    - "constitution/"
+    - "canon/"
+    - "docs/architecture/"
+    - "engines/foundry/README.md"
+    - "engines/foundry/docs/prompt-architecture-standard.md"
+  dynamic:
+    - "ROADMAP.md"
+    - "docs/adrs/"
+    - "docs/programs/"
+    - "docs/first-contact/constitutional-change-log.md"
+
+produced_artifacts:
+  - id: "constitutional_model"
+    name: "Constitutional Model"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/constitutional-model.md"
+  - id: "concept_inventory"
+    name: "Concept Inventory"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/concept-inventory.md"
+  - id: "vocabulary_model"
+    name: "Vocabulary Model"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/concept-inventory.md"
+  - id: "layer_model"
+    name: "Layer Model"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/layer-model.md"
+  - id: "dependency_model"
+    name: "Dependency Model"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/dependency-model.md"
+  - id: "traceability_model"
+    name: "Traceability Model"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/traceability-model.md"
+  - id: "engineering_model"
+    name: "Engineering Model"
+    path: "engines/foundry/bootstrap/07_ENGINEERING.md"
+  - id: "prompt_model"
+    name: "Prompt Model"
+    path: "engines/foundry/docs/prompt-architecture-standard.md"
+  - id: "confidence_report"
+    name: "Confidence Report"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/confidence-report.md"
+  - id: "open_questions"
+    name: "Open Questions"
+    path: "engines/foundry/docs/p0-constitutional-bootstrap/open-questions.md"
+
+phase_prerequisites:
+  all_phases:
+    - "Execute bootstrap."
+    - "Assume bootstrap artifacts are authoritative."
+    - "Consume inherited artifacts."
+    - "Do not rediscover bootstrap knowledge."
+  P0:
+    requires:
+      - "bootstrap_success"
+    consumes:
+      - "produced_artifacts"
+  P1:
+    requires:
+      - "bootstrap_success"
+      - "P0"
+    consumes:
+      - "produced_artifacts"
+      - "P0 foundation artifact index"
+
+validation_rules:
+  - id: "required_documents_exist"
+    description: "Every required bootstrap document and required source document exists."
+    failure: "BOOTSTRAP_MISSING_REQUIRED_DOCUMENT"
+  - id: "ordering_is_valid"
+    description: "Document order matches the manifest sequence."
+    failure: "BOOTSTRAP_INVALID_ORDER"
+  - id: "artifacts_are_produced"
+    description: "Every produced artifact path exists."
+    failure: "BOOTSTRAP_MISSING_ARTIFACT"
+  - id: "confidence_threshold_met"
+    description: "Bootstrap confidence is at or above boot_policy.confidence_threshold, or uncertainty is explicitly recorded."
+    failure: "BOOTSTRAP_CONFIDENCE_BELOW_THRESHOLD"
+  - id: "traceability_complete"
+    description: "Traceability model links implementation, capability, runtime, protocol, architecture, constitution, and Eisengarten purpose."
+    failure: "BOOTSTRAP_TRACEABILITY_INCOMPLETE"
+  - id: "uncertainty_recorded"
+    description: "Open questions exist for missing or ambiguous source material."
+    failure: "BOOTSTRAP_UNRECORDED_UNCERTAINTY"
+
+static_bootstrap:
+  documents:
+    - "01_EISENGARTEN"
+    - "02_CONSTITUTION"
+    - "04_VOCABULARY"
+    - "05_ARCHITECTURE"
+    - "07_ENGINEERING"
+    - "08_PROMPT_STANDARD"
+  invalidates:
+    - "constitutional_model"
+    - "concept_inventory"
+    - "vocabulary_model"
+    - "layer_model"
+    - "dependency_model"
+    - "traceability_model"
+    - "engineering_model"
+    - "prompt_model"
+    - "confidence_report"
+
+dynamic_bootstrap:
+  documents:
+    - "03_AMENDMENTS"
+    - "06_ROADMAP"
+  invalidates:
+    - "dependency_model"
+    - "confidence_report"
+    - "open_questions"

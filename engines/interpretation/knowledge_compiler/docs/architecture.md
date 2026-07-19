@@ -42,3 +42,11 @@ Preserved Observation
 - `CompilerValidationIssue` records
 
 All outputs are proposed and reviewable. None are canonical truth.
+
+## First Contact Intake Boundary
+
+The compiler may produce more candidates than one governance repository can
+accept. Candidate output must therefore be treated as a bounded stream or set
+of Candidate Pages before governance intake. Grouping and paging are
+presentation and intake controls only; they must not alter candidate meaning or
+provenance.

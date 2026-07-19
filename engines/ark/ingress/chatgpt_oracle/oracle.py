@@ -13,6 +13,7 @@ from hashlib import sha256
 from json import JSONDecodeError, dumps, loads
 from mimetypes import guess_type
 from pathlib import Path
+from re import fullmatch
 from shutil import copyfileobj
 from typing import Any, Iterable, Mapping
 from zipfile import BadZipFile, ZipFile
@@ -749,6 +750,7 @@ class ChatGPTExportOracle:
     ) -> ProvenanceRecord:
         return ProvenanceRecord(
             original_file=original_file,
+            source_file=original_file,
             original_path=original_path,
             byte_offset=None,
             conversation_id=conversation_id,
@@ -757,6 +759,7 @@ class ChatGPTExportOracle:
             parser_name=PARSER_NAME,
             parser_version=PARSER_VERSION,
             import_timestamp=self._import_timestamp,
+            source_hash=source_hash,
             hash=source_hash,
         )
 
@@ -916,7 +919,7 @@ def classify_artifact(original_path: str, data: bytes) -> str:
     name = Path(path).name.lower()
     suffix = Path(name).suffix.lower()
     path_lower = path.lower()
-    if name == "conversations.json":
+    if name == "conversations.json" or fullmatch(r"conversations-\d+\.json", name):
         return "Conversation"
     if "memory" in name and suffix == ".json":
         return "Memory"
@@ -930,9 +933,11 @@ def classify_artifact(original_path: str, data: bytes) -> str:
         return "Configuration"
     if suffix in IMAGE_EXTENSIONS or path_lower.startswith("images/"):
         return "Image"
-    if suffix in DOCUMENT_EXTENSIONS:
+    if name == "chat.html" or suffix in DOCUMENT_EXTENSIONS:
         return "Document"
     if path_lower.startswith("attachments/") or path_lower.startswith("files/"):
+        return "Attachment"
+    if suffix == ".dat" and (name.startswith("file_") or name.startswith("file-")):
         return "Attachment"
     if suffix in TEXT_EXTENSIONS:
         return "Metadata"
@@ -1052,7 +1057,13 @@ def _timestamp_from_export(value: Any) -> str | None:
     if value is None:
         return None
     if isinstance(value, (int, float)):
-        return datetime.fromtimestamp(float(value), tz=UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+        numeric = float(value)
+        for candidate in (numeric, numeric / 1000.0):
+            try:
+                return datetime.fromtimestamp(candidate, tz=UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+            except (OverflowError, OSError, ValueError):
+                continue
+        return str(value)
     if isinstance(value, str):
         stripped = value.strip()
         if not stripped:

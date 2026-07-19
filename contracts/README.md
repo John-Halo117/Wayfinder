@@ -10,7 +10,7 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 
 | Contract | Producer | Primary Output |
 | --- | --- | --- |
-| [Observation](observations/README.md) | ARK | Observation |
+| [Observation](observations/README.md) | Observation Source role | Observation |
 | [Evidence](evidence/README.md) | ARK | Evidence |
 | [Representation](representations/README.md) | Views | Representation |
 | [Asset](assets/README.md) | ARK | Asset in Context reference |
@@ -29,6 +29,13 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 ## Supporting Contracts
 
 Existing supporting contracts remain canonical for shared language: identities, events, policies, permissions, health, schemas, storage, provenance, and views.
+
+## First Contact Clarification
+
+Observation Sources produce observation-shaped records. ARK preserves those
+records into append-only reality. ARK may also preserve explicit Source
+Relationships as evidence, while WEAVE remains the owner of durable
+relationship topology.
 
 ## Governance Reports
 

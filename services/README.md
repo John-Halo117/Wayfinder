@@ -19,6 +19,11 @@ The initial platform substrate is:
   and replay support.
 - `storage/` - abstract persistence, transactional operations, object storage,
   metadata, and versioning hooks.
+- `configuration/`, `policy/`, and `storage/` include scaffold or pending
+  consumer-migration documentation where implementation proof is not complete.
 
 These services are reusable infrastructure. Engines consume them through
 contracts and explicit dependencies.
+
+Service folders do not imply that every consumer has been rewired. First
+Contact used bounded local proofs and documented remaining migration debt.

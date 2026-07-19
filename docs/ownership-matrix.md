@@ -8,6 +8,15 @@ Every concept has exactly one canonical owner.
 | --- | --- |
 | Observation | Observation Contracts |
 | Observation Source | Observation Contracts |
+| Source Relationship | Relationship Contracts |
+| Import Profile | Execution Semantics |
+| Candidate Page | Knowledge Governance |
+| Opaque Attachment | Asset Contracts and source-specific Oracle docs |
+| Canonical Language | Canonical Language Design |
+| Canonical English | Canonical Language Design |
+| Statement | Canonical Language Design |
+| Chunk | Canonical Language Design |
+| Canonical Dictionary | Canonical Language Design |
 | Evidence | Evidence Contracts |
 | Evidence Bundle | Evidence Contracts |
 | Provenance | Provenance Contracts |
@@ -81,9 +90,19 @@ routing implementation.
 
 Storage Contracts own persistence language. Storage Service owns persistence abstraction and storage implementation boundaries.
 
-ARK owns reality-preservation behavior that consumes Observation, Evidence,
-Provenance, Promotion, Health, Event, Identity, Asset, Policy, Permission,
-Capability, View, Capsule, and Schema language.
+Observation Sources own source discovery and canonical observation-shaped record
+production.
+
+ARK owns reality-preservation behavior that consumes Observation, Source
+Relationship, Evidence, Provenance, Promotion, Health, Event, Identity, Asset,
+Policy, Permission, Capability, View, Capsule, and Schema language.
+
+WEAVE owns durable relationship topology. ARK-preserved Source Relationships
+remain evidence until WEAVE consumes and promotes topology.
+
+Canonical Language owns derived language normalization and compression
+artifacts. It consumes ARK-preserved observations and remains rebuildable. It
+does not own reality, knowledge, reasoning, navigation, or source parsing.
 
 Jarvis owns navigation behavior that consumes Bearing and Capability language.
 
@@ -142,4 +161,3 @@ Capability, Health, View, Capsule, Event, Asset, and Schema language.
 | Subscription Registry Implementation | Event Bus Service |
 | Replay Cursor Implementation | Event Bus Service |
 | Event Bus Health Signal | Event Bus Service |
-

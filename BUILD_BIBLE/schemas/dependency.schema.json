@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:dependency",
+  "title": "Build Bible Dependency",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "subject_id",
+    "provides",
+    "requires",
+    "consumes",
+    "produces",
+    "depends_on",
+    "used_by",
+    "criticality",
+    "graceful_degradation",
+    "fallbacks",
+    "failure_propagation",
+    "verification_state"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:dependency:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "provides": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consumes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "produces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "used_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "criticality": {
+      "enum": ["life-safety", "critical", "important", "convenience", "optional"]
+    },
+    "graceful_degradation": {
+      "type": "string"
+    },
+    "fallbacks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "failure_propagation": {
+      "type": "string"
+    },
+    "verification_state": {
+      "enum": ["unverified", "observed", "inferred", "designed", "installed", "retired"]
+    }
+  }
+}
+

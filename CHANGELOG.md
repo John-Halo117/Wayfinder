@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.0 - 2026-06-26
+## Unreleased
 
-- Established the Wayfinder master repository foundation.
-- Added constitutional architecture, classification rules, canonical directory
-  ownership, and repository-folding guidance.
+- Created constitutional skeleton for Wayfinder.
+- No production code, implementation, executable tooling, framework decision,
+  or language-specific API has been introduced.
 

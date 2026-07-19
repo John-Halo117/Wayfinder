@@ -18,6 +18,20 @@ Evidence, Proof, Promotion, Capsules, Views, Reasoning, VALOR, MICE, Domains, Op
 
 Observation reference, evidence reference, source reference, representation reference, actor reference, event metadata, time frame, transformation reference, context.
 
+First Contact validated these source-preservation fields as required
+provenance vocabulary for import records:
+
+- `parser_name`
+- `parser_version`
+- `source_file`
+- `original_path`
+- `import_timestamp`
+- `source_hash`
+
+Source-specific implementations may also preserve optional fields such as byte
+offset, conversation ID, message ID, attachment ID, custody metadata, or
+transformation references when available.
+
 ## Outputs
 
 Provenance record, source chain, derivation reference, custody reference, trust boundary reference, uncertainty reference.

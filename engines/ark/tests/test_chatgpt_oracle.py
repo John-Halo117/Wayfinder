@@ -100,6 +100,8 @@ def test_import_is_deterministic_and_preserves_relationships(tmp_path):
     assert any(item.relationship_type == "message_replies_to_message" for item in first.relationships)
     assert any(item.relationship_type == "message_references_attachment" for item in first.relationships)
     assert any(item.relationship_type == "conversation_belongs_to_project" for item in first.relationships)
+    assert first.observations[0].provenance.source_file == first.observations[0].provenance.original_file
+    assert first.observations[0].provenance.source_hash == first.observations[0].provenance.hash
 
 
 def test_unknown_and_corrupt_artifacts_are_reported_without_silent_repair(tmp_path):
@@ -164,3 +166,50 @@ def test_zip_export_matches_directory_export(tmp_path):
     assert [(item.relationship_type, item.source_id, item.target_id) for item in directory_result.relationships] == [
         (item.relationship_type, item.source_id, item.target_id) for item in zip_result.relationships
     ]
+
+
+def test_real_export_artifact_shapes_are_classified_without_json_repair(tmp_path):
+    export = tmp_path / "export"
+    export.mkdir()
+    (export / "conversations-000.json").write_text("[]", encoding="utf-8")
+    (export / "chat.html").write_text("<html><body>export transcript</body></html>", encoding="utf-8")
+    (export / "file_0000000000cc722fbd172561674a1b74.dat").write_bytes(b"attachment")
+
+    result = import_export(export)
+
+    by_path = {item.original_path: item.artifact_type for item in result.export_inventory.files}
+    assert by_path["conversations-000.json"] == "Conversation"
+    assert by_path["chat.html"] == "Document"
+    assert by_path["file_0000000000cc722fbd172561674a1b74.dat"] == "Attachment"
+    assert "JSON_PARSE_FAILED" not in {issue.error_code for issue in result.validation_report}
+
+
+def test_numeric_millisecond_timestamps_do_not_abort_import(tmp_path):
+    export = tmp_path / "export"
+    export.mkdir()
+    conversations = [
+        {
+            "id": "conv-ms",
+            "create_time": 1700000000000,
+            "mapping": {
+                "msg-ms": {
+                    "id": "msg-ms",
+                    "parent": None,
+                    "children": [],
+                    "message": {
+                        "id": "msg-ms",
+                        "author": {"role": "user"},
+                        "create_time": 1700000000000,
+                        "content": {"content_type": "text", "parts": ["millisecond timestamp"]},
+                        "metadata": {},
+                    },
+                }
+            },
+        }
+    ]
+    (export / "conversations-000.json").write_text(json.dumps(conversations), encoding="utf-8")
+
+    result = import_export(export)
+    timestamps = {item.timestamp for item in result.observations if item.message_reference == "msg-ms"}
+
+    assert "2023-11-14T22:13:20Z" in timestamps

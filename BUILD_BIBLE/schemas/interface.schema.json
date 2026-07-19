@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:interface",
+  "title": "Build Bible Interface",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "provider_scope_id",
+    "consumer_scope_id",
+    "medium",
+    "capacity",
+    "termination",
+    "isolation_method",
+    "failure_behavior",
+    "access_method",
+    "verification_state"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:interface:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "provider_scope_id": {
+      "type": "string"
+    },
+    "consumer_scope_id": {
+      "type": "string"
+    },
+    "medium": {
+      "enum": ["power", "water", "drainage", "air", "data", "structure", "access", "thermal", "control", "other"]
+    },
+    "capacity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "termination": {
+      "type": "string",
+      "minLength": 1
+    },
+    "isolation_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_behavior": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verification_state": {
+      "enum": ["unverified", "observed", "inferred", "designed", "installed", "retired"]
+    }
+  }
+}
+

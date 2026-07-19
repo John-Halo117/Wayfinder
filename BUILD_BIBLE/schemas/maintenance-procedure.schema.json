@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:maintenance-procedure",
+  "title": "Build Bible Maintenance Procedure",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "maintained_scope_id",
+    "trigger",
+    "tools",
+    "materials",
+    "safety_isolation",
+    "access_path",
+    "expected_duration_minutes",
+    "pass_criteria",
+    "failure_criteria",
+    "service_record_location"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:maintenance:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "maintained_scope_id": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety_isolation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected_duration_minutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10080
+    },
+    "pass_criteria": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_criteria": {
+      "type": "string",
+      "minLength": 1
+    },
+    "service_record_location": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
+

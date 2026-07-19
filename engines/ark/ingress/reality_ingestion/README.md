@@ -9,6 +9,9 @@ identity references, preserves observations and explicit relationships through a
 replaceable Storage Service abstraction, and publishes transport-neutral events
 through the Event Bus.
 
+Explicit relationships from source data are Source Relationships. ARK preserves
+them as evidence; WEAVE owns later durable relationship topology.
+
 This package contains no ChatGPT-specific logic. The ChatGPT Export Oracle is
 only the first producer of canonical observation streams.
 
@@ -48,6 +51,12 @@ verification. It is not a durable backend selection.
 Last Verified Reality updates only when an observation preservation write
 succeeds. Relationship preservation does not move the LVR cursor.
 
+## Import Profiles
+
+Large local imports must use an Import Profile that declares observation,
+relationship, artifact, payload, runtime, and replay bounds. The profile keeps
+execution deterministic without repairing source data.
+
 ## Events
 
 The pipeline emits:
@@ -62,3 +71,7 @@ The pipeline emits:
 
 Events are published through an `EventSink`. `EventBusEventSink` adapts this
 boundary to the Event Bus service without importing a concrete broker or backend.
+
+First Contact emitted 328,614 event publication records. Larger imports should
+use streamable event publication or bounded event reporting before expanding
+import scale.

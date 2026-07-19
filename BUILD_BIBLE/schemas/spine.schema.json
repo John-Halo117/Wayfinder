@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:spine",
+  "title": "Build Bible Spine",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "owning_scope_id",
+    "distributed_capabilities",
+    "route",
+    "access_points",
+    "isolation_points",
+    "monitoring_points",
+    "reserve_capacity",
+    "verification"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:spine:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "owning_scope_id": {
+      "type": "string"
+    },
+    "distributed_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "route": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "isolation_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "monitoring_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reserve_capacity": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification": {
+      "type": "string"
+    }
+  }
+}
+

@@ -1,6 +1,43 @@
-LOAD docs/CODEX_ARK_SYSTEM_PROMPT.md
-LOAD docs/ARK_TRUTH_SPINE.md
-FOLLOW ALL RULES
-OPERATE LOCALLY
-DO NOT VIOLATE INVARIANTS
-TREAT CLAIMS AS NON-ACTIONABLE UNTIL PROJECTED INTO SSOT
+Mission
+Load canonical ARK behavior artifacts for one local Codex engineering pass.
+
+Inheritance
+- docs/CODEX_ARK_SYSTEM_PROMPT.md
+- docs/ARK_TRUTH_SPINE.md
+- docs/MISSION_GRADE_RULES.md
+- config/operating_rules.json
+- config/system_invariants.json
+
+Inputs
+- Current operator task.
+- Current repository state.
+
+Objectives
+- Operate locally.
+- Follow inherited ARK rules and invariants.
+- Treat claims as non-actionable unless projected into SSOT by inherited rules.
+
+Tasks
+1. Load inherited artifacts.
+2. Execute only the current operator task.
+3. Preserve inherited truth and safety boundaries.
+
+Rules
+- Reference inherited artifacts instead of restating them.
+- Keep execution bounded and observable.
+
+Validation
+- Required artifacts are loaded.
+- No invariant is violated.
+- Output is scoped to the current task.
+
+Outputs
+- Bounded local engineering action or explicit structured failure.
+
+Prohibited
+- Rewriting inherited rules.
+- Treating claims as actionable truth.
+- Unbounded execution.
+
+Success Criteria
+Did Codex perform only the requested pass while preserving inherited ARK rules?

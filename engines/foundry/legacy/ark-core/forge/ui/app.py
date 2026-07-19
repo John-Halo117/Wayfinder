@@ -1,4 +1,4 @@
-"""Textual control panel for Forge."""
+"""Textual control panel for Foundry."""
 
 from __future__ import annotations
 
@@ -90,7 +90,7 @@ def launch(
     timeout_s: int = 300,
     num_ctx: int = 2048,
 ) -> int:
-    """Launch the Forge operator UI."""
+    """Launch the Foundry operator UI."""
 
     try:
         from textual import on, work
@@ -109,12 +109,12 @@ def launch(
         )
     except ImportError as exc:
         raise RuntimeError(
-            "Forge TUI requires the `textual` package in ark-core/.venv. "
+            "Foundry TUI requires the `textual` package in ark-core/.venv. "
             "Install it with `cd ark-core && .venv/bin/pip install textual`."
         ) from exc
 
     class ForgeApp(App[None]):
-        TITLE = "Forge"
+        TITLE = "Foundry"
         SUB_TITLE = "Deterministic self-coding control panel"
         CSS = """
         Screen {
@@ -257,7 +257,7 @@ def launch(
                 yield Static("", id="status-strip")
                 with Horizontal(id="task-bar"):
                     yield Input(
-                        placeholder="Tell Forge what to change...", id="task-input"
+                        placeholder="Tell Foundry what to change...", id="task-input"
                     )
                     yield Input(
                         placeholder="Optional files: app.py tests/test_app.py",
@@ -429,7 +429,7 @@ def launch(
             self.machine_state["status"] = "RUNNING"
             self.machine_state["stage_label"] = "stop requested"
             self._render_panels()
-            self._log("Stop requested. Forge will stop after the current iteration.")
+            self._log("Stop requested. Foundry will stop after the current iteration.")
 
         @on(Button.Pressed, "#runtime-button")
         def _on_runtime_pressed(self) -> None:
@@ -529,11 +529,11 @@ def launch(
             self.call_from_thread(self._set_running_state, False)
             if self.stop_requested:
                 self.call_from_thread(self._set_stage, "INTERRUPTED", "interrupted")
-                self.call_from_thread(self._log, "Forge stopped by operator.")
+                self.call_from_thread(self._log, "Foundry stopped by operator.")
 
         def _start_run(self, *, auto: bool) -> None:
             if self.running:
-                self._log("Forge is already running.")
+                self._log("Foundry is already running.")
                 return
             request = self._build_request(auto=auto)
             if request is None:
@@ -646,7 +646,7 @@ def launch(
             self._runtime_boot_thread.start()
 
         def _runtime_boot_worker(self) -> None:
-            self._log("Forge is waking up the local AI in the background.")
+            self._log("Foundry is waking up the local AI in the background.")
             status = ensure_runtime_ready(
                 preferred_url=self.preferred_url,
                 preferred_model=self.preferred_model,
@@ -1067,14 +1067,14 @@ def launch(
             self._render_panels()
             if value == "fast":
                 self._log(
-                    "Test mode fast: Forge will target explicit test files when possible."
+                    "Test mode fast: Foundry will target explicit test files when possible."
                 )
             else:
                 self._log(f"Test mode {value} enabled.")
 
         def _preview_safe_revert(self) -> None:
             if not self.applied_history:
-                self._log("Nothing in Forge lineage is ready to revert.")
+                self._log("Nothing in Foundry lineage is ready to revert.")
                 return
             latest = self.applied_history[-1]
             touched = ", ".join(latest.files_touched[:4]) or "unknown files"
@@ -1085,7 +1085,7 @@ def launch(
 
         def _apply_safe_revert(self) -> None:
             if not self.applied_history:
-                self._log("Nothing in Forge lineage is ready to revert.")
+                self._log("Nothing in Foundry lineage is ready to revert.")
                 return
             latest = self.applied_history[-1]
             try:

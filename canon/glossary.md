@@ -192,6 +192,35 @@ Ephemeral State, Proof Before Promotion, Durable Knowledge.
 See Also:
 constitution/laws.md
 
+## Progressive Discovery
+
+Status:
+Canonical
+
+Definition:
+Progressive Discovery retrieves the smallest sufficient representation for the
+current objective and escalates depth only when confidence is insufficient.
+
+Purpose:
+Minimizes tokens, I/O, latency, storage access, privacy exposure, and
+unnecessary computation.
+
+Owns:
+Retrieval progression; bounded traversal posture; preference for indexes,
+metadata, summaries, relationships, deltas, hashes, and references before full
+content.
+
+Does Not Own:
+Source truth, durable knowledge, domain-specific classification rules, or a
+new engine/service implementation.
+
+Relationships:
+Reality First, Ephemeral First, Proof Before Promotion, Representation,
+Retrieval, Focus.
+
+See Also:
+constitution/laws.md; constitution/execution.md; docs/canonical-language/retrieval-strategy.md
+
 ## Proof Before Promotion
 
 Status:
@@ -1664,6 +1693,336 @@ Engine, Graph.
 See Also:
 engines/README.md
 
+# First Contact Terms
+
+## Observation Source
+
+Status:
+Canonical
+
+Acronym:
+OS (Observation Source)
+
+Expanded Name:
+Observation Source
+
+Definition:
+A source-specific producer of canonical observation-shaped records before ARK
+preservation.
+
+Purpose:
+Separates source discovery and parsing from append-only reality preservation.
+
+Owns:
+Discovery, artifact classification, source-specific parsing, source validation,
+provenance capture, observation emission, and explicit Source Relationship
+emission.
+
+Does Not Own:
+Reality preservation, identity, topology, interpretation, reasoning,
+navigation, summaries, embeddings, search, or durable knowledge.
+
+Relationships:
+Oracle, Observation, Source Relationship, ARK, Import Profile.
+
+Aliases:
+Oracle when source-specific and deterministic; integration producer when the
+source is an integration boundary.
+
+Deprecated Aliases:
+Importer as source-of-truth; parser as preservation owner.
+
+Evidence:
+First Contact ChatGPT Oracle emitted 110,619 observations before ARK
+preservation.
+
+See Also:
+contracts/observations/README.md
+
+## Oracle
+
+Status:
+Alias
+
+Acronym:
+None
+
+Expanded Name:
+Oracle
+
+Definition:
+An Observation Source with deterministic, source-specific discovery,
+classification, parsing, and provenance behavior.
+
+Purpose:
+Names source-specific observation producers without making them preservation
+owners.
+
+Owns:
+Source-specific parser behavior and artifact handling.
+
+Does Not Own:
+ARK preservation, identity, WEAVE topology, interpretation, or navigation.
+
+Relationships:
+Observation Source, Import Profile, Provenance.
+
+Aliases:
+Observation Source.
+
+Deprecated Aliases:
+Knowledge source when used to imply promoted truth.
+
+Evidence:
+The ChatGPT Export Oracle imported a real export with zero unknown artifacts
+after First Contact fixes.
+
+See Also:
+engines/ark/ingress/chatgpt_oracle/README.md
+
+## Source Relationship
+
+Status:
+Canonical
+
+Acronym:
+SR (Source Relationship)
+
+Expanded Name:
+Source Relationship
+
+Definition:
+An explicit relationship present in source data and preserved before
+interpretation.
+
+Purpose:
+Keeps source-provided structure separate from durable topology.
+
+Owns:
+Explicit source edges such as containment, reply, reference, origin,
+membership, and attachment links.
+
+Does Not Own:
+Inferred topology, conceptual relationship meaning, knowledge graph behavior,
+or WEAVE promotion.
+
+Relationships:
+Relationship, Observation Source, ARK, WEAVE, Provenance.
+
+Aliases:
+Explicit source edge; preserved source edge.
+
+Deprecated Aliases:
+Relationship graph; inferred relationship.
+
+Evidence:
+First Contact preserved 217,994 explicit relationships while WEAVE remained a
+future topology owner.
+
+See Also:
+contracts/relationships/README.md
+
+## Import Profile
+
+Status:
+Canonical
+
+Acronym:
+IP (Import Profile)
+
+Expanded Name:
+Import Profile
+
+Definition:
+A bounded configuration posture for one import class.
+
+Purpose:
+Keeps large imports deterministic, capped, replayable, and reviewable.
+
+Owns:
+Limits, validation posture, runtime expectations, replay expectations, and
+reporting requirements.
+
+Does Not Own:
+Source repair, source semantics, storage backend selection, or observation
+content.
+
+Relationships:
+Observation Source, ARK, Validation, Replay.
+
+Aliases:
+Validation profile; import limits profile.
+
+Deprecated Aliases:
+Unbounded import mode.
+
+Evidence:
+First Contact required explicit caps above the default ARK observation limit.
+
+See Also:
+constitution/execution.md
+
+## Candidate Page
+
+Status:
+Proposed
+
+Acronym:
+CP (Candidate Page)
+
+Expanded Name:
+Candidate Page
+
+Definition:
+A bounded slice of compiler candidates prepared for governance review.
+
+Purpose:
+Preserves reviewability when candidate volume exceeds one governance batch.
+
+Owns:
+Candidate intake bounds, deterministic page identity, candidate provenance
+retention, and review queue handoff.
+
+Does Not Own:
+Candidate meaning, promotion, human approval, or durable knowledge.
+
+Relationships:
+Knowledge Compiler, Knowledge Governance, Knowledge Views.
+
+Aliases:
+Review page; candidate batch page.
+
+Deprecated Aliases:
+Unbounded review batch.
+
+Evidence:
+First Contact hit 250,000 compiler candidates and a 100,000 governance
+repository cap.
+
+See Also:
+engines/interpretation/knowledge_governance/README.md
+
+## Opaque Attachment
+
+Status:
+Canonical
+
+Acronym:
+OA (Opaque Attachment)
+
+Expanded Name:
+Opaque Attachment
+
+Definition:
+A preserved attachment artifact whose bytes are retained with provenance but
+not parsed by the current Observation Source.
+
+Purpose:
+Preserves attachments without pretending to understand unsupported content.
+
+Owns:
+Attachment classification, source location, hash, byte preservation, and
+provenance.
+
+Does Not Own:
+OCR, transcription, embeddings, semantic extraction, or file-type inference
+beyond safe source classification.
+
+Relationships:
+Asset, Artifact, Observation, Source Relationship, Provenance.
+
+Aliases:
+Preserved blob; unparsed attachment.
+
+Deprecated Aliases:
+Unknown artifact when source evidence identifies it as an attachment.
+
+Evidence:
+First Contact classified 250 `.dat` source files as attachments and normalized
+700 attachment artifacts.
+
+See Also:
+engines/ark/ingress/chatgpt_oracle/docs/artifact-classification.md
+
+## Conversation Shard
+
+Status:
+Oracle-specific
+
+Acronym:
+CS (Conversation Shard)
+
+Expanded Name:
+Conversation Shard
+
+Definition:
+A ChatGPT export conversation file using a numbered shard name such as
+`conversations-000.json`.
+
+Purpose:
+Records a real ChatGPT export convention without making it universal
+architecture.
+
+Owns:
+ChatGPT Oracle classification evidence.
+
+Does Not Own:
+Generic conversation ontology or non-ChatGPT parsers.
+
+Relationships:
+Oracle, Observation Source, Conversation, Export.
+
+Aliases:
+Sharded conversation export file.
+
+Deprecated Aliases:
+Metadata file when the source path matches ChatGPT conversation shard evidence.
+
+Evidence:
+First Contact observed 17 conversation shard source files.
+
+See Also:
+engines/ark/ingress/chatgpt_oracle/docs/artifact-classification.md
+
+## Export Transcript
+
+Status:
+Oracle-specific
+
+Acronym:
+ET (Export Transcript)
+
+Expanded Name:
+Export Transcript
+
+Definition:
+A ChatGPT export transcript document such as `chat.html`.
+
+Purpose:
+Preserves transcript artifacts without forcing JSON parsing or interpretation.
+
+Owns:
+ChatGPT Oracle document classification evidence.
+
+Does Not Own:
+Conversation reconstruction, summarization, or source truth.
+
+Relationships:
+Document, Oracle, Opaque Attachment, Export.
+
+Aliases:
+Transcript document.
+
+Deprecated Aliases:
+JSON metadata when the file is `chat.html`.
+
+Evidence:
+First Contact observed `chat.html` and corrected it from JSON metadata parsing
+to document preservation.
+
+See Also:
+engines/ark/ingress/chatgpt_oracle/docs/artifact-classification.md
+
 ## Capsules
 
 Status:
@@ -1985,6 +2344,210 @@ External Integration, Operation.
 
 See Also:
 engines/README.md
+
+# Canonical Language Terms
+
+## Canonical Language
+
+Status:
+Proposed
+
+Acronym:
+CL (Canonical Language)
+
+Expanded Name:
+Canonical Language
+
+Definition:
+A deterministic, rebuildable, source-agnostic language normalization and
+compression substrate derived from ARK-preserved reality.
+
+Purpose:
+Gives every Oracle a shared language substrate before interpretation.
+
+Owns:
+Canonical English, Statements, Chunks, language dictionaries, structural
+language relationships, and rebuild validation.
+
+Does Not Own:
+Reality, raw artifacts, durable knowledge, reasoning, navigation,
+summarization, embeddings, or truth evaluation.
+
+Relationships:
+ARK, Observation, Statement, Chunk, Knowledge Compiler, Retrieval.
+
+Aliases:
+CL; language substrate.
+
+Deprecated Aliases:
+Knowledge; reality; summary layer.
+
+Evidence:
+Phase 8D Canonical Language Architecture.
+
+See Also:
+docs/canonical-language/README.md
+
+## Canonical English
+
+Status:
+Proposed
+
+Acronym:
+CE (Canonical English)
+
+Expanded Name:
+Canonical English
+
+Definition:
+The deterministic normalized English surface used for language deduplication
+and content-addressed IDs.
+
+Purpose:
+Normalizes language without losing raw source traceability.
+
+Owns:
+Whitespace normalization, safe punctuation normalization, source-preserving
+case/display rules, and structural text normalization.
+
+Does Not Own:
+Translation, meaning repair, summarization, or AI correction.
+
+Relationships:
+Canonical Language, Statement, Phrase, Word.
+
+Aliases:
+Normalized English surface.
+
+Deprecated Aliases:
+Cleaned truth; summary text.
+
+Evidence:
+Phase 8D requires AI never to own normalization.
+
+See Also:
+docs/canonical-language/architecture.md
+
+## Statement
+
+Status:
+Proposed
+
+Acronym:
+STMT (Statement)
+
+Expanded Name:
+Statement
+
+Definition:
+The primary reusable language unit: a deterministic source-derived surface unit
+prepared for compiler, retrieval, and future AI consumption.
+
+Purpose:
+Provides a unit more useful than a Phrase and more precise than a Chunk.
+
+Owns:
+Statement content identity, occurrence identity, structural type, normalized
+surface, and provenance links.
+
+Does Not Own:
+Truth, claim validation, promotion, or interpretation.
+
+Relationships:
+Canonical Language, Chunk, Phrase, Word, Observation.
+
+Aliases:
+Canonical Statement.
+
+Deprecated Aliases:
+Claim when truth has not been evaluated.
+
+Evidence:
+Phase 8D selected Statement as the primary reusable unit.
+
+See Also:
+docs/canonical-language/statement-architecture.md
+
+## Chunk
+
+Status:
+Proposed
+
+Acronym:
+CHK (Chunk)
+
+Expanded Name:
+Chunk
+
+Definition:
+A bounded ordered window of Statements used for retrieval, context expansion,
+and future AI input.
+
+Purpose:
+Carries enough context around Statements without becoming the primary language
+identity.
+
+Owns:
+Chunk profile, ordered Statement membership, stable ordinal under profile,
+content ID, occurrence ID, and retrieval context.
+
+Does Not Own:
+Raw source, truth, summary, or durable knowledge.
+
+Relationships:
+Statement, Paragraph, Message, Section, Retrieval.
+
+Aliases:
+Context window.
+
+Deprecated Aliases:
+Summary chunk.
+
+Evidence:
+Phase 8D chunk architecture.
+
+See Also:
+docs/canonical-language/chunk-architecture.md
+
+## Canonical Dictionary
+
+Status:
+Proposed
+
+Acronym:
+CD (Canonical Dictionary)
+
+Expanded Name:
+Canonical Dictionary
+
+Definition:
+A versioned, content-addressed dictionary for canonical Words, Phrases,
+Statements, and Chunks.
+
+Purpose:
+Deduplicates language and supports compression, frequency, and retrieval.
+
+Owns:
+Dictionary entry identity, occurrence references, versioning, and rebuildable
+frequency indexes.
+
+Does Not Own:
+Raw source, mutable content IDs, or knowledge promotion.
+
+Relationships:
+Word Dictionary, Phrase Dictionary, Statement Dictionary, Chunk Dictionary.
+
+Aliases:
+Language dictionary.
+
+Deprecated Aliases:
+Memory store; knowledge base.
+
+Evidence:
+Phase 8D dictionary architecture.
+
+See Also:
+docs/canonical-language/dictionary-architecture.md
 
 # Aliases and Deprecated Terms
 

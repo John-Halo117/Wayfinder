@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:decision-record",
+  "title": "Build Bible Decision Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "decided_at",
+    "affected_scope_ids",
+    "problem",
+    "context",
+    "options_considered",
+    "selected_option",
+    "tradeoffs",
+    "assumptions",
+    "optionality_preserved",
+    "optionality_spent",
+    "reevaluation_triggers",
+    "verification_method"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:decision:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "decided_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "affected_scope_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "problem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "options_considered": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_option": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tradeoffs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "optionality_preserved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "optionality_spent": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reevaluation_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_method": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

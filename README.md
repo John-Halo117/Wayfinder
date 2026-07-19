@@ -1,54 +1,48 @@
 # Wayfinder
 
-Wayfinder is the constitutional continuity platform for preserving reality,
-reasoning under uncertainty, navigating capabilities, and maintaining long-term
-continuity.
+Status: Constitutional skeleton  
+Authority: Foundation v2.0, Wayfinder Repository Constitution v1.0, Wayfinder Interface Specification v1.0, ADR-0009, ADR-0011, ADR-0012  
+Scope: Implementation-ready structure without implementation
 
-The repository is organized as a master monorepo. Existing and future projects
-are folded into the architecture by responsibility, not by implementation
-history or convenience.
+## Mission
 
-## Constitutional Priority
+Wayfinder defines what the Polaris ecosystem means.
 
-Wayfinder optimizes for:
+## Purpose
 
-- Capability
-- Continuity
-- Attention
-- Maneuverability
+Wayfinder is the constitutionally independent semantic authority for Polaris.
+It owns ontology, vocabulary, universal models, policy language, architecture
+semantics, ownership governance, and the semantic rules that keep
+implementations replaceable.
 
-Architectural integrity takes precedence over short-term convenience.
+## Scope
 
-## Repository Map
+Wayfinder owns:
 
-```text
-wayfinder/
-  canon/
-  constitution/
-  contracts/
-  capabilities/
-  services/
-  engines/
-  domains/
-  internal/
-  external/
-  operations/
-  tooling/
-  docs/
-  tests/
-```
+- constitution and architecture semantics;
+- ontology and vocabulary;
+- identity, relationship, capability, and mission models;
+- knowledge and decision models;
+- policy language;
+- ownership and architecture governance.
 
-Dependencies point downward through the stack. Concepts have one canonical
-home, and all other locations reference that home.
+## Boundaries
 
-## Getting Oriented
+Wayfinder does not own contract packaging, runtime execution, persistence, UI,
+deployment, telemetry collection, assistant implementation, generated SDKs,
+or implementation behavior. Wayfinder must not depend on ecosystem runtime
+services.
 
-- Start with [WAYFINDER.md](WAYFINDER.md) for the constitutional foundation.
-- Use [canon/glossary.md](canon/glossary.md) for canonical terms, aliases, deprecated names, and ownership boundaries.
-- Use [docs/repository-folding.md](docs/repository-folding.md) when moving an
-  existing repository into the monorepo.
-- Use [docs/classification.md](docs/classification.md) before adding any new
-  concept.
-- Use [engines/README.md](engines/README.md) before creating or modifying an
-  engine.
+## Repository Contents
+
+This skeleton contains only documentation placeholders for approved semantic
+domains, governance surfaces, public interface placeholders, validation, and
+future implementation notes. It contains no source code, executable tooling,
+framework choice, build system, service topology, schema syntax, or
+language-specific API.
+
+## Architecture Freeze
+
+Wayfinder's mission, ownership, and public contracts are frozen by ADR-0012.
+Any proposed change requires an RFC/ADR path before implementation.
 

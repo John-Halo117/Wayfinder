@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:digital-twin-state",
+  "title": "Build Bible Digital Twin State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scope_id",
+    "lifecycle_state",
+    "operational_state",
+    "verification_state",
+    "last_verified",
+    "evidence",
+    "known_uncertainty",
+    "open_issues",
+    "service_history",
+    "maintenance_schedules",
+    "capacity_state"
+  ],
+  "properties": {
+    "scope_id": {
+      "type": "string"
+    },
+    "lifecycle_state": {
+      "enum": ["acquire", "observe", "plan", "prepare", "build", "commission", "operate", "maintain", "expand", "renew", "retire"]
+    },
+    "operational_state": {
+      "enum": ["planned", "installed", "commissioning", "normal", "idle", "active", "maintenance", "testing", "fault", "emergency", "offline", "retired"]
+    },
+    "verification_state": {
+      "enum": ["unverified", "observed", "inferred", "designed", "installed", "retired"]
+    },
+    "last_verified": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "known_uncertainty": {
+      "type": "string"
+    },
+    "open_issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "service_history": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "maintenance_schedules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "capacity_state": {
+      "enum": ["unknown", "available", "reserved", "near-limit", "over-limit", "blocked"]
+    }
+  }
+}

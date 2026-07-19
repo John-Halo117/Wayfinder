@@ -1,0 +1,4001 @@
+{
+  "action_health": {
+    "action_examples": [
+      ".github/workflows/architecture-governance.yml",
+      "CONTRIBUTING.md",
+      "Knowledge/OpenQuestions/README.md",
+      "Knowledge/reports/conflicts.md",
+      "Knowledge/reports/unresolved.md",
+      "ROADMAP.md",
+      "canon/glossary.md",
+      "canon/ontology.md",
+      "constitution/civphys.md",
+      "constitution/execution.md",
+      "contracts/assets/README.md",
+      "contracts/duplicate-analysis.md",
+      "contracts/gap-analysis.md",
+      "contracts/permissions/README.md",
+      "contracts/recommendations/README.md",
+      "contracts/storage/README.md",
+      "contracts/transformations/README.md",
+      "docs/adrs/0006-canonical-language-substrate.md",
+      "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+      "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+      "docs/adrs/README.md",
+      "docs/architectural-analysis-2026-07-05.md",
+      "docs/architectural-debt.md",
+      "docs/architecture/00-overview.md",
+      "docs/architecture/01-reality.md",
+      "docs/architecture/04-ark.md",
+      "docs/architecture/05-representations.md",
+      "docs/architecture/06-focus.md",
+      "docs/architecture/07-understanding.md",
+      "docs/architecture/09-civphys.md",
+      "docs/architecture/11-digital-twins.md",
+      "docs/architecture/12-missions.md",
+      "docs/architecture/13-bearings.md",
+      "docs/architecture/14-reasoning.md",
+      "docs/architecture/16-experiences.md",
+      "docs/architecture/17-actions.md",
+      "docs/architecture/19-dependency-rules.md",
+      "docs/architecture/20-repository-map.md",
+      "docs/architecture/21-roadmap.md",
+      "docs/architecture/README.md",
+      "docs/canonical-language/architecture.md",
+      "docs/canonical-language/cross-oracle-language-specification.md",
+      "docs/canonical-language/phase-9-implementation-plan.md",
+      "docs/constitution-v1-release-audit.md",
+      "docs/constitutional-census.md",
+      "docs/constitutional-migration-agent.md",
+      "docs/constitutional-scorecard.md",
+      "docs/developer-handbook.md",
+      "docs/first-contact/evidence-assimilation.md",
+      "docs/first-contact/first-contact-consolidation.md"
+    ],
+    "action_references": 100,
+    "action_to_ark_imports": [],
+    "actions_update_ark": false,
+    "reobserve_boundary_documented": true
+  },
+  "candidate_pages": [
+    {
+      "candidate_page_id": "candidate-page-81b06df4303e",
+      "concept": "purpose",
+      "evidence_paths": [
+        "constitution/civphys.md",
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md"
+      ],
+      "occurrences": 74,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-2a49fdd64f2a",
+      "concept": "consumers",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 61,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-32381523e631",
+      "concept": "inputs",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 60,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-7b8c56be0a5f",
+      "concept": "outputs",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 60,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-52429b670685",
+      "concept": "does not own",
+      "evidence_paths": [
+        "docs/architecture/01-reality.md",
+        "docs/architecture/02-perception.md",
+        "docs/architecture/03-observations.md",
+        "docs/architecture/04-ark.md",
+        "docs/architecture/05-representations.md",
+        "docs/architecture/06-focus.md",
+        "docs/architecture/07-understanding.md",
+        "docs/architecture/08-networks.md",
+        "docs/architecture/09-civphys.md",
+        "docs/architecture/10-capability-registry.md",
+        "docs/architecture/11-digital-twins.md",
+        "docs/architecture/12-missions.md",
+        "docs/architecture/13-bearings.md",
+        "docs/architecture/14-reasoning.md",
+        "docs/architecture/15-navigation.md",
+        "docs/architecture/16-experiences.md",
+        "docs/architecture/17-actions.md",
+        "docs/governance/candidate-pages.md",
+        "engines/ark/README.md",
+        "engines/blackwall/README.md"
+      ],
+      "occurrences": 49,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-aafa8285ee3a",
+      "concept": "owns",
+      "evidence_paths": [
+        "docs/architecture/01-reality.md",
+        "docs/architecture/02-perception.md",
+        "docs/architecture/03-observations.md",
+        "docs/architecture/04-ark.md",
+        "docs/architecture/05-representations.md",
+        "docs/architecture/06-focus.md",
+        "docs/architecture/07-understanding.md",
+        "docs/architecture/08-networks.md",
+        "docs/architecture/09-civphys.md",
+        "docs/architecture/10-capability-registry.md",
+        "docs/architecture/11-digital-twins.md",
+        "docs/architecture/12-missions.md",
+        "docs/architecture/13-bearings.md",
+        "docs/architecture/14-reasoning.md",
+        "docs/architecture/15-navigation.md",
+        "docs/architecture/16-experiences.md",
+        "docs/architecture/17-actions.md",
+        "docs/governance/candidate-pages.md",
+        "engines/ark/README.md",
+        "engines/blackwall/README.md"
+      ],
+      "occurrences": 49,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-2188dfc2d889",
+      "concept": "dependencies",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/wayfinder-portfolio.md",
+        "engines/ark/README.md",
+        "engines/blackwall/README.md",
+        "engines/build-bible/README.md",
+        "engines/capsules/README.md",
+        "engines/foundry/README.md",
+        "engines/interpretation/README.md",
+        "engines/jarvis/README.md",
+        "engines/mice/README.md",
+        "engines/midas/README.md",
+        "engines/netwatch/README.md",
+        "engines/nomad/README.md",
+        "engines/reasoning/README.md",
+        "engines/sandbox/README.md",
+        "engines/valor/README.md",
+        "engines/views/README.md",
+        "engines/weave/README.md",
+        "engines/zwlib/README.md",
+        "services/configuration/README.md"
+      ],
+      "occurrences": 45,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-a4fb82d3de83",
+      "concept": "non-goals",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 35,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-da25480fb483",
+      "concept": "rollback",
+      "evidence_paths": [
+        "docs/adrs/0001-observation-sources.md",
+        "docs/adrs/0002-source-relationships.md",
+        "docs/adrs/0003-import-profiles.md",
+        "docs/adrs/0004-private-validation-outputs.md",
+        "docs/adrs/0005-candidate-paging-governance-intake.md",
+        "docs/adrs/0006-canonical-language-substrate.md",
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-implementation.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/observation-contract.md"
+      ],
+      "occurrences": 29,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-f3b717cfb270",
+      "concept": "failure modes",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 26,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-2437a91a4c57",
+      "concept": "invariants",
+      "evidence_paths": [
+        "Knowledge/README.md",
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md"
+      ],
+      "occurrences": 26,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-2a86f2761571",
+      "concept": "constitutional basis",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 25,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-704c0e6343f3",
+      "concept": "dependency graph",
+      "evidence_paths": [
+        "docs/architectural-analysis-2026-07-05.md",
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/identity-implementation.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md"
+      ],
+      "occurrences": 25,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-b11a85b296a9",
+      "concept": "inventory",
+      "evidence_paths": [
+        "Knowledge/README.md",
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/identity-implementation.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md"
+      ],
+      "occurrences": 25,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-d1990f97a1f4",
+      "concept": "producer",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 25,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-24cb7d61f2ae",
+      "concept": "promotion rules",
+      "evidence_paths": [
+        "contracts/assets/README.md",
+        "contracts/bearings/README.md",
+        "contracts/capabilities/README.md",
+        "contracts/capsules/README.md",
+        "contracts/commitments/README.md",
+        "contracts/context/README.md",
+        "contracts/events/README.md",
+        "contracts/evidence/README.md",
+        "contracts/health/README.md",
+        "contracts/identities/README.md",
+        "contracts/observations/README.md",
+        "contracts/permissions/README.md",
+        "contracts/policies/README.md",
+        "contracts/promotion/README.md",
+        "contracts/proofs/README.md",
+        "contracts/provenance/README.md",
+        "contracts/recommendations/README.md",
+        "contracts/relationships/README.md",
+        "contracts/representations/README.md",
+        "contracts/schemas/README.md"
+      ],
+      "occurrences": 25,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-761b7ad8ad43",
+      "concept": "summary",
+      "evidence_paths": [
+        "docs/first-contact/constitutional-change-log.md",
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md"
+      ],
+      "occurrences": 24,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-ee3c1a0b22d9",
+      "concept": "migration plan",
+      "evidence_paths": [
+        "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+        "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+        "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+        "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md",
+        "docs/promotions/views-contract.md"
+      ],
+      "occurrences": 20,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-c6def4c37c63",
+      "concept": "constitutional boundary",
+      "evidence_paths": [
+        "docs/canonical-language/README.md",
+        "docs/governance/candidate-pages.md",
+        "engines/ark/README.md",
+        "engines/blackwall/README.md",
+        "engines/build-bible/README.md",
+        "engines/capsules/README.md",
+        "engines/foundry/README.md",
+        "engines/interpretation/README.md",
+        "engines/jarvis/README.md",
+        "engines/mice/README.md",
+        "engines/midas/README.md",
+        "engines/netwatch/README.md",
+        "engines/nomad/README.md",
+        "engines/reasoning/README.md",
+        "engines/sandbox/README.md",
+        "engines/valor/README.md",
+        "engines/views/README.md",
+        "engines/weave/README.md",
+        "engines/zwlib/README.md"
+      ],
+      "occurrences": 19,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-367979f8aa96",
+      "concept": "ownership graph",
+      "evidence_paths": [
+        "docs/constitutional-census.md",
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md",
+        "docs/promotions/views-contract.md"
+      ],
+      "occurrences": 17,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-444f7eaa5e02",
+      "concept": "behavior preservation",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md",
+        "docs/promotions/views-contract.md"
+      ],
+      "occurrences": 16,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-401a82e6bfc6",
+      "concept": "canonical owner verification",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md",
+        "docs/promotions/views-contract.md"
+      ],
+      "occurrences": 16,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-fa44132b238e",
+      "concept": "discovery",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md",
+        "docs/promotions/views-contract.md"
+      ],
+      "occurrences": 16,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-a402c4336ebf",
+      "concept": "execution",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/assets-contract.md",
+        "docs/promotions/bearings-contract.md",
+        "docs/promotions/capabilities-contract.md",
+        "docs/promotions/capsules-contract.md",
+        "docs/promotions/events-contract.md",
+        "docs/promotions/evidence-contract.md",
+        "docs/promotions/health-contract.md",
+        "docs/promotions/identities-contract.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/permissions-contract.md",
+        "docs/promotions/policies-contract.md",
+        "docs/promotions/promotion-contract.md",
+        "docs/promotions/provenance-contract.md",
+        "docs/promotions/schemas-contract.md",
+        "docs/promotions/views-contract.md"
+      ],
+      "occurrences": 16,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-ea7792a26f40",
+      "concept": "context",
+      "evidence_paths": [
+        "canon/glossary.md",
+        "constitution/assets.md",
+        "docs/adrs/0001-observation-sources.md",
+        "docs/adrs/0002-source-relationships.md",
+        "docs/adrs/0003-import-profiles.md",
+        "docs/adrs/0004-private-validation-outputs.md",
+        "docs/adrs/0005-candidate-paging-governance-intake.md",
+        "docs/adrs/0006-canonical-language-substrate.md",
+        "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+        "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+        "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+        "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 13,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-86ae35d58a6a",
+      "concept": "decision",
+      "evidence_paths": [
+        "docs/adrs/0001-observation-sources.md",
+        "docs/adrs/0002-source-relationships.md",
+        "docs/adrs/0003-import-profiles.md",
+        "docs/adrs/0004-private-validation-outputs.md",
+        "docs/adrs/0005-candidate-paging-governance-intake.md",
+        "docs/adrs/0006-canonical-language-substrate.md",
+        "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+        "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+        "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+        "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+        "docs/governance/candidate-pages.md",
+        "engines/views/knowledge_views/docs/view-types.md"
+      ],
+      "occurrences": 12,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-284be18a303c",
+      "concept": "architecture sections",
+      "evidence_paths": [
+        "docs/adrs/0001-observation-sources.md",
+        "docs/adrs/0002-source-relationships.md",
+        "docs/adrs/0003-import-profiles.md",
+        "docs/adrs/0004-private-validation-outputs.md",
+        "docs/adrs/0005-candidate-paging-governance-intake.md",
+        "docs/adrs/0006-canonical-language-substrate.md",
+        "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+        "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+        "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+        "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 11,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-3edfe0291df0",
+      "concept": "current state",
+      "evidence_paths": [
+        "docs/architecture/08-networks.md",
+        "docs/architecture/11-digital-twins.md",
+        "docs/architecture/13-bearings.md",
+        "docs/architecture/14-reasoning.md",
+        "docs/architecture/15-navigation.md",
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/consumer-graph.md",
+        "services/event-bus/docs/consumer-graph.md",
+        "services/identity/docs/consumer-graph.md",
+        "services/policy/docs/consumer-graph.md",
+        "services/storage/docs/consumer-graph.md"
+      ],
+      "occurrences": 11,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-01b8016fdce4",
+      "concept": "ownership",
+      "evidence_paths": [
+        "constitution/assets.md",
+        "constitution/civphys.md",
+        "docs/canonical-language/relationship-architecture.md",
+        "docs/governance/candidate-pages.md",
+        "docs/reality-identity-program.md",
+        "docs/universal-asset-ingestion-program.md",
+        "services/configuration/README.md",
+        "services/event-bus/README.md",
+        "services/identity/README.md",
+        "services/policy/README.md",
+        "services/storage/README.md"
+      ],
+      "occurrences": 11,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-caf9f906b16a",
+      "concept": "documentation",
+      "evidence_paths": [
+        "docs/README.md",
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/BUILD_SUMMARY.md",
+        "engines/ark/legacy/DEPLOYMENT_CHECKLIST_PROD.md",
+        "engines/ark/legacy/INDEX.md",
+        "engines/ark/legacy/VERIFICATION_v1.0.md",
+        "engines/interpretation/knowledge_compiler/README.md",
+        "engines/interpretation/knowledge_governance/README.md",
+        "engines/views/knowledge_retrieval/README.md",
+        "engines/views/knowledge_views/README.md"
+      ],
+      "occurrences": 10,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-3de1580490d2",
+      "concept": "roadmap",
+      "evidence_paths": [
+        "ROADMAP.md",
+        "docs/governance/candidate-pages.md",
+        "docs/wayfinder-portfolio.md"
+      ],
+      "occurrences": 10,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-4183b7793fd2",
+      "concept": "verification",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-implementation.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/observation-contract.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/storage-service.md",
+        "services/event-bus/docs/implementation-proof.md",
+        "services/identity/docs/implementation-proof.md"
+      ],
+      "occurrences": 10,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-4331397143a1",
+      "concept": "backlog",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/wayfinder-portfolio.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-c5926e69e275",
+      "concept": "canonical owner",
+      "evidence_paths": [
+        "docs/architecture/03-observations.md",
+        "docs/architecture/09-civphys.md",
+        "docs/architecture/13-bearings.md",
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/ownership-report.md",
+        "services/event-bus/docs/ownership-report.md",
+        "services/identity/docs/ownership-report.md",
+        "services/policy/docs/ownership-report.md",
+        "services/storage/docs/ownership-report.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-620f0159aa2d",
+      "concept": "consumer graph",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/identity-implementation.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/storage-service.md",
+        "services/event-bus/docs/implementation-proof.md",
+        "services/identity/docs/implementation-proof.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-37b444916b0c",
+      "concept": "current maturity",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/wayfinder-portfolio.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-ee8250fb76e0",
+      "concept": "evidence",
+      "evidence_paths": [
+        "canon/glossary.md",
+        "constitution/assets.md",
+        "docs/adrs/0001-observation-sources.md",
+        "docs/adrs/0002-source-relationships.md",
+        "docs/adrs/0003-import-profiles.md",
+        "docs/adrs/0004-private-validation-outputs.md",
+        "docs/adrs/0005-candidate-paging-governance-intake.md",
+        "docs/adrs/0006-canonical-language-substrate.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-77c9fc350e76",
+      "concept": "health signal",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/README.md",
+        "engines/foundry/README.md",
+        "engines/jarvis/README.md",
+        "services/configuration/README.md",
+        "services/event-bus/README.md",
+        "services/identity/README.md",
+        "services/policy/README.md",
+        "services/storage/README.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-4e3d2497fdd8",
+      "concept": "next milestone",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/wayfinder-portfolio.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-4c1029697ee3",
+      "concept": "owner",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/wayfinder-portfolio.md"
+      ],
+      "occurrences": 9,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-ff0139d07c59",
+      "concept": "confidence",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/event-bus-implementation.md",
+        "engines/interpretation/knowledge_compiler/docs/candidate-schemas.md",
+        "services/configuration/docs/ownership-report.md",
+        "services/event-bus/docs/ownership-report.md",
+        "services/identity/docs/ownership-report.md",
+        "services/policy/docs/ownership-report.md",
+        "services/storage/docs/ownership-report.md"
+      ],
+      "occurrences": 8,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-824520932124",
+      "concept": "responsibilities",
+      "evidence_paths": [
+        "canon/README.md",
+        "docs/governance/candidate-pages.md",
+        "engines/interpretation/knowledge_governance/README.md",
+        "services/configuration/README.md",
+        "services/event-bus/README.md",
+        "services/identity/README.md",
+        "services/policy/README.md",
+        "services/storage/README.md"
+      ],
+      "occurrences": 8,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-f6a214f7a5fc",
+      "concept": "result",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/identity-implementation.md",
+        "docs/wave-2-verification.md",
+        "services/configuration/docs/verification.md",
+        "services/event-bus/docs/verification.md",
+        "services/identity/docs/verification.md",
+        "services/policy/docs/verification.md",
+        "services/storage/docs/verification.md"
+      ],
+      "occurrences": 8,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-961f787b0cd3",
+      "concept": "checks",
+      "evidence_paths": [
+        "contracts/verification.md",
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/verification.md",
+        "services/event-bus/docs/verification.md",
+        "services/identity/docs/verification.md",
+        "services/policy/docs/verification.md",
+        "services/storage/docs/verification.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-b7d64a922100",
+      "concept": "configuration",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/BUILD_SUMMARY.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md",
+        "engines/ark/legacy/EMITTERS_GUIDE.md",
+        "engines/ark/legacy/PRODUCTION_RELEASE_v1.0.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-de00163e8031",
+      "concept": "consequences",
+      "evidence_paths": [
+        "docs/adrs/0001-observation-sources.md",
+        "docs/adrs/0002-source-relationships.md",
+        "docs/adrs/0003-import-profiles.md",
+        "docs/adrs/0004-private-validation-outputs.md",
+        "docs/adrs/0005-candidate-paging-governance-intake.md",
+        "docs/adrs/0006-canonical-language-substrate.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-787c16bbb543",
+      "concept": "evidence sources",
+      "evidence_paths": [
+        "docs/first-contact/evidence-assimilation.md",
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/inventory.md",
+        "services/event-bus/docs/inventory.md",
+        "services/identity/docs/inventory.md",
+        "services/policy/docs/inventory.md",
+        "services/storage/docs/inventory.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-26a7b503e876",
+      "concept": "law of theseus",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/assets.md",
+        "constitution/laws.md",
+        "docs/constitutional-migration-agent.md",
+        "docs/developer-handbook.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-f31168c67a14",
+      "concept": "lifecycle",
+      "evidence_paths": [
+        "constitution/assets.md",
+        "docs/canonical-language/architecture.md",
+        "docs/canonical-language/chunk-architecture.md",
+        "docs/governance/candidate-pages.md",
+        "engines/_template/README.md",
+        "engines/foundry/README.md",
+        "engines/jarvis/README.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-7b344f559119",
+      "concept": "migration path",
+      "evidence_paths": [
+        "docs/architecture/02-perception.md",
+        "docs/architecture/06-focus.md",
+        "docs/architecture/09-civphys.md",
+        "docs/architecture/11-digital-twins.md",
+        "docs/architecture/13-bearings.md",
+        "docs/architecture/17-actions.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-94fc815f3a5b",
+      "concept": "next steps",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/ARK_SPEC.md",
+        "engines/ark/legacy/BUILD_SUMMARY.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE.md",
+        "engines/ark/legacy/EMITTERS_GUIDE.md",
+        "engines/ark/legacy/EMITTERS_SUMMARY.md",
+        "engines/ark/legacy/README_PROD.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-d454bec656d3",
+      "concept": "objective",
+      "evidence_paths": [
+        "docs/canonical-language/phase-8d-report.md",
+        "docs/first-contact/first-contact-consolidation.md",
+        "docs/governance/candidate-pages.md",
+        "docs/reality-identity-program.md",
+        "docs/universal-asset-ingestion-program.md",
+        "docs/wayfinder-infra-program.md",
+        "engines/views/knowledge_views/docs/view-types.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-4094c4f999d0",
+      "concept": "one concept, one home",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/laws.md",
+        "docs/constitutional-migration-agent.md",
+        "docs/developer-handbook.md",
+        "docs/fitness-functions.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-7d61f318e187",
+      "concept": "proof before promotion",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/laws.md",
+        "docs/constitutional-migration-agent.md",
+        "docs/developer-handbook.md",
+        "docs/fitness-functions.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-3ace60b0a0c1",
+      "concept": "restart",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/ARCHITECTURE.md",
+        "engines/ark/legacy/EMITTERS_QUICK_REF.md",
+        "engines/ark/legacy/PRODUCTION_FIXES_SUMMARY.md",
+        "engines/ark/legacy/PROD_REFERENCE.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-680d12f9f234",
+      "concept": "troubleshooting",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md",
+        "engines/ark/legacy/EMITTERS_GUIDE.md",
+        "engines/ark/legacy/OPTIMIZATION_CHANGES.md",
+        "engines/ark/legacy/PRODUCTION_GUIDE.md",
+        "engines/ark/legacy/README_PROD.md"
+      ],
+      "occurrences": 7,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-cf92f4c59023",
+      "concept": "allowed inbound references",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/dependency-graph.md",
+        "services/event-bus/docs/dependency-graph.md",
+        "services/identity/docs/dependency-graph.md",
+        "services/policy/docs/dependency-graph.md",
+        "services/storage/docs/dependency-graph.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-20f9d380a1c6",
+      "concept": "behavior impact",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/rollback.md",
+        "services/event-bus/docs/rollback.md",
+        "services/identity/docs/rollback.md",
+        "services/policy/docs/rollback.md",
+        "services/storage/docs/rollback.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-e1e38e701262",
+      "concept": "classification decision",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/inventory.md",
+        "services/event-bus/docs/inventory.md",
+        "services/identity/docs/inventory.md",
+        "services/policy/docs/inventory.md",
+        "services/storage/docs/inventory.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-93fbe96be443",
+      "concept": "classified responsibilities",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/inventory.md",
+        "services/event-bus/docs/inventory.md",
+        "services/identity/docs/inventory.md",
+        "services/policy/docs/inventory.md",
+        "services/storage/docs/inventory.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-cc8321d6375c",
+      "concept": "contract",
+      "evidence_paths": [
+        "canon/glossary.md",
+        "constitution/glossary.md",
+        "docs/developer-handbook.md",
+        "docs/governance/candidate-pages.md",
+        "docs/repository-folding.md",
+        "engines/ark/legacy/external/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-dd7fe1ec55c0",
+      "concept": "current evidence consumers",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/consumer-graph.md",
+        "services/event-bus/docs/consumer-graph.md",
+        "services/identity/docs/consumer-graph.md",
+        "services/policy/docs/consumer-graph.md",
+        "services/storage/docs/consumer-graph.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-0ee38123862b",
+      "concept": "duplicate concepts reduced",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/ownership-report.md",
+        "services/event-bus/docs/ownership-report.md",
+        "services/identity/docs/ownership-report.md",
+        "services/policy/docs/ownership-report.md",
+        "services/storage/docs/ownership-report.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-229c4fecaa39",
+      "concept": "ephemeral first",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/laws.md",
+        "docs/constitutional-migration-agent.md",
+        "docs/developer-handbook.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-f9eaf652fc5d",
+      "concept": "forbidden outbound references",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/dependency-graph.md",
+        "services/event-bus/docs/dependency-graph.md",
+        "services/identity/docs/dependency-graph.md",
+        "services/policy/docs/dependency-graph.md",
+        "services/storage/docs/dependency-graph.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-62484e22a6a5",
+      "concept": "health",
+      "evidence_paths": [
+        "docs/architecture/01-reality.md",
+        "docs/architecture/04-ark.md",
+        "docs/architecture/08-networks.md",
+        "docs/architecture/09-civphys.md",
+        "docs/governance/candidate-pages.md",
+        "engines/_template/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-52c1cd79399e",
+      "concept": "later implementation migration",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/migration-plan.md",
+        "services/event-bus/docs/migration-plan.md",
+        "services/identity/docs/migration-plan.md",
+        "services/policy/docs/migration-plan.md",
+        "services/storage/docs/migration-plan.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-e97abb25ae6e",
+      "concept": "minimal promotion",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/storage-service.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-733e6cd85ded",
+      "concept": "minimal promotion completed",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/migration-plan.md",
+        "services/event-bus/docs/migration-plan.md",
+        "services/identity/docs/migration-plan.md",
+        "services/policy/docs/migration-plan.md",
+        "services/storage/docs/migration-plan.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-42387bfe6f5f",
+      "concept": "ownership decision",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/promotions/configuration-service.md",
+        "docs/promotions/event-bus-service.md",
+        "docs/promotions/identity-service.md",
+        "docs/promotions/policy-service.md",
+        "docs/promotions/storage-service.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-ff9cc1ea6863",
+      "concept": "previous owners",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/ownership-report.md",
+        "services/event-bus/docs/ownership-report.md",
+        "services/identity/docs/ownership-report.md",
+        "services/policy/docs/ownership-report.md",
+        "services/storage/docs/ownership-report.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-ff4b20bab20c",
+      "concept": "public contracts",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/README.md",
+        "services/event-bus/README.md",
+        "services/identity/README.md",
+        "services/policy/README.md",
+        "services/storage/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-aa4d603bff9e",
+      "concept": "reality first",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/laws.md",
+        "docs/constitutional-migration-agent.md",
+        "docs/developer-handbook.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-c5f88e747d24",
+      "concept": "responsibility",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/_template/README.md",
+        "engines/ark/README.md",
+        "engines/ark/ingress/chatgpt_oracle/README.md",
+        "engines/foundry/README.md",
+        "engines/jarvis/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-3ef1521035f4",
+      "concept": "rollback scope",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/rollback.md",
+        "services/event-bus/docs/rollback.md",
+        "services/identity/docs/rollback.md",
+        "services/policy/docs/rollback.md",
+        "services/storage/docs/rollback.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-b7595e2a8639",
+      "concept": "steps",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/docs/rollback.md",
+        "services/event-bus/docs/rollback.md",
+        "services/identity/docs/rollback.md",
+        "services/policy/docs/rollback.md",
+        "services/storage/docs/rollback.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-98c41dcd20b8",
+      "concept": "validation",
+      "evidence_paths": [
+        "docs/canonical-language/chunk-architecture.md",
+        "docs/canonical-language/dictionary-architecture.md",
+        "docs/governance/candidate-pages.md",
+        "docs/reality-identity-program.md",
+        "docs/universal-asset-ingestion-program.md",
+        "docs/wayfinder-infra-program.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-85a55aea24b4",
+      "concept": "verification status",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/README.md",
+        "services/event-bus/README.md",
+        "services/identity/README.md",
+        "services/policy/README.md",
+        "services/storage/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-a12dd3a7fd32",
+      "concept": "verify",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/BUILD_SUMMARY.md",
+        "engines/ark/legacy/EMITTERS_QUICK_REF.md",
+        "engines/ark/legacy/README.md",
+        "engines/ark/legacy/WIRING_CHECKLIST.md",
+        "engines/ark/legacy/ark-core/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-d5abf9588f9f",
+      "concept": "what does not belong here",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "services/configuration/README.md",
+        "services/event-bus/README.md",
+        "services/identity/README.md",
+        "services/policy/README.md",
+        "services/storage/README.md"
+      ],
+      "occurrences": 6,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-163356029bb7",
+      "concept": "alternatives considered",
+      "evidence_paths": [
+        "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+        "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+        "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+        "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-38a5be91af79",
+      "concept": "capability",
+      "evidence_paths": [
+        "canon/glossary.md",
+        "constitution/glossary.md",
+        "docs/developer-handbook.md",
+        "docs/governance/candidate-pages.md",
+        "engines/views/knowledge_retrieval/docs/index-types.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-2a995d636497",
+      "concept": "capability first",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/laws.md",
+        "docs/developer-handbook.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-b77e6fb92ff5",
+      "concept": "closed under extension",
+      "evidence_paths": [
+        "WAYFINDER.md",
+        "canon/glossary.md",
+        "constitution/laws.md",
+        "docs/constitutional-migration-agent.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-558cadc5f4a5",
+      "concept": "core infrastructure",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/ALL_PORTS_URLS.md",
+        "engines/ark/legacy/BUILD_SUMMARY.md",
+        "engines/ark/legacy/PORTS_REFERENCE.md",
+        "engines/ark/legacy/SYSTEM_MAP.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-52f95f2e9700",
+      "concept": "environment variables",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/ARK_SPEC.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md",
+        "engines/ark/legacy/EMITTERS_QUICK_REF.md",
+        "engines/ark/legacy/QUICK_REFERENCE.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-dc9a3d9258bd",
+      "concept": "health checks",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/ARCHITECTURE.md",
+        "engines/ark/legacy/DEPLOYMENT_CHECKLIST_PROD.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-49d8fddfc107",
+      "concept": "implementation backlog",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "docs/implementation-backlog.md",
+        "docs/reality-identity-program.md",
+        "docs/universal-asset-ingestion-program.md",
+        "docs/wayfinder-infra-program.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-177a7ea3611f",
+      "concept": "metrics",
+      "evidence_paths": [
+        "docs/constitutional-scorecard.md",
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md",
+        "engines/ark/legacy/ark/subjects.py"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-e94a0945228c",
+      "concept": "platform progress",
+      "evidence_paths": [
+        "ROADMAP.md",
+        "docs/governance/candidate-pages.md",
+        "docs/implementation-backlog.md",
+        "docs/migration-dashboard.md",
+        "docs/wayfinder-infra-program.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-96d815328a42",
+      "concept": "provenance",
+      "evidence_paths": [
+        "canon/glossary.md",
+        "constitution/assets.md",
+        "docs/governance/candidate-pages.md",
+        "engines/interpretation/knowledge_compiler/README.md",
+        "engines/interpretation/knowledge_compiler/docs/candidate-schemas.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-d7ac1d220e6a",
+      "concept": "reality",
+      "evidence_paths": [
+        "canon/glossary.md",
+        "constitution/execution.md",
+        "constitution/glossary.md",
+        "docs/governance/candidate-pages.md",
+        "engines/_template/reality/README.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-f1dae5433072",
+      "concept": "resource usage",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/EMITTERS_DELIVERY.md",
+        "engines/ark/legacy/EMITTERS_SUMMARY.md",
+        "engines/ark/legacy/PROD_REFERENCE.md",
+        "engines/ark/legacy/SYSTEM_MAP.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-6c621d1a0513",
+      "concept": "rules",
+      "evidence_paths": [
+        "docs/architecture/19-dependency-rules.md",
+        "docs/governance/candidate-pages.md",
+        "engines/ark/ingress/chatgpt_oracle/docs/validation-rules.md",
+        "engines/ark/legacy/ark-core/docs/TODO_TIERS.md",
+        "engines/ark/legacy/external/README.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-5f161c914988",
+      "concept": "scope",
+      "evidence_paths": [
+        "docs/first-contact/repository-validation-report.md",
+        "docs/governance/candidate-pages.md",
+        "docs/wave-2-verification.md",
+        "services/event-bus/docs/implementation-proof.md",
+        "services/identity/docs/implementation-proof.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-5d2d3ceb7abe",
+      "concept": "security",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE.md",
+        "engines/ark/legacy/REVIEW.md",
+        "engines/ark/legacy/VERIFICATION_v1.0.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-193157176830",
+      "concept": "set environment variables",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md",
+        "engines/ark/legacy/EMITTERS_GUIDE.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-0328049773b8",
+      "concept": "tradeoffs",
+      "evidence_paths": [
+        "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+        "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+        "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+        "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+        "docs/governance/candidate-pages.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-8d5726fb8da3",
+      "concept": "view logs",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/EMITTERS_QUICK_REF.md",
+        "engines/ark/legacy/INDEX.md",
+        "engines/ark/legacy/PROD_REFERENCE.md",
+        "engines/ark/legacy/README_PROD.md"
+      ],
+      "occurrences": 5,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    },
+    {
+      "candidate_page_id": "candidate-page-279b8a60f444",
+      "concept": "added",
+      "evidence_paths": [
+        "docs/governance/candidate-pages.md",
+        "engines/ark/legacy/docs/ARK_FIELD_V4_2_STAGE2.md",
+        "engines/ark/legacy/docs/ARK_FIELD_V4_2_STAGE3.md",
+        "engines/ark/legacy/docs/ARK_FIELD_V4_2_STAGE4.md"
+      ],
+      "occurrences": 4,
+      "promotion": "never_auto_promote",
+      "status": "review_required"
+    }
+  ],
+  "capability_edges": [
+    [
+      "capability-registry",
+      "1.-forge-publishes-capability-call"
+    ],
+    [
+      "capability-registry",
+      "10-capability-registry"
+    ],
+    [
+      "capability-registry",
+      "2.-capability-routing"
+    ],
+    [
+      "capability-registry",
+      "3.-capability-names"
+    ],
+    [
+      "capability-registry",
+      "call-capability"
+    ],
+    [
+      "capability-registry",
+      "call-home-assistant-capability-to-adjust-climate"
+    ],
+    [
+      "capability-registry",
+      "capability"
+    ],
+    [
+      "capability-registry",
+      "capability"
+    ],
+    [
+      "capability-registry",
+      "capability-analysis"
+    ],
+    [
+      "capability-registry",
+      "capability-call-/-reply"
+    ],
+    [
+      "capability-registry",
+      "capability-contract"
+    ],
+    [
+      "capability-registry",
+      "capability-dashboard"
+    ],
+    [
+      "capability-registry",
+      "capability-first"
+    ],
+    [
+      "capability-registry",
+      "capability-first"
+    ],
+    [
+      "capability-registry",
+      "capability-grammar-and-availability"
+    ],
+    [
+      "capability-registry",
+      "capability-health"
+    ],
+    [
+      "capability-registry",
+      "capability-planning"
+    ],
+    [
+      "capability-registry",
+      "capability-profile"
+    ],
+    [
+      "capability-registry",
+      "capability-request"
+    ],
+    [
+      "capability-registry",
+      "capability-request-flow"
+    ],
+    [
+      "capability-registry",
+      "capability-response"
+    ],
+    [
+      "capability-registry",
+      "capability-routing"
+    ],
+    [
+      "capability-registry",
+      "example-5:-n8n-webhook-trigger-\u2192-ark-capability"
+    ],
+    [
+      "capability-registry",
+      "example-7:-home-assistant-action-\u2192-ark-capability"
+    ],
+    [
+      "capability-registry",
+      "get-routing-for-capability"
+    ],
+    [
+      "capability-registry",
+      "promotion-report:-capability-contract"
+    ],
+    [
+      "capability-registry",
+      "re-entry-capability"
+    ],
+    [
+      "capability-registry",
+      "registry-maps-capability-\u2192-service-\u2192-instance-(least-loaded)"
+    ],
+    [
+      "capability-registry",
+      "route-a-capability"
+    ],
+    [
+      "capability-registry",
+      "route-a-capability-request"
+    ],
+    [
+      "capability-registry",
+      "route-capability"
+    ],
+    [
+      "capability-registry",
+      "route-capability-to-best-instance"
+    ],
+    [
+      "capability-registry",
+      "test-capability-routing"
+    ],
+    [
+      "capability-registry",
+      "testing-capability-routing"
+    ],
+    [
+      "capability-registry",
+      "trigger-capability-(in-another-terminal)"
+    ],
+    [
+      "capability-registry",
+      "\u2713-capability-based-routing"
+    ]
+  ],
+  "capability_health": {
+    "capability_docs": 176,
+    "capability_examples": [
+      "1. Forge publishes capability call",
+      "10 Capability Registry",
+      "2. Capability Routing",
+      "3. Capability Names",
+      "Call Home Assistant capability to adjust climate",
+      "Call capability",
+      "Capability",
+      "Capability Analysis",
+      "Capability Contract",
+      "Capability Dashboard",
+      "Capability First",
+      "Capability Grammar and Availability",
+      "Capability Health",
+      "Capability Planning",
+      "Capability Profile",
+      "Capability Request",
+      "Capability Request Flow",
+      "Capability Response",
+      "Capability Routing",
+      "Capability call / reply",
+      "Example 5: n8n Webhook Trigger \u2192 ARK Capability",
+      "Example 7: Home Assistant Action \u2192 ARK Capability",
+      "Get routing for capability",
+      "Promotion Report: Capability Contract",
+      "Re-entry Capability",
+      "Registry maps capability \u2192 service \u2192 instance (least-loaded)",
+      "Route a Capability",
+      "Route a capability request",
+      "Route capability",
+      "Route capability to best instance",
+      "Test Capability Routing",
+      "Testing Capability Routing",
+      "Trigger capability (in another terminal)",
+      "capability",
+      "capability first",
+      "\u2713 Capability-Based Routing"
+    ],
+    "coverage": 6,
+    "duplicate_capabilities": 2,
+    "duplicate_examples": [
+      "capability",
+      "capability first"
+    ],
+    "missing_capability_owners": 34,
+    "orphan_capabilities": 34,
+    "orphan_examples": [
+      "1. Forge publishes capability call",
+      "10 Capability Registry",
+      "2. Capability Routing",
+      "3. Capability Names",
+      "Call Home Assistant capability to adjust climate",
+      "Call capability",
+      "Capability Analysis",
+      "Capability Contract",
+      "Capability Dashboard",
+      "Capability First",
+      "Capability Grammar and Availability",
+      "Capability Health",
+      "Capability Planning",
+      "Capability Profile",
+      "Capability Request",
+      "Capability Request Flow",
+      "Capability Response",
+      "Capability Routing",
+      "Capability call / reply",
+      "Example 5: n8n Webhook Trigger \u2192 ARK Capability",
+      "Example 7: Home Assistant Action \u2192 ARK Capability",
+      "Get routing for capability",
+      "Promotion Report: Capability Contract",
+      "Re-entry Capability",
+      "Registry maps capability \u2192 service \u2192 instance (least-loaded)",
+      "Route a Capability",
+      "Route a capability request",
+      "Route capability",
+      "Route capability to best instance",
+      "Test Capability Routing",
+      "Testing Capability Routing",
+      "Trigger capability (in another terminal)",
+      "capability first",
+      "\u2713 Capability-Based Routing"
+    ],
+    "registered_capabilities": 36
+  },
+  "constitution_validation": {
+    "layer_violations": 7,
+    "rules": [
+      {
+        "evidence": [
+          "01-reality.md",
+          "05-representations.md"
+        ],
+        "rule": "Reality before Representation",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "05-representations.md",
+          "07-understanding.md"
+        ],
+        "rule": "Representation before Knowledge",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "06-focus.md",
+          "07-understanding.md"
+        ],
+        "rule": "Focus before Understanding",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "12-missions.md",
+          "15-navigation.md"
+        ],
+        "rule": "Mission before Navigation",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "15-navigation.md",
+          "16-experiences.md"
+        ],
+        "rule": "Navigation before Views",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "16-experiences.md",
+          "17-actions.md"
+        ],
+        "rule": "Views before Actions",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "17-actions.md",
+          "01-reality.md"
+        ],
+        "rule": "Actions affect Reality only",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "14-reasoning.md"
+        ],
+        "rule": "AI last",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "18-cross-cutting.md"
+        ],
+        "rule": "Reuse before creation",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "19-dependency-rules.md"
+        ],
+        "rule": "Deterministic before probabilistic",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "18-cross-cutting.md"
+        ],
+        "rule": "Composition before duplication",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "04-ark.md",
+          "05-representations.md"
+        ],
+        "rule": "Identity before representation",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "10-capability-registry.md"
+        ],
+        "rule": "Capability before implementation",
+        "status": "pass"
+      },
+      {
+        "evidence": [
+          "04-ark.md",
+          "19-dependency-rules.md"
+        ],
+        "rule": "Theseus invariant preservation",
+        "status": "pass"
+      }
+    ],
+    "seven_roots_terms": {
+      "boundary": 282,
+      "energy": 38,
+      "force": 135,
+      "form": 676,
+      "motion": 1460,
+      "relation": 1006,
+      "time": 3284
+    },
+    "status": "attention"
+  },
+  "dependency_health": {
+    "active_python_files": 42,
+    "circular_dependencies": 0,
+    "cross_layer_shortcuts": 7,
+    "cycles": [],
+    "engine_view_violations": 0,
+    "import_edges": 28,
+    "layer_violations": 7,
+    "service_engine_violations": 0
+  },
+  "documentation_health": {
+    "broken_documentation_links": 0,
+    "broken_link_examples": [],
+    "doc_directories": 161,
+    "markdown_files": 399,
+    "missing_adr_links": 0,
+    "missing_architecture_references": 0,
+    "missing_readme_examples": [
+      ".github/workflows",
+      "docs/first-contact",
+      "docs/promotions",
+      "engines/ark/docs",
+      "engines/ark/ingress/chatgpt_oracle/docs",
+      "engines/ark/legacy/.githooks",
+      "engines/ark/legacy/.github/workflows",
+      "engines/ark/legacy/action",
+      "engines/ark/legacy/agents/aider",
+      "engines/ark/legacy/agents/composio",
+      "engines/ark/legacy/agents/forge_native",
+      "engines/ark/legacy/agents/opencode",
+      "engines/ark/legacy/agents/openwolf",
+      "engines/ark/legacy/agents/rube",
+      "engines/ark/legacy/api",
+      "engines/ark/legacy/ark",
+      "engines/ark/legacy/ark-core/.github/workflows",
+      "engines/ark/legacy/ark-core/config",
+      "engines/ark/legacy/ark-core/docs",
+      "engines/ark/legacy/ark-core/forge",
+      "engines/ark/legacy/ark-core/forge/ci",
+      "engines/ark/legacy/ark-core/forge/context",
+      "engines/ark/legacy/ark-core/forge/control",
+      "engines/ark/legacy/ark-core/forge/core",
+      "engines/ark/legacy/ark-core/forge/exec",
+      "engines/ark/legacy/ark-core/forge/mcp",
+      "engines/ark/legacy/ark-core/forge/memory",
+      "engines/ark/legacy/ark-core/forge/models",
+      "engines/ark/legacy/ark-core/forge/runtime",
+      "engines/ark/legacy/ark-core/forge/transform",
+      "engines/ark/legacy/ark-core/forge/ui",
+      "engines/ark/legacy/ark-core/forge/verify",
+      "engines/ark/legacy/ark-core/internal/epistemic",
+      "engines/ark/legacy/ark-core/internal/models",
+      "engines/ark/legacy/ark-core/scripts",
+      "engines/ark/legacy/ark-core/scripts/ai",
+      "engines/ark/legacy/ark-core/scripts/ci",
+      "engines/ark/legacy/ark-core/tests",
+      "engines/ark/legacy/ark/integrations",
+      "engines/ark/legacy/ark/src",
+      "engines/ark/legacy/ark/src/compress",
+      "engines/ark/legacy/ark/src/control",
+      "engines/ark/legacy/ark/src/delta",
+      "engines/ark/legacy/ark/src/event",
+      "engines/ark/legacy/ark/src/ingest",
+      "engines/ark/legacy/ark/src/policy",
+      "engines/ark/legacy/ark/src/replay",
+      "engines/ark/legacy/ark/src/storage",
+      "engines/ark/legacy/ark/src/trisca",
+      "engines/ark/legacy/ark/vendor/arrow-arith-51.0.0"
+    ],
+    "missing_readme_files": 131,
+    "orphan_documentation": 142,
+    "orphan_documentation_examples": [
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "Knowledge/Historical/timeline.md",
+      "Knowledge/Indexes/concepts.md",
+      "Knowledge/Indexes/provenance.md",
+      "Knowledge/Indexes/sources.md",
+      "Knowledge/reports/conflicts.md",
+      "Knowledge/reports/duplicates.md",
+      "Knowledge/reports/timeline.md",
+      "Knowledge/reports/unresolved.md",
+      "ROADMAP.md",
+      "docs/architectural-analysis-2026-07-05.md",
+      "docs/architectural-debt.md",
+      "docs/constitutional-census.md",
+      "docs/constitutional-migration-agent.md",
+      "docs/constitutional-scorecard.md",
+      "docs/dependency-rules.md",
+      "docs/developer-handbook.md",
+      "docs/first-contact/chatgpt-export-validation.md",
+      "docs/first-contact/constitutional-change-log.md",
+      "docs/first-contact/evidence-assimilation.md",
+      "docs/first-contact/first-contact-consolidation.md",
+      "docs/first-contact/repository-validation-report.md",
+      "docs/fitness-functions.md",
+      "docs/implementation-backlog.md",
+      "docs/migration-dashboard.md",
+      "docs/ownership-matrix.md",
+      "docs/platform-substrate-dependencies.md",
+      "docs/programs/dependency-graph.md",
+      "docs/programs/portfolio-dashboard.md",
+      "docs/promotion-checklist.md",
+      "docs/promotion-registry.md",
+      "docs/promotions/assets-contract.md",
+      "docs/promotions/bearings-contract.md",
+      "docs/promotions/capabilities-contract.md",
+      "docs/promotions/capsules-contract.md",
+      "docs/promotions/configuration-service.md",
+      "docs/promotions/event-bus-implementation.md",
+      "docs/promotions/event-bus-service.md",
+      "docs/promotions/events-contract.md",
+      "docs/promotions/evidence-contract.md",
+      "docs/promotions/health-contract.md",
+      "docs/promotions/identities-contract.md",
+      "docs/promotions/identity-implementation.md",
+      "docs/promotions/identity-service.md",
+      "docs/promotions/observation-contract.md",
+      "docs/promotions/permissions-contract.md",
+      "docs/promotions/policies-contract.md",
+      "docs/promotions/policy-service.md"
+    ]
+  },
+  "drift_detection": {
+    "duplicate_capability_terms": [
+      "capability",
+      "capability first",
+      "capability routing",
+      "route capability",
+      "test capability routing"
+    ],
+    "generated_artifact_status": "tracked-as-derived-evidence",
+    "generated_artifacts_tracked": 57,
+    "knowledge_replaces_reality": false,
+    "layer_bypass_edges": 7
+  },
+  "findings": [
+    {
+      "code": "ARCHITECTURAL_DRIFT_LAYER_BYPASS",
+      "details": {
+        "count": 7
+      },
+      "message": "New or existing modules bypass canonical layer direction.",
+      "path": null,
+      "severity": "warning"
+    },
+    {
+      "code": "DUPLICATE_HASH_GROUPS",
+      "details": {
+        "groups": 67
+      },
+      "message": "Duplicate tracked file hashes detected.",
+      "path": null,
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_compiler/models.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/interpretation/knowledge_governance/engine.py",
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_compiler/models.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/interpretation/knowledge_governance/models.py",
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_compiler/models.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/interpretation/knowledge_governance/repository.py",
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_compiler/__init__.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/interpretation/tests/test_knowledge_governance.py",
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_governance/models.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/views/knowledge_retrieval/store.py",
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_compiler/__init__.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/views/tests/test_knowledge_retrieval.py",
+      "severity": "warning"
+    },
+    {
+      "code": "LAYER_SHORTCUT",
+      "details": {
+        "target": "engines/interpretation/knowledge_governance/__init__.py"
+      },
+      "message": "Upstream layer imports downstream layer.",
+      "path": "engines/views/tests/test_knowledge_retrieval.py",
+      "severity": "warning"
+    }
+  ],
+  "graph_nodes": [
+    {
+      "adrs": [],
+      "consumers": [
+        "reality"
+      ],
+      "dependencies": [],
+      "label": "00 Overview",
+      "layer": "Overview",
+      "node_id": "overview",
+      "purpose": "Wayfinder is a constitutional continuity platform. Its architecture is ordered around a strict evidence pipeline:",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "perception"
+      ],
+      "dependencies": [
+        "overview"
+      ],
+      "label": "01 Reality",
+      "layer": "Reality",
+      "node_id": "reality",
+      "purpose": "Reality is the external world and source material before representation, interpretation, knowledge, or action. Wayfinder's first law is that reality precedes representation.",
+      "source_directories": [],
+      "tests": [
+        "engines/ark/tests/test_reality_ingestion.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "observations"
+      ],
+      "dependencies": [
+        "reality"
+      ],
+      "label": "02 Perception",
+      "layer": "Perception",
+      "node_id": "perception",
+      "purpose": "Perception is the boundary where external source material is noticed, discovered, classified, and prepared for observation emission.",
+      "source_directories": [
+        "engines/ark/ingress/",
+        "external/"
+      ],
+      "tests": [
+        "engines/ark/tests/test_chatgpt_oracle.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "ark"
+      ],
+      "dependencies": [
+        "perception"
+      ],
+      "label": "03 Observations",
+      "layer": "Observations",
+      "node_id": "observations",
+      "purpose": "Observations are source-shaped records emitted before interpretation. They are the contract boundary between perception and ARK.",
+      "source_directories": [
+        "contracts/observations/",
+        "engines/ark/ingress/chatgpt_oracle/"
+      ],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "representations"
+      ],
+      "dependencies": [
+        "observations"
+      ],
+      "label": "04 ARK",
+      "layer": "ARK",
+      "node_id": "ark",
+      "purpose": "ARK is the reality preservation engine. It preserves observations, explicit Source Relationships, evidence, provenance, replay records, and Last Verified Reality.",
+      "source_directories": [
+        "engines/ark/ingress/reality_ingestion/"
+      ],
+      "tests": [
+        "engines/ark/legacy/ark-core/tests/conftest.py",
+        "engines/ark/legacy/ark-core/tests/test_ai_orchestrator.py",
+        "engines/ark/legacy/ark-core/tests/test_docs_contracts.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_banlist.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_bootstrap.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_browser.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_diff_apply.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_launcher.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_linux.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_loc.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_mcp.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_mvp.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_ollama.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_propose.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_security.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_session.py",
+        "engines/ark/legacy/ark-core/tests/test_forge_ui_app.py",
+        "engines/ark/legacy/ark-core/tests/test_tier_enforcement.py",
+        "engines/ark/legacy/tests/__init__.py",
+        "engines/ark/legacy/tests/agents/__init__.py",
+        "engines/ark/legacy/tests/agents/test_composio_agent.py",
+        "engines/ark/legacy/tests/agents/test_opencode_agent.py",
+        "engines/ark/legacy/tests/agents/test_openwolf_agent.py",
+        "engines/ark/legacy/tests/agents/test_rube_agent.py",
+        "engines/ark/legacy/tests/ark/__init__.py",
+        "engines/ark/legacy/tests/ark/test_autoscaler.py",
+        "engines/ark/legacy/tests/ark/test_config.py",
+        "engines/ark/legacy/tests/ark/test_duck_client.py",
+        "engines/ark/legacy/tests/ark/test_emitter_contracts.py",
+        "engines/ark/legacy/tests/ark/test_event_schema.py",
+        "engines/ark/legacy/tests/ark/test_git_reconcile.py",
+        "engines/ark/legacy/tests/ark/test_gsb.py",
+        "engines/ark/legacy/tests/ark/test_import_audit.py",
+        "engines/ark/legacy/tests/ark/test_integrations.py",
+        "engines/ark/legacy/tests/ark/test_maintenance.py",
+        "engines/ark/legacy/tests/ark/test_mesh_registry.py",
+        "engines/ark/legacy/tests/ark/test_policy_engine.py",
+        "engines/ark/legacy/tests/ark/test_reducers.py",
+        "engines/ark/legacy/tests/ark/test_runtime_contracts.py",
+        "engines/ark/legacy/tests/ark/test_runtime_flow.py",
+        "engines/ark/legacy/tests/ark/test_security.py",
+        "engines/ark/legacy/tests/ark/test_subjects.py",
+        "engines/ark/legacy/tests/emitters/__init__.py",
+        "engines/ark/legacy/tests/emitters/test_homeassistant_emitter.py",
+        "engines/ark/legacy/tests/emitters/test_jellyfin_emitter.py",
+        "engines/ark/legacy/tests/emitters/test_unifi_emitter.py",
+        "engines/ark/legacy/tests/replay/fixtures/real_world_sims.json",
+        "engines/ark/legacy/tests/replay/test_sd_ark_replay.py",
+        "engines/ark/tests/README.md",
+        "engines/ark/tests/test_chatgpt_oracle.py",
+        "engines/ark/tests/test_reality_ingestion.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "focus"
+      ],
+      "dependencies": [
+        "ark"
+      ],
+      "label": "05 Representations",
+      "layer": "Representations",
+      "node_id": "representations",
+      "purpose": "Representations are derived forms created from preserved reality. They include metadata, search indexes, embeddings, OCR, summaries, feature vectors, GIS layers, and media derivatives.",
+      "source_directories": [
+        "contracts/representations/",
+        "engines/views/knowledge_retrieval/"
+      ],
+      "tests": [
+        "engines/views/tests/test_knowledge_retrieval.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "understanding"
+      ],
+      "dependencies": [
+        "representations"
+      ],
+      "label": "06 Focus",
+      "layer": "Focus",
+      "node_id": "focus",
+      "purpose": "Focus selects what deserves attention before understanding. It filters representations into bounded attention surfaces.",
+      "source_directories": [
+        "engines/interpretation/knowledge_governance/"
+      ],
+      "tests": [
+        "engines/interpretation/tests/test_knowledge_governance.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "networks"
+      ],
+      "dependencies": [
+        "focus"
+      ],
+      "label": "07 Understanding",
+      "layer": "Understanding",
+      "node_id": "understanding",
+      "purpose": "Understanding turns focused representations into candidate meanings while preserving uncertainty. It precedes missions and reasoning.",
+      "source_directories": [
+        "engines/interpretation/knowledge_compiler/"
+      ],
+      "tests": [
+        "engines/interpretation/tests/test_knowledge_compiler.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "civphys"
+      ],
+      "dependencies": [
+        "understanding"
+      ],
+      "label": "08 Networks",
+      "layer": "Networks",
+      "node_id": "networks",
+      "purpose": "Networks are relationship structures among assets, observations, concepts, systems, people, providers, and contexts.",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "capability_registry"
+      ],
+      "dependencies": [
+        "networks"
+      ],
+      "label": "09 CivPhys",
+      "layer": "Civphys",
+      "node_id": "civphys",
+      "purpose": "CivPhys is Wayfinder's universal mechanics layer: pressure, flow, friction, potential, membranes, trust, slack, and related primitives.",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "digital_twins"
+      ],
+      "dependencies": [
+        "civphys"
+      ],
+      "label": "10 Capability Registry",
+      "layer": "Capability Registry",
+      "node_id": "capability_registry",
+      "purpose": "Capabilities are stable architectural verbs; implementations are replaceable. The Capability Registry is the future inventory of available providers, implementations, constraints, and proofs for those verbs.",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "missions"
+      ],
+      "dependencies": [
+        "capability_registry"
+      ],
+      "label": "11 Digital Twins",
+      "layer": "Digital Twins",
+      "node_id": "digital_twins",
+      "purpose": "Digital Twins are identity-backed, representation-rich projections of assets, systems, people, places, or processes.",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "bearings"
+      ],
+      "dependencies": [
+        "digital_twins"
+      ],
+      "label": "12 Missions",
+      "layer": "Missions",
+      "node_id": "missions",
+      "purpose": "Missions organize objectives, constraints, success criteria, and horizons. Missions must precede navigation.",
+      "source_directories": [
+        "domains/"
+      ],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "reasoning"
+      ],
+      "dependencies": [
+        "missions"
+      ],
+      "label": "13 Bearings",
+      "layer": "Bearings",
+      "node_id": "bearings",
+      "purpose": "Bearings orient Wayfinder before recommendations or navigation. A Bearing is not an action; it is a directionally useful orientation.",
+      "source_directories": [
+        "contracts/bearings/"
+      ],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "navigation"
+      ],
+      "dependencies": [
+        "bearings"
+      ],
+      "label": "14 Reasoning",
+      "layer": "Reasoning",
+      "node_id": "reasoning",
+      "purpose": "Reasoning evaluates evidence, interpretations, missions, constraints, policies, and bearings to infer conclusions under uncertainty.",
+      "source_directories": [
+        "engines/jarvis/"
+      ],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "experiences"
+      ],
+      "dependencies": [
+        "reasoning"
+      ],
+      "label": "15 Navigation",
+      "layer": "Navigation",
+      "node_id": "navigation",
+      "purpose": "Navigation chooses where to go based on missions, bearings, reasoning, capabilities, constraints, and context.",
+      "source_directories": [
+        "contracts/recommendations/"
+      ],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "actions"
+      ],
+      "dependencies": [
+        "navigation"
+      ],
+      "label": "16 Experiences",
+      "layer": "Experiences",
+      "node_id": "experiences",
+      "purpose": "Experiences are presentation surfaces and composed interactions. They sit after navigation and before actions.",
+      "source_directories": [
+        "engines/views/",
+        "internal/"
+      ],
+      "tests": [
+        "engines/views/tests/test_knowledge_retrieval.py",
+        "engines/views/tests/test_knowledge_views.py"
+      ]
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "cross_cutting"
+      ],
+      "dependencies": [
+        "experiences"
+      ],
+      "label": "17 Actions",
+      "layer": "Actions",
+      "node_id": "actions",
+      "purpose": "Actions modify reality. They are downstream of navigation and experiences, and their effects must be re-observed.",
+      "source_directories": [
+        "operations/",
+        "engines/foundry/"
+      ],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "dependency_rules"
+      ],
+      "dependencies": [
+        "actions"
+      ],
+      "label": "18 Cross-Cutting Systems",
+      "layer": "Cross Cutting",
+      "node_id": "cross_cutting",
+      "purpose": "Cross-cutting systems are reusable concerns that appear across layers but must not become hidden owners of domain or engine behavior.",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "repository_map"
+      ],
+      "dependencies": [
+        "cross_cutting"
+      ],
+      "label": "19 Dependency Rules",
+      "layer": "Dependency Rules",
+      "node_id": "dependency_rules",
+      "purpose": "Canonical dependency direction:",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [
+        "roadmap"
+      ],
+      "dependencies": [
+        "dependency_rules"
+      ],
+      "label": "20 Repository Map",
+      "layer": "Repository Map",
+      "node_id": "repository_map",
+      "purpose": "This map assigns major repository areas to canonical layers. It is a documentation inventory, not a file move plan.",
+      "source_directories": [],
+      "tests": []
+    },
+    {
+      "adrs": [],
+      "consumers": [],
+      "dependencies": [
+        "repository_map"
+      ],
+      "label": "21 Roadmap",
+      "layer": "Roadmap",
+      "node_id": "roadmap",
+      "purpose": "This roadmap is incremental. It preserves existing functionality and avoids rewrites.",
+      "source_directories": [],
+      "tests": []
+    }
+  ],
+  "knowledge_health": {
+    "knowledge_files": 59,
+    "knowledge_is_generated": true,
+    "provenance_missing_count": 0,
+    "quality_gates": {
+      "circular_reference_count": 0,
+      "contradiction_count": 344,
+      "duplicate_examples": [
+        [
+          "\"\"\"docstring = describe, schema = signature\"\"\"",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "\"add to the bottom of schema/01-ark-core.sql a full insert for ark_event_type with at least these 20 rows covering all 10 clusters (infrastructure, sensor, environmental, water, energy, food, resource, knowledge, media, intelligence).",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "\"ark is local-first distributed continuity infrastructure.\"",
+          [
+            "constitutional_principle",
+            "constraint"
+          ]
+        ],
+        [
+          "\"build a version-controlled docker infrastructure repository for my local-first wayfinder stack.",
+          [
+            "constitutional_principle",
+            "constraint"
+          ]
+        ],
+        [
+          "\"bundle\" is functional, but i don't think it's the right canonical term.",
+          [
+            "architectural_decision",
+            "terminology"
+          ]
+        ],
+        [
+          "\"define ark core philosophy: local-first, privacy-first, modular, replaceable\",",
+          [
+            "constitutional_principle",
+            "constraint",
+            "pattern"
+          ]
+        ],
+        [
+          "\"description\": \"phase 0-6 roadmap for a portable, self-hosted, privacy-first ark stack, with nas core, cyberdeck nodes, and real-world sensors.\",",
+          [
+            "constitutional_principle",
+            "constraint"
+          ]
+        ],
+        [
+          "\"extract the canonical ontology.\"",
+          [
+            "architectural_decision",
+            "pattern",
+            "terminology"
+          ]
+        ],
+        [
+          "\"manual is master\"** \u2192 human override is *always* a constitutional right.",
+          [
+            "constitutional_principle",
+            "domain_model"
+          ]
+        ],
+        [
+          "\"observation\" just looks like the missing noun that lets the truth spine, trisca, civphys, and jarvis all speak the same language.",
+          [
+            "domain_model",
+            "future_work"
+          ]
+        ],
+        [
+          "\"schema\": \"energy.yaml\",",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "\"what observation should be preserved?\"",
+          [
+            "domain_model",
+            "pattern",
+            "requirement"
+          ]
+        ],
+        [
+          "\"write the complete production-ready postgresql ddl for the ark ssot mvp in schema/01-ark-core.sql.",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# **1) canonical end-to-end pipeline (correct order)**",
+          [
+            "architectural_decision",
+            "pipeline"
+          ]
+        ],
+        [
+          "# **5) delta + binary schema design**",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# **ark founder privacy & ownership clause**",
+          [
+            "boundary",
+            "constraint"
+          ]
+        ],
+        [
+          "# 1) canonical ark data pipeline (final form)",
+          [
+            "architectural_decision",
+            "pipeline"
+          ]
+        ],
+        [
+          "# 1) first principles (what \u201cone ontology\u201d means)",
+          [
+            "constitutional_principle",
+            "terminology"
+          ]
+        ],
+        [
+          "# 1) globalize the contract (one schema to rule it)",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# 1) why replay works (first principles)",
+          [
+            "constitutional_principle",
+            "pipeline"
+          ]
+        ],
+        [
+          "# 10) schema validator",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# 2) determinsitic replay engine (missing core)",
+          [
+            "future_work",
+            "pipeline",
+            "terminology"
+          ]
+        ],
+        [
+          "# 2) memory schema (what you actually store)",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# 24 - provenance & replay (audit)",
+          [
+            "domain_model",
+            "pipeline"
+          ]
+        ],
+        [
+          "# 3) openclaw definition (explicit contract)",
+          [
+            "interface_api",
+            "terminology"
+          ]
+        ],
+        [
+          "# 3) schema-driven event system (global constraint layer)",
+          [
+            "constraint",
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# 4) integration \u2192 deterministic accounting + replay",
+          [
+            "constraint",
+            "pipeline",
+            "terminology"
+          ]
+        ],
+        [
+          "# 5) determinism + replay",
+          [
+            "pipeline",
+            "terminology"
+          ]
+        ],
+        [
+          "# 5) key rule: ark never parses by default",
+          [
+            "constitutional_principle",
+            "pipeline"
+          ]
+        ],
+        [
+          "# 7) determinism + replay",
+          [
+            "pipeline",
+            "terminology"
+          ]
+        ],
+        [
+          "# 8) cache (idempotent, replay)",
+          [
+            "constraint",
+            "pipeline"
+          ]
+        ],
+        [
+          "# 8) determinism and replay tests",
+          [
+            "pipeline",
+            "terminology"
+          ]
+        ],
+        [
+          "# 9) determinism + replay",
+          [
+            "pipeline",
+            "terminology"
+          ]
+        ],
+        [
+          "# 9) example pipeline (canonical)",
+          [
+            "architectural_decision",
+            "pipeline"
+          ]
+        ],
+        [
+          "# ark universal asset ingestion architecture",
+          [
+            "domain_model",
+            "pipeline"
+          ]
+        ],
+        [
+          "# ark universal asset ingestion engine - canonical architecture specification",
+          [
+            "architectural_decision",
+            "domain_model",
+            "pipeline"
+          ]
+        ],
+        [
+          "# b) rust ark controller (deterministic brain)",
+          [
+            "constraint",
+            "terminology"
+          ]
+        ],
+        [
+          "# canonical ontology",
+          [
+            "architectural_decision",
+            "terminology"
+          ]
+        ],
+        [
+          "# ci/schema-validator.py",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# core ontology domains",
+          [
+            "domain_model",
+            "terminology"
+          ]
+        ],
+        [
+          "# create the canonical glossary for the wayfinder repository",
+          [
+            "architectural_decision",
+            "terminology"
+          ]
+        ],
+        [
+          "# data schema format (5w+h)",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# dynamic plugin configuration schema",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# enable or disable schema-on-read",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# here you'd plug in json schema/yaml validator",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# jarvis pipeline (canonical)",
+          [
+            "architectural_decision",
+            "pipeline"
+          ]
+        ],
+        [
+          "# jarvis should preserve escalation integrity",
+          [
+            "pattern",
+            "requirement"
+          ]
+        ],
+        [
+          "# layer 1 - meta-schema",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# layer 3 - domain registry",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ],
+        [
+          "# layer 5 - observation schema",
+          [
+            "domain_model",
+            "interface_api"
+          ]
+        ]
+      ],
+      "duplicate_groups": 4887,
+      "orphan_concept_count": 0,
+      "orphan_concept_examples": [],
+      "provenance_missing_count": 0,
+      "provenance_missing_examples": [],
+      "stable_identifier_scheme": "uuid5(namespace, kind + ':' + stable_id)"
+    },
+    "reality_remains_canonical": true
+  },
+  "mission_health": {
+    "coverage": 100,
+    "inventory_paths": [
+      "Knowledge/OpenQuestions/README.md",
+      "Knowledge/reports/conflicts.md",
+      "Knowledge/reports/unresolved.md",
+      "WAYFINDER.md",
+      "canon/glossary.md",
+      "canon/ontology.md",
+      "constitution/architecture.md",
+      "constitution/civphys.md",
+      "contracts/README.md",
+      "contracts/ownership-matrix.md",
+      "contracts/permissions/README.md",
+      "contracts/policies/README.md",
+      "contracts/verification.md",
+      "docs/architectural-analysis-2026-07-05.md",
+      "docs/architecture/00-overview.md",
+      "docs/architecture/02-perception.md",
+      "docs/architecture/07-understanding.md",
+      "docs/architecture/08-networks.md",
+      "docs/architecture/12-missions.md",
+      "docs/architecture/13-bearings.md",
+      "docs/architecture/14-reasoning.md",
+      "docs/architecture/15-navigation.md",
+      "docs/architecture/19-dependency-rules.md",
+      "docs/architecture/20-repository-map.md",
+      "docs/architecture/21-roadmap.md",
+      "docs/architecture/README.md",
+      "docs/canonical-language/cross-oracle-language-specification.md",
+      "docs/constitutional-census.md",
+      "docs/constitutional-migration-agent.md",
+      "docs/first-contact/evidence-assimilation.md",
+      "docs/first-contact/first-contact-consolidation.md",
+      "docs/governance/architecture-doctor.json",
+      "docs/governance/candidate-pages.md",
+      "docs/governance/repository-health-dashboard.md",
+      "docs/implementation-backlog.md",
+      "docs/ownership-matrix.md",
+      "docs/promotion-registry.md",
+      "docs/promotions/permissions-contract.md",
+      "docs/promotions/policy-service.md",
+      "docs/system-architecture-v1.md",
+      "docs/wave-1-verification.md",
+      "docs/wayfinder-portfolio.md",
+      "engines/README.md",
+      "engines/ark/README.md",
+      "engines/ark/docs/dependency-graph.md",
+      "engines/ark/docs/inventory.md",
+      "engines/ark/ingress/chatgpt_oracle/docs/testing.md",
+      "engines/ark/legacy/.github/workflows/ark-build-push.yml",
+      "engines/ark/legacy/.github/workflows/ark-core-ci.yml",
+      "engines/ark/legacy/ARCHITECTURE.md"
+    ],
+    "orphan_count": 0,
+    "terms": {
+      "constraint": 188,
+      "horizon": 27,
+      "mission": 285,
+      "objective": 108,
+      "success criteria": 12
+    }
+  },
+  "module_edges": [
+    [
+      "engines/ark/tests/test_reality_ingestion.py",
+      "engines/ark/ingress/reality_ingestion/__init__.py"
+    ],
+    [
+      "engines/ark/tests/test_reality_ingestion.py",
+      "services/identity/__init__.py"
+    ],
+    [
+      "engines/interpretation/knowledge_governance/engine.py",
+      "engines/interpretation/knowledge_compiler/models.py"
+    ],
+    [
+      "engines/interpretation/knowledge_governance/models.py",
+      "engines/interpretation/knowledge_compiler/models.py"
+    ],
+    [
+      "engines/interpretation/knowledge_governance/repository.py",
+      "engines/interpretation/knowledge_compiler/models.py"
+    ],
+    [
+      "engines/interpretation/tests/test_knowledge_compiler.py",
+      "engines/ark/ingress/reality_ingestion/__init__.py"
+    ],
+    [
+      "engines/interpretation/tests/test_knowledge_compiler.py",
+      "engines/interpretation/knowledge_compiler/__init__.py"
+    ],
+    [
+      "engines/interpretation/tests/test_knowledge_governance.py",
+      "engines/ark/ingress/reality_ingestion/__init__.py"
+    ],
+    [
+      "engines/interpretation/tests/test_knowledge_governance.py",
+      "engines/interpretation/knowledge_compiler/__init__.py"
+    ],
+    [
+      "engines/interpretation/tests/test_knowledge_governance.py",
+      "engines/interpretation/knowledge_governance/__init__.py"
+    ],
+    [
+      "engines/views/knowledge_retrieval/store.py",
+      "engines/interpretation/knowledge_governance/models.py"
+    ],
+    [
+      "engines/views/knowledge_views/engine.py",
+      "engines/interpretation/knowledge_governance/models.py"
+    ],
+    [
+      "engines/views/knowledge_views/engine.py",
+      "engines/views/knowledge_retrieval/models.py"
+    ],
+    [
+      "engines/views/knowledge_views/engine.py",
+      "engines/views/knowledge_retrieval/store.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_retrieval.py",
+      "engines/ark/ingress/reality_ingestion/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_retrieval.py",
+      "engines/interpretation/knowledge_compiler/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_retrieval.py",
+      "engines/interpretation/knowledge_governance/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_retrieval.py",
+      "engines/views/knowledge_retrieval/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_views.py",
+      "engines/ark/ingress/reality_ingestion/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_views.py",
+      "engines/interpretation/knowledge_compiler/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_views.py",
+      "engines/interpretation/knowledge_governance/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_views.py",
+      "engines/views/knowledge_retrieval/__init__.py"
+    ],
+    [
+      "engines/views/tests/test_knowledge_views.py",
+      "engines/views/knowledge_views/__init__.py"
+    ],
+    [
+      "services/identity/tests/test_identity_service.py",
+      "services/identity/__init__.py"
+    ],
+    [
+      "tests/test_architecture_intelligence.py",
+      "tooling/architecture_intelligence/doctor.py"
+    ],
+    [
+      "tests/test_export_mining.py",
+      "tooling/export_mining/build_source_manifest.py"
+    ],
+    [
+      "tests/test_export_mining.py",
+      "tooling/export_mining/compile_knowledge.py"
+    ],
+    [
+      "tests/test_export_mining.py",
+      "tooling/export_mining/mine_wayfinder_export.py"
+    ]
+  ],
+  "navigation_health": {
+    "coverage": 100,
+    "inventory_paths": [
+      "Knowledge/OpenQuestions/README.md",
+      "Knowledge/reports/conflicts.md",
+      "Knowledge/reports/unresolved.md",
+      "canon/glossary.md",
+      "canon/ontology.md",
+      "capabilities/README.md",
+      "constitution/README.md",
+      "constitution/architecture.md",
+      "constitution/civphys.md",
+      "constitution/execution.md",
+      "contracts/bearings/README.md",
+      "contracts/capabilities/README.md",
+      "contracts/views/README.md",
+      "docs/architectural-analysis-2026-07-05.md",
+      "docs/architectural-debt.md",
+      "docs/architecture/00-overview.md",
+      "docs/architecture/02-perception.md",
+      "docs/architecture/04-ark.md",
+      "docs/architecture/05-representations.md",
+      "docs/architecture/06-focus.md",
+      "docs/architecture/07-understanding.md",
+      "docs/architecture/08-networks.md",
+      "docs/architecture/10-capability-registry.md",
+      "docs/architecture/11-digital-twins.md",
+      "docs/architecture/12-missions.md",
+      "docs/architecture/13-bearings.md",
+      "docs/architecture/15-navigation.md",
+      "docs/architecture/16-experiences.md",
+      "docs/architecture/17-actions.md",
+      "docs/architecture/19-dependency-rules.md",
+      "docs/architecture/README.md",
+      "docs/canonical-language/README.md",
+      "docs/canonical-language/architecture.md",
+      "docs/canonical-language/retrieval-strategy.md",
+      "docs/constitution-v1-release-audit.md",
+      "docs/constitutional-census.md",
+      "docs/constitutional-migration-agent.md",
+      "docs/developer-handbook.md",
+      "docs/first-contact/chatgpt-export-validation.md",
+      "docs/governance/architecture-doctor.json",
+      "docs/governance/candidate-pages.md",
+      "docs/governance/repository-health-dashboard.md",
+      "docs/migration-dashboard.md",
+      "docs/ownership-matrix.md",
+      "docs/programs/README.md",
+      "docs/programs/release-plan.md",
+      "docs/promotion-registry.md",
+      "docs/promotions/assets-contract.md",
+      "docs/promotions/bearings-contract.md",
+      "docs/promotions/capabilities-contract.md"
+    ],
+    "orphan_count": 0,
+    "terms": {
+      "navigation": 274,
+      "opportunity bundle": 6,
+      "recommendation": 98,
+      "tradeoff": 35
+    }
+  },
+  "oracle_edges": [
+    [
+      "engines/ark/ingress",
+      "engines/ark/ingress/chatgpt_oracle"
+    ]
+  ],
+  "oracle_health": {
+    "missing_observation_domains": {
+      "Digital Reality": [
+        "github",
+        "calendar",
+        "filesystem",
+        "email",
+        "home assistant"
+      ],
+      "Human Reality": [
+        "voice",
+        "corrections",
+        "manual observations",
+        "preferences"
+      ],
+      "Physical Reality": [
+        "weather",
+        "power",
+        "water",
+        "vision",
+        "audio",
+        "gps",
+        "environment"
+      ]
+    },
+    "oracle_count": 1,
+    "oracles": [
+      {
+        "children": [],
+        "confidence_propagation": true,
+        "coverage": 100,
+        "observation_types": [
+          "_file_observation",
+          "child_observation",
+          "conversation_observation",
+          "file_observation",
+          "message_observation",
+          "parent_observation"
+        ],
+        "oracle": "engines/ark/ingress/chatgpt_oracle",
+        "parent": "engines/ark/ingress",
+        "provenance_propagation": true,
+        "scope": "ChatGPT Export Oracle"
+      }
+    ]
+  },
+  "package_edges": [
+    [
+      "engines/ark/tests",
+      "engines/ark/ingress"
+    ],
+    [
+      "engines/ark/tests",
+      "services/identity/__init__.py"
+    ],
+    [
+      "engines/interpretation/knowledge_governance",
+      "engines/interpretation/knowledge_compiler"
+    ],
+    [
+      "engines/interpretation/tests",
+      "engines/ark/ingress"
+    ],
+    [
+      "engines/interpretation/tests",
+      "engines/interpretation/knowledge_compiler"
+    ],
+    [
+      "engines/interpretation/tests",
+      "engines/interpretation/knowledge_governance"
+    ],
+    [
+      "engines/views/knowledge_retrieval",
+      "engines/interpretation/knowledge_governance"
+    ],
+    [
+      "engines/views/knowledge_views",
+      "engines/interpretation/knowledge_governance"
+    ],
+    [
+      "engines/views/knowledge_views",
+      "engines/views/knowledge_retrieval"
+    ],
+    [
+      "engines/views/tests",
+      "engines/ark/ingress"
+    ],
+    [
+      "engines/views/tests",
+      "engines/interpretation/knowledge_compiler"
+    ],
+    [
+      "engines/views/tests",
+      "engines/interpretation/knowledge_governance"
+    ],
+    [
+      "engines/views/tests",
+      "engines/views/knowledge_retrieval"
+    ],
+    [
+      "engines/views/tests",
+      "engines/views/knowledge_views"
+    ],
+    [
+      "services/identity/tests",
+      "services/identity/__init__.py"
+    ],
+    [
+      "tests/test_architecture_intelligence.py",
+      "tooling/architecture_intelligence/doctor.py"
+    ],
+    [
+      "tests/test_export_mining.py",
+      "tooling/export_mining/build_source_manifest.py"
+    ],
+    [
+      "tests/test_export_mining.py",
+      "tooling/export_mining/compile_knowledge.py"
+    ],
+    [
+      "tests/test_export_mining.py",
+      "tooling/export_mining/mine_wayfinder_export.py"
+    ]
+  ],
+  "reality_health": {
+    "coverage": 100,
+    "terms": {
+      "confidence": 1191,
+      "lvr": 33,
+      "provenance": 1429,
+      "relationship": 911,
+      "rid": 799
+    }
+  },
+  "repository_health": {
+    "compatibility_aliases": 10,
+    "dead_code_candidates": 5,
+    "dead_code_examples": [
+      "constitution/civphys.md",
+      "engines/ark/legacy/PRODUCTION_FIXES_SUMMARY.md",
+      "engines/ark/legacy/PRODUCTION_GUIDE.md",
+      "engines/ark/legacy/QUICK_REFERENCE_PROD.md",
+      "tooling/architecture_intelligence/doctor.py"
+    ],
+    "deprecated_interfaces": 23,
+    "duplicate_examples": [
+      [
+        "engines/ark/legacy/tests/__init__.py",
+        "engines/ark/legacy/tests/agents/__init__.py",
+        "engines/ark/legacy/tests/ark/__init__.py",
+        "engines/ark/legacy/tests/emitters/__init__.py"
+      ],
+      [
+        "engines/ark/legacy/FORGE_START_HERE.md",
+        "engines/foundry/legacy/FORGE_START_HERE.md"
+      ],
+      [
+        "engines/ark/legacy/Forge App.cmd",
+        "engines/foundry/legacy/Forge App.cmd"
+      ],
+      [
+        "engines/ark/legacy/Forge App.ps1",
+        "engines/foundry/legacy/Forge App.ps1"
+      ],
+      [
+        "engines/ark/legacy/Forge App.sh",
+        "engines/foundry/legacy/Forge App.sh"
+      ],
+      [
+        "engines/ark/legacy/agents/forge_native/__init__.py",
+        "engines/foundry/legacy/agents/forge_native/__init__.py"
+      ],
+      [
+        "engines/ark/legacy/agents/forge_native/agent.py",
+        "engines/foundry/legacy/agents/forge_native/agent.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/__init__.py",
+        "engines/foundry/legacy/ark-core/forge/__init__.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/ci/__init__.py",
+        "engines/foundry/legacy/ark-core/forge/ci/__init__.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/ci/loc.py",
+        "engines/foundry/legacy/ark-core/forge/ci/loc.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/context/build.py",
+        "engines/foundry/legacy/ark-core/forge/context/build.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/context/provider.py",
+        "engines/foundry/legacy/ark-core/forge/context/provider.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/control/controller.py",
+        "engines/foundry/legacy/ark-core/forge/control/controller.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/control/decay.py",
+        "engines/foundry/legacy/ark-core/forge/control/decay.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/control/phi.py",
+        "engines/foundry/legacy/ark-core/forge/control/phi.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/core/loop.py",
+        "engines/foundry/legacy/ark-core/forge/core/loop.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/core/orchestrator.py",
+        "engines/foundry/legacy/ark-core/forge/core/orchestrator.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/exec/git.py",
+        "engines/foundry/legacy/ark-core/forge/exec/git.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/exec/runner.py",
+        "engines/foundry/legacy/ark-core/forge/exec/runner.py"
+      ],
+      [
+        "engines/ark/legacy/ark-core/forge/exec/sandbox.py",
+        "engines/foundry/legacy/ark-core/forge/exec/sandbox.py"
+      ]
+    ],
+    "duplicate_hash_groups": 67,
+    "hash_skipped_large_files": 41,
+    "legacy_examples": [
+      "engines/ark/legacy/.cursorrules",
+      "engines/ark/legacy/.dockerignore",
+      "engines/ark/legacy/.env.example",
+      "engines/ark/legacy/.env.prod",
+      "engines/ark/legacy/.githooks/post-commit",
+      "engines/ark/legacy/.githooks/pre-commit",
+      "engines/ark/legacy/.github/workflows/ark-build-push.yml",
+      "engines/ark/legacy/.github/workflows/ark-core-ci.yml",
+      "engines/ark/legacy/.gitignore",
+      "engines/ark/legacy/AI_CONTRACT.md",
+      "engines/ark/legacy/ALL_PORTS_URLS.md",
+      "engines/ark/legacy/ARCHITECTURE.md",
+      "engines/ark/legacy/ARK_SPEC.md",
+      "engines/ark/legacy/ARK_SPEC_PACK_V1.md",
+      "engines/ark/legacy/BUILD_SUMMARY.md",
+      "engines/ark/legacy/DEPLOYMENT_CHECKLIST.txt",
+      "engines/ark/legacy/DEPLOYMENT_CHECKLIST_PROD.md",
+      "engines/ark/legacy/DEPLOYMENT_GUIDE.md",
+      "engines/ark/legacy/DEPLOYMENT_GUIDE_v1.0.md",
+      "engines/ark/legacy/Dockerfile.ark",
+      "engines/ark/legacy/Dockerfile.autoscaler",
+      "engines/ark/legacy/Dockerfile.composio",
+      "engines/ark/legacy/Dockerfile.duckdb",
+      "engines/ark/legacy/Dockerfile.gateway",
+      "engines/ark/legacy/Dockerfile.ha-emitter",
+      "engines/ark/legacy/Dockerfile.ingestion-leader",
+      "engines/ark/legacy/Dockerfile.jellyfin-emitter",
+      "engines/ark/legacy/Dockerfile.mesh",
+      "engines/ark/legacy/Dockerfile.mqtt-bridge",
+      "engines/ark/legacy/Dockerfile.netwatch",
+      "engines/ark/legacy/Dockerfile.opencode",
+      "engines/ark/legacy/Dockerfile.openwolf",
+      "engines/ark/legacy/Dockerfile.stability-kernel",
+      "engines/ark/legacy/Dockerfile.unifi-emitter",
+      "engines/ark/legacy/EMITTERS_DELIVERY.md",
+      "engines/ark/legacy/EMITTERS_GUIDE.md",
+      "engines/ark/legacy/EMITTERS_QUICK_REF.md",
+      "engines/ark/legacy/EMITTERS_SUMMARY.md",
+      "engines/ark/legacy/EMITTER_WORKFLOWS.md",
+      "engines/ark/legacy/EXAMPLES.md",
+      "engines/ark/legacy/FINAL_DELIVERY_SUMMARY.txt",
+      "engines/ark/legacy/FORGE_START_HERE.md",
+      "engines/ark/legacy/FRESH_START.md",
+      "engines/ark/legacy/Forge App.cmd",
+      "engines/ark/legacy/Forge App.ps1",
+      "engines/ark/legacy/Forge App.sh",
+      "engines/ark/legacy/GLOSSARY.md",
+      "engines/ark/legacy/INDEX.md",
+      "engines/ark/legacy/MASTER_CHECKLIST.txt",
+      "engines/ark/legacy/Makefile"
+    ],
+    "legacy_modules": 493,
+    "tracked_files": 928
+  },
+  "repository_timeline": [
+    {
+      "id": "0001-observation-sources",
+      "path": "docs/adrs/0001-observation-sources.md",
+      "title": "ADR-0001: Observation Sources Produce Observations",
+      "type": "adr"
+    },
+    {
+      "id": "0002-source-relationships",
+      "path": "docs/adrs/0002-source-relationships.md",
+      "title": "ADR-0002: Preserve Source Relationships Before Topology",
+      "type": "adr"
+    },
+    {
+      "id": "0003-import-profiles",
+      "path": "docs/adrs/0003-import-profiles.md",
+      "title": "ADR-0003: Require Import Profiles For Large Private Imports",
+      "type": "adr"
+    },
+    {
+      "id": "0004-private-validation-outputs",
+      "path": "docs/adrs/0004-private-validation-outputs.md",
+      "title": "ADR-0004: Keep Private Validation Outputs Local",
+      "type": "adr"
+    },
+    {
+      "id": "0005-candidate-paging-governance-intake",
+      "path": "docs/adrs/0005-candidate-paging-governance-intake.md",
+      "title": "ADR-0005: Page Governance Candidate Intake",
+      "type": "adr"
+    },
+    {
+      "id": "0006-canonical-language-substrate",
+      "path": "docs/adrs/0006-canonical-language-substrate.md",
+      "title": "ADR-0006: Treat Canonical Language As Derived Substrate",
+      "type": "adr"
+    },
+    {
+      "id": "0007-storage-service-before-runtime-kernel",
+      "path": "docs/adrs/0007-storage-service-before-runtime-kernel.md",
+      "title": "ADR 0007: Promote Storage Service Proof Before Runtime Kernel Extraction",
+      "type": "adr"
+    },
+    {
+      "id": "0008-compatibility-layer-for-external-integrations",
+      "path": "docs/adrs/0008-compatibility-layer-for-external-integrations.md",
+      "title": "ADR 0008: Introduce A Compatibility Layer For External Integrations",
+      "type": "adr"
+    },
+    {
+      "id": "0009-candidate-pages-for-knowledge-governance",
+      "path": "docs/adrs/0009-candidate-pages-for-knowledge-governance.md",
+      "title": "ADR 0009: Add Candidate Pages For Bounded Knowledge Governance",
+      "type": "adr"
+    },
+    {
+      "id": "0010-legacy-forge-consolidation-with-compatibility-aliases",
+      "path": "docs/adrs/0010-legacy-forge-consolidation-with-compatibility-aliases.md",
+      "title": "ADR 0010: Consolidate Duplicate Forge Legacy With Compatibility Aliases",
+      "type": "adr"
+    },
+    {
+      "path": "docs/constitution-v1-release-audit.md",
+      "title": "constitution-v1-release-audit",
+      "type": "milestone"
+    },
+    {
+      "path": "docs/programs/release-plan.md",
+      "title": "release-plan",
+      "type": "milestone"
+    },
+    {
+      "path": "engines/ark/legacy/PRODUCTION_RELEASE_v1.0.md",
+      "title": "PRODUCTION_RELEASE_v1.0",
+      "type": "milestone"
+    }
+  ],
+  "representation_health": {
+    "coverage": 100,
+    "derived_boundary_status": "pass",
+    "derived_representation_references": 24,
+    "media_terms": {
+      "books": 15,
+      "documents": 79,
+      "games": 5,
+      "gis": 955,
+      "movies": 7,
+      "music": 143,
+      "photos": 5,
+      "podcasts": 5,
+      "recipes": 7,
+      "tv": 56,
+      "videos": 3
+    },
+    "representation_docs": [
+      "contracts/representations/README.md",
+      "docs/architecture/05-representations.md",
+      "docs/canonical-language/retrieval-strategy.md",
+      "engines/views/knowledge_retrieval/README.md",
+      "engines/views/knowledge_retrieval/__init__.py",
+      "engines/views/knowledge_retrieval/docs/architecture.md",
+      "engines/views/knowledge_retrieval/docs/index-types.md",
+      "engines/views/knowledge_retrieval/docs/interfaces.md",
+      "engines/views/knowledge_retrieval/docs/validation.md",
+      "engines/views/knowledge_retrieval/models.py",
+      "engines/views/knowledge_retrieval/store.py",
+      "engines/views/tests/test_knowledge_retrieval.py"
+    ],
+    "terms": {
+      "embedding": 84,
+      "feature vector": 5,
+      "metadata": 317,
+      "ocr": 22,
+      "search": 281,
+      "summary": 637
+    }
+  },
+  "score": 55,
+  "service_edges": [
+    [
+      "engines/ark/tests/test_reality_ingestion.py",
+      "services/identity/__init__.py"
+    ],
+    [
+      "services/identity/tests/test_identity_service.py",
+      "services/identity/__init__.py"
+    ]
+  ],
+  "status": "pass",
+  "technical_debt": {
+    "compatibility_shims": 10,
+    "deprecated_apis": 23,
+    "duplicate_code": 67,
+    "legacy_aliases": 10,
+    "migration_blockers": 35,
+    "priority_order": [
+      "Storage service proof",
+      "Candidate Pages",
+      "Compatibility Layer",
+      "Generated/legacy surface labeling",
+      "Dependency linter warning mode"
+    ],
+    "todo_examples": [
+      "Knowledge/OpenQuestions/README.md",
+      "Knowledge/reports/unresolved.md",
+      "docs/architecture/07-understanding.md",
+      "docs/canonical-language/statement-architecture.md",
+      "docs/first-contact/chatgpt-export-validation.md",
+      "docs/governance/architecture-doctor.json",
+      "docs/governance/candidate-pages.md",
+      "docs/governance/technical-debt-dashboard.md",
+      "engines/ark/docs/inventory.md",
+      "engines/ark/legacy/.github/workflows/ark-core-ci.yml",
+      "engines/ark/legacy/README.md",
+      "engines/ark/legacy/ark-core/.github/workflows/ci.yml",
+      "engines/ark/legacy/ark-core/README.md",
+      "engines/ark/legacy/ark-core/config/operating_rules.json",
+      "engines/ark/legacy/ark-core/config/tiering_rules.json",
+      "engines/ark/legacy/ark-core/docs/CODEX_ARK_SYSTEM_PROMPT.md",
+      "engines/ark/legacy/ark-core/docs/TODO_TIERS.md",
+      "engines/ark/legacy/ark-core/docs/ark-field-v4.2-foundation.md",
+      "engines/ark/legacy/ark-core/forge/context/build.py",
+      "engines/ark/legacy/ark-core/forge/core/orchestrator.py",
+      "engines/ark/legacy/ark-core/forge/models/prompts.py",
+      "engines/ark/legacy/ark-core/forge/types.py",
+      "engines/ark/legacy/ark-core/forge/ui/app.py",
+      "engines/ark/legacy/ark-core/forge/ui/browser.py",
+      "engines/ark/legacy/ark-core/forge/ui/launcher.py",
+      "engines/ark/legacy/ark-core/scripts/ci/enforce_tiers.py",
+      "engines/ark/legacy/ark-core/tests/test_ai_orchestrator.py",
+      "engines/ark/legacy/ark-core/tests/test_docs_contracts.py",
+      "engines/ark/legacy/ark-core/tests/test_forge_mvp.py",
+      "engines/ark/legacy/ark-core/tests/test_forge_ollama.py",
+      "engines/ark/legacy/ark-core/tests/test_forge_propose.py",
+      "engines/ark/legacy/ark-core/tests/test_tier_enforcement.py",
+      "engines/ark/legacy/config/tiering_rules.json",
+      "engines/ark/legacy/scripts/ci/classify_todo.py",
+      "engines/foundry/legacy/ark-core/forge/context/build.py",
+      "engines/foundry/legacy/ark-core/forge/core/orchestrator.py",
+      "engines/foundry/legacy/ark-core/forge/models/prompts.py",
+      "engines/foundry/legacy/ark-core/forge/types.py",
+      "engines/foundry/legacy/ark-core/forge/ui/app.py",
+      "engines/foundry/legacy/ark-core/forge/ui/browser.py",
+      "engines/foundry/legacy/ark-core/forge/ui/launcher.py",
+      "engines/interpretation/knowledge_compiler/README.md",
+      "engines/interpretation/knowledge_compiler/compiler.py",
+      "engines/interpretation/knowledge_compiler/docs/candidate-schemas.md",
+      "engines/interpretation/knowledge_compiler/docs/rules.md",
+      "engines/interpretation/knowledge_compiler/models.py",
+      "engines/interpretation/knowledge_governance/docs/review-views.md",
+      "engines/interpretation/knowledge_governance/repository.py",
+      "engines/interpretation/tests/test_knowledge_compiler.py",
+      "engines/interpretation/tests/test_knowledge_governance.py"
+    ],
+    "todos": 58
+  },
+  "view_health": {
+    "interchangeable_status": "pass",
+    "navigation_consumers": [],
+    "reasoning_imports": [],
+    "view_files": 8,
+    "views_perform_reasoning": false
+  }
+}

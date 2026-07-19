@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:universal-scope",
+  "title": "Build Bible Universal Scope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "purpose",
+    "parent_id",
+    "children",
+    "spatial_identity",
+    "capabilities",
+    "constraints",
+    "interfaces",
+    "dependencies",
+    "resources",
+    "reserve_capacity",
+    "health",
+    "reliability",
+    "maintenance",
+    "evolution",
+    "lifecycle",
+    "verification",
+    "documentation",
+    "digital_twin",
+    "history"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:[a-z0-9-]+:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_id": {
+      "type": ["string", "null"]
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "spatial_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["address", "frame", "verification_state"],
+      "properties": {
+        "address": {
+          "type": "string",
+          "minLength": 1
+        },
+        "frame": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification_state": {
+          "$ref": "#/$defs/verification_state"
+        }
+      }
+    },
+    "capabilities": {
+      "$ref": "#/$defs/links"
+    },
+    "constraints": {
+      "$ref": "#/$defs/links"
+    },
+    "interfaces": {
+      "$ref": "#/$defs/links"
+    },
+    "dependencies": {
+      "$ref": "#/$defs/links"
+    },
+    "resources": {
+      "$ref": "#/$defs/links"
+    },
+    "reserve_capacity": {
+      "$ref": "#/$defs/links"
+    },
+    "health": {
+      "$ref": "#/$defs/links"
+    },
+    "reliability": {
+      "$ref": "#/$defs/links"
+    },
+    "maintenance": {
+      "$ref": "#/$defs/links"
+    },
+    "evolution": {
+      "$ref": "#/$defs/links"
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phase", "operational_state"],
+      "properties": {
+        "phase": {
+          "enum": ["acquire", "observe", "plan", "prepare", "build", "commission", "operate", "maintain", "expand", "renew", "retire"]
+        },
+        "operational_state": {
+          "enum": ["planned", "installed", "commissioning", "normal", "idle", "active", "maintenance", "testing", "fault", "emergency", "offline", "retired"]
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "evidence"],
+      "properties": {
+        "state": {
+          "$ref": "#/$defs/verification_state"
+        },
+        "evidence": {
+          "$ref": "#/$defs/links"
+        }
+      }
+    },
+    "documentation": {
+      "$ref": "#/$defs/links"
+    },
+    "digital_twin": {
+      "$ref": "#/$defs/links"
+    },
+    "history": {
+      "$ref": "#/$defs/links"
+    }
+  },
+  "$defs": {
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_state": {
+      "enum": ["unverified", "observed", "inferred", "designed", "installed", "retired"]
+    }
+  }
+}
+

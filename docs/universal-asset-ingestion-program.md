@@ -10,7 +10,7 @@ This program adds first-class planning for Wayfinder's Universal Asset Ingestion
 | --- | --- |
 | `constitution/assets.md` | Everything Wayfinder operates on should be representable as an Asset in Context; representations are not assets. |
 | `docs/reality-identity-program.md` | RID precedes Universal Asset Ingestion and full ARK implementation. |
-| `engines/ark/README.md` | ARK owns observation, evidence, provenance, reality graph behavior, and proof-gated promotion, and consumes Identity, Event Bus, Storage, and Policy. |
+| `engines/ark/README.md` | ARK owns preservation, provenance, append-only reality, replay, LVR, Source Relationship preservation, and proof-gated promotion, and consumes Identity, Event Bus, Storage, and Policy. |
 | `capabilities/README.md` | Capability grammar is reusable verb language, not architectural layers or implementations. |
 | `contracts/observations/README.md` | Observation records reality before interpretation and may reference Asset or RID. |
 | `contracts/assets/README.md` | ARK produces durable asset knowledge while the Asset model remains constitutional. |

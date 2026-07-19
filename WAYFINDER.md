@@ -65,6 +65,14 @@ Working state should be disposable.
 
 Durable knowledge must be intentionally promoted.
 
+### Progressive Discovery
+
+Retrieve only the smallest sufficient representation.
+
+Escalate retrieval depth only when confidence is insufficient.
+
+Stop as soon as the objective can be satisfied with adequate confidence.
+
 ### Proof Before Promotion
 
 Nothing becomes durable without passing through an ephemeral proof.
@@ -124,4 +132,3 @@ Egress
 Reality is immutable and append-only. Ephemeral state is disposable. Proofs
 justify promotion. Core contains durable engine logic. Egress exposes validated
 outputs.
-

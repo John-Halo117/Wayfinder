@@ -1,0 +1,14 @@
+# Updated Open Questions
+
+| # | Question | Disposition | Evidence | Notes |
+| ---: | --- | --- | --- | --- |
+| 1 | Where is the canonical standalone Eisengarten source, if it exists outside `WAYFINDER.md`? | Requires Human Decision | P0 recorded no standalone source; P2 Eisengarten Corpus uses `WAYFINDER.md` as summary. | Decide whether to add a standalone source or accept constitutional summary as sufficient. |
+| 2 | Are constitutional amendments represented only as ADRs and architecture documents, or is there a separate amendment ledger? | Partially Resolved | `docs/adrs/` exists; no separate amendment ledger found in P0/P1/P2 scans. | Current evidence supports ADRs as decision artifacts, not formal amendment ledger. |
+| 3 | Which document is the canonical source for promoting new constitutional terms? | Partially Resolved | `canon/README.md` owns naming/aliases; `constitution/` owns laws; P2 Promotion Report defines promotion states. | Formal promotion authority remains human/governance decision. |
+| 4 | What is the explicit promotion path from ADR to constitutional amendment? | Requires Human Decision | ADRs exist and cite architecture sections; no formal ADR-to-amendment path found. | Needs governance rule before automatic promotion. |
+| 5 | Which capability registry entries are canonical today versus early placeholders? | Deferred | P1 maps `capabilities/` as early scaffold; P1 confidence report marks registry maturity medium/early. | Requires capability maturity phase. |
+| 6 | What is the formal boundary between Canonical Language as derived substrate and future knowledge governance contracts? | Partially Resolved | ADR-0006 and canonical-language docs state Canonical Language is derived, rebuildable, not knowledge. | Contract boundary remains future implementation detail. |
+| 7 | Which operations signals are required before a capability may be called Operational in the maturity framework? | Deferred | Maturity framework prompt exists in session context; no committed canonical maturity implementation found in P2.5 scope. | Requires maturity-system artifact. |
+| 8 | How should generated knowledge artifacts be referenced by Foundry without treating generated representations as constitutional sources? | Resolved | P2 Canonical Knowledge Graph and Knowledge Inventory classify `Knowledge/` as derived; P2.5 confirms source docs remain authority. | Reference by path, provenance, and derived-artifact status. |
+| 9 | What is the canonical policy for retiring or superseding deprecated aliases once compatibility windows close? | Requires Human Decision | `canon/glossary.md` records aliases/deprecated terms; no lifecycle closure policy found. | Needs alias retirement governance. |
+| 10 | What exact evidence is required to merge or split RIDs under the Asset model? | Partially Resolved | `constitution/assets.md` defines merge/split semantics require proof and provenance. | Exact evidence threshold is not specified. |

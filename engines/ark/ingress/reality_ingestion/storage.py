@@ -54,8 +54,8 @@ class InMemoryRealityStorage:
             raise ValueError("max_relationships must be positive")
         self._max_observations = max_observations
         self._max_relationships = max_relationships
-        self._observations: tuple[PreservedObservationRecord, ...] = ()
-        self._relationships: tuple[PreservedRelationshipRecord, ...] = ()
+        self._observations: list[PreservedObservationRecord] = []
+        self._relationships: list[PreservedRelationshipRecord] = []
         self._observations_by_id: dict[str, PreservedObservationRecord] = {}
         self._relationships_by_id: dict[str, PreservedRelationshipRecord] = {}
         self._lvr = LastVerifiedReality(0, None, None, DEFAULT_PRESERVED_AT)
@@ -86,7 +86,7 @@ class InMemoryRealityStorage:
                 ),
             )
         preserved = replace(record, sequence=len(self._observations) + 1)
-        self._observations = (*self._observations, preserved)
+        self._observations.append(preserved)
         self._observations_by_id[preserved.observation_id] = preserved
         self._lvr = LastVerifiedReality(
             sequence=preserved.sequence,
@@ -122,7 +122,7 @@ class InMemoryRealityStorage:
                 ),
             )
         preserved = replace(record, sequence=len(self._relationships) + 1)
-        self._relationships = (*self._relationships, preserved)
+        self._relationships.append(preserved)
         self._relationships_by_id[preserved.relationship_id] = preserved
         return StorageWriteResult("preserved", preserved)
 

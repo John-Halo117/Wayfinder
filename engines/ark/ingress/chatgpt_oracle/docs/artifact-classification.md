@@ -22,6 +22,13 @@
 Classification uses original path and extension only. It does not infer semantic
 meaning from file content beyond supported JSON parser entry points.
 
+Observed ChatGPT export path conventions are classified as follows:
+
+- `conversations.json` and `conversations-000.json` style shards:
+  `Conversation`
+- `chat.html`: `Document`
+- `file_*.dat` and `file-*.dat`: `Attachment`
+
 ## Preservation Rule
 
 Every file is preserved regardless of classification.

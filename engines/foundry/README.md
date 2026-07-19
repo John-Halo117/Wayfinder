@@ -2,6 +2,10 @@
 
 Foundry is the Wayfinder engineering engine.
 
+Foundry begins with bootstrap. Bootstrap establishes the constitutional
+worldview and produces immutable session artifacts before any engineering phase
+or prompt executes.
+
 ## Responsibility
 
 Foundry owns engineering workflows: code-change proposal, bounded execution,
@@ -24,9 +28,31 @@ canonical owner is Foundry.
 
 Forge-labeled ARK source has been preserved under `legacy/`.
 
-The legacy executable and module names are intentionally preserved for
-compatibility. Renaming runtime entrypoints requires a separate proof-backed
-compatibility phase.
+Canonical Foundry launchers now live beside the preserved legacy entrypoints:
+
+- `./wf foundry` launches the Foundry browser app through Wayfinder.
+- `./wf foundry --status` checks whether the app is responding.
+- `./wf foundry --stop` stops the app listener recorded for the current port.
+- `./wf foundry-cli` invokes the underlying preserved engineering runtime.
+
+Legacy executable and module names such as `forge`, `forge-app`, and
+`ark-core/forge/` remain compatibility surfaces and historical source names.
+They are not canonical owners.
+
+## Canonical Layout
+
+| Path | Responsibility |
+| --- | --- |
+| `bootstrap/` | Mandatory constitutional worldview bootstrap. |
+| `prompts/` | Minimal phase prompts that consume artifacts. |
+| `artifacts/` | Artifact pipeline records. |
+| `knowledge/` | Foundry knowledge acquisition and graph inheritance. |
+| `engineering/` | Engineering gates and implementation-phase records. |
+| `reports/` | Human-readable artifact reports. |
+| `templates/` | Reusable artifact templates. |
+| `plugins/` | Replaceable workflow extensions. |
+| `schemas/` | Machine-checkable artifact and prompt contracts. |
+| `tests/` | Foundry verification surfaces. |
 
 ## Lifecycle
 
@@ -94,4 +120,3 @@ Build Bible, Policy, Capsules, Jarvis, Storage, Identity.
 ### Consumers
 
 Internal applications, operators, Build Bible, operations, and domains.
-

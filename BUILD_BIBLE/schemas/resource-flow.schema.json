@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bb:schema:resource-flow",
+  "title": "Build Bible Resource Flow",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "scope_id",
+    "resource_type",
+    "ingress",
+    "storage",
+    "distribution",
+    "transformation",
+    "consumption",
+    "recovery",
+    "losses",
+    "egress",
+    "monitoring",
+    "constraints",
+    "verification_state"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^bb:resource-flow:[a-z0-9-]+(?:/[a-z0-9-]+)*$"
+    },
+    "scope_id": {
+      "type": "string"
+    },
+    "resource_type": {
+      "enum": ["water", "waste", "greywater", "stormwater", "air", "heat", "electricity", "fuel", "communications", "sunlight", "food", "materials", "people", "animals", "vehicles"]
+    },
+    "ingress": {
+      "type": "string"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "distribution": {
+      "type": "string"
+    },
+    "transformation": {
+      "type": "string"
+    },
+    "consumption": {
+      "type": "string"
+    },
+    "recovery": {
+      "type": "string"
+    },
+    "losses": {
+      "type": "string"
+    },
+    "egress": {
+      "type": "string"
+    },
+    "monitoring": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verification_state": {
+      "enum": ["unverified", "observed", "inferred", "designed", "installed", "retired"]
+    }
+  }
+}
+

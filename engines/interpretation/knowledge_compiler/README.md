@@ -53,6 +53,14 @@ This implementation uses rules, existing glossary baselines supplied through
 configuration, lexical pattern matching, and deterministic scoring. AI fallback
 is intentionally not implemented in this phase.
 
+## First Contact Scale Lesson
+
+First Contact showed that real private exports can produce more candidates
+than governance can review in one bounded batch. The compiler remains
+proposal-only, but future work must support Candidate Pages and grouping before
+governance intake. Candidate paging must preserve candidate IDs, provenance,
+confidence, uncertainty, and deterministic replay.
+
 ## Non-Goals
 
 - source ingestion
