@@ -27,6 +27,15 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 | [Proof](proofs/README.md) | ARK | Proof |
 | [Promotion](promotion/README.md) | ARK | Promotion record |
 
+## Evaluated Projection Contracts
+
+- [Sparse Bipolar Dimensional Trend Tensor](bearings/sbdtt.md) — default sparse cross-domain evaluated projection when several orthogonal evaluated dimensions materially change interpretation or action.
+- [Environmental External-World Projection](world-state/environmental-projection.md) — environmental/local-twin semantics as a projection of EWS rather than a separate world model.
+- [Spatial Scope and Jurisdiction](../ontology/spatial-scope.md) — universal spatial, jurisdictional, and functional-scope semantics.
+- [Derived Classification](../ontology/classification.md) — classification as a derived relation/projection over stable identity and qualified state.
+
+SBDTT is not a new truth store or mandatory representation. Scalars, state machines, graphs/DAGs, and fields remain preferred when they are cheaper adequate representations.
+
 ## Supporting Contracts
 
 Existing supporting contracts remain canonical for shared language: identities, events, policies, permissions, health, schemas, storage, provenance, and views.
@@ -41,6 +50,8 @@ relationship topology.
 Reasoning produces qualified External World State from evidence and
 interpretations. External World State is derived state and does not replace
 ARK's durable evidence/provenance record.
+
+Jarvis/Bearing implementations may derive SBDTT projections from qualified EWS/domain state relative to a named objective. Those projections remain disposable and must preserve references sufficient to recover their source semantics.
 
 ## Governance Reports
 
