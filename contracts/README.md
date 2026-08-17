@@ -12,6 +12,7 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 | --- | --- | --- |
 | [Observation](observations/README.md) | Observation Source role | Observation |
 | [Evidence](evidence/README.md) | ARK | Evidence |
+| [External World State](world-state/README.md) | Reasoning | External World State |
 | [Representation](representations/README.md) | Views | Representation |
 | [Asset](assets/README.md) | ARK | Asset in Context reference |
 | [Context](context/README.md) | ARK | Context reference |
@@ -36,6 +37,10 @@ Observation Sources produce observation-shaped records. ARK preserves those
 records into append-only reality. ARK may also preserve explicit Source
 Relationships as evidence, while WEAVE remains the owner of durable
 relationship topology.
+
+Reasoning produces qualified External World State from evidence and
+interpretations. External World State is derived state and does not replace
+ARK's durable evidence/provenance record.
 
 ## Governance Reports
 
