@@ -2,7 +2,7 @@
 
 **Semantic owner:** Wayfinder  
 **Artifact identity:** `wayfinder.external-world-state`  
-**Semantic version:** `0.1.0-alpha.18`  
+**Semantic version:** `0.1.0-alpha.19`  
 **Producer:** Reasoning  
 **Compatibility:** additive alpha contract; legacy `Operative State` and `Current Head` names are accepted as compatibility aliases only  
 **Supersession:** canonicalizes the previously distributed EWS / Operative-State concept without selecting an implementation
@@ -52,6 +52,16 @@ A **Successor** is a state that validly supersedes a predecessor for a defined s
 
 A **Twin** is a maintained representation tied to an external referent and updated through evidence. A twin is not the referent itself. Fidelity, coverage, staleness, uncertainty, and provenance remain explicit.
 
+## Evaluated Projections
+
+EWS does not store objective-relative evaluation as canonical factual truth. Consumers may derive evaluated projections relative to a named Telos, concern, requirement, or objective.
+
+When several orthogonal evaluated dimensions materially change interpretation or action, the preferred shared projection is the [Sparse Bipolar Dimensional Trend Tensor](../bearings/sbdtt.md).
+
+SBDTT remains downstream of EWS and disposable. Polarity, operational condition, epistemic state, and trend are independent. A projection may not rewrite the EWS evidence/state it was derived from.
+
+Environmental and local-twin semantics are defined by [Environmental External-World Projection](environmental-projection.md). Universal spatial/jurisdictional scope and derived classification semantics are defined in the Wayfinder ontology.
+
 ## Compatibility Aliases
 
 - `External World State` / `EWS` — canonical name.
@@ -84,6 +94,8 @@ Capability and authority remain orthogonal. A state claim never grants permissio
 8. Stale state may be useful but must not present as current state once its validity conditions fail.
 9. No consumer may mutate canonical evidence by editing EWS.
 10. Presentation-specific simplification may compress redundancy, not consequential meaning.
+11. Evaluated projections may be recomputed or discarded without loss of canonical state.
+12. Target, polarity, consequence, or operational interpretation may not be silently promoted into factual EWS claims.
 
 ## Implementation Obligation
 
