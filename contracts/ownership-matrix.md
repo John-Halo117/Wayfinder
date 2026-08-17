@@ -9,6 +9,7 @@ always mean ownership of the universal constitutional model.
 | Observation Contract | Observation Source role | ARK, Evidence, Interpretation, Reasoning, Views, Jarvis, Capsules, MIDAS, Domains, Internal applications | Observation |
 | Evidence Contract | ARK | Proof, Promotion, Interpretation, Reasoning, VALOR, MIDAS, Jarvis, MICE, Blackwall | Evidence item |
 | External World State Contract | Reasoning | Views, Jarvis, MICE, Foundry, VALOR, Domains, Internal applications, Operators | External World State |
+| SBDTT Evaluated Projection | Bearing / decision-model implementation | Views, Jarvis, Domains, Internal applications, Operators | Sparse evaluated tensor cells |
 | Provenance Contract | ARK | Evidence, Proof, Promotion, Capsules, Views, Reasoning, VALOR, MICE, Domains, Operations | Provenance record |
 | Identity Contract | Identity Service | ARK, Event Bus, Storage, Jarvis, Foundry, Capsules, MICE, Domains, Internal applications, Operations | RID / canonical identity reference |
 | Event Contract | Event Bus | ARK, Jarvis, Foundry, Capsules, MICE, Domains, Internal applications, Operations, External integrations | Event envelope |
@@ -35,6 +36,8 @@ always mean ownership of the universal constitutional model.
 ## Ownership Clarifications
 
 - Wayfinder owns External World State semantics and compatibility; Reasoning produces EWS boundary artifacts from qualified evidence and interpretations.
+- Wayfinder owns SBDTT semantics; Bearing/decision-model implementations produce SBDTT evaluated projections from qualified state relative to explicit objectives.
+- SBDTT is a disposable evaluated projection and does not own evidence, EWS, identity, domain thresholds, or persistence.
 - ARK retains durable evidence/provenance ownership; an EWS artifact references but does not replace the reality record.
 - Interpretation owns candidate meanings; final state inference remains with Reasoning.
 - Jarvis consumes EWS for Bearings and Recommendations and does not redefine canonical world state.
