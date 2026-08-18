@@ -1,60 +1,86 @@
 # Universal Expansion Pattern
 
-Expansion is the normal operation of a long-lived physical platform.
+Expansion is normal operation of a long-lived physical platform, but
+future-readiness means preserving economical **interfaces, routes, clearances,
+and options**—not pre-installing speculative future-maximum equipment.
 
 ## Rule
 
-New capabilities consume reserved interfaces before requiring reconstruction.
+New capabilities consume adequate existing/reserved interfaces before requiring
+reconstruction.
+
+`future interface != installed future capacity`
 
 ## Expansion Sequence
 
-1. Use an existing published interface.
-2. Use reserved capacity in an existing spine.
-3. Use an existing access panel, chase, raceway, conduit, service corridor, or
-   utility wall.
-4. Use a planned expansion zone.
-5. Create a new interface with a decision record.
-6. Reconstruct only after cheaper preserved options are exhausted or rejected.
+1. Confirm the current requirement and profile/scope.
+2. Use an adequate existing published interface.
+3. Use reserved capacity in an existing spine/path.
+4. Use an existing access panel, chase, raceway, conduit, service zone, utility
+   wall, structural allowance, or reserved clearance.
+5. Use a planned expansion zone.
+6. Adapt/compose using existing standards and mature interoperable components.
+7. Create a custom residual only after standards-first resolution documents why
+   existing interfaces fail.
+8. Reconstruct only after cheaper preserved options are exhausted or rejected.
 
 ## Required Expansion Metadata
 
 Each scope should state:
 
-- addable capabilities
-- reserved interfaces
-- reserved capacity
+- addable/reachable capabilities when known
+- reserved interfaces/routes/clearances
+- reserved capacity where intentionally provided
 - blocked additions
 - reconstruction triggers
-- safety constraints
+- safety/accessibility/service constraints
 - required approvals or inspections
+- profile/scope (`GH`, `MH`, `CAMPUS`, etc.) where applicable
+- whether the reserve is physical capacity, pathway capacity, clearance, or
+  merely an option to adapt later
+
+A valid expansion state may explicitly say `no reserve` when preserving capacity
+would not earn its burden.
 
 ## Examples
 
-- additional solar connects through reserved roof, conduit, inverter, panel, and
-  battery interfaces
-- battery bank uses reserved floor area, ventilation, fire separation, conduit,
-  and monitoring
-- LiDAR uses reserved power, data, mounting, sightline, and weather exposure
-  constraints
-- drone pad uses reserved exterior surface, charging, lighting, weather, access,
-  and security interfaces
-- weather station uses reserved mast or roof mount, power, data, calibration,
-  and service access
-- unknown technology uses published power, data, structure, access, and
-  monitoring capacity without assuming its final form
+Examples are illustrative, not mandatory infrastructure:
+
+- additional generation/storage may use a reserved electrical/conduit/service
+  interface if that reserve was justified;
+- future communications/control devices may use an accessible standards-based
+  power/data path without installing those devices now;
+- future physical payloads may use qualified structural blocking/rails/mounts
+  where their likely value justified the interface;
+- an unknown future technology may benefit from generic power/data/structure/
+  access pathways, but Polaris should not invent or populate a special interface
+  merely because the technology is imaginable.
+
+## Habitat Boundary
+
+For current GH/MH profiles:
+
+- both remain one human-occupied story;
+- expansion must not assume an upper occupied floor, stair, or inter-floor lift;
+- GH should not absorb eventual MH/Campus functions merely for completeness;
+- MH should not inherit GH compression mechanisms unless independently useful;
+- Campus placement should be evaluated for bulky/noisy/dirty/seasonal or
+  material-handling capability before interior residential allocation.
 
 ## Failure Isolation
 
-New capabilities must declare failure behavior and isolation so they do not
-silently compromise existing critical systems.
+New capabilities must declare material failure behavior and isolation so they do
+not silently compromise existing critical systems.
 
 ## Maintenance
 
 Expansion work must update source records, generated artifacts, labels,
-maintenance schedules, and digital twin state.
+maintenance schedules, and digital twin state. Added interfaces must retain
+inspection/removal/service paths appropriate to their consequence.
 
 ## Relationships
 
+- Habitat scope: [Habitat Assumption Scope](../../contracts/habitat-assumption-scope-v1.md)
 - Parent doctrine: [Optionality](../../doctrine/optionality.md)
 - Contracts: [Interface Contract](../../contracts/interface-contract.md),
   [Capacity Contract](../../contracts/capacity-contract.md),
