@@ -2,74 +2,87 @@
 
 Status: canonical human-interface law for Model `0.1.0-alpha.21`.
 
-## Objective
+## Governing law
 
-The human expresses intent, constraints, symptoms, examples, approximate descriptions, and preferences. Polaris resolves internal canonical concepts, owners, operators, standards, providers, diagnostics, and workflows without requiring the human to memorize them.
+**Polaris remembers Polaris. The human states intent.**
 
-**A canonical name is a retrieval handle, not a prerequisite for use.**
+A person MUST be able to invoke and correctly use an ordinary Polaris capability without knowing its canonical internal name. Canonical names are retrieval, engineering, provenance, testing, and debugging handles—not prerequisites, commands, or navigation requirements.
 
 ## Default human surface
 
-Normal interaction exposes at most two navigational levels. Default top-level projections are deliberately small and plain-language:
+Normal interaction exposes at most two navigational levels by default. The stable top-level projection is deliberately small:
 
-- **World** — what is happening outside/around the user and their systems?
-- **Life** — what does the household/person need, want, or protect?
+- **World** — what is happening outside and around the user and their systems?
+- **Life** — what does the person/household need, want, or protect?
 - **Things** — what resources, property, equipment, inventory, money, and capabilities exist?
 - **Plans** — what should happen next, what is blocked, and what is reachable?
-- **System** — is Polaris/Basecamp itself healthy, recoverable, synchronized, and trustworthy?
+- **System** — is Polaris/Basecamp healthy, recoverable, synchronized, current, and trustworthy?
 
-These are projections, not new canonical owners. Existing owners remain authoritative underneath.
+These are projections only; they create no new semantic owners.
 
 ## Resolution law
 
-`natural language / approximate description / symptom / example`
-`-> concept and alias resolution`
-`-> relevant canonical owner/operator/standard/provider`
+`intent / approximate description / symptom / example / alias / remembered fragment`
+`-> canonical concept + owner/operator/standard/provider resolution`
 `-> state/evidence retrieval`
 `-> decision/diagnostic/workflow composition`
-`-> plain-language bearings/action`
+`-> plain-language bearing/action`
 
-The user MUST NOT need to know the internal name for this path to work.
+Resolution SHOULD prefer consequence and intent over asking the user to choose ontology labels. Clarification is warranted only when unresolved ambiguity can materially change outcome, authority, safety, cost, privacy, or another protected constraint.
 
-## Disclosure policy
+Historical/superseded names SHOULD remain retrieval aliases when safe, while the current canonical concept remains the semantic owner.
 
-1. Default output uses plain language and consequences.
-2. Internal handles may appear as optional secondary labels when useful for precision, provenance, engineering, debugging, or learning.
-3. Deep ontology is progressive disclosure: reveal it on request or when a consequential choice cannot be understood safely without it.
-4. Never require memorized commands, subsystem names, acronyms, taxonomies, providers, metrics, or canonical operators when intent can resolve them.
-5. New internal concepts require a plain-language gloss and aliases/symptom/example hooks sufficient for retrieval.
-6. Internal complexity may grow only when human-facing complexity does not grow proportionally.
+## Progressive disclosure
 
-## Human-facing completion test
+Default projection order:
 
-A capability is not interface-complete until a user can invoke and understand its consequential result without knowing its canonical internal name.
+1. plain-language state, consequence, recommendation, or action;
+2. optional friendly explanation;
+3. optional canonical technical handle;
+4. evidence/service hatch to deeper ontology, provenance, transforms, assumptions, contracts, and implementation.
 
-Formally:
+When an internal handle is shown, pair it with meaning. Example:
 
-`CAN_USE_FROM_INTENT == true`
+`Reproduction Proof — prove we can actually rebuild it.`
 
-is required independently of:
+Do not require vocabulary such as EWS, SBDTT, Failure Drain, Tail-Cutter Capital, Germline/Phenotype, or future equivalents for ordinary operation.
 
-`KNOWS_CANONICAL_NAME`.
+## Retrieval requirements
 
-## Naming policy
+Human-facing concepts SHOULD provide enough hooks to resolve from:
 
-Cool/stable technical names may be retained. They support engineering, provenance, search, contracts, and precise discussion. They do not become human obligations.
+- plain-language meaning;
+- aliases and old names;
+- partial/approximate names;
+- examples;
+- symptoms;
+- desired outcomes;
+- provider-independent capability descriptions.
 
-Preferred rendering:
+Friendly phrases may change without changing canonical identity or stored state.
 
-`Prove we can rebuild this.`
+## Completion gate
 
-Optional technical detail:
+For every human-facing capability ask:
 
-`Mechanism: Reproduction Proof`
+> Could the user successfully invoke, understand, and recover this capability without knowing its canonical internal name?
 
-Not preferred:
+If no, the human interface is incomplete.
 
-`Run Reproduction Proof.`
+Formally, `CAN_USE_FROM_INTENT == true` is required independently of `KNOWS_CANONICAL_NAME`.
 
-unless the user deliberately uses that handle.
+## Anti-bloat / anti-jargon invariants
+
+- `new name != new required vocabulary`.
+- `internal ontology complexity != required human memory`.
+- `canonical name != command`.
+- `technical precision available != technical precision always displayed`.
+- No provider name is required when capability can be resolved independently.
+- No architecture diagram is required for ordinary operation.
+- Abbreviations are optional compression, never required knowledge.
+- Cool/stable internal names may survive for engineering value without becoming human obligations.
+- Natural-language resolution never grants authority; capability and authority remain separate.
 
 ## Compatibility
 
-This law composes with the existing owner graph, generated mission UI, Bearings, Concept Registry, aliases, standards-first resolution, SBDTT projections, and evidence service hatch. It creates no parallel truth store or authority surface.
+This law composes with the existing owner graph, Concept Registry, aliases, Generated Mission UI, Bearings, standards-first resolution, SBDTT projections, and evidence service hatch. It creates no parallel truth store, authority surface, or second ontology.
