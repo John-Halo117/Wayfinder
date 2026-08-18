@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0-alpha.25 — 2026-08-18
+
+- Fused the Reality Intelligence architecture around the existing Master Reality Watch Registry instead of creating another truth store or domain subsystem.
+- Added tail-sensor semantics for level/delta/velocity/acceleration/distributions/tails/thresholds/transitions/duration/recurrence/spatial propagation/divergence/convergence/reversal/expected-event absence.
+- Added explicit housing microstructure dimensions and tail/divergence sensing without a universal housing score.
+- Added observe-once/resolve-many and acquire/canonicalize/store/relate-once reuse laws.
+- Standardized primitive shapes and separate Evidence/Derivation/Causal/Execution/Capability DAGs.
+- Added semantic-optimization-before-machine-optimization: PRUNE -> DEDUP -> DELTA -> SPARSE -> REUSE -> ROLL UP -> INCREMENT -> CACHE -> LAYOUT -> VECTORIZE -> COMPRESS.
+- Added delta-first acquisition, generic collectors/parsers, cheapest-adequate-compute, incremental/sparse execution, storage/temperature/retention tiers, CAS/Merkle guidance, sparse CRDT use, columnar/compact analytical layout guidance, bounded parallelism/backpressure, negative caching, and geometry/partition pruning.
+- Added uncertainty/contradiction/tail escalation, LLM-last compact Jarvis packets, graceful degradation, offline replay, immutable-observation/corrigible-interpretation semantics, source-independence/sensor-dominance pruning, self-accounting/self-pruning, resource admission, and decade-scale storage targets.
+- Preserved the engineering invariant: choose the right shape, fetch less, store once, reuse everything, compute on change, roll up, compose late, materialize sparingly, vectorize necessary work, compress it, surface almost nothing, sleep.
+
 ## 0.1.0-alpha.24 — 2026-08-18
 
 - Added one canonical Master Reality Watch Registry instead of spawning new observation subsystems for each discovered signal.
