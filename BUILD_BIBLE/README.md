@@ -24,6 +24,24 @@ Repository intelligence and future tooling should use Progressive Discovery:
 indexes, metadata, relationships, and scoped summaries before full-document
 retrieval, with low-confidence findings routed to review.
 
+## Assumption Scope Rule
+
+Physical assumptions do not become universal merely because they appeared in an
+older conversation or another building profile.
+
+For current Sanctuary work, residential assumptions resolve as `SHARED`, `GH`,
+`MH`, `CAMPUS`, `UNKNOWN_SCOPE`, or `N/A` through the
+[Habitat Assumption Scope](../contracts/habitat-assumption-scope-v1.md).
+
+- GH and MH both have one human-occupied story.
+- GH compression rules do not silently apply to MH.
+- MH comfort/space assumptions do not silently apply to GH.
+- Campus capability is evaluated separately rather than forced into either house.
+- `UNKNOWN_SCOPE` is quarantine, not inheritance.
+
+Conventional presence is not proof of requirement, and a novel mechanism is not
+proof of improvement.
+
 ## Editing Model
 
 - One concept per document.
@@ -32,8 +50,11 @@ retrieval, with low-confidence findings routed to review.
   replacement paths, maintenance procedures, history, and growth options.
 - Every critical capability must be serviceable without destructive access.
 - Unknown future technologies are handled by preserved interfaces, spare
-  capacity, access paths, and published expansion locations.
+  capacity, access paths, and published expansion locations rather than by
+  speculative maximum equipment population.
 - Reality claims require evidence or an explicit verification state.
+- Profile-specific assumptions must retain their profile when copied,
+  summarized, generated, or reviewed.
 
 ## Start Here
 
@@ -50,6 +71,8 @@ retrieval, with low-confidence findings routed to review.
   defines the minimum required structure for any physical scope.
 - [contracts/universal-scope-contract.md](contracts/universal-scope-contract.md)
   defines the root abstraction for all physical entities.
+- [Habitat Assumption Scope](../contracts/habitat-assumption-scope-v1.md)
+  separates Shared/GH/MH/Campus assumptions and quarantines unresolved legacy rules.
 
 ## Canonical Pattern Entry Points
 
