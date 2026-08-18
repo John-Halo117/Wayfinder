@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.0-alpha.24 — 2026-08-18
+
+- Added one canonical Master Reality Watch Registry instead of spawning new observation subsystems for each discovered signal.
+- Added 20 organizational watch domains plus an open-ended Proxy & Exhaust Watch for useful indirect OSINT signals.
+- Made `source != observable != proxy != inferred state != consequence != action` a hard semantic separation.
+- Added the composition pipeline from raw observations through qualified signals/proxies/dimension/domain/compound states to objective effects and operative action.
+- Added no-averaging-away, constraint, convergence, contradiction, causal, spatial, temporal, objective-relative, sparse, reversible, denominator-preserving, and source-independence composition laws.
+- Added explicit proxy mechanism/confounder semantics and prevented correlated source lineage from masquerading as independent confirmation.
+- Added delta-first hot-state policy so the registry may grow very large while normal human-facing output gets smaller.
+- Preserved aggregate/place-level privacy boundaries and prohibited the watch architecture from becoming private-person dossier tracking.
+
 ## 0.1.0-alpha.23 — 2026-08-18
 
 - Added the Sanctuary Anti-Pattern & Failure-Mode Canon as the negative specification paired with the positive spatial-capability compiler.
