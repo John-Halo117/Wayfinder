@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.1.0-alpha.22 — 2026-08-18
+
+- Added explicit habitat assumption scoping: `SHARED`, `GH`, `MH`, `CAMPUS`, `UNKNOWN_SCOPE`, and `N/A`.
+- Made one human-occupied story a shared GH/MH protected constraint; rejected stair-dependent and inter-floor residential assumptions by default.
+- Split GH and MH spatial profiles: GH minimizes circulation/duplication aggressively while MH may deliberately use hallways, dedicated rooms, generous transitions, and larger storage when they improve long-term ordinary life.
+- Quarantined unresolved historical habitat assumptions instead of allowing implicit inheritance.
+- Updated the Build Bible Guest House and Main House patterns to current one-story profiles.
+- Expanded spatial-bundle accounting to distinguish floor/circulation/wall/cavity/overhead/clearance/negative-space/time resources and prevent incompatible double-counting.
+- Removed the assumption that every room should receive sensors, controls, endpoints, or populated future capacity merely because a pathway exists.
+- Expanded architectural review and anti-pattern gates for profile leakage, second-story leakage, accessibility, transformation friction, human burden, standards-first resolution, and negative-space preservation.
+
+## 0.1.0-alpha.21 — 2026-08-18
+
+- Admitted the corpus-wide survivor operators under existing canonical owners without creating parallel Fabrics.
+- Added the canonical human-interface self-resolution rule: Polaris remembers its ontology; the human states intent.
+- Made canonical technical names optional retrieval/engineering handles rather than required user vocabulary.
+- Standardized the default human-facing navigation projection as World / Life / Things / Plans / System with at most two levels exposed by default.
+- Collapsed duplicate human-interface contracts into one canonical self-resolution contract.
+
+## 0.1.0-alpha.20 — 2026-08-18
+
+- Added standards-first physical resolution: applicable mandatory/consensus standards and mature interoperable interfaces are searched before custom physical residuals.
+- Added standard-reference semantics for edition/revision/profile/jurisdiction/applicability and explicit residual justification.
+- Clarified that Polaris owns standards selection, mapping, composition, lifecycle, and residual reasoning rather than a competing physical standards ecosystem.
+
 ## 0.1.0-alpha.19 — 2026-08-17
 
 - Added Sparse Bipolar Dimensional Trend Tensor (SBDTT) as the default sparse evaluated projection when several orthogonal dimensions materially change interpretation or action.
