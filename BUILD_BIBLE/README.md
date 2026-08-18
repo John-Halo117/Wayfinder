@@ -39,6 +39,11 @@ For current Sanctuary work, residential assumptions resolve as `SHARED`, `GH`,
 - Campus capability is evaluated separately rather than forced into either house.
 - `UNKNOWN_SCOPE` is quarantine, not inheritance.
 
+Concrete user-specified Sanctuary features live in the
+[Sanctuary Concrete Feature Catalog](registries/sanctuary-feature-catalog.md).
+Generalization must not erase these specific physical choices, and a listed
+feature is not automatically a requirement.
+
 Conventional presence is not proof of requirement, and a novel mechanism is not
 proof of improvement.
 
@@ -73,11 +78,14 @@ proof of improvement.
   defines the root abstraction for all physical entities.
 - [Habitat Assumption Scope](../contracts/habitat-assumption-scope-v1.md)
   separates Shared/GH/MH/Campus assumptions and quarantines unresolved legacy rules.
+- [Sanctuary Concrete Feature Catalog](registries/sanctuary-feature-catalog.md)
+  preserves the current scoped physical specifics.
 
 ## Canonical Pattern Entry Points
 
 - [Property Pattern](domains/site/property-pattern.md)
 - [Building Patterns](domains/buildings/patterns/README.md)
+- [Sanctuary Concrete Feature Catalog](registries/sanctuary-feature-catalog.md)
 - [Utility Standards](domains/utilities/standards/README.md)
 - [Spatial Bundle Standard](domains/spaces/spatial-bundle-standard.md)
 - [Universal Room Pattern](domains/spaces/universal-room-pattern.md)
