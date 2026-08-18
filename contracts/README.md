@@ -37,6 +37,14 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 
 SBDTT is not a new truth store or mandatory representation. Scalars, state machines, graphs/DAGs, and fields remain preferred when they are cheaper adequate representations.
 
+## Human Interface Contract
+
+- [Ontology Self-Resolution](human-interface-ontology-self-resolution-v1.md) — Polaris resolves canonical names, owners, operators, standards, providers, aliases, symptoms, and examples internally. Ordinary users state intent; technical names are progressive disclosure, not required vocabulary. Default human navigation is World / Life / Things / Plans / System with at most two levels exposed by default.
+
+## Corpus-Wide Survivor Operators
+
+- [Cross-Domain Survivor Operators](cross-domain-survivor-operators-v1.md) — admitted operators, policies, projections, metrics, and verification gates recovered from the corpus-wide delta reconciliation without creating new sovereign owners.
+
 ## Standards-First Physical Resolution
 
 Physical interfaces and subsystems must resolve requirements against applicable external standards and mature interoperable interfaces before a custom physical interface is proposed. Polaris owns selection, mapping, composition, lifecycle, and residual justification; it does not create a parallel physical standards ecosystem merely for internal naming consistency.
