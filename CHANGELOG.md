@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.26 — 2026-08-18
+
+- Added the full Reality Intelligence Anti-Pattern & Failure-Mode Canon as the negative specification paired with the fused Reality Intelligence architecture.
+- Added rejection families for registry/source/proxy/tail/housing/composition/DAG/spatial/temporal/rollup/storage/compression/cache/compute/sketch/acquisition/parsing/CAS-Merkle/CRDT/parallelism/I-O/attention/confidence/contradiction/versioning/self-optimization/resource-admission/degradation/privacy/meta failures.
+- Added explicit anti-patterns for registry-as-database, dataset=subsystem, zombie watches, echo-chamber confidence, proxy literalism, quantile fetish, tail-noise panic, housing-score collapse, mega-DAGs, radius-as-reality, national parcel scans, average-of-averages, JSON-forever, sparse-cube materialization, cache-as-truth, LLM-first, SIMD theater, polling-everything, schema-drift silence, CRDT epistemology, dashboard swamp, contradiction averaging, stale=fresh, and OSINT dossier creep.
+- Added the universal Reality Intelligence inverse compiler and non-scalar dispositions: ADMIT_ACTIVE, ADMIT_DORMANT, PROBE, DEFER, DEMOTE, PRUNE.
+- Made dormant/on-demand capability, demotion, and removal first-class outcomes instead of treating every admitted sensor as permanently active.
+- Preserved the governing negative law: do not collect because you can; do not compute because you stored; do not store because you fetched; do not surface because you know; do not keep because you built.
+
 ## 0.1.0-alpha.25 — 2026-08-18
 
 - Fused the Reality Intelligence architecture around the existing Master Reality Watch Registry instead of creating another truth store or domain subsystem.
