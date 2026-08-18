@@ -6,103 +6,129 @@ Status: CANONICAL
 Polaris maintains one composable reality engine. Housing, stocks, bonds, commodities, energy, minerals, agriculture, water, land, labor, companies, supply chains, infrastructure, ecology, demographics, government, technology, insurance, transportation, weather, and future domains are semantic adapters, not separate intelligence engines.
 
 Core grammar:
-
 THING -> OBSERVATIONS -> EVENTS -> STATE -> DISTRIBUTIONS/TAILS -> RELATIONS -> PRESSURES/FLOWS -> TRANSITIONS -> COMPOSITION -> CONSEQUENCE
 
 Law: domain semantics vary; reality machinery does not.
 
-## Domain contract
-A domain adapter defines only consequential domain-specific semantics:
-- ENTITY: what exists and how identity persists.
-- STOCKS: what accumulates.
-- FLOWS: what enters, leaves, transfers, transforms, is lost, recovered, or recycled.
-- RATES: change per appropriate denominator/time.
-- STATE TRANSITIONS: category/lifecycle transitions.
-- CONSTRAINTS: binding limits and bottlenecks.
-- NETWORK/TOPOLOGY: dependency/connectivity/flow structure.
-- OBJECTIVES: why the state may matter, without collapsing objective-relative consequences.
-- OBSERVABLES: direct measurements/events.
-- PROXIES: indirect observations with explicit mechanisms/confounders.
-- TAILS: edge behavior, divergence, thresholds, transitions, bottlenecks, absence, reversals.
-- BALANCES: conservation/reconciliation laws where applicable.
-- FAILURE MODES and RECOVERY.
-- SPATIAL/TEMPORAL SCALE and aggregation semantics.
+## Semantic inheritance and compression lattice
+Polaris SHALL factor semantics at the highest shared level that preserves consequential differences. Do not merely give silver and copper identical field names; recognize that they are instances of increasingly specific shared shapes.
 
-Everything else must preferentially compile through shared primitives and operators.
+Canonical pattern:
+UNIVERSAL REALITY PRIMITIVE
+-> PHYSICAL / ECONOMIC / BIOLOGICAL / INSTITUTIONAL / INFORMATIONAL FAMILY
+-> RESOURCE / ASSET / NETWORK / ORGANISM / PLACE / ORGANIZATION / PROCESS family
+-> narrower class
+-> specific entity/material/instrument
+-> instance
+
+Example:
+THING
+-> PHYSICAL RESOURCE
+-> EXTRACTIVE MATERIAL
+-> MINERAL/COMMODITY
+-> METAL
+-> NON-FERROUS METAL
+-> COPPER or SILVER
+-> specific grade/form/location/inventory lot.
+
+Copper and silver therefore inherit common metal/resource semantics once, then declare only deltas. Shared semantics may include reserves/resources, grade, extraction, recovery, processing, refining/smelting, inventories, recycling/scrap, substitution, energy intensity, transport, geographic concentration, production cost curves, market price/liquidity, ownership and end-use demand. Copper-specific electrical/construction demand and silver-specific precious/monetary/photovoltaic characteristics remain deltas rather than contaminating the parent.
+
+Another example:
+THING -> FINANCIAL CLAIM/ASSET -> SECURITY -> EQUITY -> COMMON STOCK -> issuer/share class.
+Shared equity semantics are inherited; issuer-specific operations remain linked company semantics rather than duplicated into every instrument.
+
+## Standard semantic shapes
+Create reusable standard shapes whenever independent domains repeatedly express the same consequential structure. Candidate standards include:
+- ENTITY/IDENTITY
+- STOCK/FLOW/BALANCE
+- RESOURCE/RESERVE/INVENTORY
+- PRODUCTION/TRANSFORMATION/LOSS/RECOVERY
+- CAPACITY/UTILIZATION/BOTTLENECK
+- SUPPLY/DEMAND/CLEARING/PRESSURE
+- PRICE/COST/VALUE/FINANCING
+- NETWORK/NODE/EDGE/FLOW
+- LOCATION/GEOMETRY/REACH
+- POPULATION/COHORT/ENTRY/EXIT
+- ORGANIZATION/OWNERSHIP/AUTHORITY
+- ASSET/LIABILITY/CLAIM/CASH FLOW
+- FACILITY/EQUIPMENT/INPUT/OUTPUT
+- ECOLOGICAL STOCK/FLOW/HABITAT/PRESSURE/RECOVERY
+- INFRASTRUCTURE CAPACITY/CONDITION/FAILURE/RECOVERY
+- RISK/HAZARD/EXPOSURE/VULNERABILITY/LOSS
+- LIFECYCLE/STATE TRANSITION
+- OBSERVATION/PROXY/EVIDENCE/CONFIDENCE
+- DISTRIBUTION/TAIL/DIVERGENCE
+- CONSTRAINT/PRESSURE/SLACK
+
+These are semantic mixins/composable shapes, not a rigid single inheritance tree. A copper inventory can simultaneously instantiate MATERIAL + COMMODITY + INVENTORY + LOCATION + MARKET semantics without copying their definitions.
+
+## Delta-only specialization
+A child class/entity SHALL inherit valid parent semantics and specify only:
+ADD: semantics unique to the child.
+OVERRIDE/REFINE: parent semantics whose meaning/range/units/mechanism legitimately narrows.
+N/A: inherited semantics that provably do not apply.
+CONSTRAINT: additional child invariants.
+MAPPING: external standards/source vocabularies.
+
+Absence of a child override means inherit; it does not mean duplicate the parent definition.
+
+## Standards-first semantic mapping
+Before inventing a Polaris vocabulary, search/adopt/reference adequate existing standards, identifiers, units, classifications and ontologies where practical. Polaris should maintain thin mappings among external standards and its canonical semantic shapes. Custom semantics represent unresolved deltas, not a parallel universe of names.
+
+## Domain contract
+A domain adapter defines only consequential domain-specific semantics: ENTITY, STOCKS, FLOWS, RATES, STATE TRANSITIONS, CONSTRAINTS, NETWORK/TOPOLOGY, OBJECTIVES, OBSERVABLES, PROXIES, TAILS, BALANCES, FAILURE/RECOVERY and SPATIAL/TEMPORAL SCALE. Everything else preferentially compiles through inherited standard shapes and shared operators.
 
 ## Universal pipeline
-DOMAIN ADAPTER
--> CANONICAL OBSERVATION/EVENT MODEL
--> EVENT/DELTA FABRIC
--> STATE + DISTRIBUTION/TAILS
--> RELATION/GRAPH/DAG
--> PRESSURE-FLOW-SLACK / BALANCE OPERATORS
--> TRANSITION DETECTION
--> CROSS-DOMAIN COMPOSITION
--> OBJECTIVE-RELATIVE CONSEQUENCE
--> OPERATIVE STATE / ACTION
--> SPARSE PROJECTION
+DOMAIN ADAPTER -> CANONICAL OBSERVATION/EVENT MODEL -> EVENT/DELTA FABRIC -> STATE + DISTRIBUTION/TAILS -> RELATION/GRAPH/DAG -> PRESSURE-FLOW-SLACK / BALANCE OPERATORS -> TRANSITION DETECTION -> CROSS-DOMAIN COMPOSITION -> OBJECTIVE-RELATIVE CONSEQUENCE -> OPERATIVE STATE/ACTION -> SPARSE PROJECTION.
 
-Source != observable != event != proxy != latent state != consequence != action.
-Observation is immutable/corrigibly interpreted: preserve what was observed and separately version consequential interpretation semantics.
+Source != observable != event != proxy != latent state != consequence != action. Observation is immutable/corrigibly interpreted.
 
 ## Conservation-first domains
 Where material/energy/people/money/other conserved or reconciled quantities matter, establish the balance before optimizing components:
 OPENING STOCK + INFLOW + PRODUCTION/CREATION - OUTFLOW - CONSUMPTION - LOSS +/- TRANSFORMATION = CLOSING STOCK.
-Domain adapters specialize terms and denominators.
 
-Examples:
-- resources: RESERVES/STOCK -> EXTRACTION/PRODUCTION -> PROCESSING -> TRANSPORT -> INVENTORY -> CONSUMPTION -> LOSS/RECOVERY/RECYCLING.
-- energy: RESOURCE -> GENERATION -> TRANSMISSION -> STORAGE -> DISTRIBUTION -> LOAD.
-- water: PRECIPITATION -> SURFACE/GROUND STORAGE/RECHARGE -> WITHDRAWAL -> TREATMENT -> DISTRIBUTION -> CONSUMPTION -> WASTEWATER/RETURN/LOSS.
-- agriculture: SOIL/WATER/WEATHER -> PLANTED AREA -> DEVELOPMENT -> YIELD -> HARVEST -> STORAGE -> PROCESSING -> TRANSPORT -> CONSUMPTION.
-- labor: WORKING-AGE POPULATION -> PARTICIPATION -> AVAILABLE LABOR -> HIRING -> EMPLOYMENT -> HOURS -> OUTPUT -> COMPENSATION -> SEPARATION.
-
-## Market/company adapters
-Stocks/companies may expose PRICE, VOLUME, LIQUIDITY, VOLATILITY, FLOWS, FUNDAMENTALS, BALANCE SHEET, OWNERSHIP, OPTIONS, CREDIT, OPERATIONS, VALUATION, EXPECTATIONS plus physical company topology such as FACILITIES, PEOPLE, INPUTS, CAPACITY, PRODUCTION, INVENTORY, DISTRIBUTION, CUSTOMERS, CAPITAL, REGULATION and COMPETITION.
-These dimensions do not create automatic BUY/SELL conclusions; they compose into qualified objective-relative states.
+Resources generally inherit RESERVES/STOCK -> EXTRACTION/PRODUCTION -> PROCESSING -> TRANSPORT -> INVENTORY -> CONSUMPTION -> LOSS/RECOVERY/RECYCLING, then specialize only the material-specific deltas.
 
 ## Universal tail/divergence operators
-Reusable operators include level extreme, velocity, acceleration, persistence, recurrence, volatility/dispersion change, threshold crossing, correlation break, cross-signal divergence, convergence, bottleneck/constraint approach, flow reversal, network concentration, recovery failure, structural break, novel state, subpopulation divergence, spatial clustering/propagation, and expected-event absence.
-Quantiles are implementation choices; mechanistic thresholds dominate when more consequential.
-Preserve components: PRICE down + PHYSICAL TIGHTNESS up is a divergence, not an average.
+Reusable operators include level extreme, velocity, acceleration, persistence, recurrence, volatility/dispersion change, threshold crossing, correlation break, cross-signal divergence, convergence, bottleneck/constraint approach, flow reversal, network concentration, recovery failure, structural break, novel state, subpopulation divergence, spatial clustering/propagation and expected-event absence. Quantiles are implementation choices; mechanistic thresholds dominate when more consequential. Preserve components rather than averaging divergence away.
 
 ## Cross-domain composition
-Typed causal/relational edges may cross adapters while preserving recoverability and epistemic type. Example:
-MINE DISRUPTION -> CONCENTRATE AVAILABILITY down -> SMELTER PRESSURE up -> COPPER PHYSICAL TIGHTNESS up -> ELECTRICAL INPUT PRESSURE up -> TRANSFORMER COST/LEAD-TIME PRESSURE up -> GRID EXPANSION FRICTION up -> DEVELOPMENT INFRASTRUCTURE PRESSURE up.
-Observed, derived, inferred and predicted states remain distinct.
+Typed causal/relational edges may cross adapters while preserving recoverability and epistemic type. Observed, derived, inferred and predicted states remain distinct.
 
 ## Registry semantics
-The Master Reality Watch Registry is a catalog of reality primitives, observables, sensors, sources and dormant capabilities feeding this engine; it is not a dashboard catalog.
-A weird new signal attaches as a sensor/proxy to existing entities/dimensions/relations. It does not create a new intelligence subsystem merely because it is novel.
+The Master Reality Watch Registry catalogs reality primitives, observables, sensors, sources and dormant capabilities feeding this engine. A weird new signal attaches to existing standard shapes and entity/dimension relations wherever adequate; novelty does not create a subsystem.
 
 ## Projections are downstream
-Dashboards, maps, alerts, indexes, reports, Wayfinder publications and domain views are projections/materializations of shared state. They are not independent truth stores.
+Dashboards, maps, alerts, indexes, reports, publications and domain views are projections/materializations of shared state, not independent truth stores.
 
 ## Semantic reduction before machine optimization
-Canonical order:
-QUALIFY MEANING -> CHOOSE SMALLEST ADEQUATE REPRESENTATION -> PRUNE -> DEDUP -> EVENT/DELTA -> SPARSE -> REUSE -> DAG/ROLLUP -> INCREMENT -> CACHE -> LAYOUT -> VECTORIZE NECESSARY WORK -> COMPRESS -> TIER -> QUIET.
-The cheapest byte and computation are those never created.
+QUALIFY MEANING -> FACTOR SHARED SEMANTICS -> INHERIT -> STORE DELTA -> CHOOSE SMALLEST ADEQUATE REPRESENTATION -> PRUNE -> DEDUP -> EVENT/DELTA -> SPARSE -> REUSE -> DAG/ROLLUP -> INCREMENT -> CACHE -> LAYOUT -> VECTORIZE NECESSARY WORK -> COMPRESS -> TIER -> QUIET.
 
 ## Domain-admission law
-New semantic coverage should grow much faster than architecture. Adding a domain should mostly add adapter semantics and evidence mappings. If a domain requires a new engine, first prove the shared primitives/operators cannot adequately represent the unresolved delta.
+New semantic coverage should grow much faster than architecture and duplicated schema. Adding a new material/entity should preferably cost only its semantic delta plus source mappings. If repeated child deltas converge independently, promote the common structure upward into the nearest valid shared standard shape.
 
 ## Anti-patterns / polars
 - Domain-engine proliferation / noun-driven architecture.
+- Flat-schema duplication: copper/silver/etc. each repeat identical resource semantics.
+- Name-only standardization: same field names without shared semantic ownership.
+- Premature abstraction: promoting coincidental similarity before invariants are established.
+- False inheritance: parent semantics applied where the child materially differs.
+- Universal-schema overreach: unlike things forced into meaningless common fields.
+- Taxonomy worship: insisting every thing has one parent when composable mixins are more truthful.
+- Diamond ambiguity: conflicting inherited semantics without explicit precedence/refinement.
+- Semantic alias explosion: multiple names for the same property without canonical mapping.
+- Unit/denominator drift under inheritance.
+- Child shadow copies: inherited semantics copied and later diverge silently.
+- Parent contamination: child-specific semantics promoted upward and imposed on siblings.
 - Sensor-as-subsystem / Cardboard Intelligence syndrome.
-- Dashboard-as-database.
-- Duplicate truth stores per domain.
-- Price-only or headline-metric substitution for physical/economic state.
-- Conservation blindness where balance laws matter.
-- Proxy promotion: indirect signal treated as direct state.
-- Epistemic laundering across cross-domain chains.
+- Dashboard-as-database; duplicate truth stores.
+- Conservation blindness; proxy promotion; epistemic laundering.
 - Cross-domain edge without typed mechanism.
-- Universal-schema overreach: forcing unlike domain semantics into meaningless common fields.
-- Mega-graph collapse: evidence, derivation, causal, execution and capability graphs lose distinct semantics.
-- Tail fetish: every anomaly escalates regardless of consequence.
-- Domain adapter bloat: adapter reimplements shared collectors/operators/storage/composition.
-- Semantic reduction overreach: deleting structure that changes interpretation/action.
-- Architecture rigidity: shared engine prevents a genuinely necessary new primitive.
-- Projection authority: a dashboard/index becomes canonical state.
+- Mega-graph collapse.
+- Tail fetish.
+- Domain adapter bloat.
+- Semantic reduction overreach.
+- Architecture rigidity.
+- Projection authority.
 
-Polar rule: shared machinery is preferred, not worshipped. Invent a new primitive/mechanism only for a demonstrated unresolved semantic or operational requirement, then integrate it back into the common vocabulary when generalizable.
+Polar rule: compress common semantics aggressively only when the abstraction preserves consequential reality. Split/refine whenever inheritance hides a material difference. Shared standards are tools for reuse, not permission to erase domain mechanics.
