@@ -7,6 +7,8 @@
 - Split GH and MH spatial profiles: GH minimizes circulation/duplication aggressively while MH may deliberately use hallways, dedicated rooms, generous transitions, and larger storage when they improve long-term ordinary life.
 - Quarantined unresolved historical habitat assumptions instead of allowing implicit inheritance.
 - Updated the Build Bible Guest House and Main House patterns to current one-story profiles.
+- Added a canonical scoped Sanctuary feature catalog preserving concrete user-specified doors/partitions, cat circulation, high/pull-down storage, deployables, mechanical-assistance tools, storage profiles, service infrastructure, robot interfaces, and protected negative space without turning each item into a universal requirement.
+- Explicitly rejected stair/lift/hook-spine, stair-storage, inter-floor transfer, and upper-occupied-floor lift specifics while retaining valid one-story elevated cat/storage/deployable capabilities.
 - Expanded spatial-bundle accounting to distinguish floor/circulation/wall/cavity/overhead/clearance/negative-space/time resources and prevent incompatible double-counting.
 - Removed the assumption that every room should receive sensors, controls, endpoints, or populated future capacity merely because a pathway exists.
 - Expanded architectural review and anti-pattern gates for profile leakage, second-story leakage, accessibility, transformation friction, human burden, standards-first resolution, and negative-space preservation.
