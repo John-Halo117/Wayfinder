@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "release": "0.1.0-alpha.27",
+  "qualification_status": "MIGRATION_QUALIFIED",
+  "canonical_contract": "contracts/universal-rule-polarization-canon-v3.md",
+  "sources": [
+    {
+      "source_id": "SPEC-CONST-V2",
+      "repository": "Polaris",
+      "path": "constitution/foundation-v2.md",
+      "status": "QUALIFICATION_DEBT",
+      "owner": "constitution",
+      "reason": "canonical superseding constitutional specification not yet fully rule-harvested",
+      "review_condition": "harvest stable normative rule identities and pair them"
+    },
+    {
+      "source_id": "SPEC-REAL-CANONICAL-RULES",
+      "repository": "Polaris",
+      "path": "reality/canonical-rules.md",
+      "status": "HARVESTED",
+      "owner": "reality",
+      "reason": "20 canonical reality rules have a source-drift-checked compatibility map",
+      "review_condition": "requalify on source drift"
+    },
+    {
+      "source_id": "SANCTUARY-HABITAT-ASSUMPTIONS",
+      "repository": "Polaris",
+      "path": "governance/habitat_assumptions.py",
+      "status": "HARVESTED",
+      "owner": "sanctuary",
+      "reason": "structured stable-key assumption registry is harvested into universal pairs",
+      "review_condition": "requalify on registry change"
+    },
+    {
+      "source_id": "SPEC-ONTO",
+      "repository": "Polaris",
+      "path": "ontology/",
+      "status": "QUALIFICATION_DEBT",
+      "owner": "ontology",
+      "reason": "registered canonical specification directory not yet fully harvested/reviewed",
+      "review_condition": "inventory normative surfaces and harvest or mark reviewed-no-rules"
+    },
+    {
+      "source_id": "SPEC-LAWS",
+      "repository": "Polaris",
+      "path": "natural-laws/",
+      "status": "QUALIFICATION_DEBT",
+      "owner": "natural-laws",
+      "reason": "registered canonical specification directory not yet fully harvested/reviewed",
+      "review_condition": "inventory normative surfaces and harvest or mark reviewed-no-rules"
+    },
+    {
+      "source_id": "SPEC-CAP",
+      "repository": "Polaris",
+      "path": "specs/capabilities/",
+      "status": "QUALIFICATION_DEBT",
+      "owner": "capability",
+      "reason": "registered canonical specification directory not yet fully harvested/reviewed",
+      "review_condition": "harvest normative rules and parent structure"
+    },
+    {
+      "source_id": "SPEC-SEC",
+      "repository": "Polaris",
+      "path": "specs/security/",
+      "status": "QUALIFICATION_DEBT",
+      "owner": "security",
+      "reason": "registered canonical security specification not yet fully rule-harvested",
+      "review_condition": "harvest authority/privacy/security rules and specialized bindings"
+    },
+    {
+      "source_id": "SPEC-RT",
+      "repository": "Polaris",
+      "path": "runtime-spec/",
+      "status": "QUALIFICATION_DEBT",
+      "owner": "runtime",
+      "reason": "registered canonical runtime specification not yet fully rule-harvested",
+      "review_condition": "harvest operational/recovery/lifecycle rules"
+    },
+    {
+      "source_id": "POLARIZATION-V3",
+      "repository": "Wayfinder",
+      "path": "contracts/universal-rule-polarization-canon-v3.md",
+      "status": "HARVESTED",
+      "owner": "wayfinder",
+      "reason": "sole active polarization contract; its compiler invariants are represented by source-backed core rules and fixed-point tests",
+      "review_condition": "requalify on contract revision"
+    }
+  ],
+  "note": "This is a visible migration ledger, not a claim that omitted sources do not exist. Polaris' authoritative Specification Registry supplies the broader source universe during system qualification."
+}
