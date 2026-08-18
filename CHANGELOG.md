@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.27 — 2026-08-18
+
+- Added Universal Rule Polarization: every normative Polaris rule now requires an explicit negative specification; no domain or rule class is exempt.
+- Defined polarization as more than logical negation: direct violation, over/under-application, mechanism/metric capture, Goodhart failure, boundary leakage, displaced burden/local optimization, failure/recovery/lifecycle gaps, epistemic promotion, and excessive-compliance counter-polars are checked where applicable.
+- Added pair-completeness invariant: active normative rules must have a polar or visible temporary qualification debt; target exemptions are zero.
+- Preserved rule strength and abstraction so inverse review cannot silently turn preferences into prohibitions or mechanism failures into objective failures.
+- Added co-maintenance/successor semantics: change, scope, retirement, or supersession of a rule requalifies its polar.
+- Added universal anti-pattern families and the rule-polarization compiler while preserving domain-specific inverse canons as specialized extensions rather than duplicate architectures.
+- Human interface remains plain-language first; anti-pattern names are optional drill-down handles.
+
 ## 0.1.0-alpha.26 — 2026-08-18
 
 - Added the full Reality Intelligence Anti-Pattern & Failure-Mode Canon as the negative specification paired with the fused Reality Intelligence architecture.
