@@ -1,6 +1,6 @@
 # Architectural Review Checklist
 
-Every reusable pattern should be evaluated before being used as design input.
+Every reusable physical pattern should be evaluated before being used as design input.
 
 ## Scope Gate
 
@@ -13,13 +13,11 @@ Before evaluating a habitat/building pattern, identify its assumption scope:
 - `UNKNOWN_SCOPE`
 - `N/A`
 
-`UNKNOWN_SCOPE` historical material is quarantined and may not silently flow
-into a current GH/MH design.
+`UNKNOWN_SCOPE` historical material is quarantined and may not silently flow into a current GH/MH design.
 
-For GH/MH also verify the shared protected constraint: **one human-occupied
-story; no dependency on stairs or another occupied floor.**
+For GH/MH also verify the shared protected constraint: **one human-occupied story; no dependency on stairs or another occupied floor.**
 
-## Review Areas
+## Positive review areas
 
 - requirement clarity: desired state is distinct from mechanism
 - scope/profile correctness: GH rules do not leak into MH and vice versa
@@ -27,12 +25,11 @@ story; no dependency on stairs or another occupied floor.**
 - serviceability
 - maintainability
 - evolvability
-- modularity
+- modularity only where justified
 - accessibility and long-term physical independence
 - isolation
 - documentation
 - reserve capacity and option value
-- optionality
 - reliability and safe failure/recovery
 - upgrade paths
 - standards-first interface resolution
@@ -42,46 +39,60 @@ story; no dependency on stairs or another occupied floor.**
 - negative/restorative space preservation
 - technology dependence, telemetry, repair lock-in, and provider dependence when material
 
-## Habitat-Specific Questions
+## Mandatory inverse review
 
-1. What requirement does this feature actually satisfy?
-2. Which profile owns it: GH, MH, Campus, or Shared?
-3. Is the feature hard, preferred, optional, or merely conventional?
-4. Is a named mechanism being mistaken for the requirement?
-5. Does a simpler fixed/passive/manual solution satisfy the requirement with lower lifecycle burden?
-6. Does spatial compression transfer cost into recurring human labor, poor access, privacy/acoustics loss, service difficulty, or safety?
-7. If a transformation is proposed, will deploy/reset friction cause it to remain deployed or reduce task completion?
-8. Does vertical/overhead use keep essential daily capability accessible?
-9. Are wall/cavity/clearance claims mutually compatible, or is the same physical resource being counted twice?
-10. Is future-proofing limited to cheap durable pathways/interfaces rather than speculative future-maximum equipment?
-11. Could a noisy, dirty, bulky, seasonal, or material-handling function live more effectively elsewhere on Campus?
-12. For MH, is a hallway/transition/dedicated room being rejected only because a GH compression rule was inherited?
-13. For GH, is area being spent on circulation/duplication that does not materially improve a protected requirement?
+Every Sanctuary candidate must also pass the [Sanctuary Anti-Pattern & Failure-Mode Canon](sanctuary-anti-pattern-failure-mode-canon.md).
 
-## Required Review Result
+The inverse review must explicitly ask:
 
-- pass
-- pass with accepted tradeoff
-- fail pending redesign
-- fail pending Engineering Decision Record
+1. What state are we trying to create?
+2. Is this a real requirement or a promoted mechanism?
+3. What existing capability already does it?
+4. What permanent obligation does it add?
+5. What failure modes does it introduce?
+6. Where does displaced burden move?
+7. What deploy/reset/maintenance/cleaning burden appears?
+8. What happens when power/network/motor/controller/vendor fails?
+9. Can it be inspected, cleaned, repaired, isolated, and replaced?
+10. Does it harm calm, accessibility, security, water, fire, acoustics, privacy, or serviceability?
+11. Is there a simpler static/manual solution?
+12. Is there a boring industry-standard solution?
+13. Does the claimed saving survive parent/whole-house recompilation?
+14. Would it still be chosen after novelty wears off?
+
+## Habitat-specific discriminators
+
+- GH may spend less area on circulation/duplication, but cannot trade away accessibility, sleep, privacy, calm, or ordinary usability.
+- MH may deliberately spend area on hallways, dedicated rooms, transitions, views, acoustics, and spaciousness where those reduce lifelong friction.
+- Campus should absorb noisy, dirty, bulky, seasonal, fabrication, animal, storage, or heavy-material-handling capability when that dominates forcing it into either house.
+- Vertical/overhead use never makes frequently needed capability inaccessible by default.
+- Wall/cavity/clearance resources cannot be double-booked across incompatible states.
+- Future-proofing preserves cheap geometry/routes/interfaces before speculative hardware.
+- Mechanization follows passive/manual/assisted/powered complexity only as burden justifies.
+
+## Required disposition
+
+For Sanctuary candidates, use one of:
+
+- **BUILD** — survives positive and inverse review.
+- **DEFER** — useful but not sufficiently justified.
+- **RESERVE / PROBE** — material uncertainty remains and cheap reversible option preservation/probing is worthwhile.
+- **PRUNE** — rejected, dominated, or fails whole-system recompilation.
+
+General pattern review may still use pass / pass-with-tradeoff / fail-pending-redesign / fail-pending-EDR, but any Sanctuary acceptance must map to one of the four dispositions above.
 
 ## Rule
 
-A pattern that fails serviceability, isolation, documentation, accessibility,
-profile scope, or the one-story protected constraint for a critical capability
-cannot be treated as ready for implementation without an Engineering Decision
-Record where the underlying requirement is still valid.
+A pattern that fails serviceability, isolation, documentation, accessibility, profile scope, the one-story protected constraint, or a protected inverse-compiler gate cannot be treated as ready for implementation merely because it performs its local function.
 
-A rejected/obsolete assumption is not revived merely by writing an EDR; the EDR
-must document a current requirement and why the old assumption has become valid
-again under changed Reality or explicit intent.
+A rejected/obsolete assumption is not revived merely by writing an EDR. The EDR must document a current requirement, whole-system tradeoff, evidence, mitigation, and reevaluation/deletion trigger.
 
 ## Relationships
 
 - Habitat scope: [Habitat Assumption Scope](../../../contracts/habitat-assumption-scope-v1.md)
+- Negative specification: [Sanctuary Anti-Pattern & Failure-Mode Canon](sanctuary-anti-pattern-failure-mode-canon.md)
 - Related metrics: [Metrics Rubrics](metrics-rubrics.md)
 - Related questions: [Constitutional Review Questions](constitutional-review-questions.md)
 - Related anti-patterns: [Anti-Pattern Library](anti-pattern-library.md)
 - Related reliability: [Reliability](../../lifecycle/reliability/README.md)
-- Generated artifacts: review checklists, acceptance packets, design risk
-  registers
+- Generated artifacts: review checklists, acceptance packets, design risk registers
