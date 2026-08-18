@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.23 — 2026-08-18
+
+- Added the Sanctuary Anti-Pattern & Failure-Mode Canon as the negative specification paired with the positive spatial-capability compiler.
+- Added governing rejection laws: local optimization is invalid when displaced burden exceeds recovered value; technically present capability that is too annoying, fragile, inaccessible, unsafe, illegible, or confusing is not real capability.
+- Added mandatory inverse review across spatial design, hollowing, productive boundaries, vertical volume, interfaces, deployables, foundation, earthwork, water, utilities, floors, walls, ceilings, pet architecture, robots/machines, progressive disclosure, security/ZTA, modularity, resilience, accessibility, maintenance, cost, future-proofing, and meta optimization failures.
+- Added explicit Sanctuary dispositions: BUILD, DEFER, RESERVE/PROBE, and PRUNE.
+- Made whole-system recompilation mandatory for claimed savings and retained a boring/mature baseline in every competition.
+- Added anti-cleverness gates for mechanism promotion, complexity ratchets, novelty ratchets, metric substitution, architecture-for-the-diagram, and optimization without a stop condition.
+- Preserved independent burden dimensions instead of introducing a universal anti-pattern score.
+
 ## 0.1.0-alpha.22 — 2026-08-18
 
 - Added explicit habitat assumption scoping: `SHARED`, `GH`, `MH`, `CAMPUS`, `UNKNOWN_SCOPE`, and `N/A`.
