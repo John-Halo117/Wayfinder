@@ -22,6 +22,7 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 | [Recommendation](recommendations/README.md) | Jarvis | Recommendation |
 | [Commitment](commitments/README.md) | MICE | Commitment |
 | [Transformation](transformations/README.md) | ZWLib | Transformation Path |
+| [Standard Reference](standards/README.md) | Domain owner / Evidence | Selected external standard or interface reference |
 | [Capsule](capsules/README.md) | Capsules | Capsule |
 | [Specification](specifications/README.md) | Build Bible | Specification |
 | [Proof](proofs/README.md) | ARK | Proof |
@@ -35,6 +36,10 @@ Contracts contain no runtime behavior, implementation APIs, storage formats, or 
 - [Derived Classification](../ontology/classification.md) — classification as a derived relation/projection over stable identity and qualified state.
 
 SBDTT is not a new truth store or mandatory representation. Scalars, state machines, graphs/DAGs, and fields remain preferred when they are cheaper adequate representations.
+
+## Standards-First Physical Resolution
+
+Physical interfaces and subsystems must resolve requirements against applicable external standards and mature interoperable interfaces before a custom physical interface is proposed. Polaris owns selection, mapping, composition, lifecycle, and residual justification; it does not create a parallel physical standards ecosystem merely for internal naming consistency.
 
 ## Supporting Contracts
 
