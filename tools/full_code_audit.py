@@ -34,7 +34,7 @@ def py(path,text):
  return out
 
 def main():
- fs=files(); findings=[]; skips=[]; nfiles=nlines=nbytes=0; conflicts=re.compile(r"^(<{7}|={7}|>{7})(?:\s|$)"); todo=re.compile(r"\b(TODO|FIXME|HACK|XXX)\b",re.I)
+ head=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(); fs=files(); findings=[]; skips=[]; nfiles=nlines=nbytes=0; conflicts=re.compile(r"^(<{7}|={7}|>{7})(?:\s|$)"); todo=re.compile(r"\b(TODO|FIXME|HACK|XXX)\b",re.I)
  for rel in fs:
   p=ROOT/rel
   if not p.exists() or p.is_dir(): skips.append(Skip(rel,"absent/gitlink/directory")); continue
@@ -52,8 +52,8 @@ def main():
    if todo.search(raw): findings.append(Finding(rel,i,"INFO","UNRESOLVED_MARKER","TODO/FIXME/HACK remains"))
    if len(raw)>240 and p.suffix.lower() in {".py",".js",".ts",".kt",".java"}: findings.append(Finding(rel,i,"INFO","VERY_LONG_LINE","line >240 chars"))
   if p.suffix.lower()==".py": findings.extend(py(rel,text))
- sev=Counter(f.severity for f in findings); rules=Counter(f.rule for f in findings); report={"tracked_files":len(fs),"audited_text_files":nfiles,"audited_lines":nlines,"bytes_read":nbytes,"skip_count":len(skips),"skipped":[asdict(s) for s in skips],"severity_counts":dict(sev),"rule_counts":dict(rules),"findings":[asdict(f) for f in findings]}
+ sev=Counter(f.severity for f in findings); rules=Counter(f.rule for f in findings); report={"schema_version":"1.1.0","audited_commit":head,"tracked_files":len(fs),"audited_text_files":nfiles,"audited_lines":nlines,"bytes_read":nbytes,"skip_count":len(skips),"skipped":[asdict(s) for s in skips],"severity_counts":dict(sev),"rule_counts":dict(rules),"findings":[asdict(f) for f in findings]}
  OUT.mkdir(parents=True,exist_ok=True); (OUT/"full-code-audit.json").write_text(json.dumps(report,indent=2,sort_keys=True)+"\n")
- md=["# Wayfinder Full Code Audit","",f"- Tracked files: {len(fs)}",f"- Audited text files: {nfiles}",f"- Audited lines: {nlines}",f"- Skipped: {len(skips)}",f"- BLOCKER: {sev.get('BLOCKER',0)} | WARN: {sev.get('WARN',0)} | INFO: {sev.get('INFO',0)}","","## Rules"]+[f"- {k}: {v}" for k,v in rules.most_common()]+["","## Findings"]+[f"- **{f.severity}** `{f.path}:{f.line}` `{f.rule}` — {f.message}" for f in findings]
- (OUT/"full-code-audit.md").write_text("\n".join(md)+"\n"); print(json.dumps({"tracked_files":len(fs),"audited_text_files":nfiles,"audited_lines":nlines,"skip_count":len(skips),"severity_counts":dict(sev)},sort_keys=True)); return 1 if sev.get("BLOCKER") else 0
+ md=["# Wayfinder Full Code Audit","",f"- Audited commit: `{head}`",f"- Tracked files: {len(fs)}",f"- Audited text files: {nfiles}",f"- Audited lines: {nlines}",f"- Skipped: {len(skips)}",f"- BLOCKER: {sev.get('BLOCKER',0)} | WARN: {sev.get('WARN',0)} | INFO: {sev.get('INFO',0)}","","## Rules"]+[f"- {k}: {v}" for k,v in rules.most_common()]+["","## Explicit skips"]+[f"- `{s.path}` — {s.reason}" for s in skips]+["","## Findings"]+[f"- **{f.severity}** `{f.path}:{f.line}` `{f.rule}` — {f.message}" for f in findings]
+ (OUT/"full-code-audit.md").write_text("\n".join(md)+"\n"); print(json.dumps({"audited_commit":head,"tracked_files":len(fs),"audited_text_files":nfiles,"audited_lines":nlines,"skip_count":len(skips),"severity_counts":dict(sev)},sort_keys=True)); return 1 if sev.get("BLOCKER") else 0
 if __name__=="__main__": raise SystemExit(main())
