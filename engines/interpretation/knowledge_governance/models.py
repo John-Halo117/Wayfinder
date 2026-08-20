@@ -1,11 +1,21 @@
-"""Contracts for candidate review and promotion governance."""
+"""Contracts for candidate review and promotion governance.
+
+Cross-layer candidate and promotion exchange shapes are owned by contracts.knowledge
+and are re-exported here for compatibility with existing governance consumers.
+"""
 
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass, field
-from typing import Any, Literal, Mapping
+from dataclasses import dataclass, field
+from typing import Literal, Mapping
 
-from engines.interpretation.knowledge_compiler.models import CandidateArtifact
+from contracts.knowledge.models import (
+    PROMOTION_TARGETS,
+    CandidateArtifact,
+    PromotionRecord,
+    PromotionTargetName,
+    to_plain,
+)
 
 DEFAULT_REVIEWED_AT = "1970-01-01T00:00:00Z"
 GOVERNANCE_VERSION = "1.0.0"
@@ -18,14 +28,6 @@ REVIEW_STATES: tuple[str, ...] = (
     "superseded",
     "promoted",
 )
-PROMOTION_TARGETS: tuple[str, ...] = (
-    "glossary",
-    "constitution",
-    "adr_repository",
-    "capsule_repository",
-    "execution_backlog",
-    "knowledge_repository",
-)
 
 ReviewState = Literal[
     "discovered",
@@ -35,14 +37,6 @@ ReviewState = Literal[
     "deferred",
     "superseded",
     "promoted",
-]
-PromotionTargetName = Literal[
-    "glossary",
-    "constitution",
-    "adr_repository",
-    "capsule_repository",
-    "execution_backlog",
-    "knowledge_repository",
 ]
 
 
@@ -93,23 +87,6 @@ class MergeHistoryEntry:
     rationale: str
     at: str
     event_id: str
-
-
-@dataclass(frozen=True)
-class PromotionRecord:
-    """Durable promoted knowledge record produced by human governance."""
-
-    promotion_id: str
-    version: int
-    target: PromotionTargetName
-    promoted_artifact_id: str
-    candidate_ids: tuple[str, ...]
-    reviewer: str
-    rationale: str
-    rollback: str
-    promoted_at: str
-    artifact: Mapping[str, Any]
-    provenance: Mapping[str, Any]
 
 
 @dataclass(frozen=True)
@@ -177,17 +154,3 @@ class GovernanceActionResult:
     promotion_records: tuple[PromotionRecord, ...] = ()
     validation_report: tuple[GovernanceValidationIssue, ...] = ()
     events: tuple[ReviewEventRecord, ...] = ()
-
-
-def to_plain(value: Any) -> Any:
-    """Convert governance records into JSON-ready values."""
-
-    if hasattr(value, "__dataclass_fields__"):
-        return to_plain(asdict(value))
-    if isinstance(value, tuple):
-        return [to_plain(item) for item in value]
-    if isinstance(value, list):
-        return [to_plain(item) for item in value]
-    if isinstance(value, Mapping):
-        return {str(key): to_plain(item) for key, item in value.items()}
-    return value
