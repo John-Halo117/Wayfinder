@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from engines.interpretation.knowledge_compiler.models import CandidateArtifact
+from contracts.knowledge.models import CandidateArtifact
 
 from .models import GovernanceActionResult, PromotionTargetName
 from .repository import CandidateRepository
