@@ -14,6 +14,7 @@ building, material, or technology generation.
 
 - [Platform, Not Product](platform-not-product.md)
 - [Capability-Centered Design](capability-centered-design.md)
+- [Universal Capability Harvest & Physical Compression](universal-capability-harvest-and-compression.md)
 - [Fractal Spines](fractal-spines.md)
 - [Serviceability Invariant](serviceability-invariant.md)
 - [Reserve Capacity](reserve-capacity.md)
