@@ -74,7 +74,7 @@ Current displacement patterns to preserve in architecture reviews include:
   management is actually required.
 - Local AI interfaces: prefer direct maintained gateway/provider support between
   an interface and local model runtime over compatibility proxies or custom
-  middleware. Ollama's direct Claude Desktop gateway support is a current example;
+  middleware. Ollama's direct desktop-client gateway support is a current example;
   it does not displace richer interfaces where their additional capabilities are
   required.
 - Home automation observability: harvest Home Assistant's maintained diagnostics,
@@ -89,10 +89,54 @@ Current displacement patterns to preserve in architecture reviews include:
   capabilities from the photo platform before creating a separate indexing or
   household-photo query layer. Immich 3.2 is a current watch candidate and must
   pass the Stability Gate before production adoption.
+- Embedded home-automation edge: use ESPHome-class maintained firmware before
+  inventing dedicated bridge software when it can provide Bluetooth proxying,
+  multi-interface Ethernet/Wi-Fi networking, maintained Modbus behavior, OTA key
+  rotation, and sensor/actuator integration while preserving local control.
+- Home Assistant host management: prefer maintained Supervisor/OS APIs and native
+  mount/container/storage management before shell glue, host-side repair scripts,
+  duplicate health checks, or parallel lifecycle services.
+- Local-model desktop access: when a maintained desktop client can connect directly
+  to the local model runtime, use that path before adding an OpenAI-compatibility
+  proxy or UI-specific middleware. Pre-release support remains gated by the
+  Stability Gate.
+- Interoperable smart-home devices: for new cameras, closures, soil sensors,
+  irrigation-adjacent sensing, energy devices, and similar categories, evaluate
+  adequate Matter support before vendor-specific cloud APIs or custom adapters.
+  Matter is preferred only where the required local control, telemetry, security,
+  and reliability are actually present.
+- Fabrication workflow: prefer maintained slicer/project/plugin capabilities over
+  external preprocessing services or custom print-preparation automation when the
+  slicer can safely own the transformation.
+- Recipe ingestion: prefer the maintained recipe platform's importer, retry,
+  browser-signature, proxy, or headless-browser escalation before building a
+  separate scraper/import-resilience service. Custom ingestion exists only for a
+  demonstrated persistent gap.
 
 These examples are replaceable implementation notes, not permanent product
 commitments. Future Capability Harvest passes should retire or replace examples
 when better maintained primitives emerge.
+
+## Bespoke-Code Deletion Rule
+
+When a harvested upstream capability fully satisfies an existing bespoke
+implementation's required function, local-control boundary, observability,
+reliability, and rollback needs, delete the displaced custom code rather than
+keeping a parallel implementation "just in case." Preserve only the irreducible
+gap.
+
+Deletion requires verification that:
+
+1. the upstream path passes the Stability Gate;
+2. required behavior and data remain available under loss of external services
+   where the capability requires local continuity;
+3. migration and rollback are tested;
+4. no unique Wayfinder capability is silently removed; and
+5. configuration, documentation, tests, and dependency references to the bespoke
+   implementation are removed with the code.
+
+If no matching bespoke implementation exists yet, record the displacement rule
+and prevent that code from being built in the first place.
 
 ### Stability Gate
 
