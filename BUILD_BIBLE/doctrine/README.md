@@ -1,36 +1,53 @@
 # Doctrine
 
-Doctrine contains long-lived Wayfinder and Basecamp design principles spanning the
-physical world, digital systems, navigation, continuity, authority, and capability
-composition.
+Doctrine contains Wayfinder and Basecamp principles that should outlive any single
+property, implementation, product, provider, protocol, or model.
 
-Doctrine is intentionally slow-moving. It explains how to think about durable
-systems before specific implementations, products, designs, or generated artifacts
-are selected.
+## Governing Order
 
-## Purpose
+Resolve conflicts in this order:
 
-Define invariant principles that outlive any single property, building, material,
-technology generation, software application, provider, or model runtime.
+1. Mission and established Teloi.
+2. Reality and evidence.
+3. Constitutional constraints and human authority.
+4. Required capability and continuity.
+5. Bearings and navigational consequence.
+6. Architecture and Membrane boundaries.
+7. Resource allocation.
+8. Harvested implementation candidates.
+9. Minimal bespoke implementation for the irreducible gap.
 
-## Canonical Reconciliation
+A lower layer may not redefine a higher one merely because it is easier to
+implement.
 
-Start with [Wayfinder Reconciled Architecture](wayfinder-reconciled-architecture.md)
-when determining precedence, ownership, or how restored historical concepts compose
-with current Wayfinder doctrine.
+## System Ownership
 
-The reconciliation map does not replace each concept's canonical home; it prevents
-parallel vocabularies and conflicting interpretations.
+- **Wayfinder** owns mission-first navigation.
+- **Basecamp** composes the physical and digital capability estate.
+- **Jarvis** is the singular human-facing navigator and intelligence identity.
+- **ARK** preserves observations, evidence, lineage, constraints, topology, and
+  events.
+- **Capsules** preserve re-entry capability and continuity projections.
+- **Harvested systems** provide replaceable capability organs.
 
-## Contents
+No application becomes Wayfinder, Basecamp, or Jarvis by accumulating features.
 
-- [Wayfinder Reconciled Architecture](wayfinder-reconciled-architecture.md)
-- [Wayfinder Navigation Primitives](wayfinder-navigation-primitives.md)
-- [Capability-Centered Design](capability-centered-design.md)
-- [Continuity and Capsules](continuity-and-capsules.md)
-- [CivPhys, Membranes, and Authority](civphys-membranes-and-authority.md)
-- [Resource Allocation, ATR, and Priority Cascade](resource-allocation-and-atr.md)
-- [Architecture Homeostasis](architecture-homeostasis.md)
+## Canonical Homes
+
+- [Wayfinder Navigation Primitives](wayfinder-navigation-primitives.md) — Bearings,
+  Color State, attention, uncertainty, affordances, root objectives, and Jarvis
+  navigation functions.
+- [Capability-Centered Design](capability-centered-design.md) — capability
+  composition, Vision Supremacy, Capability Harvest, and harvested Basecamp/Jarvis
+  organs.
+- [Continuity and Capsules](continuity-and-capsules.md) — continuity, re-entry,
+  sedimentation, and Capsules.
+- [CivPhys, Membranes, and Authority](civphys-membranes-and-authority.md) — mechanics,
+  boundaries, Context Bridges, and scoped authority.
+- [Resource Allocation and ATR](resource-allocation-and-atr.md) — reclaimed capacity
+  and Priority Cascade.
+- [Architecture Homeostasis](architecture-homeostasis.md) — pressure, viscosity,
+  composting, ratchets, WET/AHA, and architectural drift control.
 - [Universal Capability Harvest & Physical Compression](universal-capability-harvest-and-compression.md)
 - [Platform, Not Product](platform-not-product.md)
 - [Fractal Spines](fractal-spines.md)
@@ -41,25 +58,9 @@ parallel vocabularies and conflicting interpretations.
 
 ## One Concept, One Home
 
-New doctrine should search these canonical homes before introducing new vocabulary.
-Extend, compose, alias, or retire an existing concept before creating a competing
-architecture.
+Search the canonical homes before adding foundational vocabulary. Extend an
+existing concept when it already owns the meaning. Keep aliases only when they
+materially improve retrieval; aliases do not create separate semantics or authority.
 
-Historical terminology may remain as a retrieval alias where useful, but aliases do
-not create separate authority or semantics.
-
-## Relationships
-
-Doctrine informs contracts, schemas, registries, domain patterns, lifecycle
-records, navigation, validation, capability harvest, and generated artifacts.
-
-## Lifecycle
-
-Doctrine changes only through deliberate decisions because it affects downstream
-physical and digital patterns. Architecture Homeostasis and reconciliation rules
-should be applied before adding new foundational concepts.
-
-## Generation Targets
-
-Doctrine is consumed by validators, review checklists, design guides, capability
-maps, navigation surfaces, operational rules, and generated acceptance criteria.
+Doctrine should remain small enough to navigate. Add structure only when it protects
+a real invariant, boundary, capability, continuity requirement, or decision.
