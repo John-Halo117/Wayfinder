@@ -47,6 +47,53 @@ shrink, simplify, or postpone planned custom work. Prefer deleting future bespok
 work over migrating a stable working system merely because a newer integration
 path exists.
 
+## Native Observability Rule
+
+Before building custom telemetry, inventory, diagnostic, topology, capacity, or
+causality tooling, harvest the maintained platform's native observability surface.
+Custom observability is justified only for a demonstrated information, retention,
+automation, correlation, or sovereignty gap.
+
+For Home Assistant, native protocol and subsystem diagnostics such as Serial,
+MQTT, Matter topology, Activity causality, and network-storage capacity should be
+used before adding parallel scripts, dashboards, or diagnostic services.
+
+## Upstream Displacement Review
+
+Capability Harvest must actively look for upstream changes that can delete,
+collapse, simplify, or defer planned Wayfinder components. Evaluate the capability
+provided, not the release novelty or product name.
+
+Current displacement patterns to preserve in architecture reviews include:
+
+- Remote connectivity: prefer a maintained open data-plane primitive when it can
+  provide the required point-to-point connectivity without a permanent external
+  control-plane dependency. Tailcat is a current candidate for simple WireGuard,
+  NAT-traversal, and DERP-based links; managed Tailscale or another control plane
+  remains appropriate when identity, policy, ACL, administration, or fleet
+  management is actually required.
+- Local AI interfaces: prefer direct maintained gateway/provider support between
+  an interface and local model runtime over compatibility proxies or custom
+  middleware. Ollama's direct Claude Desktop gateway support is a current example;
+  it does not displace richer interfaces where their additional capabilities are
+  required.
+- Home automation observability: harvest Home Assistant's maintained diagnostics,
+  protocol panels, topology views, causality traces, and storage-capacity views
+  before creating equivalent Basecamp telemetry or glue.
+- Storage plus lightweight compute: periodically reassess whether a stable storage
+  platform can safely absorb lightweight service hosting and thereby remove a VM
+  or separate host layer. TrueNAS 26's LXC and OpenZFS evolution is a current
+  watch candidate, not a deployment dependency while the relevant release remains
+  pre-stable or otherwise fails the Stability Gate.
+- Household photo intelligence: harvest maintained search, clustering, and API
+  capabilities from the photo platform before creating a separate indexing or
+  household-photo query layer. Immich 3.2 is a current watch candidate and must
+  pass the Stability Gate before production adoption.
+
+These examples are replaceable implementation notes, not permanent product
+commitments. Future Capability Harvest passes should retire or replace examples
+when better maintained primitives emerge.
+
 ### Stability Gate
 
 An upstream capability jump may change the preferred architecture immediately,
@@ -54,6 +101,10 @@ but deployment or migration waits until the relevant stable release/patch level,
 hardware compatibility, rollback path, and required local-control behavior are
 verified. Capability availability alone is not sufficient reason to migrate a
 working subsystem.
+
+Pre-release capability may justify postponing new bespoke work when waiting has
+low mission cost and preserves option value, but it must not become a production
+dependency until the gate is satisfied.
 
 ## Relationships
 
