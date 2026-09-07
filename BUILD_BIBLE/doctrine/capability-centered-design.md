@@ -167,6 +167,117 @@ Current displacement patterns to preserve in architecture reviews include:
   parts database or stock service. Wayfinder should add cross-domain reasoning,
   not duplicate mature inventory semantics.
 
+## Jarvis Capability Harvest
+
+Jarvis is the persistent human-facing identity and intelligence that composes
+Basecamp capabilities. It is not required to own the implementation of every
+capability it can perceive or invoke.
+
+Prefer harvesting maintained applications, protocols, and platform primitives for
+Jarvis organs before creating equivalent Wayfinder services:
+
+- House nervous system and voice: use Home Assistant Assist for deterministic
+  house intent and Home Assistant's local voice pipeline where adequate. Use
+  Wyoming as the modular transport for maintained speech-to-text, text-to-speech,
+  and wake-word engines such as Whisper, Speech-to-Phrase, Piper, and
+  openWakeWord. Do not create a second house-command intent or audio RPC stack.
+- Physical-world tool bridge: use Home Assistant's MCP Server and Assist API to
+  expose explicitly permitted entities, tools, and live home context to Jarvis.
+  Device protocols stay behind Home Assistant rather than becoming Jarvis tools
+  one device at a time.
+- External tool acquisition: where Home Assistant is the active conversation
+  surface, use its MCP client integration to acquire maintained external tools
+  before implementing bespoke tool adapters. Account for the integration's
+  supported MCP feature subset rather than assuming full protocol coverage.
+- Conversational console and RAG: evaluate maintained self-hosted conversational
+  interfaces such as Open WebUI before creating a Basecamp-specific chat/RAG
+  frontend. Keep the interface replaceable and keep canonical Basecamp state out
+  of interface-specific storage where practical.
+- Local inference: use maintained local-model runtimes such as Ollama as
+  interchangeable inference substrates rather than making one model runtime the
+  identity of Jarvis.
+- Digital workflow execution: evaluate maintained workflow engines such as n8n
+  for non-house digital workflows before creating a generic Wayfinder workflow
+  engine. Home Assistant remains the preferred owner for physical-house
+  automation where adequate.
+- Assistant implementation references: mine maintained open-source personal-agent
+  projects for proven interaction, routing, desktop-presence, computer-use,
+  channel, and worker-delegation patterns. Personal Jarvis and similar projects
+  are implementation references or replaceable components, not canonical
+  Basecamp identity.
+- Persistent memory: prefer a maintained, inspectable memory or knowledge layer
+  that can separate working context, durable personal knowledge, source history,
+  and user-editable records before building a bespoke memory database. QwenPaw's
+  ReMe-style layered memory is a current implementation reference; evaluate its
+  boundaries and maturity before adoption.
+- Cross-device continuity: prefer an assistant substrate that can preserve
+  conversation/task continuity across browser, desktop, mobile, terminal, and
+  messaging surfaces without making any one UI canonical. Self-hosted multi-user
+  and multi-channel agent platforms are candidates when they preserve required
+  sovereignty and exportability.
+- Agent and model routing: harvest maintained routing between fast/local models,
+  deeper models, coding agents, browser/computer-use workers, and long-running
+  tasks before creating a bespoke dispatcher. Routing policy remains a Wayfinder
+  concern even when execution mechanics are harvested.
+- Computer and screen agency: evaluate maintained browser-use, computer-use, OS
+  shell, workspace, and checkpoint primitives before implementing screen scraping,
+  mouse/keyboard automation, or desktop-control daemons. Expose only bounded
+  capabilities and retain confirmation/permission boundaries for consequential
+  actions.
+- Proactive awareness: use event-driven automation, calendars, sensors, state
+  changes, scheduled summaries, and maintained notification channels to wake
+  Jarvis when a meaningful condition changes. Do not create a permanent polling
+  loop merely to simulate awareness when upstream event sources exist.
+- Briefings and notifications: prefer Home Assistant automation/Assist summary
+  patterns and maintained notification integrations for household-state and
+  calendar-derived briefings before creating a parallel push-delivery service.
+  Wayfinder owns relevance and attention policy; delivery mechanisms are
+  replaceable.
+- Vision: consume maintained semantic outputs from Frigate for camera events and
+  Immich for household-photo intelligence before building a general visual index.
+  Add a separate vision layer only for demonstrated real-time or cross-domain
+  reasoning gaps.
+- Documents and recall: use Paperless-ngx for document ingestion and document
+  workflow semantics, then expose selected retrieval capability to Jarvis rather
+  than duplicating OCR, filing, and document-routing machinery.
+- Calendar, email, contacts, and personal services: prefer maintained provider
+  integrations, plugins, or MCP/API connectors with scoped permissions before
+  implementing provider-specific clients inside Jarvis. Jarvis owns the unified
+  interaction model, not each provider protocol.
+- Household identity and presence: prefer explicit household identities plus
+  maintained presence/device/person primitives from Home Assistant and relevant
+  domain systems. Do not infer sensitive identity or presence beyond the evidence
+  needed for the requested automation or interaction.
+- Phone and room presence: use Home Assistant companion/mobile clients and
+  voice-satellite endpoints as replaceable Jarvis surfaces before creating a
+  proprietary mobile client or room audio protocol.
+
+### Jarvis Composition Rule
+
+Jarvis should feel singular to the human while remaining plural underneath.
+
+The preferred flow is:
+
+human interaction surface -> Jarvis orchestration/policy -> model or reasoning
+runtime -> permissioned tools/protocols -> harvested domain systems -> physical
+and digital reality.
+
+Jarvis owns identity, continuity, permission policy, cross-domain context,
+attention policy, reasoning, and composition. Domain systems own their mature
+mechanics. A capability may move between implementations without changing the
+human-facing Jarvis identity.
+
+### Jarvis Proactivity Rule
+
+Proactivity must be event- and relevance-driven, not chatter-driven. Jarvis may
+surface a condition without being asked when evidence indicates that timing,
+safety, continuity, cost, a committed plan, or another established Wayfinder path
+materially changed. Otherwise archive the event.
+
+Prefer upstream event subscriptions and automation triggers over repeated polling.
+Notifications must remain finite, attributable to a real state change, and
+controllable by the household.
+
 These examples are replaceable implementation notes, not permanent product
 commitments. Future Capability Harvest passes should retire or replace examples
 when better maintained primitives emerge.
