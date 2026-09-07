@@ -26,6 +26,23 @@ implementations evolve.
 Products are replaceable implementations. A product selection should not become
 canonical doctrine unless it represents a stable physical principle.
 
+## Vision Supremacy Rule
+
+No wholesale application, framework, platform, vendor, protocol, implementation,
+or upstream roadmap may redefine or dilute the established Basecamp, Jarvis, or
+Wayfinder vision merely because adopting it would be easier or more complete.
+
+Capability Harvest proceeds from vision to required capability to architecture to
+candidate implementation. Never reverse that order by adopting an application and
+then reshaping the mission around its assumptions.
+
+When an upstream system satisfies only part of the required vision, harvest the
+adequate portion and preserve the irreducible remainder through composition,
+extension, adaptation, replacement, or minimal bespoke implementation. Ease of
+adoption is not sufficient reason to surrender sovereignty, continuity,
+interoperability, behavior, identity, local-control boundaries, or established
+human experience.
+
 ## Integration Escalation Rule
 
 When satisfying a capability through a software-controlled device or subsystem,
@@ -251,6 +268,48 @@ Jarvis organs before creating equivalent Wayfinder services:
 - Phone and room presence: use Home Assistant companion/mobile clients and
   voice-satellite endpoints as replaceable Jarvis surfaces before creating a
   proprietary mobile client or room audio protocol.
+- Salience before reasoning: classify incoming events for novelty, consequence,
+  confidence, relevance, and required attention before spending higher-cost
+  reasoning on them. Routine state should remain quiet unless it materially
+  changes a path, commitment, constraint, safety condition, or established watch.
+- Historical normality: interpret current conditions against explicit baselines
+  and recent history where useful. An event being technically unusual is not
+  sufficient; Jarvis should distinguish meaningful deviation from harmless noise
+  without silently turning inferred habits into canonical truth.
+- Goals and follow-ups: represent standing goals, commitments, due follow-ups, and
+  their status as explicit inspectable state rather than relying on conversational
+  recall. Jarvis may use this state to surface a due action or changed path, while
+  Wayfinder remains the canonical owner of mission and navigation meaning.
+- Suggest-before-automate: when Jarvis detects a repeated household or workflow
+  pattern, prefer generating a proposed automation with rationale, scope, and
+  expected effect before granting it persistent authority. Learned convenience
+  must not silently become policy.
+- Bounded delegation: when specialist agents or workers are used, give them narrow
+  objectives, explicit capability/tool limits, bounded execution, and a defined
+  return path to Jarvis. Delegation may expand execution capacity without
+  fragmenting human-facing identity or transferring policy authority to workers.
+- Operational modes and autonomy: separate the current operating mode and allowed
+  degree of autonomous action from the model's conversational personality. Modes
+  and autonomy limits should be explicit, inspectable, reversible, and subordinate
+  to household policy.
+- Graceful degradation: preserve a useful local capability floor for critical or
+  frequent interactions when preferred models, networks, providers, or external
+  services are unavailable. Templates, cached state, deterministic intents, local
+  models, or simpler reasoning paths may provide continuity without pretending to
+  equal full capability.
+- Self-diagnostics and root-cause reasoning: expose enough internal health,
+  connectivity, dependency, and execution state for Jarvis to explain degraded
+  behavior and identify likely causes before creating a separate diagnostic
+  application. Diagnostic conclusions must remain attributable to observed state
+  and uncertainty.
+- Occupancy- and context-gated briefings: use explicit presence, time, commitments,
+  and relevance state to decide when a briefing is appropriate rather than
+  broadcasting merely because information exists. Delivery context must never
+  override attention policy or privacy boundaries.
+- Explicit ignore/unignore controls: allow noisy entities, event classes, sources,
+  or watches to be intentionally suppressed and later restored without deleting
+  their underlying data. Attention policy should be controllable directly rather
+  than requiring the model to repeatedly rediscover that something is unwanted.
 
 ### Jarvis Composition Rule
 
@@ -266,6 +325,12 @@ Jarvis owns identity, continuity, permission policy, cross-domain context,
 attention policy, reasoning, and composition. Domain systems own their mature
 mechanics. A capability may move between implementations without changing the
 human-facing Jarvis identity.
+
+No harvested assistant or "Jarvis" application is entitled to become the Jarvis
+architecture wholesale. Such systems are mines for capabilities, interaction
+patterns, and maintained primitives. They may be adopted as bounded components
+only where they conform to the established Wayfinder vision and composition
+boundary.
 
 ### Jarvis Proactivity Rule
 
