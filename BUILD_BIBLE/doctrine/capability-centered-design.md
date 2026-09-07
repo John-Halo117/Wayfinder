@@ -112,10 +112,84 @@ Current displacement patterns to preserve in architecture reviews include:
   browser-signature, proxy, or headless-browser escalation before building a
   separate scraper/import-resilience service. Custom ingestion exists only for a
   demonstrated persistent gap.
+- Thread network ownership: treat Thread network identity and credentials as
+  platform state rather than radio state. Prefer a maintained OpenThread Border
+  Router and platform-managed credentials so border-router hardware can be
+  replaced or migrated without redefining the network. Harvest standard Thread
+  diagnostics, credential sharing, commissioning, and infrastructure integration
+  before creating proprietary Thread-management tooling.
+- Home-automation backup: let the automation platform own its maintained backup
+  mechanism, encryption format, scheduling, retention primitives, and supported
+  backup targets. Basecamp owns backup policy, independent copies, restore
+  verification, and continuity requirements; custom archive/encryption/rotation
+  scripts exist only for an uncovered requirement.
+- Local house-control voice: prefer a maintained fully local speech-to-text,
+  intent-processing, and text-to-speech path for house commands before building a
+  second voice-control stack. General conversational AI may remain a separate
+  capability where its function exceeds deterministic house control.
+- Camera-event intelligence: prefer the camera/NVR platform's maintained local
+  semantic indexing, embeddings, event search, and similarity capabilities before
+  exporting frames into a separate vector database or custom search service.
+  Wayfinder should consume the resulting capability rather than duplicate it.
+- EV charging and bidirectional energy: for future charger and vehicle-energy
+  interfaces, prefer adequate OCPP 2.1 and ISO 15118-20 support, documented local
+  control, and interoperable DER behavior before proprietary charger APIs or
+  custom orchestration. Standards are preferred only when the required hardware
+  implementation is complete and reliable.
+- Utility and grid signaling: prefer OpenADR 3 or another adequate open utility
+  signaling interface for tariffs, demand response, DER, storage, EV charging,
+  and capacity events before one-off utility adapters. Keep local energy policy
+  downstream of the standardized signal rather than embedding utility-specific
+  behavior throughout automations.
+- Document ingestion and household records: prefer the document platform's native
+  mail ingestion, scheduled workflows, webhooks, storage/filename templates,
+  duplicate handling, custom fields, and routing before building a Basecamp
+  document watcher or router. Bills, manuals, warranties, receipts, property
+  records, and maintenance documents should enter through maintained document
+  semantics where adequate.
+- Long-range property sensing: for gates, barns, sheds, tanks, utility structures,
+  and other low-bandwidth remote points, evaluate adequate standardized long-range
+  options such as Z-Wave Long Range alongside Thread and wired interfaces before
+  designing repeater-heavy meshes or custom radio infrastructure.
+- Lighting control: evaluate standards-based DALI/DALI+ capability, including
+  Thread transport where mature and appropriate, before inventing a proprietary
+  lighting-control bus or wireless translation layer. Preserve serviceable local
+  lighting operation independent of higher-level automation.
+- UPS and power-device telemetry: prefer Network UPS Tools or another maintained
+  standard telemetry/control layer plus the platform's native integration before
+  creating a UPS telemetry daemon, duplicate polling service, or proprietary
+  dashboard. Custom code exists only for demonstrated missing control or state.
+- Household inventory: harvest maintained Grocy-class APIs, add-ons, and native
+  product/stock operations before writing synchronization or CRUD middleware whose
+  only purpose is reproducing household inventory semantics.
+- Parts and workshop inventory: harvest maintained InvenTree-class inventory,
+  security, API, and workflow capabilities before creating a Basecamp-specific
+  parts database or stock service. Wayfinder should add cross-domain reasoning,
+  not duplicate mature inventory semantics.
 
 These examples are replaceable implementation notes, not permanent product
 commitments. Future Capability Harvest passes should retire or replace examples
 when better maintained primitives emerge.
+
+## Basecamp Composition Boundary
+
+Basecamp should be a sovereign coordination and composition layer over harvested
+capability islands, not a monolith that reimplements each island.
+
+Where maintained systems adequately own a domain, Basecamp should primarily own:
+
+- cross-domain policy and orchestration;
+- canonical intent and capability requirements;
+- identity and relationships between physical and digital scopes;
+- verification and operational state;
+- lifecycle and maintenance obligations;
+- local-control and continuity boundaries;
+- cross-system reasoning and derived decisions; and
+- the irreducible integration gaps between otherwise capable systems.
+
+A domain platform may own implementation mechanics without owning Basecamp's
+canonical intent. Conversely, Basecamp must not reproduce implementation mechanics
+merely to make itself appear self-contained.
 
 ## Bespoke-Code Deletion Rule
 
