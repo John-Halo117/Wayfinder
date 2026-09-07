@@ -43,6 +43,140 @@ adoption is not sufficient reason to surrender sovereignty, continuity,
 interoperability, behavior, identity, local-control boundaries, or established
 human experience.
 
+## Wayfinder Navigation Language
+
+Capability Harvest must preserve Wayfinder's own navigation language. Upstream
+applications may provide observations, state, workflows, interfaces, or execution,
+but they do not replace Bearings, Color States, transitions, or the Wayfinder
+navigation model.
+
+The canonical navigation flow is:
+
+Reality -> Observations -> State Estimation -> Color State -> Transition ->
+Bearing -> Action.
+
+A Bearing is a compiled navigational consequence, not a raw sensor value, article,
+score, or application status. It answers what the established reality means for a
+capability, path, commitment, constraint, opportunity, or mission direction and,
+when warranted, what attention or action follows.
+
+### Operational Color States
+
+Every navigable capability may expose an operational Color State using one shared
+coordinate system:
+
+- Blue — Surplus / Opportunity. Capability exceeds the relevant baseline or a
+  meaningful improvement, leverage, expansion, or optimization opportunity exists.
+- Green — Healthy / On Course. Capability is within its intended operating
+  envelope; normal operation and stewardship apply.
+- Yellow — Attention / Pressure. A material constraint, degradation, or emerging
+  pressure exists; monitor, prepare options, or plan attention.
+- Red — Critical / Failure. Capability is materially degraded, threatened, lost,
+  or requires timely intervention; stabilize and recover.
+
+Operational color and epistemic certainty are separate axes. The color answers
+"How is the capability doing?" while certainty answers "How well can we establish
+that assessment?"
+
+### Epistemic State
+
+Use the epistemic qualifier only when it adds information:
+
+- White — verified or adequately established. White is normally implicit and need
+  not be displayed.
+- Gray — uncertain, stale, conflicting, low-confidence, or otherwise insufficient
+  for confident navigation while an operational estimate may still be useful.
+- Black — unknown or presently unresolvable. Do not invent an operational color
+  when the state itself cannot be established.
+
+Thus a Bearing may be Red + Gray when a consequential degradation is plausible but
+uncertain. Black means the system cannot responsibly establish the operational
+state at all. Gray and Black are exceptions that should stand out; normal verified
+state should remain visually quiet.
+
+### Color Ranks
+
+Where additional resolution is genuinely useful, operational colors may carry a
+1–5 rank within the band. The color remains primary and the number is an ordinal
+within that meaning, not fake numerical precision.
+
+Canonical state should therefore prefer forms such as:
+
+Band = Yellow 4
+Confidence = High
+Trend = Improving
+TimeInBand = 3 days
+
+rather than an arbitrary score such as 67 percent. Numeric mappings may be derived
+for charts or computation, but they are not the canonical human navigation state.
+
+Ranks are interpreted within their band and domain thresholds. In general, higher
+rank means a stronger expression of that band's meaning: stronger Blue opportunity,
+stronger Green condition, stronger Yellow pressure, or stronger Red degradation.
+Domain rules may define exact thresholds without changing the universal color
+semantics.
+
+### Recursive Color State
+
+Color State is fractal across Wayfinder. A leaf, device, capability, domain,
+project, property, system, or overall mission view may expose the same minimal
+navigation contract:
+
+- Current Color State
+- Projected Color State when a justified forecast exists
+- Epistemic qualifier when not implicitly White
+- Last Transition
+- History
+
+The recursive flow is:
+
+Observation -> Leaf Color State -> Capability Color State -> Domain Color State ->
+Overall Color State.
+
+Parent state must be constitutionally derived from dependencies and consequences,
+not mechanically set to the worst child. An isolated Red child may leave a parent
+Green; several Yellow dependencies may make a parent Yellow; an unknown critical
+dependency may make confident parent navigation impossible.
+
+### Transition and Alert Rule
+
+Alerts are primarily Color State transitions or other genuinely consequential
+Bearing changes, not raw event volume. State evaluation should use appropriate
+hysteresis, persistence, confidence, dependency, and recovery rules so noisy
+measurements do not cause band flapping or alert fatigue.
+
+A transition is meaningful because navigational condition changed. Jarvis may
+surface the transition, MICE or another delivery mechanism may notify it, and
+Operations may react to it, but the underlying Color State and Bearing semantics
+remain Wayfinder-owned.
+
+### Bearings Economy
+
+The human interface should optimize for Bearings, not telemetry. Raw observations,
+measurements, provenance, and detailed metadata remain available underneath, while
+the normal surface compiles them into consequences.
+
+Normal Green state should collapse unless useful. Exceptions, opportunities,
+constraints, uncertainty, transitions, and requested detail should dominate the
+visible field. A person should be able to ask, at any scope, "What color are we?",
+"What changed?", "What needs attention?", "What is uncertain?", or "What are the
+opportunities?" without learning each underlying application's status language.
+
+Wayfinder may group the same canonical states for a task without changing them:
+attention views may emphasize Red and Yellow; uncertainty views Gray and Black;
+opportunity views Blue. The underlying Bearing remains stable.
+
+### Jarvis Navigation Role
+
+Jarvis is the human-facing Wayfinder navigator. It presents current and projected
+Color States, explains Bearings, identifies meaningful transitions, and routes
+attention or bounded action. It must not substitute an upstream application's
+health score, agent status, dashboard taxonomy, or internal ontology for the
+Wayfinder navigation language.
+
+Harvested systems feed reality and capability into this layer. They do not own the
+meaning of the course.
+
 ## Integration Escalation Rule
 
 When satisfying a capability through a software-controlled device or subsystem,
