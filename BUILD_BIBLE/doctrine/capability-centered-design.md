@@ -310,6 +310,101 @@ Jarvis organs before creating equivalent Wayfinder services:
   or watches to be intentionally suppressed and later restored without deleting
   their underlying data. Attention policy should be controllable directly rather
   than requiring the model to repeatedly rediscover that something is unwanted.
+- Deliberate memory lifecycle: distinguish observed facts, user-stated preferences,
+  inferred patterns, temporary working context, and canonical Wayfinder state.
+  Memory must be inspectable and correctable, support explicit forgetting, and
+  require confirmation before destructive memory removal where ambiguity would
+  matter. Upstream assistants with editable or confirm-before-forget memory are
+  implementation references, not authorities over Wayfinder memory semantics.
+- Contradiction-aware learning: when new remembered information conflicts with an
+  existing fact, preference, rule, or baseline, preserve provenance and resolve
+  the conflict explicitly rather than silently overwriting whichever record was
+  retrieved first. Learned corrections should improve future routing and tool use
+  without becoming unquestioned canonical truth.
+- Human-editable knowledge: preserve a direct, non-model-mediated way to inspect
+  and edit durable household knowledge, vocabulary, instructions, and reference
+  material. Semantic memory may accelerate recall, but the household must retain
+  an understandable source-of-truth surface for important knowledge.
+- Consequential-action governance: place policy evaluation between reasoning and
+  real-world effects. Actions above an established consequence threshold should
+  be held for approval, denied, or constrained before execution rather than
+  relying on the model to self-police. Approval state belongs to policy, not to a
+  model prompt.
+- Action audit trail: maintain attributable records of consequential tool calls,
+  policy decisions, approvals, denials, execution outcomes, and material errors.
+  Where justified, use append-oriented or tamper-evident techniques so later
+  reasoning cannot rewrite the history it is being judged against.
+- Tool and reasoning traces: expose useful execution traces, selected tools,
+  handoffs, failures, and verification results so the operator can understand what
+  Jarvis actually did. Transparency should support diagnosis and trust without
+  requiring raw hidden model reasoning to become an operational dependency.
+- Channel abstraction: treat web, desktop, terminal, mobile, room voice, messaging,
+  and other communication surfaces as adapters onto one Jarvis identity and
+  conversation/task fabric. Prefer a maintained channel-provider abstraction over
+  hard-coding every transport into Jarvis core.
+- Per-channel policy: delivery channel must not silently change authority. Voice,
+  messaging, web, terminal, and room surfaces may have different disclosure,
+  confirmation, identity, and tool limits while sharing the same underlying
+  Jarvis identity.
+- Capability discovery with permission filtering: harvest maintained discovery of
+  devices, tools, areas, applications, files, and available integrations so Jarvis
+  can understand the environment without hand-maintained enumerations. Discovery
+  does not imply authority; expose only the subset allowed by policy and context.
+- Home topology grounding: use maintained floor, area, device, entity, and
+  relationship metadata to ground spatial reasoning before constructing a second
+  household topology database. Basecamp may add canonical cross-domain identity
+  and relationships where Home Assistant's topology stops.
+- Sandboxed execution: prefer maintained OS, container, browser, workspace, or
+  process isolation for code and tool execution before inventing an ad hoc safety
+  wrapper. Privilege elevation should be explicit, minimal, separately governed,
+  and unavailable to ordinary tasks by default.
+- Secrets isolation: credentials and provider secrets should remain outside model
+  context wherever practical, with tools receiving only the minimum scoped secret
+  necessary for execution. Redaction, dedicated secret stores, and per-capability
+  access are preferred over embedding secrets in prompts or general memory.
+- Signed or attestable capability packages: where external skills, agents, or tool
+  bundles are dynamically installed, prefer package identity, integrity checks,
+  versioning, and explicit enablement before execution. Dynamic extensibility must
+  not become an unreviewed path around Wayfinder policy.
+- Assistant-state continuity: back up and restore the durable state that makes
+  Jarvis continuous, including approved memory, policy/configuration, task state,
+  channel configuration, and capability metadata where appropriate. Restoration
+  should be testable and should not depend on a single application-specific opaque
+  database.
+- Two-phase restoration: for consequential assistant state, prefer restore into a
+  reviewable/staged state followed by validation before it becomes authoritative.
+  A backup existing is not proof that Jarvis continuity can actually be recovered.
+- Accessibility-first computer control: prefer semantic accessibility trees,
+  application controls, and direct UI element actions before coordinate-only
+  clicking or image-based screen automation. Computer-use mechanisms should avoid
+  unnecessarily taking over the human's active input devices and should fall back
+  to visual interaction only when semantic interfaces are insufficient.
+- Browser-session continuity: when browser automation is required, harvest
+  maintained tab, cookie, storage, and session-profile handling rather than
+  rebuilding browser state management. Session persistence must remain bounded by
+  explicit privacy, credential, and policy rules.
+- Configuration mutation review: if an upstream agent can create or modify home,
+  system, workflow, or application configuration, route proposed mutations
+  through diff/review/validation boundaries before making them canonical. The
+  existence of a writable API is not permission to let the model rewrite the
+  operating environment freely.
+- Knowledge-graph augmentation: maintained entity-relation extraction can be used
+  as a derived navigation aid when it improves cross-domain recall or reasoning,
+  but graph output must remain reconstructable from source evidence and must not
+  silently replace canonical Basecamp relationships.
+- Memory-quality maintenance: harvest maintained deduplication, contradiction
+  detection, source validation, decay, and cleanup mechanisms where they improve
+  durable recall. Memory maintenance should reduce noise while preserving
+  provenance and intentional household records.
+- Correction-driven routing: use explicit user corrections and verified outcomes
+  to improve intent classification, model selection, tool selection, and
+  complexity routing. Learning should tune execution without allowing accidental
+  phrasing to rewrite policy or mission state.
+- Service-placement by function: latency-sensitive voice, perception, and local
+  control may run close to the edge while durable databases, indexing, and other
+  stateful services run where they are easiest to protect and maintain. Packaging
+  boundaries should follow capability, latency, continuity, and failure-domain
+  requirements rather than forcing all Jarvis organs into one runtime.
 
 ### Jarvis Composition Rule
 
