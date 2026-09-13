@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wayfinder:schema:legal-primitive-delta:1",
+  "title": "Legal Primitive Delta",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "primitive_type",
+    "legal_stage",
+    "current_state",
+    "proposed_state",
+    "objective_refs",
+    "affected_population",
+    "causal_chain",
+    "uncertainty",
+    "evidence_refs",
+    "reevaluation_triggers"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string"},
+    "primitive_type": {
+      "type": "string",
+      "enum": [
+        "definition", "classification", "threshold", "floor", "cap", "cliff",
+        "denominator", "eligibility", "default", "presumption", "burden_of_proof",
+        "jurisdiction", "venue", "standing", "preemption", "delegation",
+        "cause_of_action", "remedy", "liability_edge", "safe_harbor", "exception",
+        "exemption", "time_boundary", "geographic_boundary", "residency",
+        "valuation", "accounting", "aggregation", "attribution", "ownership",
+        "indexation", "verification", "enforcement_trigger", "penalty_function",
+        "mandatory_operator", "other"
+      ]
+    },
+    "legal_stage": {
+      "type": "string",
+      "enum": [
+        "idea", "proposal", "draft", "bill", "amendment", "enacted_law",
+        "proposed_rule", "final_rule", "guidance", "enforcement_practice",
+        "litigation", "injunction", "precedent", "implementation", "observed_effect"
+      ]
+    },
+    "current_state": {},
+    "proposed_state": {},
+    "objective_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "protected_constraints": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "affected_population": {
+      "type": "object",
+      "required": ["description", "denominator"],
+      "properties": {
+        "description": {"type": "string"},
+        "denominator": {"type": "string"},
+        "estimate": {},
+        "boundary_notes": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "causal_chain": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+    "counterfactuals": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "dependency_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "dependency_centrality": {},
+    "propagation_depth": {},
+    "behavioral_response": {"type": "array", "items": {"type": "string"}},
+    "behavioral_elasticity": {},
+    "externalities": {"type": "array", "items": {"type": "string"}},
+    "distributional_effects": {"type": "array", "items": {"type": "string"}},
+    "gaming_arbitrage_risk": {},
+    "automation_substitution": {},
+    "federalism_effect": {},
+    "implementation_friction": {},
+    "persistence": {},
+    "reversibility": {},
+    "option_value": {},
+    "leverage_components": {
+      "type": "object",
+      "description": "Components are retained separately. Any scalar rollup is a screening aid, not semantic truth.",
+      "additionalProperties": true
+    },
+    "uncertainty": {
+      "type": "object",
+      "description": "Uncertainty remains separate from leverage or desirability scores.",
+      "additionalProperties": true
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "source_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "effective_date": {"type": ["string", "null"]},
+    "sunset_or_rollback": {"type": ["string", "null"]},
+    "reevaluation_triggers": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "status": {
+      "type": "string",
+      "enum": ["candidate", "modeled", "pilot", "adopted", "rejected", "superseded", "retired"]
+    }
+  }
+}
