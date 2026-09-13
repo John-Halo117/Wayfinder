@@ -1,81 +1,58 @@
 # Wayfinder Implementation Readiness Report
 
-Status: Not ready - halted pending RFC  
+Status: Governance-ready; semantic-specification work permitted  
 Repository: Wayfinder  
-Phase: Skeleton validation  
+Phase: Reconciled skeleton
 
 ## Summary
 
-Wayfinder is not implementation-ready. The target path
-`repositories/wayfinder/` already contains an existing implementation-bearing
-nested repository. This conflicts with the requested skeleton-only lifecycle
-and prevents certification.
+RFC-0001 resolves the existing-repository collision by preserving the current
+Wayfinder repository and Git history in place. The constitutional skeleton is
+layered additively; historical content does not become authoritative merely by
+presence.
 
-## Outstanding RFCs
+Wayfinder remains a semantic/specification repository. This readiness decision
+does not authorize runtime code, persistence, presentation, deployment, or
+other implementation behavior inside Wayfinder.
 
-Required:
+## Resolved RFCs
 
-- RFC-0001 Wayfinder Existing Repository Collision and Migration Decision
+- RFC-0001 Wayfinder Existing Repository Collision and Migration Decision — accepted.
 
-## Outstanding ADRs
+## Remaining Governance Work
 
-Potential ADRs after RFC disposition:
-
-- Wayfinder existing repository preservation and migration plan.
-- Harvest/move/retain decision for existing implementation-bearing content.
-- Ownership reassignment decisions for any content that belongs to ARK,
-  Foundry, Aurora, Observatory, AMOS, Odysseus, Jarvis, Atlas, Basecamp,
-  Groundskeeper, Commons, or Polaris.
-- Compatibility and rollback plan for existing Wayfinder users or workflows.
+Future destructive migration, ownership reassignment, or public-contract change
+still requires the normal RFC/ADR path. Historical assets with uncertain
+ownership remain non-authoritative until audited.
 
 ## Remaining Risks
 
 | Risk | Severity | Mitigation |
 | --- | --- | --- |
-| Existing implementation becomes accidental Wayfinder authority | Critical | Halt and resolve through RFC/ADR. |
-| History-preserving policy is violated by cleanup | Critical | Do not move/delete content without approved migration plan. |
-| Ownership duplication | Critical | Audit existing services, engines, contracts, and docs against Foundation v2 owners. |
-| Skeleton certification becomes meaningless | High | Keep validation failed until target path is resolved. |
+| Historical implementation becomes accidental semantic authority | High | Authority derives from Foundation v2 and approved Wayfinder specifications, not file presence. |
+| History-preserving policy is violated by cleanup | High | No bulk move/delete; use explicit ADRs for later migration. |
+| Ownership duplication | High | Audit uncertain artifacts against Foundation v2 owners before promotion. |
+| Semantic/runtime boundary drifts | High | Keep Wayfinder code-free; package contracts via Commons and implement behavior in canonical runtime owners. |
 
 ## Implementation Assumptions
 
-No implementation assumptions are approved while this stop condition is open.
-
-## Known Unknowns
-
-- Which existing Wayfinder materials are canonical semantic assets.
-- Which existing materials are implementation or legacy artifacts.
-- Which materials belong in future repositories.
-- Whether the constitutional skeleton should be created in a new clean path or
-  layered into the existing repository after migration.
-- Whether existing nested Git history must be preserved as the Wayfinder child
-  repository history.
-
-## Recommended Resolution Order
-
-1. Review and decide RFC-0001.
-2. If accepted, produce required ADR(s) for migration/history/ownership.
-3. Audit existing Wayfinder contents against Foundation v2 ownership.
-4. Decide whether to preserve, archive, migrate, or leave existing materials.
-5. Re-run skeleton generation only after the target path is constitutionally
-   clear.
+- Existing Git history is preserved.
+- New semantic work is additive and governed.
+- Runtime implementations remain outside Wayfinder.
+- No historical artifact is promoted to canonical status without review.
 
 ## Certification Status
 
 | Certification | Status | Evidence |
 | --- | --- | --- |
-| Skeleton Certified | Fail | Existing implementation-bearing repository present. |
-| Interface Certified | Fail | Existing surfaces require audit before certification. |
-| Documentation Certified | Blocked | New placeholders coexist with unaudited historical docs. |
-| Governance Certified | Blocked | RFC/ADR decision required. |
-| Implementation Ready | Fail | Stop condition active. |
+| Repository identity | Pass | RFC-0001 preservation-in-place decision. |
+| Semantic governance | Pass | One canonical Wayfinder authority retained. |
+| History preservation | Pass | No destructive migration required. |
+| Runtime implementation in Wayfinder | Prohibited | Foundation v2 / Wayfinder boundary. |
+| Semantic specification readiness | Pass | Collision stop condition resolved. |
 
 ## Readiness Decision
 
-Not ready.
-
-## Approval Requested
-
-Do not proceed to AMOS. Review the RFC candidate and decide how to handle the
-existing Wayfinder repository collision.
-
+Wayfinder may proceed with governed semantic specifications. Runtime work must
+proceed only in the repository that canonically owns the relevant executable
+behavior.
