@@ -48,6 +48,8 @@ No application becomes Wayfinder, Basecamp, or Jarvis by accumulating features.
   and Priority Cascade.
 - [Architecture Homeostasis](architecture-homeostasis.md) — pressure, viscosity,
   composting, ratchets, WET/AHA, and architectural drift control.
+- [Legal Primitive Refactor](legal-primitive-refactor.md) — Teloi-safe foundational
+  legal deltas, causal propagation, externalities, and Legal Primitive Watch.
 - [Universal Capability Harvest & Physical Compression](universal-capability-harvest-and-compression.md)
 - [Platform, Not Product](platform-not-product.md)
 - [Fractal Spines](fractal-spines.md)
