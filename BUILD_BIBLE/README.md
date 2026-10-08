@@ -44,6 +44,8 @@ retrieval, with low-confidence findings routed to review.
   belongs in the Build Bible.
 - [governance/canonicality.md](governance/canonicality.md) defines canonical
   ownership and reference rules.
+- [Teloi Physical Projection Contract](governance/teloi-physical-projection-contract.md)
+  specifies how every upstream Telos maps to a scoped physical requirement, constraint, interface, acceptance check, or explicit no-delta result.
 - [doctrine/fractal-spines.md](doctrine/fractal-spines.md) defines the recursive
   spine model.
 - [contracts/physical-scope-contract.md](contracts/physical-scope-contract.md)
