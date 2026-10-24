@@ -1,0 +1,9 @@
+version: 2
+updates:
+  # The engines/ark/legacy tree is an archived copy, not an independent
+  # dependency owner. ARK receives its own update monitoring.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    labels: [dependencies]
